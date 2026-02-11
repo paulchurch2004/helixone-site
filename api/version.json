@@ -1,0 +1,29 @@
+{
+  "version": "1.0.3",
+  "release_date": "2026-02-10",
+  "download_url_mac": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.3/HelixOne.dmg",
+  "download_url_windows": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.3/HelixOne_Setup.exe",
+  "downloads": {
+    "mac": {
+      "url": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.3/HelixOne.dmg",
+      "filename": "HelixOne.dmg",
+      "size": 210763776,
+      "checksum": ""
+    },
+    "windows": {
+      "url": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.3/HelixOne_Setup.exe",
+      "filename": "HelixOne_Setup.exe",
+      "size": 0,
+      "checksum": ""
+    }
+  },
+  "changelog": [
+    "Fix: Bouton de suppression de compte fonctionnel",
+    "Fix: XP et badges maintenant persistants (sauvegarde cloud)",
+    "Nouveau design des badges avec barre de progression",
+    "Compteur de badges avec actualisation automatique",
+    "Fix: Changement de logo (logo.png au lieu de logo2.png)"
+  ],
+  "mandatory": false,
+  "min_version": "1.0.0"
+}
