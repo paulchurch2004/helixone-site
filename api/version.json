@@ -1,13 +1,13 @@
 {
   "version": "1.0.3",
-  "release_date": "2026-02-10",
+  "release_date": "2026-02-11",
   "download_url_mac": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.3/HelixOne.dmg",
   "download_url_windows": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.3/HelixOne_Setup.exe",
   "downloads": {
     "mac": {
       "url": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.3/HelixOne.dmg",
       "filename": "HelixOne.dmg",
-      "size": 210763776,
+      "size": 210844059,
       "checksum": ""
     },
     "windows": {
