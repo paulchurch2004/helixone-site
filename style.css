@@ -83,7 +83,7 @@ a {
 }
 
 .logo-helix { color: var(--primary); }
-.logo-one { color: #a855f7; }
+.logo-one { color: #ffffff; }
 
 .nav-menu {
   display: flex;
@@ -319,6 +319,14 @@ a {
   border-radius: var(--radius);
   border: 1px solid var(--border);
   opacity: 0.85;
+}
+
+.hero-video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  object-fit: cover;
 }
 
 /* ===== SECTIONS ===== */
