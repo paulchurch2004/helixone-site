@@ -1,24 +1,27 @@
 {
-  "version": "1.0.4",
-  "release_date": "2026-02-11",
-  "download_url_mac": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.4/HelixOne.dmg",
-  "download_url_windows": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.4/HelixOne_Setup.exe",
+  "version": "1.0.5",
+  "release_date": "2026-02-12",
+  "download_url_mac": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.5/HelixOne.dmg",
+  "download_url_windows": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.5/HelixOne_Setup.exe",
   "downloads": {
     "mac": {
-      "url": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.4/HelixOne.dmg",
+      "url": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.5/HelixOne.dmg",
       "filename": "HelixOne.dmg",
-      "size": 210844353,
+      "size": 210763776,
       "checksum": ""
     },
     "windows": {
-      "url": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.4/HelixOne_Setup.exe",
+      "url": "https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.5/HelixOne_Setup.exe",
       "filename": "HelixOne_Setup.exe",
       "size": 0,
       "checksum": ""
     }
   },
   "changelog": [
-    "Fix: Page de formation qui dédouble après avoir terminé un module"
+    "🔐 Nouvelle: Connexion rapide avec Touch ID/Face ID",
+    "✨ Nouvelle: Reconnaissance de l'appareil (\"Se souvenir de cet appareil\")",
+    "🔒 Nouvelle: Stockage sécurisé des credentials dans Keychain macOS",
+    "⚡ Amélioration: Auto-login biométrique au démarrage (si activé)"
   ],
   "mandatory": false,
   "min_version": "1.0.0"
