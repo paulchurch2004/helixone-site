@@ -92,6 +92,12 @@ a {
   gap: 32px;
 }
 
+.nav-menu > li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .nav-link {
   color: var(--text-secondary);
   font-weight: 500;
