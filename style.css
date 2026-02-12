@@ -329,6 +329,149 @@ a {
   object-fit: cover;
 }
 
+/* ===== ABOUT PAGE ===== */
+.about-hero {
+  padding: 160px 24px 80px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(0, 212, 255, 0.05) 0%, transparent 100%);
+}
+
+.about-hero-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-quote {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.about-quote-author {
+  margin-top: 20px;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.about-section {
+  padding: 80px 24px;
+}
+
+.about-section-alt {
+  background: var(--bg-alt);
+}
+
+.about-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.about-block {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.about-text {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Fondateur */
+.about-founder {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-founder-photo {
+  flex-shrink: 0;
+}
+
+.about-photo-placeholder {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-founder-photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+}
+
+.about-founder-name {
+  color: var(--primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Universités */
+.about-universities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.about-uni-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.about-uni-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.about-uni-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.about-uni-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .about-founder {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}
+
 /* ===== SECTIONS ===== */
 .section {
   padding: 0;
