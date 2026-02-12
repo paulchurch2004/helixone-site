@@ -87,6 +87,7 @@ a {
 
 .nav-menu {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 32px;
 }
