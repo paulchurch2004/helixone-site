@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FAQ HelixOne - Réponses à vos questions sur la plateforme de formation au trading.">
+  <meta name="author" content="HelixOne">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>HelixOne - FAQ</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%2300e0ff'/></svg>">
+</head>
+<body>
+
+  <main class="main-app">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-helix">Helix</span><span class="logo-one">One</span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-dropdown">
+            <a href="index.html#" class="nav-link nav-dropdown-toggle">Logiciel <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg></a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="index.html#features" class="nav-dropdown-link">Fonctionnalités</a></li>
+              <li><a href="index.html#formation" class="nav-dropdown-link">Formation</a></li>
+              <li><a href="index.html#screens" class="nav-dropdown-link">Aperçu</a></li>
+              <li><a href="index.html#reviews" class="nav-dropdown-link">Avis clients</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">À propos</a></li>
+          <li><a href="faq.html" class="nav-link" style="color: var(--primary);">FAQ</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="index.html#download" class="nav-cta">Télécharger</a>
+          <button class="nav-toggle" id="navToggle">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- FAQ Hero -->
+    <section class="faq-hero">
+      <div class="faq-hero-container">
+        <h1 class="faq-hero-title">Questions fréquentes</h1>
+        <p class="faq-hero-subtitle">Tout ce que vous devez savoir sur HelixOne</p>
+      </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-content">
+      <div class="faq-content-container">
+
+        <div class="faq-category">
+          <h2 class="faq-category-title">Général</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>Est-ce que HelixOne est vraiment gratuit ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Oui, HelixOne est 100% gratuit. Vous avez accès à l'ensemble des cours, quiz et fonctionnalités sans aucun frais ni carte bancaire.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>Qui est derrière HelixOne ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>HelixOne a été créé par Paul Church, un développeur autodidacte franco-américain passionné par les marchés financiers. Le projet est né en 2024 avec la mission de démocratiser le trading institutionnel.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>D'où viennent les contenus de formation ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Nos cours s'appuient sur des ressources de finance quantitative issues des plus grandes universités : MIT, Stanford, Harvard, Oxford et Cambridge.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2 class="faq-category-title">Installation & Compatibilité</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>Sur quels systèmes fonctionne HelixOne ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>HelixOne est disponible sur macOS 12+ et Windows 10+. C'est une application de bureau qui s'installe en quelques secondes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>macOS affiche un avertissement au lancement, que faire ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>C'est normal car l'application n'est pas encore sur l'App Store. Faites clic droit sur HelixOne puis "Ouvrir" et confirmez. Cette manipulation n'est nécessaire qu'au premier lancement.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>HelixOne sera-t-il disponible sur mobile ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Pour le moment, HelixOne est uniquement disponible sur desktop (Mac et Windows). Une version mobile pourrait voir le jour dans le futur.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2 class="faq-category-title">Formation & Contenu</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>Faut-il des connaissances préalables en trading ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Non, HelixOne est conçu pour tous les niveaux. Le Niveau 1 (Débutant) part de zéro et vous guide progressivement jusqu'au niveau Expert.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>Combien de temps faut-il pour terminer la formation ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Cela dépend de votre rythme. En moyenne, il faut quelques semaines par niveau. Vous pouvez apprendre à votre rythme, sans limite de temps.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2 class="faq-category-title">Sécurité & Compte</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>Mes données sont-elles sécurisées ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Oui, votre compte est protégé par un chiffrement de bout en bout et une authentification biométrique (Face ID / empreinte digitale) est disponible.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>Comment contacter le support ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Vous pouvez nous contacter par email à contact@helixone.app ou via notre page Instagram <a href="https://instagram.com/helixonefxi" target="_blank" style="color: var(--primary);">@helixonefxi</a>.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">
+              <span class="logo-helix">Helix</span><span class="logo-one">One</span>
+            </a>
+            <p>Votre formation trading, simplifiée.</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-socials">
+            <a href="https://instagram.com/helixonefxi" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+            </a>
+          </div>
+          <p>&copy; 2025 HelixOne. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
