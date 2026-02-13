@@ -340,14 +340,77 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">Questions fréquentes</h2>
+          <p class="section-subtitle">Tout ce que vous devez savoir sur HelixOne</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>Est-ce que HelixOne est vraiment gratuit ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Oui, HelixOne est 100% gratuit. Vous avez accès à l'ensemble des cours, quiz et fonctionnalités sans aucun frais ni carte bancaire.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>Sur quels systèmes fonctionne HelixOne ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>HelixOne est disponible sur macOS 12+ et Windows 10+. C'est une application de bureau qui s'installe en quelques secondes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>D'où viennent les contenus de formation ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Nos cours s'appuient sur des ressources de finance quantitative issues des plus grandes universités : MIT, Stanford, Harvard, Oxford et Cambridge.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>Faut-il des connaissances préalables en trading ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Non, HelixOne est conçu pour tous les niveaux. Le Niveau 1 (Débutant) part de zéro et vous guide progressivement jusqu'au niveau Expert.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              <span>Mes données sont-elles sécurisées ?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Oui, votre compte est protégé par un chiffrement de bout en bout et une authentification biométrique (Face ID / empreinte digitale) est disponible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA Download Section -->
     <section class="section section-cta">
-      <div class="section-container" style="text-align: center;">
-        <h2 class="section-title">Prêt à commencer ?</h2>
-        <p class="section-subtitle" style="margin-bottom: 40px;">
-          Téléchargez HelixOne gratuitement et commencez votre formation au trading.
+      <div class="cta-container">
+        <div class="cta-badge">Gratuit &mdash; Aucune carte requise</div>
+        <h2 class="cta-title">Commencez votre formation<br><span class="cta-accent">dès maintenant</span></h2>
+        <p class="cta-subtitle">
+          Rejoignez les utilisateurs qui apprennent le trading avec des ressources issues de MIT, Stanford et Harvard.
         </p>
-        <div class="hero-actions" style="justify-content: center;">
+        <div class="cta-actions">
           <a href="https://github.com/paulchurch2004/helixoneapp/releases/download/v1.0.5/HelixOne.dmg" class="hero-cta primary" download>
             <svg viewBox="0 0 24 24" width="20" height="20" style="margin-right: 8px; fill: currentColor;">
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
@@ -361,9 +424,7 @@
             <span>Télécharger pour Windows</span>
           </a>
         </div>
-        <p style="margin-top: 16px; color: rgba(255,255,255,0.4); font-size: 0.85rem;">
-          macOS 12+ / Windows 10+ | v1.0.5 | Compte gratuit
-        </p>
+        <p class="cta-info">macOS 12+ / Windows 10+ | v1.0.5</p>
       </div>
     </section>
   </main>
