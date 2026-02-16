@@ -1396,6 +1396,20 @@ a {
   }
 }
 
+/* ===== DEVICE DETECTION ===== */
+/* Par défaut (desktop) : bouton mobile caché */
+.mobile-only { display: none !important; }
+
+/* Quand JS détecte un mobile : affiche mobile, cache desktop */
+body.is-mobile .mobile-only { display: flex !important; }
+body.is-mobile .desktop-only { display: none !important; }
+
+/* Fallback CSS pour très petits écrans */
+@media (max-width: 480px) {
+  .mobile-only { display: flex !important; }
+  .desktop-only { display: none !important; }
+}
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
