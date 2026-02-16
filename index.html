@@ -506,9 +506,12 @@
         androidBtn.style.display = 'inline-flex';
         mobileInfo.textContent = 'App Web Progressive | Installez sur votre appareil';
       }
-      // Desktop: afficher les deux options
-      else if (window.innerWidth > 768) {
-        // Ne rien faire, les boutons desktop sont déjà visibles
+      // Desktop: afficher les deux options mobile
+      else {
+        mobileSection.style.display = 'block';
+        iPhoneBtn.style.display = 'inline-flex';
+        androidBtn.style.display = 'inline-flex';
+        mobileInfo.textContent = 'Progressive Web App | iPhone & Android';
       }
     })();
   </script>
