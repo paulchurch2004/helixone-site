@@ -1,0 +1,1053 @@
+[
+  {
+    "id": "module_2_1",
+    "parcours": "intermediaire",
+    "titre": "📈 Analyse Fondamentale",
+    "description": "Maîtrisez les états financiers, les ratios de valorisation et les méthodes d'évaluation d'entreprise.",
+    "durée": "70 minutes",
+    "difficulté": "Intermédiaire",
+    "points_xp": 180,
+    "prérequis": [
+      "module_1_1",
+      "module_1_2"
+    ],
+    "contenu": {
+      "introduction": "L'analyse fondamentale est l'art d'évaluer la valeur réelle d'une entreprise en étudiant ses données financières, sa position concurrentielle et ses perspectives de croissance. Contrairement à l'analyse technique qui se concentre sur les graphiques de prix, l'analyse fondamentale cherche à déterminer si une action est sous-évaluée ou surévaluée par rapport à sa valeur intrinsèque. Maîtriser cette discipline vous permettra de prendre des décisions d'investissement éclairées et de construire un portefeuille solide sur le long terme.",
+      "sections": [
+        {
+          "titre": "📊 Les Trois États Financiers",
+          "contenu": "Toute analyse fondamentale commence par l'étude des trois états financiers publiés par les entreprises cotées :\n\nLe Bilan (Balance Sheet) : photographie du patrimoine de l'entreprise à un instant donné. Il se divise en Actif (ce que l'entreprise possède : trésorerie, stocks, immobilisations, brevets) et Passif (comment elle se finance : capitaux propres, dettes). Règle fondamentale : Actif = Passif. Un bilan sain montre des capitaux propres solides et une dette maîtrisée.\n\nLe Compte de Résultat (Income Statement) : film de la performance sur une période. Il part du Chiffre d'Affaires (CA), déduit les charges opérationnelles pour obtenir l'EBITDA (bénéfice avant intérêts, taxes, dépréciations et amortissements), puis l'EBIT (résultat opérationnel), et enfin le Résultat Net après impôts et charges financières. C'est le résultat net qui détermine le Bénéfice Par Action (BPA).\n\nLe Tableau des Flux de Trésorerie (Cash Flow Statement) : montre les mouvements réels de cash. Trois catégories : flux opérationnels (cash généré par l'activité), flux d'investissement (achats d'équipements, acquisitions), flux de financement (emprunts, dividendes, rachats d'actions). Le Free Cash Flow (FCF) = flux opérationnel - capex. C'est l'argent réellement disponible pour les actionnaires.",
+          "points_cles": [
+            "Bilan : Actif = Passif (patrimoine à un instant T)",
+            "Compte de résultat : CA → EBITDA → EBIT → Résultat Net",
+            "Flux de trésorerie : opérationnel, investissement, financement",
+            "Free Cash Flow = l'argent réellement disponible"
+          ],
+          "exemple_pratique": {
+            "ticker": "AAPL",
+            "scenario": "Apple en 2024 : CA de 383 milliards$, marge nette de 26%, FCF de 110 milliards$. Le bilan montre 162 milliards$ de trésorerie. Ces chiffres montrent une entreprise extrêmement rentable avec une capacité massive à générer du cash."
+          }
+        },
+        {
+          "titre": "📐 Les Ratios Essentiels",
+          "contenu": "Les ratios financiers permettent de comparer rapidement des entreprises entre elles et d'évaluer leur attractivité.\n\nRatios de valorisation :\n- PER (Price/Earnings Ratio) = Cours / BPA. Un PER de 20 signifie que vous payez 20 fois les bénéfices. PER élevé = marché optimiste sur la croissance. PER bas = opportunité ou problèmes. Comparez toujours au PER du secteur.\n- PEG (PER / taux de croissance) : corrige le PER par la croissance. PEG < 1 = potentiellement sous-évalué.\n- EV/EBITDA = Valeur d'entreprise / EBITDA. Plus pertinent que le PER car neutralise les différences de structure financière et fiscale. Moyenne : 10-12x.\n\nRatios de rentabilité :\n- ROE (Return on Equity) = Résultat Net / Capitaux Propres. Mesure la rentabilité pour les actionnaires. Bon ROE > 15%.\n- ROA (Return on Assets) = Résultat Net / Total Actif. Mesure l'efficacité de l'utilisation des actifs.\n- Marge nette = Résultat Net / CA. Indique combien l'entreprise gagne sur chaque euro de vente.\n\nRatios d'endettement :\n- Dette Nette / EBITDA : combien d'années de bénéfices pour rembourser la dette. < 2x = sain, > 4x = risqué.\n- Current Ratio = Actif courant / Passif courant. > 1 = l'entreprise peut payer ses dettes à court terme.",
+          "points_cles": [
+            "PER = Cours/BPA, comparer au secteur et au PEG",
+            "EV/EBITDA neutralise structure financière, moyenne 10-12x",
+            "ROE > 15% = bonne rentabilité pour les actionnaires",
+            "Dette Nette/EBITDA < 2x = endettement sain"
+          ],
+          "exemple_pratique": {
+            "ticker": "MSFT",
+            "scenario": "Microsoft affiche un PER de 35 (élevé), mais un PEG de 1,5 grâce à sa croissance IA de 23%. Son ROE est de 40% et sa dette nette/EBITDA de 0,5x. Le PER élevé se justifie par la rentabilité exceptionnelle et la croissance forte."
+          }
+        },
+        {
+          "titre": "💰 Méthodes de Valorisation",
+          "contenu": "Deux méthodes principales pour estimer la valeur d'une entreprise :\n\nLe DCF (Discounted Cash Flow) : méthode la plus rigoureuse. Elle consiste à projeter les flux de trésorerie futurs de l'entreprise et à les actualiser (ramener à leur valeur présente) en utilisant un taux d'actualisation appelé WACC (coût moyen pondéré du capital).\n\nÉtapes du DCF :\n1. Projeter les Free Cash Flows sur 5-10 ans\n2. Calculer une valeur terminale (valeur au-delà de la période de projection)\n3. Actualiser tous les flux avec le WACC (généralement 8-12%)\n4. Sommer pour obtenir la valeur d'entreprise\n5. Soustraire la dette nette pour obtenir la valeur des capitaux propres\n6. Diviser par le nombre d'actions = valeur intrinsèque par action\n\nSi la valeur intrinsèque > cours actuel → action sous-évaluée → opportunité d'achat.\n\nLa Méthode des Comparables : plus rapide et intuitive. On compare les multiples de valorisation (PER, EV/EBITDA) de l'entreprise avec ceux d'entreprises similaires du même secteur.\n\nExemple : si le PER moyen du secteur tech est de 25 et que votre entreprise a un PER de 15 avec des fondamentaux similaires, elle est potentiellement sous-évaluée.\n\nLimites : le DCF dépend fortement des hypothèses de croissance. Les comparables supposent que le marché valorise correctement le secteur. Utilisez les deux méthodes et appliquez une marge de sécurité de 20-30% comme le recommandait Benjamin Graham.",
+          "points_cles": [
+            "DCF : projeter les flux futurs et les actualiser avec le WACC",
+            "Valeur terminale = valeur au-delà de la période de projection",
+            "Méthode des comparables : comparer les multiples au secteur",
+            "Toujours appliquer une marge de sécurité de 20-30%"
+          ]
+        },
+        {
+          "titre": "🏰 Analyse Qualitative : Les Moats",
+          "contenu": "Warren Buffett investit dans des entreprises ayant un avantage concurrentiel durable, qu'il appelle moat (douve du château). Ces avantages protègent l'entreprise de la concurrence.\n\nTypes de moats :\n- Marque forte : Apple, Louis Vuitton, Coca-Cola. Les clients paient plus cher pour la marque. Pricing power exceptionnel.\n- Avantage de coûts : Walmart, Amazon, Costco. Ils produisent ou distribuent moins cher que les concurrents grâce aux économies d'échelle.\n- Effet de réseau : Meta, Visa, Mastercard. Plus il y a d'utilisateurs, plus le service a de valeur. Très difficile à déloger.\n- Brevets et propriété intellectuelle : Pfizer, ASML. Protection légale contre la copie.\n- Coûts de changement élevés : Microsoft (Office/Windows), SAP, Oracle. Le coût de migrer vers un concurrent est prohibitif.\n\nQualité du management :\n- Historique du CEO : résultats passés, vision stratégique.\n- Allocation du capital : l'entreprise investit-elle intelligemment (R&D, acquisitions) ou gaspille-t-elle (acquisitions destructrices de valeur) ?\n- Détention d'actions par les dirigeants : 'skin in the game' - les dirigeants investissent-ils dans leur propre entreprise ?\n\nGouvernance : indépendance du conseil d'administration, transparence de la communication, historique de traitement des actionnaires minoritaires.",
+          "points_cles": [
+            "Moat = avantage concurrentiel durable qui protège la rentabilité",
+            "5 types : marque, coûts, réseau, brevets, coûts de changement",
+            "Management : historique, allocation capital, skin in the game",
+            "Gouvernance : indépendance du board, transparence"
+          ],
+          "exemple_pratique": {
+            "ticker": "V",
+            "scenario": "Visa possède un moat colossal : effet de réseau (accepté partout, donc tout le monde veut l'avoir), coûts de changement élevés (infrastructures bancaires), et marque mondiale. Résultat : marge nette de 50%+, ROE > 40%, croissance régulière. Le moat justifie un PER élevé."
+          }
+        },
+        {
+          "titre": "✅ Checklist Pré-Investissement",
+          "contenu": "Avant d'investir dans une action, passez en revue cette checklist en 10 points :\n\n1. Compréhension : Comprenez-vous le business model ? Si vous ne pouvez pas expliquer simplement comment l'entreprise gagne de l'argent, passez votre chemin.\n2. Moat : L'entreprise a-t-elle un avantage concurrentiel durable et identifiable ?\n3. Croissance : Le CA et les bénéfices croissent-ils régulièrement sur 5-10 ans ?\n4. Rentabilité : ROE > 15%, marges stables ou en amélioration ?\n5. Endettement : Dette Nette/EBITDA raisonnable (< 3x) ?\n6. Cash Flow : Le FCF est-il positif et croissant ?\n7. Management : Dirigeants compétents avec un historique de bonnes décisions ?\n8. Valorisation : L'action est-elle raisonnablement valorisée (PER, PEG, DCF) avec une marge de sécurité ?\n9. Risques : Quels sont les risques principaux (réglementaire, technologique, concurrence) ?\n10. Catalyseurs : Y a-t-il des événements à venir qui pourraient faire bouger le cours (earnings, lancement produit, expansion) ?\n\nSi vous répondez 'oui' à au moins 7 de ces 10 critères, l'investissement mérite d'être approfondi. Ne vous précipitez jamais. La patience est la vertu principale de l'investisseur fondamental. Warren Buffett dit : 'Le marché boursier est un mécanisme de transfert d'argent des impatients vers les patients.'",
+          "points_cles": [
+            "10 critères à vérifier avant d'investir",
+            "Comprendre le business model est le critère numéro 1",
+            "Minimum 7/10 critères positifs pour approfondir",
+            "La patience est la vertu principale de l'investisseur"
+          ]
+        }
+      ],
+      "resume": "L'analyse fondamentale évalue la valeur intrinsèque d'une entreprise via ses états financiers, ses ratios et ses avantages concurrentiels. Les trois états financiers (bilan, compte de résultat, flux de trésorerie) donnent une image complète. Les ratios (PER, ROE, dette/EBITDA) permettent de comparer. Le DCF et les comparables estiment la valeur. Les moats protègent la rentabilité. La checklist en 10 points guide vos décisions.",
+      "ressources_complementaires": [
+        "📖 Livre : 'L'investisseur intelligent' de Benjamin Graham",
+        "📖 Livre : 'Warren Buffett et l'interprétation des états financiers' de Mary Buffett",
+        "🎥 Vidéo : 'Analyse fondamentale complète' - Zonebourse YouTube",
+        "🌐 Site : Morningstar.com - fiches financières détaillées"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Que mesure le PER ?",
+        "options": [
+          "Le chiffre d'affaires",
+          "Le rapport entre le cours et le bénéfice par action",
+          "La dette de l'entreprise",
+          "Le dividende"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le PER (Price/Earnings Ratio) = Cours / BPA. Il indique combien de fois les bénéfices vous payez pour une action."
+      },
+      {
+        "question": "Qu'est-ce que le Free Cash Flow ?",
+        "options": [
+          "Le chiffre d'affaires total",
+          "L'argent réellement disponible après les dépenses d'investissement",
+          "La trésorerie au bilan",
+          "Les dividendes versés"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le FCF = flux opérationnel - capex. C'est l'argent véritablement disponible pour rémunérer les actionnaires ou investir."
+      },
+      {
+        "question": "Qu'est-ce qu'un moat selon Warren Buffett ?",
+        "options": [
+          "Un type d'obligation",
+          "Un avantage concurrentiel durable",
+          "Un ratio financier",
+          "Une technique de trading"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le moat est un avantage concurrentiel durable qui protège l'entreprise de la concurrence, comme une douve protège un château."
+      },
+      {
+        "question": "Quelle méthode de valorisation actualise les flux de trésorerie futurs ?",
+        "options": [
+          "PER",
+          "Méthode des comparables",
+          "DCF (Discounted Cash Flow)",
+          "ROE"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le DCF projette les flux futurs et les actualise à leur valeur présente en utilisant le WACC comme taux d'actualisation."
+      },
+      {
+        "question": "Un ratio Dette Nette/EBITDA de 5x indique :",
+        "options": [
+          "Un endettement sain",
+          "Un endettement risqué",
+          "Une entreprise sans dette",
+          "Une entreprise très rentable"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Un ratio > 4x est considéré risqué. À 5x, il faudrait 5 ans de bénéfices pour rembourser la dette, ce qui est excessif."
+      },
+      {
+        "question": "Qu'est-ce que le ROE ?",
+        "options": [
+          "Return on Equity : résultat net / capitaux propres",
+          "Return on Earnings : bénéfice / chiffre d'affaires",
+          "Rate of Exchange : taux de change",
+          "Ratio of Expenses : ratio des dépenses"
+        ],
+        "bonne_reponse": 0,
+        "explication": "Le ROE mesure la rentabilité des capitaux propres investis par les actionnaires. Un ROE > 15% est considéré comme bon."
+      },
+      {
+        "question": "Quelle marge de sécurité recommandait Benjamin Graham ?",
+        "options": [
+          "5%",
+          "10%",
+          "20-30%",
+          "50%"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Graham recommandait d'acheter avec une marge de sécurité de 20-30% sous la valeur intrinsèque estimée pour se protéger des erreurs d'estimation."
+      },
+      {
+        "question": "Quel type de moat possède Visa ?",
+        "options": [
+          "Avantage de coûts",
+          "Marque forte uniquement",
+          "Effet de réseau + coûts de changement",
+          "Brevets"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Visa bénéficie d'un puissant effet de réseau (plus il y a de commerçants et de porteurs, plus le réseau a de valeur) et de coûts de changement élevés."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Analyser une entreprise",
+        "description": "Choisissez une entreprise cotée. Trouvez ses 3 états financiers sur un site comme Morningstar ou Yahoo Finance. Calculez ses ratios clés : PER, ROE, marge nette, dette/EBITDA. Comparez-les au secteur."
+      },
+      {
+        "type": "simulation",
+        "titre": "Appliquer la checklist",
+        "description": "Passez 3 entreprises différentes dans la checklist des 10 critères. Laquelle obtient le meilleur score ? Justifiez chaque réponse."
+      }
+    ],
+    "duree": "60 min",
+    "difficulte": "intermédiaire",
+    "prerequis": [
+      "module_1_2"
+    ]
+  },
+  {
+    "id": "module_2_2",
+    "parcours": "intermediaire",
+    "titre": "📉 Les Indicateurs Techniques",
+    "description": "Maîtrisez les indicateurs techniques essentiels : moyennes mobiles, MACD, RSI, Bollinger, et apprenez à les combiner.",
+    "durée": "75 minutes",
+    "difficulté": "Intermédiaire",
+    "points_xp": 200,
+    "prérequis": [
+      "module_1_4"
+    ],
+    "contenu": {
+      "introduction": "Les indicateurs techniques sont des calculs mathématiques appliqués aux données de prix et de volume. Ils aident à identifier les tendances, mesurer le momentum, évaluer la volatilité et générer des signaux d'achat et de vente. Il existe des centaines d'indicateurs, mais seuls quelques-uns sont réellement utiles. L'erreur du débutant est de surcharger ses graphiques avec trop d'indicateurs. Dans ce module, vous apprendrez les indicateurs essentiels et surtout comment les combiner efficacement.",
+      "sections": [
+        {
+          "titre": "📏 Moyennes Mobiles (SMA et EMA)",
+          "contenu": "Les moyennes mobiles lissent les données de prix pour révéler la tendance sous-jacente.\n\nSMA (Simple Moving Average) : moyenne arithmétique des N derniers prix de clôture. La SMA 200 (moyenne des 200 derniers jours) est la plus suivie par les institutionnels. Prix au-dessus de la SMA 200 = tendance haussière long terme.\n\nEMA (Exponential Moving Average) : donne plus de poids aux données récentes, donc réagit plus vite. Plus adaptée au trading court terme.\n\nPériodes clés :\n- 20 périodes : tendance court terme\n- 50 périodes : tendance moyen terme\n- 200 périodes : tendance long terme\n\nSignaux importants :\n- Golden Cross : la SMA 50 croise au-dessus de la SMA 200. Signal haussier majeur. Historiquement fiable sur le S&P 500.\n- Death Cross : la SMA 50 croise en dessous de la SMA 200. Signal baissier.\n- Les moyennes mobiles agissent comme supports/résistances dynamiques. Dans une tendance haussière, le prix rebondit souvent sur la SMA 50.\n\nUtilisation pratique :\n- Tendance : si prix > SMA 200, ne chercher que des achats\n- Entrée : acheter quand le prix rebondit sur la SMA 50 en tendance haussière\n- Stop loss : placer sous la SMA pertinente",
+          "points_cles": [
+            "SMA 200 = indicateur de tendance long terme le plus suivi",
+            "Golden Cross (SMA50 > SMA200) = signal haussier majeur",
+            "EMA réagit plus vite que SMA, meilleure pour le court terme",
+            "Les moyennes mobiles servent aussi de supports/résistances dynamiques"
+          ],
+          "exemple_pratique": {
+            "ticker": "SPY",
+            "scenario": "En octobre 2023, le S&P 500 repasse au-dessus de sa SMA 200 et la SMA 50 croise au-dessus de la SMA 200 (Golden Cross). Ce signal a précédé un rallye de +25% sur les 6 mois suivants."
+          }
+        },
+        {
+          "titre": "📊 MACD (Moving Average Convergence Divergence)",
+          "contenu": "Le MACD mesure la relation entre deux moyennes mobiles exponentielles. C'est un indicateur de momentum très populaire.\n\nComposantes :\n- Ligne MACD = EMA 12 - EMA 26 (différence entre deux EMA)\n- Ligne Signal = EMA 9 de la ligne MACD\n- Histogramme = MACD - Signal (visualise l'écart entre les deux lignes)\n\nSignaux :\n- MACD croise au-dessus du Signal → signal d'achat\n- MACD croise en dessous du Signal → signal de vente\n- Histogramme positif et croissant → momentum haussier qui s'accélère\n- Histogramme qui diminue → le momentum s'essouffle\n\nDivergences (signaux les plus puissants) :\n- Divergence haussière : le prix fait un nouveau plus bas, mais le MACD fait un plus bas plus haut. Le momentum vendeur s'épuise → retournement haussier probable.\n- Divergence baissière : le prix fait un nouveau plus haut, mais le MACD fait un plus haut plus bas. Le momentum acheteur s'épuise → retournement baissier probable.\n\nLe MACD fonctionne mieux en tendance. En range (marché latéral), il génère beaucoup de faux signaux. Toujours confirmer avec le contexte de tendance et d'autres indicateurs.\n\nParamètres standard : 12, 26, 9. Certains traders utilisent 8, 17, 9 pour plus de réactivité.",
+          "points_cles": [
+            "Ligne MACD = EMA12 - EMA26, Signal = EMA9 du MACD",
+            "Croisement MACD/Signal = signal d'achat ou vente",
+            "Les divergences MACD/prix sont les signaux les plus puissants",
+            "Le MACD fonctionne mieux en tendance, beaucoup de faux signaux en range"
+          ]
+        },
+        {
+          "titre": "📈 RSI (Relative Strength Index)",
+          "contenu": "Le RSI mesure la vitesse et la magnitude des mouvements de prix. Il oscille entre 0 et 100.\n\nInterprétation classique :\n- RSI > 70 : zone de surachat. L'actif a trop monté trop vite. Risque de correction.\n- RSI < 30 : zone de survente. L'actif a trop baissé trop vite. Rebond possible.\n- RSI autour de 50 : zone neutre.\n\nAttention : en tendance forte, le RSI peut rester en surachat ou survente pendant longtemps. Un RSI > 70 ne signifie pas 'vendez immédiatement'. En forte tendance haussière, le RSI oscille entre 40 et 80.\n\nDivergences RSI :\n- Le prix fait un nouveau sommet mais le RSI ne confirme pas (divergence baissière) → signal de faiblesse.\n- Le prix fait un nouveau creux mais le RSI ne confirme pas (divergence haussière) → signal de force cachée.\n\nPériode standard : 14. Certains traders utilisent 7 (plus réactif) ou 21 (plus lissé).\n\nUtilisation avancée : en tendance haussière, les replis vers RSI 40-50 offrent souvent des points d'entrée. En tendance baissière, les rebonds vers RSI 50-60 offrent des points de vente.\n\nLe RSI est particulièrement efficace combiné avec les supports/résistances et les figures de chandeliers.",
+          "points_cles": [
+            "RSI > 70 = surachat (pas forcément vente immédiate)",
+            "RSI < 30 = survente (pas forcément achat immédiat)",
+            "Les divergences RSI/prix sont des signaux puissants",
+            "En tendance forte, le RSI peut rester longtemps en zone extrême"
+          ],
+          "exemple_pratique": {
+            "ticker": "NVDA",
+            "scenario": "NVDA monte de 200$ à 500$ avec un RSI constamment au-dessus de 70. Un débutant aurait vendu à 250$ sur le surachat. Mais en tendance forte, le RSI reste élevé. Le bon signal est la divergence : quand le prix fait 500$ mais le RSI est plus bas qu'au pic précédent."
+          }
+        },
+        {
+          "titre": "🔄 Oscillateur Stochastique",
+          "contenu": "Le stochastique compare le prix de clôture actuel à sa plage de variation sur une période donnée. Il mesure où se situe le prix par rapport à ses récents plus hauts et plus bas.\n\nComposantes :\n- %K (ligne rapide) : position du prix dans la plage de variation sur 14 périodes.\n- %D (ligne lente) : moyenne mobile de %K sur 3 périodes.\n\nZones :\n- Au-dessus de 80 : surachat\n- En dessous de 20 : survente\n\nSignaux :\n- %K croise au-dessus de %D en zone de survente (< 20) → signal d'achat.\n- %K croise en dessous de %D en zone de surachat (> 80) → signal de vente.\n\nLe stochastique est particulièrement utile dans les marchés en range. Il identifie bien les points de retournement entre les bornes du range. En tendance forte, il peut rester collé en zone extrême, générant de faux signaux.\n\nDifférence avec le RSI :\n- Le stochastique est plus sensible aux variations de prix (plus de signaux, mais aussi plus de bruit).\n- Le RSI est plus lissé et meilleur pour identifier les divergences.\n- Combinés, ils offrent une confirmation puissante : si les deux sont en survente et se retournent simultanément, le signal est très fiable.",
+          "points_cles": [
+            "Stochastique : %K et %D oscillent entre 0 et 100",
+            "Signal achat : croisement %K/%D en zone de survente (< 20)",
+            "Très efficace en range, moins fiable en tendance forte",
+            "Combiné au RSI pour des signaux plus fiables"
+          ]
+        },
+        {
+          "titre": "〰️ Bandes de Bollinger",
+          "contenu": "Les Bandes de Bollinger mesurent la volatilité et identifient les conditions de prix extrêmes.\n\nComposantes :\n- Bande médiane : SMA 20 (moyenne mobile simple sur 20 périodes)\n- Bande supérieure : SMA 20 + 2 écarts-types\n- Bande inférieure : SMA 20 - 2 écarts-types\n\nPropriété statistique : environ 95% du temps, le prix reste à l'intérieur des bandes.\n\nInterprétation :\n- Le prix touche la bande supérieure : l'actif est en zone haute, potentiel de correction.\n- Le prix touche la bande inférieure : l'actif est en zone basse, potentiel de rebond.\n- MAIS en tendance forte, le prix peut 'surfer' sur la bande supérieure ou inférieure.\n\nLe Squeeze de Bollinger : quand les bandes se resserrent fortement, la volatilité est très basse. C'est le calme avant la tempête. Un mouvement explosif se prépare (breakout). La direction n'est pas indiquée par le squeeze, juste l'ampleur du mouvement à venir.\n\nStrategy de base : acheter quand le prix touche la bande inférieure (en tendance haussière ou range) et vendre quand il touche la bande supérieure. Toujours confirmer avec d'autres indicateurs.",
+          "points_cles": [
+            "Bandes = SMA 20 ± 2 écarts-types, contiennent 95% des prix",
+            "Squeeze = bandes resserrées = mouvement explosif imminent",
+            "Le prix peut surfer sur une bande en tendance forte",
+            "Acheter sur bande inférieure + confirmation, vendre sur bande supérieure"
+          ]
+        },
+        {
+          "titre": "📏 ATR (Average True Range)",
+          "contenu": "L'ATR mesure la volatilité moyenne d'un actif sur une période donnée. Il ne donne pas de direction mais indique l'amplitude probable des mouvements.\n\nCalcul : moyenne du True Range sur 14 périodes. Le True Range est le plus grand de : High-Low, |High-Clôture précédente|, |Low-Clôture précédente|.\n\nUtilisations principales :\n1. Placement du Stop Loss : placez votre stop à 1,5x ou 2x l'ATR sous votre prix d'entrée. Cela donne au trade assez d'espace pour respirer sans être touché par le bruit normal du marché.\n\nExemple : Apple avec un ATR de 3$. Vous achetez à 180$. Stop loss à 180$ - (2 × 3$) = 174$. Ce stop est adapté à la volatilité réelle de l'actif.\n\n2. Taille de position : si l'ATR est élevé (forte volatilité), réduisez votre taille de position. Si l'ATR est bas, vous pouvez augmenter.\n\n3. Identifier les changements de régime : un ATR en forte hausse signale une augmentation de la volatilité (souvent liée à un événement ou un changement de tendance).\n\nL'ATR est un outil sous-estimé mais extrêmement utile pour adapter votre trading à la volatilité réelle du marché plutôt que d'utiliser des stops et objectifs fixes.",
+          "points_cles": [
+            "ATR mesure la volatilité moyenne, pas la direction",
+            "Stop loss recommandé : 1,5x à 2x ATR sous le prix d'entrée",
+            "ATR élevé = réduire la taille de position",
+            "ATR en hausse = changement de régime de volatilité"
+          ],
+          "exemple_pratique": {
+            "ticker": "AAPL",
+            "scenario": "ATR 14 jours d'Apple = 3,20$. Vous achetez à 185$. Stop loss à 2×ATR = 185 - 6,40 = 178,60$. Objectif à 3×ATR = 185 + 9,60 = 194,60$. Ratio R:R = 1:1,5. En ajustant avec l'ATR, votre stop n'est ni trop serré ni trop large."
+          }
+        },
+        {
+          "titre": "📊 Volume et OBV (On Balance Volume)",
+          "contenu": "L'OBV est un indicateur qui cumule le volume en fonction de la direction du prix. Si le prix monte, le volume du jour est ajouté à l'OBV. Si le prix baisse, il est soustrait.\n\nInterprétation :\n- OBV monte avec le prix : la tendance haussière est confirmée par le volume. Les acheteurs sont actifs.\n- OBV baisse quand le prix monte : divergence dangereuse. La hausse n'est pas soutenue par le volume. Retournement possible.\n- OBV monte quand le prix baisse : accumulation. Les smart money achètent discrètement. Retournement haussier possible.\n\nL'OBV est particulièrement utile pour :\n- Confirmer les cassures de support/résistance (cassure + OBV en hausse = signal fiable)\n- Détecter l'accumulation (achat discret par les institutionnels) ou la distribution (vente discrète)\n- Anticiper les retournements via les divergences\n\nLe volume est souvent appelé l'indicateur qui ne ment pas car il reflète l'engagement réel des participants du marché. Un mouvement de prix sans volume est suspect.",
+          "points_cles": [
+            "OBV = cumul du volume selon la direction du prix",
+            "OBV qui diverge du prix = signal d'alerte important",
+            "OBV monte + prix baisse = accumulation (smart money achète)",
+            "Le volume confirme ou infirme les mouvements de prix"
+          ]
+        },
+        {
+          "titre": "🔧 Combiner les Indicateurs",
+          "contenu": "L'erreur la plus courante : surcharger le graphique avec 10 indicateurs qui donnent des signaux contradictoires. La solution : combiner 2-3 indicateurs complémentaires maximum.\n\nPrincipe de complémentarité : choisir des indicateurs qui mesurent des choses différentes :\n- Un indicateur de tendance (moyenne mobile ou MACD)\n- Un oscillateur (RSI ou Stochastique)\n- Un indicateur de volatilité ou volume (Bollinger, ATR ou OBV)\n\nCombinaison classique et efficace :\n1. EMA 50/200 pour la direction de tendance\n2. RSI 14 pour le timing (surachat/survente/divergences)\n3. ATR pour le placement du stop loss\n\nExemple de setup complet :\n- Condition 1 : Prix au-dessus de l'EMA 200 (tendance haussière confirmée)\n- Condition 2 : RSI revient vers 40-50 (repli dans la tendance)\n- Condition 3 : Chandelier de retournement haussier sur un support\n- Stop loss : 2x ATR sous l'entrée\n- Take profit : 3x ATR au-dessus de l'entrée\n\nRègle d'or : tous les indicateurs doivent être d'accord. Si un indicateur dit achat mais un autre dit vente, ne faites rien. La patience de ne pas trader est aussi importante que la capacité d'identifier les signaux.",
+          "points_cles": [
+            "Maximum 2-3 indicateurs complémentaires",
+            "Combiner : tendance + oscillateur + volatilité/volume",
+            "Tous les indicateurs doivent être d'accord pour agir",
+            "La patience de ne pas trader est une force"
+          ]
+        }
+      ],
+      "resume": "Les indicateurs techniques aident à quantifier tendances, momentum et volatilité. Les moyennes mobiles (SMA/EMA) identifient la tendance. Le MACD et le RSI mesurent le momentum et détectent les divergences. Le Stochastique excelle en range. Les Bollinger mesurent la volatilité. L'ATR adapte vos stops. L'OBV confirme par le volume. Combinez 2-3 indicateurs complémentaires maximum et exigez un consensus avant d'agir.",
+      "ressources_complementaires": [
+        "📖 Livre : 'Technical Analysis of the Financial Markets' de John Murphy",
+        "📖 Livre : 'New Trading Systems and Methods' de Perry Kaufman",
+        "🎥 Vidéo : 'RSI et MACD - Le guide complet' - Andlil YouTube",
+        "🌐 Site : TradingView.com - tous les indicateurs gratuits"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Qu'est-ce qu'un Golden Cross ?",
+        "options": [
+          "RSI > 70",
+          "La SMA 50 croise au-dessus de la SMA 200",
+          "Le MACD croise 0",
+          "Le prix touche la Bollinger supérieure"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Golden Cross est le croisement de la SMA 50 au-dessus de la SMA 200. C'est un signal haussier majeur suivi par les institutionnels."
+      },
+      {
+        "question": "Que mesure le MACD ?",
+        "options": [
+          "La volatilité",
+          "Le volume",
+          "La convergence/divergence de deux moyennes mobiles exponentielles",
+          "Le prix moyen"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le MACD = EMA 12 - EMA 26. Il mesure la différence entre deux EMA pour identifier les changements de momentum."
+      },
+      {
+        "question": "Un RSI à 25 indique :",
+        "options": [
+          "Un actif surévalué",
+          "Un actif en zone de survente",
+          "Une tendance haussière forte",
+          "Rien de particulier"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Un RSI < 30 indique une zone de survente. L'actif a baissé rapidement et un rebond est possible, mais ce n'est pas un signal d'achat automatique."
+      },
+      {
+        "question": "Qu'est-ce que le Squeeze de Bollinger ?",
+        "options": [
+          "Le prix sort des bandes",
+          "Les bandes se resserrent fortement, annonçant un mouvement explosif",
+          "Le RSI est en surachat",
+          "Le volume augmente"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Squeeze se produit quand les bandes de Bollinger se resserrent fortement (faible volatilité). Un mouvement explosif est imminent, mais la direction n'est pas indiquée."
+      },
+      {
+        "question": "Comment utiliser l'ATR pour le stop loss ?",
+        "options": [
+          "ATR = prix du stop",
+          "Placer le stop à 1,5-2x ATR sous le prix d'entrée",
+          "ATR n'est pas lié au stop loss",
+          "Le stop = ATR ÷ 2"
+        ],
+        "bonne_reponse": 1,
+        "explication": "L'ATR mesure la volatilité moyenne. Un stop à 1,5-2x ATR donne assez d'espace au trade pour respirer sans être touché par le bruit normal."
+      },
+      {
+        "question": "Qu'indique une divergence baissière sur le MACD ?",
+        "options": [
+          "Le momentum acheteur faiblit malgré de nouveaux sommets",
+          "Le marché va certainement monter",
+          "Le volume est en hausse",
+          "Le MACD est en zone de surachat"
+        ],
+        "bonne_reponse": 0,
+        "explication": "Divergence baissière = le prix fait de nouveaux hauts mais le MACD fait des hauts plus bas. Le momentum s'essouffle malgré la hausse des prix."
+      },
+      {
+        "question": "Quelle combinaison d'indicateurs est recommandée ?",
+        "options": [
+          "5-6 indicateurs de même type",
+          "1 tendance + 1 oscillateur + 1 volatilité/volume",
+          "RSI et Stochastique uniquement",
+          "Aucun, seuls les chandeliers suffisent"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La règle est de combiner 2-3 indicateurs complémentaires : un de tendance (EMA), un oscillateur (RSI) et un de volatilité/volume (ATR/OBV)."
+      },
+      {
+        "question": "Qu'est-ce que l'OBV ?",
+        "options": [
+          "Un oscillateur entre 0 et 100",
+          "Un cumul du volume selon la direction du prix",
+          "Un type d'ordre boursier",
+          "Une moyenne mobile du volume"
+        ],
+        "bonne_reponse": 1,
+        "explication": "L'OBV cumule le volume : + si le prix monte, - si le prix baisse. Il détecte l'accumulation (smart money qui achète) et la distribution."
+      },
+      {
+        "question": "En tendance haussière forte, le RSI peut :",
+        "options": [
+          "Rester au-dessus de 70 pendant longtemps",
+          "Ne jamais dépasser 50",
+          "Toujours osciller entre 30 et 70",
+          "Descendre à 0"
+        ],
+        "bonne_reponse": 0,
+        "explication": "En tendance forte, le RSI peut rester en zone de surachat (>70) très longtemps. Vendre uniquement sur le surachat en tendance forte serait une erreur."
+      },
+      {
+        "question": "Quel est le réglage standard de la période du RSI ?",
+        "options": [
+          "7 périodes",
+          "14 périodes",
+          "21 périodes",
+          "50 périodes"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le RSI standard utilise une période de 14. C'est le réglage recommandé par son créateur J. Welles Wilder."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Appliquer les indicateurs sur 3 actions",
+        "description": "Ajoutez sur TradingView : EMA 50/200, RSI 14, MACD standard, et Bollinger. Identifiez sur chaque action : la tendance (EMA), les zones de surachat/survente (RSI), les divergences (MACD), et un éventuel squeeze (Bollinger)."
+      },
+      {
+        "type": "simulation",
+        "titre": "Backtester un système simple",
+        "description": "Testez ce système sur les 6 derniers mois : Acheter quand RSI < 35 + prix au-dessus SMA 200 + chandelier haussier. Vendre quand RSI > 70 ou stop à 2x ATR. Comptez les trades gagnants et perdants."
+      }
+    ],
+    "duree": "65 min",
+    "difficulte": "intermédiaire",
+    "prerequis": [
+      "module_1_4"
+    ]
+  },
+  {
+    "id": "module_2_4",
+    "parcours": "intermediaire",
+    "titre": "🔷 Les Figures Chartistes",
+    "description": "Identifiez les figures de retournement et de continuation pour anticiper les mouvements de prix.",
+    "durée": "65 minutes",
+    "difficulté": "Intermédiaire",
+    "points_xp": 180,
+    "prérequis": [
+      "module_1_4",
+      "module_2_2"
+    ],
+    "contenu": {
+      "introduction": "Les figures chartistes sont des formations de prix récurrentes qui se forment sur les graphiques. Elles résultent de la psychologie collective des investisseurs et permettent d'anticiper les mouvements futurs avec une certaine probabilité. On distingue les figures de retournement (qui signalent un changement de tendance) et les figures de continuation (qui confirment la poursuite de la tendance). Maîtriser ces figures est un atout majeur pour tout trader technique.",
+      "sections": [
+        {
+          "titre": "🔄 Figures de Retournement",
+          "contenu": "Les figures de retournement apparaissent à la fin d'une tendance et signalent un changement de direction.\n\nTête-Épaules (Head & Shoulders) : la figure de retournement la plus fiable. Elle se compose de trois sommets : épaule gauche, tête (plus haute), épaule droite. La ligne de cou (neckline) relie les deux creux entre les sommets. La cassure de la ligne de cou confirme le retournement. Objectif de prix = hauteur de la tête projetée sous la ligne de cou. Le Tête-Épaules inversé est le miroir exact, signalant un retournement haussier.\n\nDouble Top (M) : deux sommets approximativement au même niveau, séparés par un creux. Forme un M. La cassure du creux confirme le retournement baissier. Très fréquent et fiable.\n\nDouble Bottom (W) : deux creux au même niveau, séparés par un sommet. Forme un W. La cassure du sommet confirme le retournement haussier.\n\nBiseaux (Wedges) :\n- Biseau ascendant : les prix montent mais de plus en plus faiblement (sommets et creux convergents vers le haut). Signal baissier - la pression acheteuse s'épuise.\n- Biseau descendant : les prix baissent de plus en plus faiblement. Signal haussier - la pression vendeuse s'épuise.\n\nRègle importante : ces figures sont plus fiables quand elles se forment après une longue tendance et quand le volume confirme (volume décroissant pendant la formation, volume croissant à la cassure).",
+          "points_cles": [
+            "Tête-Épaules : la figure de retournement la plus fiable",
+            "Double Top (M) = retournement baissier, Double Bottom (W) = haussier",
+            "Biseau ascendant = baissier, biseau descendant = haussier",
+            "Volume décroissant pendant la formation, croissant à la cassure"
+          ],
+          "exemple_pratique": {
+            "ticker": "AAPL",
+            "scenario": "Apple forme un Double Top à 198$ en juillet et septembre 2023. Le creux entre les deux sommets est à 170$. Le prix casse 170$ avec un fort volume. Objectif : 170$ - (198$-170$) = 142$. Le prix descend effectivement vers 165$, validant partiellement la figure."
+          }
+        },
+        {
+          "titre": "▶️ Figures de Continuation",
+          "contenu": "Les figures de continuation se forment pendant une pause dans la tendance et signalent sa reprise.\n\nTriangles :\n- Triangle symétrique : les hauts descendent et les bas montent (compression). La cassure peut aller dans les deux sens, mais elle va souvent dans le sens de la tendance précédente.\n- Triangle ascendant : résistance horizontale + supports de plus en plus hauts. Haussier. La pression acheteuse monte progressivement.\n- Triangle descendant : support horizontal + résistances de plus en plus basses. Baissier.\n\nDrapeaux et Fanions : ce sont des pauses brèves dans un mouvement fort.\n- Drapeau : petit canal incliné contre la tendance (drapeau baissier dans une tendance haussière). La cassure reprend dans le sens de la tendance.\n- Fanion : petit triangle symétrique après un mouvement impulsif.\n- Règle : le mouvement après la cassure est souvent de la même amplitude que le mouvement qui précède le drapeau ('mât du drapeau').\n\nRectangle : consolidation horizontale entre un support et une résistance. Le prix oscille dans un range avant de casser dans le sens de la tendance.\n\nTasse avec anse (Cup and Handle) : figure haussière en forme de U suivie d'un petit repli (l'anse). La cassure au-dessus du bord de la tasse déclenche un mouvement haussier. Très appréciée par les traders car son taux de réussite est élevé.",
+          "points_cles": [
+            "Triangle symétrique : compression, cassure dans le sens de la tendance",
+            "Triangle ascendant = haussier, descendant = baissier",
+            "Drapeau : pause brève, mouvement post-cassure = hauteur du mât",
+            "Tasse avec anse : figure haussière très fiable"
+          ]
+        },
+        {
+          "titre": "📊 Validation par le Volume",
+          "contenu": "Le volume est le juge de paix des figures chartistes. Sans confirmation par le volume, une cassure est suspecte.\n\nRègles de volume pour les figures :\n\n1. Pendant la formation : le volume devrait diminuer progressivement. Cela montre que le marché est en phase d'indécision et d'accumulation d'énergie.\n\n2. À la cassure : le volume devrait exploser, idéalement 2-3 fois le volume moyen. C'est la confirmation que la cassure est réelle.\n\n3. Après la cassure : le volume devrait rester élevé pendant les premières sessions, confirmant l'engagement des participants.\n\nFausses cassures (Fakeouts) : la cassure se produit avec un faible volume, le prix revient rapidement à l'intérieur de la figure. C'est un piège classique. La solution : attendre la confirmation par le volume et éventuellement la clôture au-delà du niveau de cassure.\n\nPullback après cassure : il est fréquent que le prix casse une figure, avance un peu, puis revienne tester le niveau de cassure (pullback). Ce pullback est normal et offre souvent une seconde chance d'entrer. Le volume devrait diminuer pendant le pullback et augmenter à la reprise.\n\nEn résumé : figure sans volume = méfiance. Attendez la confirmation.",
+          "points_cles": [
+            "Volume décroissant pendant formation, explosif à la cassure",
+            "Cassure avec faible volume = probable fakeout",
+            "Pullback après cassure = normal, seconde chance d'entrée",
+            "Le volume est le meilleur filtre contre les faux signaux"
+          ]
+        },
+        {
+          "titre": "🎯 Calculer les Objectifs de Prix",
+          "contenu": "Chaque figure chartiste permet de calculer un objectif de prix théorique basé sur la hauteur de la figure.\n\nMéthode de projection :\n- Tête-Épaules : hauteur de la tête à la ligne de cou, projetée sous/au-dessus de la cassure.\n- Double Top/Bottom : hauteur entre le sommet et le creux, projetée depuis le point de cassure.\n- Triangles : hauteur du triangle (base la plus large), projetée depuis le point de cassure.\n- Drapeaux : hauteur du mât précédent, projetée depuis la cassure du drapeau.\n\nExemple concret : Un triangle symétrique sur Bitcoin entre 40 000$ (support) et 44 000$ (résistance). Hauteur = 4 000$. Cassure haussière à 44 000$. Objectif = 44 000$ + 4 000$ = 48 000$.\n\nImportant :\n- L'objectif n'est pas garanti. Il est atteint dans environ 60-70% des cas.\n- Utilisez l'objectif comme zone de take profit, pas comme certitude.\n- Combinez avec d'autres niveaux techniques (supports/résistances, Fibonacci) pour valider.\n- Prenez des profits partiels à mi-chemin de l'objectif pour sécuriser des gains.",
+          "points_cles": [
+            "Chaque figure a un objectif calculable basé sur sa hauteur",
+            "Objectif Tête-Épaules = hauteur de la tête projetée",
+            "Les objectifs sont atteints dans 60-70% des cas",
+            "Prendre des profits partiels à mi-chemin pour sécuriser"
+          ],
+          "exemple_pratique": {
+            "ticker": "BTC",
+            "scenario": "Bitcoin forme un triangle ascendant avec support à 60 000$ et résistance à 64 000$ (hauteur = 4 000$). Il casse la résistance à 64 000$ avec fort volume. Objectif : 64 000$ + 4 000$ = 68 000$. Take profit partiel à 66 000$."
+          }
+        },
+        {
+          "titre": "⚠️ Pièges à Éviter",
+          "contenu": "Les figures chartistes ne sont pas infaillibles. Voici les pièges courants :\n\n1. Voir des figures partout : notre cerveau est programmé pour reconnaître des patterns même quand il n'y en a pas (paréidolie). Une vraie figure doit être claire et évidente. Si vous devez chercher longuement, ce n'est probablement pas une figure.\n\n2. Anticiper avant la cassure : la figure n'est confirmée qu'à la cassure avec volume. Trader avant la cassure est du gambling, pas du trading.\n\n3. Ignorer le contexte : une figure de continuation dans le sens de la tendance a plus de chances de fonctionner qu'une figure de retournement contre la tendance.\n\n4. Négliger le timeframe : une figure sur le graphique journalier a plus de poids qu'une figure sur le 5 minutes. Plus le timeframe est élevé, plus la figure est significative.\n\n5. Ne pas utiliser de stop loss : même si la figure semble parfaite, protégez-vous. Placez votre stop loss juste de l'autre côté de la figure.\n\n6. Les faux breakouts : 20-30% des cassures sont des fausses cassures. Attendez la clôture au-delà du niveau et la confirmation par le volume. Certains traders attendent même 2 clôtures consécutives au-delà du niveau.\n\n7. Sous-estimer le temps : les figures prennent du temps à se former. Un triangle peut mettre des semaines. Soyez patient.",
+          "points_cles": [
+            "Voir des figures partout = erreur de débutant",
+            "Ne jamais trader avant la cassure confirmée",
+            "Les figures sur timeframe élevé sont plus fiables",
+            "20-30% des cassures sont des fakeouts - attendez la confirmation"
+          ]
+        }
+      ],
+      "resume": "Les figures chartistes se divisent en retournement (Tête-Épaules, Double Top/Bottom, Biseaux) et continuation (Triangles, Drapeaux, Rectangle, Tasse anse). Le volume est le juge de paix : décroissant pendant la formation, explosif à la cassure. Chaque figure a un objectif calculable. Attendez toujours la confirmation avant de trader et méfiez-vous des faux breakouts (20-30% des cassures).",
+      "ressources_complementaires": [
+        "📖 Livre : 'Encyclopedia of Chart Patterns' de Thomas Bulkowski",
+        "🎥 Vidéo : 'Les figures chartistes en pratique' - Andlil YouTube",
+        "🌐 Site : ThePatternSite.com - statistiques de fiabilité des figures",
+        "📖 Livre : 'Technical Analysis Using Multiple Timeframes' de Brian Shannon"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Qu'est-ce qu'une figure Tête-Épaules ?",
+        "options": [
+          "Un indicateur technique",
+          "Trois sommets dont le central est le plus haut, signal de retournement",
+          "Deux creux au même niveau",
+          "Un triangle symétrique"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La Tête-Épaules est composée de trois sommets : épaule gauche, tête (la plus haute), épaule droite. La cassure de la ligne de cou confirme le retournement baissier."
+      },
+      {
+        "question": "Un Double Bottom (W) est un signal :",
+        "options": [
+          "Baissier",
+          "Haussier",
+          "Neutre",
+          "De continuation"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Double Bottom forme un W avec deux creux au même niveau. La cassure du sommet entre les deux creux confirme un retournement haussier."
+      },
+      {
+        "question": "Comment calculer l'objectif d'un triangle ?",
+        "options": [
+          "Le volume du triangle",
+          "La hauteur du triangle projetée depuis la cassure",
+          "Le nombre de bougies dans le triangle",
+          "La largeur du triangle"
+        ],
+        "bonne_reponse": 1,
+        "explication": "L'objectif = hauteur du triangle (base la plus large) projetée depuis le point de cassure dans la direction de la cassure."
+      },
+      {
+        "question": "Que signifie une cassure avec un faible volume ?",
+        "options": [
+          "Signal très fiable",
+          "Probable faux signal (fakeout)",
+          "Le début d'une forte tendance",
+          "Rien de particulier"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Une cassure sans volume significatif est suspecte. Le volume doit confirmer la cassure (idéalement 2-3x le volume moyen) pour valider le signal."
+      },
+      {
+        "question": "Un biseau ascendant est généralement :",
+        "options": [
+          "Haussier",
+          "Baissier",
+          "Neutre",
+          "De continuation"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le biseau ascendant montre des prix qui montent de plus en plus faiblement (compression). La pression acheteuse s'épuise, c'est un signal baissier."
+      },
+      {
+        "question": "Qu'est-ce que le pullback après cassure ?",
+        "options": [
+          "Une fausse cassure",
+          "Le retour temporaire du prix vers le niveau de cassure avant de continuer",
+          "Un indicateur technique",
+          "Une figure de retournement"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le pullback est un retour normal du prix vers le niveau de cassure pour le tester, avant de continuer dans la direction de la cassure. C'est souvent une seconde chance d'entrée."
+      },
+      {
+        "question": "Quel pourcentage des cassures sont des faux breakouts ?",
+        "options": [
+          "0-5%",
+          "10-15%",
+          "20-30%",
+          "50-60%"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Environ 20-30% des cassures sont des fakeouts. C'est pourquoi il est crucial d'attendre la confirmation par le volume et éventuellement la clôture au-delà du niveau."
+      },
+      {
+        "question": "Quelle figure ressemble à un U suivi d'un petit repli ?",
+        "options": [
+          "Tête-Épaules",
+          "Double Top",
+          "Tasse avec anse",
+          "Drapeau"
+        ],
+        "bonne_reponse": 2,
+        "explication": "La Tasse avec Anse (Cup and Handle) forme un U (la tasse) suivi d'un petit repli (l'anse). La cassure au-dessus du bord confirme un mouvement haussier."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Repérer des figures sur des graphiques réels",
+        "description": "Sur TradingView en graphique journalier, cherchez au moins 3 figures chartistes différentes sur les actions de votre watchlist. Identifiez : le type de figure, le niveau de cassure, l'objectif théorique, et le comportement du volume."
+      },
+      {
+        "type": "simulation",
+        "titre": "Backtester les figures",
+        "description": "Trouvez 5 figures chartistes historiques (complétées). Pour chacune, notez : l'objectif théorique calculé, le prix réellement atteint, et si le volume a confirmé. Quel pourcentage a atteint l'objectif ?"
+      }
+    ],
+    "duree": "60 min",
+    "difficulte": "intermédiaire",
+    "prerequis": [
+      "module_2_2"
+    ]
+  },
+  {
+    "id": "module_2_5",
+    "parcours": "intermediaire",
+    "titre": "🪙 Analyse Crypto Intermédiaire",
+    "description": "Apprenez à évaluer un projet crypto : fondamentaux, tokenomics, métriques on-chain et identification des red flags.",
+    "durée": "60 minutes",
+    "difficulté": "Intermédiaire",
+    "points_xp": 170,
+    "prérequis": [
+      "module_1_5"
+    ],
+    "contenu": {
+      "introduction": "Investir dans les cryptomonnaies nécessite des compétences d'analyse spécifiques qui vont au-delà de l'analyse technique classique. Contrairement aux actions où l'on analyse des bilans et des bénéfices, l'analyse crypto combine l'évaluation de la technologie, de la tokenomics (économie du token), et des métriques on-chain. Dans ce module, vous apprendrez à évaluer rigoureusement un projet crypto et à identifier les red flags avant d'investir.",
+      "sections": [
+        {
+          "titre": "🔍 Fondamentaux d'un Projet Crypto",
+          "contenu": "Avant d'investir dans un projet crypto, posez-vous ces questions fondamentales :\n\nQuel problème résout-il ? Un projet crypto viable doit résoudre un problème réel. Bitcoin résout le problème de la monnaie décentralisée. Ethereum celui des contrats intelligents. Chainlink celui de l'accès aux données réelles depuis la blockchain (oracles).\n\nQuelle est la technologie ? Analysez la blockchain sous-jacente : est-elle rapide (transactions par seconde), scalable, sécurisée ? Y a-t-il des innovations technologiques réelles ou juste du marketing ? Le code est-il open source et audité ?\n\nQui est l'équipe ? Les fondateurs ont-ils un historique crédible ? Sont-ils doxxés (identité publique) ou anonymes ? L'anonymat n'est pas rédhibitoire (Satoshi est anonyme) mais augmente le risque. Regardez LinkedIn, GitHub, publications académiques.\n\nRoadmap et exécution : le projet a-t-il une roadmap claire ? L'équipe respecte-t-elle ses délais ? Comparez les promesses passées aux réalisations. Un projet qui repousse constamment ses échéances est un warning.\n\nPartenariats et écosystème : avec qui le projet collabore-t-il ? Des partenariats avec des entreprises établies (Google, Microsoft, Visa) sont un signe positif. Un écosystème de développeurs actif sur GitHub est essentiel.\n\nCommunauté : la taille et la qualité de la communauté comptent. Discord, Twitter, forums. Attention aux faux followers et aux bots.",
+          "points_cles": [
+            "Le projet doit résoudre un problème réel et identifiable",
+            "Vérifier l'équipe : identité, historique, compétences",
+            "Comparer la roadmap aux réalisations passées",
+            "Écosystème actif de développeurs sur GitHub = bon signe"
+          ],
+          "exemple_pratique": {
+            "ticker": "LINK",
+            "scenario": "Chainlink résout un vrai problème (connecter blockchains aux données réelles). Équipe doxxée avec Sergey Nazarov (connu dans l'écosystème). Plus de 1 800 intégrations, partenariats avec Google Cloud et SWIFT. Code audité, communauté active de 500K+ membres. Fondamentaux solides."
+          }
+        },
+        {
+          "titre": "💎 Tokenomics : L'Économie du Token",
+          "contenu": "La tokenomics est l'étude de l'économie d'un token : sa distribution, son utilité et ses mécanismes de création/destruction.\n\nSupply :\n- Max Supply : nombre maximum de tokens qui existeront. Bitcoin = 21 millions. Certains tokens n'ont pas de max supply.\n- Circulating Supply : tokens actuellement en circulation sur le marché.\n- Market Cap = Circulating Supply × Prix. Utilisez le market cap, pas le prix unitaire, pour comparer les projets.\n- Fully Diluted Valuation (FDV) = Max Supply × Prix. Montre la valorisation si tous les tokens étaient en circulation.\n\nDistribution : qui détient les tokens ?\n- Team : 10-20% est standard. > 30% = red flag (trop concentré).\n- Investisseurs privés (VC) : vérifiez les conditions de vesting.\n- Communauté/Airdrop : tokens distribués pour l'adoption.\n- Trésorerie du protocole : réserve pour le développement futur.\n\nVesting : calendrier de déblocage des tokens. Si des milliards de tokens sont débloqués prochainement, l'offre va augmenter et le prix risque de baisser (pression vendeuse).\n\nUtilité du token :\n- Gouvernance : voter sur les décisions du protocole (UNI, AAVE).\n- Staking : sécuriser le réseau et gagner des récompenses (ETH, SOL).\n- Paiement : payer les frais de transaction (ETH pour le gas).\n- Mécanismes déflationnistes : burn (destruction de tokens), réduisant l'offre.",
+          "points_cles": [
+            "Market Cap = Circulating Supply × Prix (pas le prix unitaire !)",
+            "FDV révèle la dilution future si tous les tokens sont débloqués",
+            "Distribution team > 30% = red flag",
+            "Vérifier le calendrier de vesting pour anticiper la pression vendeuse"
+          ]
+        },
+        {
+          "titre": "⛓️ Métriques On-Chain",
+          "contenu": "L'analyse on-chain est unique aux cryptos. Elle exploite les données publiques de la blockchain pour comprendre le comportement des investisseurs.\n\nAdresses actives : le nombre d'adresses effectuant des transactions. En hausse = adoption croissante. En baisse = désintérêt.\n\nFlux exchanges : les mouvements de crypto vers et depuis les exchanges.\n- Afflux vers exchanges = intention de vendre = baissier.\n- Retraits des exchanges = intention de HODL (garder) = haussier.\n\nMVRV (Market Value to Realized Value) : compare la valeur de marché à la valeur réalisée (prix moyen d'acquisition de tous les détenteurs).\n- MVRV > 3 : le marché est significativement surévalué. Zone de vente.\n- MVRV < 1 : le marché est en dessous de son coût moyen d'acquisition. Zone d'achat historique.\n\nSOPR (Spent Output Profit Ratio) : mesure si les détenteurs vendent en profit ou en perte.\n- SOPR > 1 : les gens vendent en profit.\n- SOPR < 1 : les gens vendent à perte (capitulation = opportunité).\n\nNVT Ratio (Network Value to Transactions) : équivalent du PER pour les cryptos. Compare la capitalisation au volume de transactions.\n- NVT élevé = réseau surévalué par rapport à son utilisation réelle.\n- NVT bas = réseau sous-évalué.",
+          "points_cles": [
+            "Retraits des exchanges = HODL = haussier",
+            "MVRV > 3 = surévalué, MVRV < 1 = zone d'achat historique",
+            "SOPR < 1 = capitulation = opportunité potentielle",
+            "NVT = PER des cryptos, compare capitalisation à l'utilisation réelle"
+          ],
+          "exemple_pratique": {
+            "ticker": "BTC",
+            "scenario": "En novembre 2022 (effondrement FTX), le MVRV de Bitcoin tombe sous 1 (détenteurs en perte moyenne), le SOPR passe sous 1 (ventes à perte massives), et les retraits d'exchanges explosent (HODLers retirent leurs BTC). Tous les signaux on-chain crient 'capitulation = zone d'achat'. BTC était à 16 000$, il atteint 73 000$ un an plus tard."
+          }
+        },
+        {
+          "titre": "🔧 Outils d'Analyse Crypto",
+          "contenu": "Plusieurs plateformes spécialisées vous donnent accès aux données on-chain et fondamentales :\n\nGlassnode : la référence pour les métriques on-chain de Bitcoin et Ethereum. Graphiques du MVRV, SOPR, flux exchanges, comportement des HODLers. Version gratuite disponible avec des données essentielles.\n\nNansen : analyse des wallets institutionnels et des smart money. Permet de suivre ce que font les gros portefeuilles (whales). Identifie les accumulations et distributions.\n\nDune Analytics : plateforme open source avec des dashboards communautaires. Excellente pour analyser les protocoles DeFi : TVL, volume, nombre d'utilisateurs, revenus.\n\nDefiLlama : agrégateur de données DeFi. Compare la TVL (Total Value Locked), les revenus et les métriques de tous les protocoles DeFi. Gratuit et très complet.\n\nCoinGecko / CoinMarketCap : pour les données de base : prix, market cap, volume, supply, liens officiels, exchanges listés.\n\nGitHub : vérifiez l'activité de développement. Un projet avec des commits réguliers et de nombreux contributeurs est un bon signe. Un projet avec un GitHub mort est un red flag majeur.\n\nConseil : ne vous fiez jamais à une seule source. Croisez les données de plusieurs outils pour avoir une vision complète.",
+          "points_cles": [
+            "Glassnode = référence pour les métriques on-chain Bitcoin/ETH",
+            "Nansen = suivi des smart money et whales",
+            "DefiLlama = données DeFi gratuites et complètes",
+            "GitHub = vérifier l'activité réelle de développement"
+          ]
+        },
+        {
+          "titre": "🚩 Red Flags : Signaux d'Alerte",
+          "contenu": "Apprendre à identifier les red flags vous évitera de perdre de l'argent sur des projets frauduleux ou voués à l'échec.\n\nRed flags majeurs :\n- Équipe 100% anonyme sans raison technique valable. L'anonymat augmente le risque de rug pull.\n- Tokenomics déséquilibrée : team > 30%, pas de vesting, déblocages massifs imminents.\n- Promesses de rendements garantis : 'APY de 100 000%', '10x garanti en 1 mois'. Rien n'est garanti en finance.\n- Code non audité : tout smart contract sérieux doit être audité par au moins une firme reconnue (CertiK, Trail of Bits, OpenZeppelin).\n- Liquidité faible et concentrée : si le pool de liquidité est petit et détenu par l'équipe, un rug pull est facile.\n- Marketing excessif, technologie insuffisante : si le projet dépense plus en influenceurs qu'en développement, méfiez-vous.\n- Whitepaper vague ou copié : un whitepaper doit être technique et spécifique. Les projets qui copient d'autres whitepapers sont des scams.\n- Pression sociale : 'achetez avant qu'il soit trop tard', 'dernière chance'. La pression d'urgence est une technique de manipulation.\n\nRègle d'or : si vous ne comprenez pas comment le protocole génère du rendement, VOUS êtes le rendement. C'est la leçon de Terra/Luna, Celsius et FTX.",
+          "points_cles": [
+            "Équipe anonyme + promesses irréalistes = fuite immédiate",
+            "Code non audité = risque d'exploit ou de rug pull",
+            "Si vous ne comprenez pas d'où vient le rendement, VOUS êtes le rendement",
+            "Marketing > développement = red flag majeur"
+          ]
+        }
+      ],
+      "resume": "L'analyse crypto combine fondamentaux (problème résolu, équipe, technologie), tokenomics (supply, distribution, vesting, utilité), et métriques on-chain (MVRV, SOPR, flux exchanges). Utilisez des outils spécialisés (Glassnode, Nansen, DefiLlama) et croisez les sources. Les red flags (anonymat, promesses irréalistes, code non audité) doivent déclencher une fuite immédiate.",
+      "ressources_complementaires": [
+        "📖 Livre : 'Cryptoassets' de Chris Burniske et Jack Tatar",
+        "🎥 Vidéo : 'On-chain analysis for beginners' - Glassnode YouTube",
+        "🌐 Site : Glassnode.com - métriques on-chain",
+        "🌐 Site : DefiLlama.com - données DeFi"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quelle est la différence entre Market Cap et FDV ?",
+        "options": [
+          "Aucune",
+          "Market Cap = supply actuelle × prix, FDV = max supply × prix",
+          "FDV est toujours plus petit",
+          "Market Cap inclut la dette"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Market Cap utilise le circulating supply, FDV utilise le max supply. La différence révèle la dilution future."
+      },
+      {
+        "question": "Un MVRV inférieur à 1 indique :",
+        "options": [
+          "Le marché est surévalué",
+          "Les détenteurs sont en perte moyenne = zone d'achat potentielle",
+          "Le volume est faible",
+          "Le token est nouveau"
+        ],
+        "bonne_reponse": 1,
+        "explication": "MVRV < 1 signifie que la valeur de marché est inférieure à la valeur réalisée (coût moyen d'acquisition). Historiquement, c'est une zone d'achat."
+      },
+      {
+        "question": "Que signifient des retraits massifs de Bitcoin depuis les exchanges ?",
+        "options": [
+          "Les gens vont vendre",
+          "Les HODLers stockent leur BTC en cold wallet = signal haussier",
+          "Le réseau est en panne",
+          "Les exchanges font faillite"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Les retraits d'exchanges vers des wallets personnels indiquent que les détenteurs veulent conserver (HODL) plutôt que vendre. C'est un signal haussier."
+      },
+      {
+        "question": "Quelle allocation à la team est considérée comme un red flag ?",
+        "options": [
+          "5%",
+          "15%",
+          "30% ou plus",
+          "Toute allocation"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Une allocation team > 30% est un red flag car elle concentre trop de pouvoir entre les mains de l'équipe et crée un risque de dump massif."
+      },
+      {
+        "question": "Qu'est-ce que le vesting ?",
+        "options": [
+          "Le prix d'un token",
+          "Le calendrier de déblocage progressif des tokens",
+          "Le volume d'échanges",
+          "Un type de staking"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le vesting est le calendrier qui définit quand les tokens alloués (à l'équipe, aux investisseurs) sont progressivement débloqués et deviennent disponibles."
+      },
+      {
+        "question": "Si vous ne comprenez pas d'où vient le rendement, que signifie cela ?",
+        "options": [
+          "C'est un bon investissement",
+          "VOUS êtes le rendement (schéma de Ponzi potentiel)",
+          "Le rendement est garanti",
+          "C'est trop complexe pour vous"
+        ],
+        "bonne_reponse": 1,
+        "explication": "C'est la leçon de Terra/Luna et Celsius. Si le rendement ne provient pas d'une activité économique réelle identifiable, il provient probablement de l'argent des nouveaux investisseurs = Ponzi."
+      },
+      {
+        "question": "Quel outil est recommandé pour analyser les données DeFi ?",
+        "options": [
+          "Bloomberg",
+          "DefiLlama",
+          "Yahoo Finance",
+          "Google Finance"
+        ],
+        "bonne_reponse": 1,
+        "explication": "DefiLlama est l'agrégateur de référence pour les données DeFi : TVL, revenus, comparaison de protocoles. Gratuit et complet."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Analyser un projet crypto",
+        "description": "Choisissez un projet crypto du top 50 sur CoinGecko. Analysez : le problème résolu, l'équipe, la tokenomics (supply, distribution, vesting), et vérifiez l'activité GitHub. Rédigez un résumé de votre analyse en une page."
+      },
+      {
+        "type": "simulation",
+        "titre": "Lire les métriques on-chain",
+        "description": "Sur Glassnode (version gratuite), consultez les métriques de Bitcoin : MVRV, SOPR, flux exchanges. Déterminez si les conditions actuelles sont plutôt favorables ou défavorables pour un achat."
+      }
+    ],
+    "duree": "55 min",
+    "difficulte": "intermédiaire",
+    "prerequis": [
+      "module_1_5"
+    ]
+  },
+  {
+    "id": "module_2_6",
+    "parcours": "intermediaire",
+    "titre": "⚙️ Construire sa Stratégie de Trading",
+    "description": "Apprenez à construire, tester et optimiser une stratégie de trading complète avec gestion du risque intégrée.",
+    "durée": "80 minutes",
+    "difficulté": "Intermédiaire",
+    "points_xp": 200,
+    "prérequis": [
+      "module_2_2",
+      "module_1_6"
+    ],
+    "contenu": {
+      "introduction": "Avoir une stratégie de trading claire et testée est ce qui sépare le trader amateur du trader discipliné. Sans stratégie, vous tradez sur l'émotion et l'intuition, ce qui mène inévitablement à des pertes. Une stratégie définit précisément quand entrer, quand sortir, combien risquer et comment gérer les trades. Dans ce module, vous apprendrez à construire votre propre stratégie, la tester sur des données historiques et l'optimiser continuellement.",
+      "sections": [
+        {
+          "titre": "🏗️ Les Composants d'une Stratégie",
+          "contenu": "Une stratégie de trading complète contient ces éléments essentiels :\n\n1. Marché : quels instruments tradez-vous ? Actions US large cap, crypto majeures, paires Forex majeures ? Choisissez un univers limité que vous connaissez bien.\n\n2. Timeframe : sur quelle unité de temps opérez-vous ? Journalier pour le swing trading, H1-H4 pour le day trading.\n\n3. Conditions d'entrée : quels signaux précis déclenchez-vous un trade ? Soyez très spécifique. Ex : 'Achat si prix > EMA200 + RSI entre 30 et 50 + englobante haussière sur support'.\n\n4. Conditions de sortie : stop loss (obligatoire), take profit, et conditions de sortie anticipée.\n\n5. Gestion du risque : taille de position, risque par trade (1-2% max), nombre maximum de positions ouvertes.\n\n6. Gestion du trade : que faire une fois en position ? Déplacer le stop ? Prendre des profits partiels ? Ajouter à la position ?\n\nChaque composant doit être défini par écrit, sans ambiguïté. Si quelqu'un d'autre peut lire votre stratégie et l'exécuter exactement comme vous, elle est bien définie. Si elle laisse place à l'interprétation, elle n'est pas assez précise.\n\nCommencez simple. Un système avec 2-3 conditions d'entrée claires surpasse un système complexe à 10 conditions qui ne se réalise jamais.",
+          "points_cles": [
+            "Stratégie = marché + timeframe + entrées + sorties + risque",
+            "Tout doit être écrit, précis, sans ambiguïté",
+            "Une autre personne doit pouvoir exécuter votre stratégie sans vous",
+            "Simple > complexe : 2-3 conditions d'entrée suffisent"
+          ]
+        },
+        {
+          "titre": "🎯 Styles de Trading",
+          "contenu": "Choisissez un style adapté à votre personnalité et votre disponibilité :\n\nScalping : durée de quelques secondes à minutes. Objectif de quelques pips ou centimes par trade. Nécessite : disponibilité totale, exécution rapide, spreads très bas, forte résistance au stress. 20-100+ trades par jour. Non recommandé pour les débutants.\n\nDay Trading : durée de quelques minutes à heures. Toutes les positions sont fermées avant la clôture du marché. Nécessite : disponibilité pendant les heures de marché, bonne maîtrise des indicateurs intraday. 2-10 trades par jour.\n\nSwing Trading : durée de quelques jours à semaines. Exploite les mouvements intermédiaires dans une tendance. Nécessite : analyse journalière (30 min/jour suffisent), patience. 2-5 trades par semaine. Idéal pour ceux qui travaillent à côté.\n\nPosition Trading : durée de plusieurs semaines à mois. Suit les grandes tendances. Nécessite : vision long terme, tolérance aux drawdowns temporaires. 1-2 trades par mois.\n\nRecommandation pour les débutants : le swing trading sur timeframe journalier. Il offre le meilleur équilibre entre fréquence de trades, fiabilité des signaux et temps requis. Vous pouvez le pratiquer en ayant un travail à côté.",
+          "points_cles": [
+            "Scalping : secondes/minutes, non recommandé aux débutants",
+            "Day trading : intraday, toutes positions fermées le soir",
+            "Swing trading : jours/semaines, idéal pour les débutants",
+            "Position trading : semaines/mois, suit les grandes tendances"
+          ],
+          "exemple_pratique": {
+            "ticker": "AAPL",
+            "scenario": "En swing trading sur Apple en journalier : vous identifiez un rebond sur la SMA 50 avec RSI à 42 et englobante haussière. Vous entrez à 178$, stop à 172$ (2x ATR), TP à 190$. Après 8 jours, l'objectif est atteint. Ratio R:R = 1:2. C'est un trade typique de swing trading."
+          }
+        },
+        {
+          "titre": "🎯 Règles d'Entrée : Setup, Trigger, Filtre",
+          "contenu": "Pour éviter les entrées impulsives, décomposez votre signal d'entrée en 3 niveaux :\n\nSetup (le contexte) : les conditions générales qui doivent être réunies AVANT de chercher un trade. Ex : 'Le prix est au-dessus de l'EMA 200' (tendance haussière confirmée) et 'Le RSI était récemment sous 50' (repli dans la tendance).\n\nTrigger (le déclencheur) : le signal précis qui déclenche l'entrée. Ex : 'Chandelier englobant haussier qui clôture au-dessus du support identifié'. Sans trigger, pas d'entrée, même si le setup est parfait.\n\nFiltre (la confirmation) : une condition supplémentaire qui augmente la probabilité. Ex : 'Le volume de la bougie trigger est supérieur à la moyenne' ou 'Le MACD est en croisement haussier'.\n\nCette méthode en 3 étapes vous force à être méthodique et élimine 80% des trades impulsifs. Si le setup n'est pas en place, vous ne cherchez même pas de trigger. Si le trigger n'apparaît pas, vous ne tradez pas, même si le setup est parfait.\n\nExemple complet de règle d'entrée :\n- Setup : prix > EMA 200, RSI entre 35-50 (repli)\n- Trigger : englobante haussière sur support ou SMA 50\n- Filtre : volume > moyenne 20 jours\n- Action : acheter à l'ouverture de la bougie suivante",
+          "points_cles": [
+            "Décomposer l'entrée en : Setup + Trigger + Filtre",
+            "Sans setup en place, ne même pas chercher de trigger",
+            "Sans trigger, ne pas trader même si le setup est parfait",
+            "Cette méthode élimine 80% des trades impulsifs"
+          ]
+        },
+        {
+          "titre": "🚪 Gestion des Sorties",
+          "contenu": "La sortie est souvent plus importante que l'entrée. Une bonne sortie transforme un trade moyen en trade profitable.\n\nStop Loss (obligatoire) :\n- Fixe : pourcentage ou montant fixe (ex: -2% du prix d'entrée)\n- Technique : sous un support, sous la SMA 50, sous le dernier creux\n- ATR : 1,5 à 2 fois l'ATR sous l'entrée (adapté à la volatilité)\n\nTake Profit :\n- Ratio Risk/Reward minimum de 1:2. Si vous risquez 100$, visez au moins 200$ de gain.\n- Sur une résistance technique identifiée\n- Sur un objectif de figure chartiste\n\nSorties partielles (recommandé) :\n- 50% de la position au premier objectif (1x le risque)\n- 25% au deuxième objectif (2x le risque)\n- 25% restant avec un trailing stop pour maximiser le potentiel\n\nCette gestion hybride vous permet de sécuriser des gains tout en laissant courir une partie de la position si le mouvement se poursuit.\n\nBreak-even stop : une fois que le prix atteint 1x votre risque initial, déplacez votre stop loss au prix d'entrée (break-even). Vous éliminez le risque de perte sur ce trade.",
+          "points_cles": [
+            "Stop loss OBLIGATOIRE : technique, fixe ou ATR",
+            "Ratio Risk/Reward minimum 1:2",
+            "Sorties partielles : 50% / 25% / 25% trailing",
+            "Break-even stop quand le gain = 1x le risque initial"
+          ]
+        },
+        {
+          "titre": "📏 Taille de Position et Risque",
+          "contenu": "La taille de position est le facteur le plus important de la gestion du risque. Elle détermine combien vous risquez réellement sur chaque trade.\n\nRègle du 1-2% : ne risquez jamais plus de 1 à 2% de votre capital total sur un seul trade.\n\nFormule de calcul :\nTaille de position = (Capital × % risque) / (Prix d'entrée - Stop loss)\n\nExemple : Capital de 10 000€, risque de 1% = 100€ max de perte.\n- Achat Apple à 180$, stop à 174$ (risque de 6$ par action)\n- Taille = 100€ / 6$ = 16 actions maximum\n\nPourquoi la règle du 1% est cruciale :\n- Avec 1% de risque, il faut 100 pertes consécutives pour perdre tout votre capital (statistiquement quasi impossible)\n- Avec 5% de risque, 20 pertes consécutives suffisent\n- Avec 10%, seulement 10 pertes\n\nAjustement selon les conditions :\n- Après une série de pertes : réduisez à 0,5% pour protéger le capital\n- En marché très favorable : montez à 2% maximum\n- Plusieurs positions corrélées : réduisez la taille car le risque global s'additionne\n\nLe risque total du portefeuille ne devrait jamais dépasser 6% (concept de Heat). Avec 6 positions à 1% chacune, vous risquez 6% au total.",
+          "points_cles": [
+            "Règle du 1-2% : ne jamais risquer plus par trade",
+            "Formule : Taille = (Capital × %risque) / (Entrée - Stop)",
+            "1% de risque = 100 pertes consécutives pour tout perdre",
+            "Heat max du portefeuille : 6% de risque total"
+          ]
+        },
+        {
+          "titre": "📊 Backtesting",
+          "contenu": "Le backtesting consiste à tester votre stratégie sur des données historiques pour vérifier qu'elle est rentable AVANT de risquer de l'argent réel.\n\nComment backtester :\n1. Définissez clairement toutes vos règles (entrée, sortie, taille)\n2. Parcourez les graphiques historiques bougie par bougie\n3. Identifiez chaque signal et notez le résultat\n4. Minimum 100 trades pour des statistiques significatives\n\nMétriques à calculer :\n- Win Rate : % de trades gagnants. Un bon système peut avoir un winrate de seulement 40% et être très rentable si le ratio R:R est élevé.\n- Profit Factor : gains totaux / pertes totales. > 1,5 = bon système.\n- Maximum Drawdown : la plus grande perte subie depuis un pic. Un drawdown de 20% est acceptable, > 30% est préoccupant.\n- Espérance : (winrate × gain moyen) - (lossrate × perte moyenne). Doit être positive.\n\nPièges du backtesting :\n- Biais de rétrospection : vous voyez la suite du graphique et interprétez les signaux avec le recul. Solution : avancer bougie par bougie sans regarder la suite.\n- Suroptimisation : ajuster les paramètres jusqu'à ce qu'ils fonctionnent parfaitement sur le passé mais pas sur le futur (curve fitting).\n- Conditions de marché : un système qui fonctionne en tendance peut échouer en range. Testez dans différentes conditions.",
+          "points_cles": [
+            "Minimum 100 trades backtestés pour des stats fiables",
+            "Profit Factor > 1,5 = bon système",
+            "Win Rate de 40% peut être rentable avec un ratio R:R élevé",
+            "Attention au biais de rétrospection et à la suroptimisation"
+          ]
+        },
+        {
+          "titre": "📝 Paper Trading",
+          "contenu": "Le paper trading est l'étape entre le backtesting et le trading réel. Vous tradez en temps réel mais avec de l'argent virtuel.\n\nPourquoi c'est indispensable :\n- Vous apprenez à exécuter votre stratégie en conditions réelles (le backtest est statique, le live est émotionnel).\n- Vous testez votre discipline : respectez-vous vos règles quand le marché bouge en temps réel ?\n- Vous identifiez les problèmes pratiques : slippage, timing, émotions.\n\nDurée recommandée : 1 à 3 mois minimum. Ne passez au trading réel que si vous êtes rentable en paper trading ET que vous respectez vos règles de manière cohérente.\n\nOutils de paper trading :\n- TradingView Paper Trading : intégré, gratuit, réaliste\n- Comptes démo chez les brokers (eToro, Interactive Brokers, etc.)\n\nTransition vers le réel :\n- Commencez avec des micro-positions (10% de votre taille normale)\n- Augmentez progressivement quand vous êtes régulièrement profitable\n- Le passage au réel est un choc émotionnel. L'argent réel change tout.\n\nAttention : le paper trading ne reproduit pas les émotions du trading réel. C'est normal de performer mieux en paper trading. Préparez-vous mentalement.",
+          "points_cles": [
+            "Paper trading : 1-3 mois minimum avant l'argent réel",
+            "Ne passer au réel que si rentable et discipliné en paper",
+            "Commencer avec des micro-positions (10% de la taille normale)",
+            "Le passage au réel change les émotions - préparation mentale nécessaire"
+          ]
+        },
+        {
+          "titre": "📓 Journal et Optimisation Continue",
+          "contenu": "Le journal de trading est l'outil qui vous fera progresser plus que tout autre. Chaque trade est une leçon si vous la documentez.\n\nÀ chaque trade, notez :\n- Date, instrument, direction, timeframe\n- Setup identifié, trigger, filtre\n- Prix d'entrée, stop loss, take profit\n- Taille de position et risque en %\n- Résultat (P&L en € et %)\n- Capture d'écran avant et après\n- État émotionnel et respect des règles\n- Leçon tirée\n\nReview hebdomadaire (dimanche) :\n- Nombre de trades, winrate, profit factor\n- Les trades étaient-ils tous conformes au plan ?\n- Quelles erreurs récurrentes ?\n- Quelle amélioration pour la semaine prochaine ?\n\nOptimisation :\n- Ne changez qu'un paramètre à la fois\n- Testez le changement sur 20+ trades avant de conclure\n- Supprimez les trades qui n'étaient pas conformes au plan et recalculez les stats\n- La meilleure optimisation est souvent de faire MOINS de trades, pas d'en changer les paramètres\n\nRègle importante : si votre stratégie est profitable en backtesting mais pas en réel, le problème n'est pas la stratégie, c'est l'exécution (discipline, émotions, taille). Corrigez l'exécution avant de changer la stratégie.",
+          "points_cles": [
+            "Documenter chaque trade : setup, émotions, résultat, leçon",
+            "Review hebdomadaire chaque dimanche : stats + amélioration",
+            "Ne changer qu'un paramètre à la fois, tester sur 20+ trades",
+            "Si backtest OK mais réel non : problème d'exécution, pas de stratégie"
+          ]
+        }
+      ],
+      "resume": "Une stratégie complète définit : marché, timeframe, entrées (Setup/Trigger/Filtre), sorties (stop/TP/partielles), taille de position (règle 1-2%), et gestion du trade. Choisissez un style adapté (swing trading recommandé). Backtestez sur 100+ trades, paper tradez 1-3 mois, puis commencez avec des micro-positions. Le journal de trading et la review hebdomadaire sont vos outils de progression.",
+      "ressources_complementaires": [
+        "📖 Livre : 'Trading for a Living' d'Alexander Elder",
+        "📖 Livre : 'Come Into My Trading Room' d'Alexander Elder",
+        "🎥 Vidéo : 'Construire une stratégie de A à Z' - Andlil YouTube",
+        "📱 App : Edgewonk - journal de trading professionnel"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quelle est la règle d'or du risque par trade ?",
+        "options": [
+          "Maximum 10%",
+          "Maximum 5%",
+          "Maximum 1-2%",
+          "Pas de limite"
+        ],
+        "bonne_reponse": 2,
+        "explication": "La règle du 1-2% signifie ne jamais risquer plus de 1 à 2% de votre capital total sur un seul trade. Avec 1%, il faut 100 pertes consécutives pour tout perdre."
+      },
+      {
+        "question": "Qu'est-ce que le Setup dans la méthode d'entrée ?",
+        "options": [
+          "Le signal d'achat précis",
+          "Le contexte général qui doit être en place avant de chercher un trade",
+          "Le placement du stop loss",
+          "La taille de position"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Setup est le contexte préalable (ex: prix > EMA200, RSI en zone de repli). Sans setup en place, on ne cherche même pas de signal d'entrée."
+      },
+      {
+        "question": "Quel Profit Factor indique un bon système ?",
+        "options": [
+          "< 0,5",
+          "= 1",
+          "> 1,5",
+          "< 1"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le Profit Factor = gains totaux / pertes totales. > 1 = rentable, > 1,5 = bon système, > 2 = excellent système."
+      },
+      {
+        "question": "Combien de trades minimum pour un backtesting fiable ?",
+        "options": [
+          "10",
+          "30",
+          "100",
+          "1000"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Minimum 100 trades pour des statistiques significatives. Moins de 100, les résultats peuvent être le fruit du hasard."
+      },
+      {
+        "question": "Quel style de trading est recommandé pour les débutants ?",
+        "options": [
+          "Scalping",
+          "Day trading",
+          "Swing trading",
+          "Trading haute fréquence"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le swing trading offre le meilleur équilibre : signaux fiables sur timeframe journalier, 30 min d'analyse par jour, compatible avec un travail à côté."
+      },
+      {
+        "question": "Formule de la taille de position :",
+        "options": [
+          "Capital × prix de l'action",
+          "(Capital × %risque) / (Prix entrée - Stop loss)",
+          "Capital / nombre de trades",
+          "Stop loss × 100"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Taille = (Capital × %risque) / (Entrée - Stop). Ex: 10 000$ × 1% / (180-174) = 100 / 6 = 16 actions max."
+      },
+      {
+        "question": "Que faire si le backtest est OK mais le réel ne l'est pas ?",
+        "options": [
+          "Changer de stratégie",
+          "Corriger l'exécution (discipline, émotions, taille)",
+          "Augmenter le risque",
+          "Abandonner le trading"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Si la stratégie est rentable en backtest mais pas en réel, le problème est l'exécution : non-respect des règles, trades impulsifs, émotions. Corrigez l'exécution avant de toucher à la stratégie."
+      },
+      {
+        "question": "Combien de temps de paper trading avant le réel ?",
+        "options": [
+          "1 jour",
+          "1 semaine",
+          "1 à 3 mois",
+          "1 an minimum"
+        ],
+        "bonne_reponse": 2,
+        "explication": "1 à 3 mois de paper trading est recommandé. Ne passez au réel que si vous êtes rentable ET discipliné de manière cohérente."
+      },
+      {
+        "question": "Qu'est-ce que le break-even stop ?",
+        "options": [
+          "Arrêter de trader",
+          "Déplacer le stop loss au prix d'entrée pour éliminer le risque",
+          "Prendre des profits",
+          "Augmenter la position"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le break-even stop = déplacer le stop au prix d'entrée quand le gain atteint 1x le risque initial. Le trade ne peut plus être perdant."
+      },
+      {
+        "question": "Quelle est la meilleure optimisation souvent ?",
+        "options": [
+          "Ajouter plus d'indicateurs",
+          "Changer de timeframe",
+          "Faire MOINS de trades et être plus sélectif",
+          "Augmenter le levier"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Souvent, la meilleure amélioration est d'être plus sélectif : ne prendre que les meilleurs setups élimine les trades médiocres qui polluent les statistiques."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Définir votre stratégie",
+        "description": "Écrivez votre stratégie complète : 1) Marchés tradés, 2) Timeframe, 3) Setup+Trigger+Filtre d'entrée, 4) Stop loss et take profit, 5) Taille de position, 6) Gestion des trades en cours."
+      },
+      {
+        "type": "simulation",
+        "titre": "Backtester votre stratégie",
+        "description": "Backtestez votre stratégie sur 6 mois de données historiques en avançant bougie par bougie. Notez chaque signal et calculez : winrate, profit factor, drawdown max."
+      },
+      {
+        "type": "pratique",
+        "titre": "Commencer le paper trading",
+        "description": "Ouvrez un compte TradingView Paper Trading ou un compte démo chez un broker. Appliquez votre stratégie pendant 2 semaines. Tenez un journal rigoureux de chaque trade."
+      }
+    ],
+    "duree": "70 min",
+    "difficulte": "intermédiaire",
+    "prerequis": [
+      "module_2_2",
+      "module_2_4"
+    ]
+  }
+]

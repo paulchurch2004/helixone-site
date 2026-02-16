@@ -1,0 +1,1437 @@
+[
+  {
+    "id": "module_4_1",
+    "parcours": "expert",
+    "titre": "VaR et Gestion de Risque Institutionnelle",
+    "description": "Comprendre et calculer la VaR et la CVaR, appliquer le stress testing et maîtriser les métriques de risque professionnelles.",
+    "duree": "90 min",
+    "difficulte": "expert",
+    "points_xp": 280,
+    "prerequis": [
+      "module_3_3"
+    ],
+    "contenu": {
+      "introduction": "La Value at Risk (VaR) est l'outil de mesure de risque le plus utilisé dans la finance institutionnelle. Elle répond à une question simple mais fondamentale : quelle est la perte maximale que je peux subir sur une période donnée, avec un certain niveau de confiance ? Ce module te plonge dans les méthodes de calcul de la VaR, la CVaR, le stress testing et les métriques avancées utilisées par les professionnels pour gérer le risque.",
+      "sections": [
+        {
+          "titre": "Introduction à la VaR (Value at Risk)",
+          "contenu": "La VaR répond à une question simple : 'Quelle est la perte maximale que je peux subir sur une période donnée, avec un certain niveau de confiance ?' Exemple : une VaR journalière de 10 000€ à 95% signifie qu'il y a 95% de chances que la perte quotidienne ne dépasse pas 10 000€ — ou dit autrement, 5% de chances qu'elle la dépasse. La VaR a trois paramètres : l'horizon temporel (1 jour, 10 jours, 1 mois), le niveau de confiance (95% ou 99%), et le montant du portefeuille. Ses utilisations sont multiples : allocation du capital, définition des limites de risque, communication avec les investisseurs, exigences réglementaires (Bâle III), et comparaison de stratégies entre elles. La VaR est devenue le standard de l'industrie financière car elle traduit un concept complexe (le risque) en un chiffre unique et compréhensible. Cependant, comme nous le verrons, elle a des limites importantes qu'il faut connaître.",
+          "points_cles": [
+            "VaR = perte maximale probable à un niveau de confiance donné",
+            "3 paramètres : horizon temporel, confiance, montant",
+            "Standard de l'industrie pour communiquer le risque",
+            "Utilisée pour les exigences réglementaires (Bâle III)"
+          ],
+          "exemple_pratique": {
+            "ticker": "Portfolio",
+            "scenario": "Portefeuille de 100 000€ avec VaR journalière à 95% de 3 300€. Cela signifie que 19 jours sur 20, ta perte quotidienne sera inférieure à 3 300€. Mais 1 jour sur 20, elle pourrait dépasser cette valeur — et la VaR ne dit pas de combien."
+          }
+        },
+        {
+          "titre": "Les 3 méthodes de calcul de la VaR",
+          "contenu": "Méthode paramétrique (Variance-Covariance) : suppose que les rendements suivent une loi normale. Formule : VaR = Valeur × Z × σ × √t, où Z est le score Z (1,65 pour 95%, 2,33 pour 99%), σ la volatilité et t l'horizon en jours. Exemple : portefeuille 100 000€, volatilité journalière 2%, confiance 95% → VaR = 100 000 × 1,65 × 0,02 = 3 300€. Avantage : simple et rapide. Inconvénient : suppose une distribution normale, sous-estime les événements extrêmes (fat tails). Méthode historique : utilise les rendements passés réels. On trie 250 rendements historiques, et la VaR à 95% = le 5ème percentile (13ème pire rendement). Avantage : pas d'hypothèse sur la distribution. Inconvénient : dépend de la période choisie. Méthode Monte Carlo : simule des milliers de scénarios aléatoires (10 000+), calcule le P&L de chaque scénario, et la VaR = le percentile correspondant. Avantage : très flexible, capture les corrélations complexes. Inconvénient : intensif en calcul, dépend du modèle.",
+          "points_cles": [
+            "Paramétrique : VaR = Valeur × Z × σ × √t (simple mais irréaliste)",
+            "Historique : basée sur les rendements réels passés",
+            "Monte Carlo : simulation de milliers de scénarios",
+            "Chaque méthode a ses forces et faiblesses"
+          ],
+          "exemple_pratique": {
+            "ticker": "SPY",
+            "scenario": "Portefeuille de 100 000€ en S&P 500. VaR paramétrique (σ=1,2%/jour) à 99% : 100 000 × 2,33 × 0,012 = 2 796€. VaR historique (2022-2023) à 99% : 3 100€. La différence vient des fat tails non capturées par la méthode paramétrique."
+          }
+        },
+        {
+          "titre": "CVaR / Expected Shortfall",
+          "contenu": "La VaR a une limite majeure : elle ne dit rien sur ce qui se passe au-delà du seuil. Avec une VaR 99% de 50 000€, la perte dans le 1% des pires cas pourrait être de 50 001€ ou de 500 000€. La CVaR (Conditional VaR), aussi appelée Expected Shortfall, mesure la perte moyenne dans les scénarios qui dépassent la VaR. Formule conceptuelle : CVaR = Moyenne des pertes quand Perte > VaR. Exemple : VaR 95% = 10 000€, les 5% pires scénarios donnent des pertes de 12k, 15k, 18k, 25k, 50k → CVaR = 24 000€. Interprétation : la VaR dit '95% du temps, tu perdras moins de 10 000€'. La CVaR dit 'quand tu dépasses cette limite, tu perdras en moyenne 24 000€'. Avantage mathématique crucial : la CVaR est sous-additive. Cela signifie que la CVaR d'un portefeuille diversifié est inférieure à la somme des CVaR individuelles — ce qui n'est pas toujours vrai pour la VaR. C'est pourquoi Bâle III privilégie la CVaR. En pratique, si ta CVaR est supérieure à 1,5× ta VaR, ton portefeuille a un risque de queue significatif.",
+          "points_cles": [
+            "CVaR = perte moyenne quand les choses vont vraiment mal",
+            "Complète la VaR en mesurant le risque de queue",
+            "Sous-additive : récompense la diversification",
+            "CVaR > 1,5× VaR indique un risque de queue important"
+          ]
+        },
+        {
+          "titre": "Stress Testing du portefeuille",
+          "contenu": "Le stress testing évalue les pertes sous des scénarios extrêmes mais plausibles. Il répond à la question 'Et si...?'. Trois types de stress tests existent. Les stress tests historiques appliquent les conditions d'une crise passée au portefeuille actuel : Krach 1987 (-22% en 1 jour), Bulle internet 2000-2002 (-78% NASDAQ), Crise 2008 (-57% S&P 500), COVID mars 2020 (-34% en 1 mois). Les stress tests hypothétiques créent des scénarios fictifs mais plausibles : hausse des taux de 200 points de base, effondrement du pétrole de 50%, cyberattaque sur les marchés. Le reverse stress testing part d'un résultat catastrophique pour trouver les scénarios qui y mènent : 'Que doit-il se passer pour que je perde 50% de mon portefeuille ?'. Application pratique : tu construis un tableau avec ton portefeuille multi-actifs et tu simules l'impact de chaque scénario. Par exemple, en récession : actions -30%, obligations +10%, or +15%, crypto -60% → impact global du portefeuille selon tes allocations.",
+          "points_cles": [
+            "3 types : historique, hypothétique, reverse",
+            "Historique : appliquer les crises passées au portefeuille actuel",
+            "Reverse : quel scénario causerait X% de perte ?",
+            "Complémentaire à la VaR pour les événements extrêmes"
+          ],
+          "exemple_pratique": {
+            "ticker": "Portfolio",
+            "scenario": "Portefeuille : 50% actions, 30% obligations, 10% or, 10% crypto. Stress test 'Récession 2008' : actions -57%, obligations +5%, or +25%, crypto -80%. Impact : (-57%×0,5) + (5%×0,3) + (25%×0,1) + (-80%×0,1) = -28,5% + 1,5% + 2,5% - 8% = -32,5%."
+          }
+        },
+        {
+          "titre": "Métriques de risque avancées",
+          "contenu": "Au-delà de la VaR, plusieurs métriques aident à évaluer la performance ajustée au risque. Le ratio de Sharpe = (Rendement - Taux sans risque) / Volatilité. Un Sharpe > 1 est bon, > 2 excellent, < 0 signifie rendement inférieur au sans-risque. Exemple : rendement 15%, Rf 3%, volatilité 20% → Sharpe = 0,60. Le ratio de Sortino améliore le Sharpe en ne considérant que la volatilité à la baisse (downside deviation), car la volatilité haussière n'est pas un risque. Le Maximum Drawdown (MDD) mesure la plus grande perte depuis un sommet historique : MDD = (Pic - Creux) / Pic. Le ratio Calmar = Rendement annualisé / MDD mesure le rendement par unité de drawdown. Le Beta mesure la sensibilité d'un actif au marché : β=1 bouge comme le marché, β>1 est plus volatile, β<1 moins volatile, β<0 se déplace inversement. Tableau récapitulatif des bons niveaux : Sharpe > 1, Sortino > 1,5, MDD < 25%, Calmar > 0,5.",
+          "points_cles": [
+            "Sharpe : rendement ajusté au risque total (> 1 = bon)",
+            "Sortino : Sharpe amélioré avec volatilité baissière seule",
+            "MDD : plus grande perte depuis un pic (< 25% souhaitable)",
+            "Beta : sensibilité au marché (β=1 = identique au marché)"
+          ]
+        },
+        {
+          "titre": "Framework de gestion de risque complet",
+          "contenu": "Un framework professionnel de gestion de risque s'organise en 4 niveaux. Niveau 1 (Risque par position) : maximum 2% du capital par trade, stop loss obligatoire, position sizing basé sur l'ATR ou la volatilité. Niveau 2 (Risque du portefeuille) : VaR quotidienne inférieure à 5% du capital, corrélations surveillées entre les positions, limites par classe d'actifs. Niveau 3 (Stress testing) : tests hebdomadaires sur scénarios historiques, tests mensuels sur scénarios hypothétiques, ajustement si dépassement des limites. Niveau 4 (Surveillance continue) : dashboard de risque en temps réel, alertes automatiques sur dépassement de limites, revue trimestrielle du framework entier. Ce framework en cascade garantit que chaque niveau de risque est contrôlé : du micro (chaque trade) au macro (le portefeuille global dans des scénarios extrêmes). Les traders institutionnels ne prennent jamais une position sans avoir vérifié l'impact sur chacun de ces niveaux.",
+          "points_cles": [
+            "4 niveaux : position, portefeuille, stress test, surveillance",
+            "VaR quotidienne < 5% du capital",
+            "Stress tests hebdomadaires et mensuels",
+            "Dashboard de risque en temps réel avec alertes"
+          ]
+        }
+      ],
+      "resume": "La VaR mesure la perte maximale probable à un niveau de confiance donné, avec 3 méthodes de calcul : paramétrique, historique et Monte Carlo. La CVaR complète la VaR en mesurant les pertes moyennes dans les pires scénarios. Le stress testing évalue l'impact des crises. Les métriques clés sont le Sharpe, Sortino, MDD et Calmar. Un framework complet combine les 4 niveaux : position, portefeuille, stress test et surveillance.",
+      "ressources_complementaires": [
+        "Value at Risk - Philippe Jorion",
+        "Risk Management and Financial Institutions - John Hull",
+        "Bâle III documentation officielle BIS",
+        "Portfolio Analytics with R - Boudt, Peterson, Lestel"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Une VaR journalière de 5 000€ à 99% signifie :",
+        "options": [
+          "Tu perdras exactement 5 000€ chaque jour",
+          "99% de chances que ta perte quotidienne ne dépasse pas 5 000€",
+          "Tu gagneras 5 000€ 99% du temps",
+          "Ta perte maximale possible est de 5 000€"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La VaR à 99% indique qu'il y a 99% de probabilité que la perte quotidienne ne dépasse pas 5 000€ — mais dans 1% des cas, elle pourrait être bien supérieure."
+      },
+      {
+        "question": "Quelle est la formule de la VaR paramétrique ?",
+        "options": [
+          "VaR = Valeur × Rendement",
+          "VaR = Valeur × Z × σ × √t",
+          "VaR = Valeur × Beta",
+          "VaR = Valeur / Volatilité"
+        ],
+        "bonne_reponse": 1,
+        "explication": "VaR paramétrique = Valeur du portefeuille × Z (score de confiance) × σ (volatilité) × √t (racine de l'horizon temporel)."
+      },
+      {
+        "question": "Quelle est la principale limite de la VaR classique ?",
+        "options": [
+          "Elle est trop complexe à calculer",
+          "Elle ne dit rien sur les pertes au-delà du seuil",
+          "Elle ne fonctionne que pour les actions",
+          "Elle nécessite des données en temps réel"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La VaR ne mesure que le seuil, pas ce qui se passe au-delà. La CVaR (Expected Shortfall) comble cette lacune en mesurant les pertes moyennes dans les pires cas."
+      },
+      {
+        "question": "Que mesure la CVaR (Expected Shortfall) ?",
+        "options": [
+          "La perte maximale possible",
+          "La perte moyenne dans les pires scénarios (au-delà de la VaR)",
+          "La volatilité moyenne du portefeuille",
+          "Le rendement espéré"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La CVaR mesure la perte moyenne conditionnelle, c'est-à-dire la perte moyenne dans les scénarios qui dépassent le seuil de la VaR."
+      },
+      {
+        "question": "Calcule le Sharpe Ratio : Rendement 18%, Rf 2%, Volatilité 15%.",
+        "options": [
+          "0,80",
+          "1,07",
+          "1,20",
+          "1,33"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Sharpe = (18% - 2%) / 15% = 16% / 15% = 1,067 ≈ 1,07. Un ratio supérieur à 1 indique un bon rendement ajusté au risque."
+      },
+      {
+        "question": "Quel type de stress test part d'un résultat catastrophique pour trouver les causes ?",
+        "options": [
+          "Stress test historique",
+          "Stress test hypothétique",
+          "Reverse stress testing",
+          "Stress test Monte Carlo"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le reverse stress testing part d'un résultat extrême ('perdre 50% du capital') et cherche quels scénarios y mèneraient."
+      },
+      {
+        "question": "Pourquoi Bâle III préfère la CVaR à la VaR ?",
+        "options": [
+          "Elle est plus simple à calculer",
+          "Elle est sous-additive et récompense la diversification",
+          "Elle est moins conservative",
+          "Elle ne nécessite pas de données historiques"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La CVaR est sous-additive : la CVaR d'un portefeuille diversifié ≤ somme des CVaR individuelles, ce qui n'est pas toujours vrai pour la VaR."
+      },
+      {
+        "question": "Un Maximum Drawdown de 40% signifie :",
+        "options": [
+          "Le portefeuille a perdu 40% depuis le début",
+          "Le portefeuille a chuté de 40% depuis son plus haut historique",
+          "La volatilité annuelle est de 40%",
+          "40% des trades ont été perdants"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le MDD mesure la plus grande perte entre un pic et le creux suivant. Un MDD de 40% signifie que le portefeuille a perdu 40% depuis son sommet."
+      },
+      {
+        "question": "Que signifie un Beta de 1,5 ?",
+        "options": [
+          "L'actif est 50% moins volatile que le marché",
+          "L'actif est 50% plus volatile que le marché",
+          "L'actif a un rendement de 1,5 fois le marché",
+          "L'actif est inversement corrélé au marché"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Un Beta de 1,5 signifie que quand le marché bouge de 1%, l'actif bouge en moyenne de 1,5% dans la même direction — 50% plus volatile."
+      },
+      {
+        "question": "Dans le framework de gestion de risque, la VaR quotidienne devrait être inférieure à :",
+        "options": [
+          "1% du capital",
+          "5% du capital",
+          "10% du capital",
+          "20% du capital"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Au niveau 2 (risque du portefeuille), la VaR quotidienne doit rester inférieure à 5% du capital pour assurer la survie à long terme."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Calcul de VaR paramétrique",
+        "description": "Calcule la VaR journalière à 95% et 99% pour un portefeuille de 50 000€ avec une volatilité journalière de 1,5%. Puis calcule la VaR à 10 jours. Compare les résultats et explique les implications."
+      },
+      {
+        "type": "simulation",
+        "titre": "Stress test de portefeuille",
+        "description": "Construis un portefeuille fictif multi-actifs (actions, obligations, or, crypto) et applique les scénarios de crise : 2008, COVID 2020, et un scénario hypothétique de hausse des taux de 300 bps. Calcule l'impact sur chaque scénario."
+      },
+      {
+        "type": "auto-evaluation",
+        "titre": "Tableau de bord de métriques de risque",
+        "description": "Pour ton portefeuille réel ou fictif, calcule les métriques suivantes : VaR 95%, Sharpe Ratio, Sortino Ratio, Maximum Drawdown, et Beta par rapport au S&P 500. Évalue si tes niveaux sont acceptables."
+      }
+    ]
+  },
+  {
+    "id": "module_4_2",
+    "parcours": "expert",
+    "titre": "Construction de Portefeuille Avancée",
+    "description": "Maîtriser la théorie moderne du portefeuille, le modèle Black-Litterman, l'approche Risk Parity et le factor investing pour construire des portefeuilles optimisés.",
+    "duree": "90 min",
+    "difficulte": "expert",
+    "points_xp": 280,
+    "prerequis": [
+      "module_4_1"
+    ],
+    "contenu": {
+      "introduction": "Construire un portefeuille ne se résume pas à acheter quelques actifs au hasard. La théorie moderne du portefeuille, développée par Harry Markowitz en 1952, a révolutionné la finance en montrant que la diversification est 'gratuite'. Ce module explore les approches avancées de construction de portefeuille, du modèle classique de Markowitz au Black-Litterman, en passant par le Risk Parity et le factor investing.",
+      "sections": [
+        {
+          "titre": "Théorie Moderne du Portefeuille (Markowitz)",
+          "contenu": "Harry Markowitz a révolutionné la finance en 1952 avec une idée fondamentale : ne regarde pas seulement le rendement, regarde aussi le risque, et surtout la diversification est gratuite. Le rendement d'un portefeuille est la somme pondérée des rendements individuels : Rp = Σ(wi × Ri). Mais le risque (volatilité) du portefeuille dépend aussi des corrélations entre actifs : σp = √(ΣΣ wi × wj × σi × σj × ρij). Exemple avec 2 actifs non corrélés (ρ=0), chacun à 10% rendement et 20% volatilité : un portefeuille 50/50 a 10% de rendement mais seulement 14,14% de volatilité — la diversification a réduit le risque sans sacrifier le rendement. La frontière efficiente représente l'ensemble des portefeuilles offrant le meilleur rendement pour chaque niveau de risque. Tout portefeuille sous cette frontière est inefficient. Limites de Markowitz : sensibilité extrême aux inputs (petits changements = grandes différences), difficulté à estimer les rendements attendus, corrélations qui changent en période de crise, et tendance à produire des portefeuilles trop concentrés.",
+          "points_cles": [
+            "La diversification réduit le risque sans sacrifier le rendement",
+            "Le risque dépend des volatilités ET des corrélations",
+            "La frontière efficiente = ensemble des portefeuilles optimaux",
+            "Limites : sensibilité aux inputs, corrélations instables"
+          ],
+          "exemple_pratique": {
+            "ticker": "Portfolio",
+            "scenario": "2 actifs à 20% de volatilité chacun. Si corrélation = +1 : volatilité du 50/50 = 20%. Si corrélation = 0 : volatilité = 14,14%. Si corrélation = -1 : volatilité = 0% ! Plus la corrélation est faible, plus la diversification est puissante."
+          }
+        },
+        {
+          "titre": "Le Modèle Black-Litterman",
+          "contenu": "Le modèle Black-Litterman (1992) résout les problèmes de Markowitz en combinant l'équilibre de marché avec les vues de l'investisseur. Étape 1 : on calcule les rendements d'équilibre implicites dans les prix actuels (reverse optimization — ce que le marché 'pense'). Étape 2 : l'investisseur exprime ses convictions avec un niveau de confiance. Par exemple : 'Je pense que les actions US vont surperformer l'Europe de 2% (confiance moyenne)' ou 'L'or va performer à 5% cette année (confiance élevée)'. Étape 3 : le modèle combine mathématiquement ces vues avec l'équilibre de marché, pondéré par la confiance. Résultat : les allocations s'ajustent dans la direction des vues mais restent proches de l'équilibre quand la confiance est faible. Avantages majeurs : les portefeuilles produits sont plus stables et intuitifs que Markowitz, les vues subjectives sont quantifiées rigoureusement, l'incertitude sur les prévisions est explicite, et les allocations extrêmes disparaissent. C'est devenu le standard dans la gestion institutionnelle.",
+          "points_cles": [
+            "Combine l'équilibre de marché + vues de l'investisseur",
+            "Résout les portefeuilles extrêmes de Markowitz",
+            "La confiance dans les vues ajuste le poids de celles-ci",
+            "Standard en gestion institutionnelle"
+          ]
+        },
+        {
+          "titre": "L'approche Risk Parity",
+          "contenu": "Le Risk Parity alloue par contribution au risque, pas par capital investi. Problème de l'allocation classique 60/40 (actions/obligations) : les actions, bien que 60% du capital, contribuent à environ 90% du risque total du portefeuille ! La solution Risk Parity : allouer pour que chaque classe d'actifs contribue également au risque. En pratique, cela donne environ 25% actions et 75% obligations (puisque les obligations sont bien moins volatiles). Pour atteindre un rendement comparable au 60/40, le Risk Parity utilise souvent du levier. Le fonds emblématique est le Bridgewater All Weather de Ray Dalio. Avantages : diversification réelle du risque (pas juste du capital), performance plus stable dans différents régimes de marché, moins de drawdown. Inconvénients : nécessite souvent du levier (coût supplémentaire), sous-performe en marché haussier fort sur les actions, plus complexe à implémenter. Le Risk Parity est particulièrement efficace car il reconnaît que les actions dominent le risque de la plupart des portefeuilles traditionnels.",
+          "points_cles": [
+            "Allocation par contribution au risque, pas par capital",
+            "60/40 classique : les actions = 90% du risque",
+            "Risk Parity équilibre les contributions au risque",
+            "Nécessite souvent du levier pour rendement équivalent"
+          ],
+          "exemple_pratique": {
+            "ticker": "Portfolio",
+            "scenario": "Allocation 60/40 classique : 60% actions (vol 15%) et 40% obligations (vol 5%). Contribution au risque : actions ~90%, obligations ~10%. Risk Parity : ~25% actions, ~75% obligations. Contribution : 50/50. Puis levier 1,5x pour augmenter le rendement."
+          }
+        },
+        {
+          "titre": "Factor Investing et Smart Beta",
+          "contenu": "L'investissement factoriel identifie les sources de rendement au-delà du simple beta de marché. Les 5 facteurs académiquement reconnus avec leurs primes historiques : Value (actions bon marché P/E, P/B bas, +3-5%), Momentum (actions en tendance haussière, +4-8%), Size (petites capitalisations, +2-3%), Quality (entreprises profitables et stables, +3-4%), Low Volatility (actions moins volatiles, +2-3%). Au lieu d'acheter simplement 'le marché', tu peux surpondérer ces facteurs. Exemple d'allocation factorielle : 30% Value, 25% Momentum, 25% Quality, 20% Low Vol. Le Smart Beta est l'implémentation pratique via des ETF : iShares Edge MSCI World Value, iShares Edge MSCI World Momentum, Invesco S&P 500 Quality. Les facteurs ne performent pas tous en même temps — Value et Momentum sont souvent complémentaires. L'important est de diversifier entre facteurs pour lisser les performances. Attention : les primes factorielles peuvent disparaître pendant de longues périodes, comme Value qui a sous-performé pendant la décennie 2010-2020.",
+          "points_cles": [
+            "5 facteurs : Value, Momentum, Size, Quality, Low Volatility",
+            "Chaque facteur offre une prime de rendement historique",
+            "Smart Beta = ETF implémentant des stratégies factorielles",
+            "Diversifier entre facteurs pour lisser les performances"
+          ]
+        },
+        {
+          "titre": "Intégrer les cryptomonnaies dans un portefeuille",
+          "contenu": "La question de l'allocation crypto dans un portefeuille traditionnel est centrale pour tout investisseur moderne. La recherche académique suggère qu'une allocation de 1-5% de crypto peut améliorer le ratio de Sharpe d'un portefeuille traditionnel. Cependant, la corrélation BTC/S&P 500 a évolué : quasi nulle avant 2020, elle a grimpé à 0,5-0,7 après 2022, réduisant le bénéfice de diversification précisément quand on en a le plus besoin. Trois approches d'intégration : allocation fixe (5% BTC/ETH, rééquilibrage trimestriel), allocation dynamique (augmenter quand volatilité basse, réduire quand haute), et Core-Satellite (90% portefeuille traditionnel + 10% satellites dont crypto). Pour : potentiel de rendement élevé, exposition à une nouvelle classe d'actifs. Contre : volatilité extrême (70-80% drawdowns possibles), corrélation croissante avec les risk assets, risques réglementaires et opérationnels. La règle d'or : n'allouer que ce que tu peux te permettre de perdre entièrement.",
+          "points_cles": [
+            "Allocation optimale : 1-5% pour améliorer le Sharpe",
+            "Corrélation croissante avec actions (0,5-0,7 post-2022)",
+            "3 approches : fixe, dynamique, Core-Satellite",
+            "Règle d'or : n'allouer que ce que tu peux perdre"
+          ]
+        },
+        {
+          "titre": "Le rééquilibrage et exemples de portefeuilles",
+          "contenu": "Le rééquilibrage est essentiel pour maintenir le profil de risque souhaité. Avec le temps, les performances différentes font dériver l'allocation : un 60/40 peut devenir 67/33 après une bonne année boursière, augmentant le risque sans décision explicite. Trois méthodes : calendaire (rééquilibrer à dates fixes, simple mais peut être inutile), par seuil (rééquilibrer quand déviation > X%, par ex si actions dépassent 65%), hybride (vérifier à dates fixes, agir si seuil dépassé — recommandé). Attention à l'impact fiscal : le rééquilibrage génère des plus-values imposables. Solutions : utiliser les flux entrants, rééquilibrer en PEA ou assurance-vie. Exemples de portefeuilles : All Weather simplifié (30% actions, 40% obligations LT, 15% TIPS, 7,5% or, 7,5% commodités — rendement ~7%, vol ~8%, MDD ~15%). Portefeuille Growth avec crypto (35% US, 20% international, 10% émergents, 15% obligations, 5% or, 10% BTC, 5% ETH — attention drawdown potentiel 40%+).",
+          "points_cles": [
+            "Rééquilibrage = retour à l'allocation cible",
+            "Méthode hybride recommandée : vérifier régulièrement + seuil",
+            "Attention à l'impact fiscal du rééquilibrage",
+            "All Weather : portefeuille pour tous les régimes de marché"
+          ]
+        }
+      ],
+      "resume": "Markowitz a montré que la diversification est gratuite. Black-Litterman améliore Markowitz en intégrant tes vues. Le Risk Parity alloue par risque, pas par capital. Le factor investing exploite les primes Value, Momentum, Quality, Size et Low Vol. Les cryptos peuvent améliorer un portefeuille (1-5%) avec précaution. Le rééquilibrage maintient le profil de risque souhaité.",
+      "ressources_complementaires": [
+        "A Random Walk Down Wall Street - Burton Malkiel",
+        "Principles - Ray Dalio",
+        "Quantitative Portfolio Management - Isichenko",
+        "Your Complete Guide to Factor-Based Investing - Berkin & Swedroe"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Pourquoi la diversification est-elle 'gratuite' selon Markowitz ?",
+        "options": [
+          "Elle ne coûte rien en frais",
+          "Elle réduit le risque sans réduire le rendement espéré",
+          "Elle élimine tous les risques",
+          "Elle double les rendements"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La diversification entre actifs peu corrélés réduit la volatilité du portefeuille sans sacrifier le rendement espéré — c'est le pouvoir de la corrélation."
+      },
+      {
+        "question": "Quel problème le modèle Black-Litterman résout-il ?",
+        "options": [
+          "Il élimine le besoin de diversification",
+          "Il résout les portefeuilles extrêmes et instables de Markowitz",
+          "Il garantit un rendement positif",
+          "Il calcule le Beta automatiquement"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Black-Litterman combine l'équilibre de marché avec les vues de l'investisseur, produisant des portefeuilles plus stables et intuitifs que l'optimisation pure de Markowitz."
+      },
+      {
+        "question": "Dans une allocation 60/40 traditionnelle, les actions contribuent à environ combien du risque ?",
+        "options": [
+          "40%",
+          "60%",
+          "75%",
+          "90%"
+        ],
+        "bonne_reponse": 3,
+        "explication": "Malgré 60% d'allocation en capital, les actions contribuent à environ 90% du risque total car elles sont beaucoup plus volatiles que les obligations."
+      },
+      {
+        "question": "Qu'est-ce que le Risk Parity ?",
+        "options": [
+          "Investir le même montant dans chaque actif",
+          "Allouer pour que chaque actif contribue également au risque",
+          "Minimiser le risque total du portefeuille",
+          "Investir uniquement dans des actifs sans risque"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Risk Parity alloue le capital de sorte que chaque classe d'actifs contribue également au risque total du portefeuille."
+      },
+      {
+        "question": "Quels sont les 5 facteurs principaux du factor investing ?",
+        "options": [
+          "Growth, Income, Stability, Liquidity, Duration",
+          "Value, Momentum, Size, Quality, Low Volatility",
+          "Alpha, Beta, Gamma, Delta, Sigma",
+          "P/E, P/B, ROE, ROA, EPS"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Les 5 facteurs académiquement reconnus sont Value, Momentum, Size, Quality et Low Volatility, chacun offrant une prime de rendement historique."
+      },
+      {
+        "question": "Quelle est l'allocation crypto recommandée dans un portefeuille traditionnel ?",
+        "options": [
+          "0% — trop risqué",
+          "1-5% pour améliorer le Sharpe",
+          "20-30% pour maximiser les rendements",
+          "50% minimum pour la diversification"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La recherche suggère qu'une allocation de 1-5% en crypto peut améliorer le ratio de Sharpe du portefeuille, mais la corrélation croissante avec les actions réduit cet avantage."
+      },
+      {
+        "question": "Pourquoi faut-il rééquilibrer un portefeuille ?",
+        "options": [
+          "Pour augmenter les rendements",
+          "Pour maintenir le profil de risque souhaité qui dérive avec le temps",
+          "Pour éviter de payer des impôts",
+          "Pour suivre la tendance du marché"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Les performances différentes des actifs font dériver l'allocation (un 60/40 peut devenir 67/33), changeant le profil de risque sans décision explicite."
+      },
+      {
+        "question": "Quel fonds emblématique utilise l'approche Risk Parity ?",
+        "options": [
+          "Berkshire Hathaway (Warren Buffett)",
+          "Bridgewater All Weather (Ray Dalio)",
+          "Renaissance Technologies (Jim Simons)",
+          "ARK Innovation (Cathie Wood)"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Bridgewater All Weather de Ray Dalio est le fonds emblématique de l'approche Risk Parity, conçu pour performer dans tous les régimes de marché."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Construction de frontière efficiente",
+        "description": "Prends 4 actifs (S&P 500, obligations US, or, BTC) avec leurs rendements et volatilités historiques. Calcule le rendement et la volatilité de 5 allocations différentes et trace une frontière efficiente simplifiée."
+      },
+      {
+        "type": "simulation",
+        "titre": "Comparaison 60/40 vs Risk Parity",
+        "description": "Simule un portefeuille 60/40 (actions/obligations) et un portefeuille Risk Parity sur les 5 dernières années. Compare les rendements, volatilités, Sharpe ratios et maximum drawdowns. Lequel préfères-tu et pourquoi ?"
+      },
+      {
+        "type": "creation",
+        "titre": "Ton portefeuille multi-actifs personnel",
+        "description": "Définis tes objectifs (horizon, tolérance au risque, rendement cible) et construis ton portefeuille en choisissant les classes d'actifs, les allocations et la stratégie de rééquilibrage. Justifie chaque choix."
+      }
+    ]
+  },
+  {
+    "id": "module_4_3",
+    "parcours": "expert",
+    "titre": "DeFi Avancée et Stratégies de Rendement",
+    "description": "Maîtriser les stratégies avancées de yield farming, le leveraged farming, l'arbitrage DeFi et l'analyse de protocoles.",
+    "duree": "80 min",
+    "difficulte": "expert",
+    "points_xp": 260,
+    "prerequis": [
+      "module_3_4"
+    ],
+    "contenu": {
+      "introduction": "Au-delà des fondamentaux de la DeFi, un écosystème de stratégies avancées permet d'optimiser les rendements tout en gérant des risques complexes. Ce module explore le yield farming avancé, le liquid staking, les flash loans, le MEV et l'analyse approfondie des protocoles pour les investisseurs expérimentés.",
+      "sections": [
+        {
+          "titre": "Yield Farming avancé et stratégies composées",
+          "contenu": "Le yield farming basique (fournir de la liquidité) n'est que le début. Les stratégies avancées combinent plusieurs protocoles pour maximiser les rendements. Stratégie 1 — Liquidity Mining Optimisé : déposer des stablecoins dans un pool Curve, récupérer les LP tokens, les staker sur Convex pour recevoir frais de trading + CRV + CVX (rendement 5-20% APY). Stratégie 2 — Looping (Leveraged Lending) : déposer 10 000 USDC sur Aave (recevant ~3% APY), emprunter 7 500 USDC (payant ~2%), redéposer, répéter. Résultat : exposition effective ~30 000 USDC, net APY = (3% × 30 000) - (2% × 20 000) = 500€, soit 5% sur le capital initial au lieu de 3%. Risques : liquidation si taux changent, risque smart contract multiplié. Stratégie 3 — Delta-Neutral Yield Farming : déposer ETH en lending + shorter la même quantité sur un perp. Les mouvements de prix s'annulent, le profit vient du yield lending + funding rate positif. Rendement potentiel : 10-30% APY en période favorable, mais nécessite un suivi actif.",
+          "points_cles": [
+            "Curve + Convex = optimisation du liquidity mining",
+            "Looping = levier via dépôt/emprunt répété (attention liquidation)",
+            "Delta-neutral = rendement sans exposition au prix",
+            "Les stratégies composées multiplient aussi les risques"
+          ],
+          "exemple_pratique": {
+            "ticker": "DeFi",
+            "scenario": "Looping sur Aave : dépôt 10 000 USDC (3% APY), emprunt 7 500 (2%), redépôt, emprunt 5 625, redépôt. Exposition totale ~30 000 USDC. Gain brut = 900$ - 400$ = 500$ net, soit 5% au lieu de 3%. Si le taux d'emprunt monte à 4%, le gain tombe à 100$ et le risque de liquidation augmente."
+          }
+        },
+        {
+          "titre": "Liquid Staking et LSTfi",
+          "contenu": "Le Liquid Staking permet de staker des tokens (comme ETH) tout en recevant un token liquide en échange. Avec Lido, tu déposes 10 ETH et reçois 10 stETH qui génèrent ~4% APY de staking. L'avantage clé : tu peux utiliser tes stETH dans la DeFi tout en gagnant le yield de staking. Le LSTfi (Liquid Staking Token Finance) exploite cette liquidité avec des stratégies dédiées. Leverage staking : déposer stETH comme collatéral, emprunter ETH, acheter plus de stETH, répéter — multiplie le yield de staking. LP avec LST : les pools stETH/ETH ont très peu d'Impermanent Loss car les prix sont quasi-identiques, offrant yield de staking + frais LP. Les principaux LST sont stETH (Lido, Ethereum), rETH (Rocket Pool, plus décentralisé), cbETH (Coinbase, institutionnel) et mSOL (Marinade, Solana). Le choix entre ces tokens dépend de la décentralisation souhaitée, des frais et de la liquidité disponible.",
+          "points_cles": [
+            "Liquid Staking = staker + garder la liquidité via un token",
+            "stETH, rETH, cbETH sont les principaux LST sur Ethereum",
+            "LSTfi = utiliser les LST dans d'autres protocoles DeFi",
+            "Pool stETH/ETH = très peu d'IL car prix quasi-identiques"
+          ]
+        },
+        {
+          "titre": "Points farming et airdrops",
+          "contenu": "De nombreux protocoles distribuent des points qui seront convertis en tokens lors d'un airdrop. La stratégie consiste à identifier les protocoles avec des programmes de points actifs, utiliser le protocole de manière à maximiser l'accumulation de points, puis attendre la conversion en tokens. Exemples historiques : Blur a distribué le token BLUR aux utilisateurs actifs, Eigenlayer accumule des points pour le restaking, LayerZero récompense les utilisateurs cross-chain. Cependant les risques sont réels : aucune garantie que les points auront de la valeur, les règles peuvent changer en cours de route, le coût d'opportunité si le protocole ne livre pas est significatif, et le Sybil filtering peut exclure certains utilisateurs qui ont créé plusieurs wallets. La stratégie optimale est d'utiliser organiquement les protocoles prometteurs plutôt que de farmer agressivement les points — les protocoles détectent et pénalisent de plus en plus le farming artificiel.",
+          "points_cles": [
+            "Points = récompenses futures convertibles en tokens",
+            "Pas de garantie de valeur — risque d'opportunité",
+            "Sybil filtering exclut les farmers agressifs",
+            "Usage organique > farming artificiel"
+          ]
+        },
+        {
+          "titre": "Arbitrage DeFi et Flash Loans",
+          "contenu": "L'arbitrage DeFi exploite les différences de prix entre protocoles. Arbitrage DEX-DEX : ETH à 2 000 USDC sur Uniswap et 2 010 USDC sur SushiSwap — acheter sur Uniswap, vendre sur SushiSwap pour 10 USDC de profit. En réalité, ces opportunités durent des millisecondes et sont captées par des bots. L'arbitrage triangulaire exploite les incohérences entre 3+ paires : ETH → USDC → BTC → ETH, si le circuit génère plus d'ETH qu'au départ. Les Flash Loans sont un concept révolutionnaire : emprunter n'importe quel montant sans collatéral, à condition de rembourser dans la même transaction blockchain. Pour l'arbitrage : emprunter 1M$ via flash loan, acheter ETH pas cher sur DEX A, vendre sur DEX B plus cher, rembourser le prêt + frais, garder le profit — tout en une seule transaction. Si l'arbitrage échoue, la transaction entière est annulée et seuls les frais de gas sont perdus. La compétition avec d'autres bots rend ces stratégies de plus en plus difficiles pour les utilisateurs manuels.",
+          "points_cles": [
+            "Arbitrage DEX-DEX : exploiter les différences de prix entre exchanges",
+            "Flash Loans : emprunt sans collatéral remboursé dans la même transaction",
+            "Si le flash loan échoue, tout est annulé (seul gas perdu)",
+            "Compétition intense entre bots rend l'arbitrage manuel difficile"
+          ],
+          "exemple_pratique": {
+            "ticker": "DeFi",
+            "scenario": "Flash Loan de 1 000 000 USDC : achète 500 ETH à 2 000$ sur Uniswap, vend 500 ETH à 2 005$ sur SushiSwap = 1 002 500 USDC. Rembourse 1 000 000 + 900 (frais 0,09%) = 1 000 900. Profit = 1 600 USDC. Le tout en une seule transaction atomique."
+          }
+        },
+        {
+          "titre": "MEV (Maximal Extractable Value)",
+          "contenu": "Le MEV représente le profit que les validateurs et bots spécialisés peuvent extraire en réordonnant les transactions dans un bloc. Le front-running consiste à placer sa transaction avant celle d'un autre utilisateur pour profiter de l'impact de prix. Le back-running place une transaction juste après pour capturer l'opportunité créée. La sandwich attack encadre une transaction victime : le bot achète avant (augmentant le prix), la victime achète au prix gonflé, puis le bot vend immédiatement après. Cela coûte des milliards de dollars par an aux utilisateurs de DeFi. Protections disponibles : utiliser un RPC privé comme Flashbots Protect qui envoie les transactions directement aux validateurs (invisible du mempool public), limiter le slippage maximum dans les swaps, éviter les gros trades visibles, utiliser des DEX avec protection MEV intégrée (comme CoW Swap qui utilise des batch auctions). Le MEV est une réalité incontournable de la DeFi qui affecte chaque utilisateur, même ceux qui n'en sont pas conscients.",
+          "points_cles": [
+            "MEV = profit extrait par réordonnancement des transactions",
+            "Sandwich attack : achat avant + vente après = perte pour la victime",
+            "Protection : Flashbots RPC, limiter le slippage, CoW Swap",
+            "Coûte des milliards/an aux utilisateurs DeFi"
+          ]
+        },
+        {
+          "titre": "Analyse avancée des protocoles DeFi",
+          "contenu": "L'analyse d'un protocole va bien au-delà de la TVL. Les métriques clés incluent : Protocol Revenue (revenus réels, pas juste les incentives temporaires), le ratio P/S (Market Cap / Revenus annualisés — exemple : token à 500M$ MC avec 50M$ de revenus → P/S = 10), les Active Users (DAU, WAU, MAU et surtout la rétention), et les Earnings (Revenue moins coûts opérationnels). La due diligence avancée couvre quatre dimensions. Sécurité : audits multiples par firmes réputées, bug bounty actif, historique sans incident, code open source vérifié. Tokenomics : distribution équitable, unlocks graduels, utilité réelle du token, mécanismes d'accumulation de valeur. Équipe et gouvernance : équipe expérimentée et doxxed, décentralisation progressive, trésorerie bien gérée. Métriques business : revenus réels et croissants, users actifs avec rétention, product-market fit démontré, position favorable vs concurrents. Les outils essentiels sont Token Terminal pour les métriques financières et DefiLlama pour la TVL comparative.",
+          "points_cles": [
+            "TVL seule est insuffisante — regarder revenue, users, earnings",
+            "P/S ratio = Market Cap / Revenus pour valoriser un protocole",
+            "Due diligence : sécurité, tokenomics, équipe, métriques business",
+            "Token Terminal et DefiLlama pour l'analyse"
+          ]
+        },
+        {
+          "titre": "Gestion des risques et portefeuille DeFi",
+          "contenu": "La gestion des risques DeFi avancée nécessite une approche structurée. Matrice des risques par type : smart contract (probabilité moyenne, impact critique — mitigation par audits et diversification), oracle (probabilité faible, impact critique — Chainlink + multi-oracles), liquidation (probabilité variable, impact élevé — Health Factor > 2), rug pull (probabilité variable, impact total — due diligence), réglementaire (probabilité croissante, impact variable — compliance). Stratégies de mitigation : ne jamais mettre plus de 20% dans un seul protocole, diversifier aussi par blockchain, monitoring actif avec alertes sur Health Factor via Zapper/DeBank, et considérer l'assurance DeFi (Nexus Mutual, InsurAce) couvrant hack, échec oracle et dépeg stablecoin pour 2-10%/an. Portefeuille DeFi structuré : Tier 1 conservateur 40-50% (lending stablecoins, LP stablecoins, liquid staking — 3-8% APY), Tier 2 modéré 30-40% (LP paires majeures, yield aggregators — 8-20% APY), Tier 3 agressif 10-20% (leveraged farming, nouveaux protocoles — 20%+ APY mais risque élevé).",
+          "points_cles": [
+            "Max 20% par protocole, diversifier par blockchain",
+            "Assurance DeFi disponible : 2-10%/an pour hack, oracle, dépeg",
+            "Structure en tiers : conservateur (40-50%), modéré (30-40%), agressif (10-20%)",
+            "Toujours avoir un plan de sortie documenté"
+          ]
+        }
+      ],
+      "resume": "Les stratégies DeFi avancées combinent plusieurs protocoles : looping, delta-neutral farming, liquid staking (LSTfi). Les flash loans permettent l'arbitrage sans capital. Le MEV est un coût caché pour tous les utilisateurs. L'analyse de protocole va au-delà de la TVL avec les revenus, users et earnings. La gestion du risque passe par la diversification protocole/blockchain et une structure en tiers.",
+      "ressources_complementaires": [
+        "DeFi and the Future of Finance - Harvey, Ramachandran, Santoro",
+        "Token Terminal - Métriques financières DeFi",
+        "Flashbots Research - MEV documentation",
+        "DefiLlama - Yields et TVL comparatifs"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Qu'est-ce que le looping en DeFi ?",
+        "options": [
+          "Échanger des tokens en boucle",
+          "Déposer, emprunter, redéposer pour augmenter le rendement",
+          "Staker des tokens en boucle sur plusieurs blockchains",
+          "Acheter et vendre rapidement un token"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le looping consiste à déposer un actif comme collatéral, emprunter le même actif, redéposer, et répéter pour amplifier le rendement via l'écart entre taux de dépôt et d'emprunt."
+      },
+      {
+        "question": "Qu'est-ce qu'une stratégie delta-neutral en DeFi ?",
+        "options": [
+          "Investir uniquement dans des stablecoins",
+          "Générer du rendement sans exposition aux variations de prix",
+          "Ne jamais utiliser de levier",
+          "Utiliser uniquement des protocoles audités"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Delta-neutral = combiner une position long (ex: lending ETH) avec une position short de même taille (ex: short perp). Les prix s'annulent, le profit vient du yield et funding rate."
+      },
+      {
+        "question": "Comment fonctionne un Flash Loan ?",
+        "options": [
+          "Emprunt rapide remboursé en 24h",
+          "Emprunt sans collatéral remboursé dans la même transaction",
+          "Prêt à taux flash (très bas)",
+          "Emprunt automatique basé sur le score de crédit"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Un flash loan permet d'emprunter n'importe quel montant sans collatéral, à condition de tout rembourser dans la même transaction blockchain. Si le remboursement échoue, tout est annulé."
+      },
+      {
+        "question": "Qu'est-ce qu'une sandwich attack ?",
+        "options": [
+          "Attaque sur deux protocoles simultanément",
+          "Achat avant et vente après la transaction d'une victime",
+          "Vol de clés privées",
+          "Manipulation du prix d'un oracle"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le bot MEV achète avant la transaction victime (gonflant le prix), la victime achète au prix gonflé, puis le bot revend immédiatement — empochant la différence."
+      },
+      {
+        "question": "Quelle métrique utiliser en plus de la TVL pour évaluer un protocole ?",
+        "options": [
+          "Uniquement le nombre de followers Twitter",
+          "Protocol Revenue et ratio P/S",
+          "La couleur du logo",
+          "Le nombre de pools disponibles"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Protocol Revenue (revenus réels) et le ratio P/S (Market Cap / Revenus) permettent d'évaluer si un protocole génère de la valeur réelle au-delà des incentives temporaires."
+      },
+      {
+        "question": "Pourquoi le liquid staking est-il avantageux ?",
+        "options": [
+          "Il élimine tous les risques du staking",
+          "Il permet de staker ET d'utiliser ses fonds dans la DeFi",
+          "Il offre des rendements de 100%+",
+          "Il ne nécessite aucun capital initial"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le liquid staking donne un token liquide (ex: stETH) en échange des tokens stakés. Tu gagnes le yield de staking tout en pouvant utiliser le token liquide comme collatéral ou LP dans la DeFi."
+      },
+      {
+        "question": "Comment se protéger du MEV ?",
+        "options": [
+          "Trader uniquement le week-end",
+          "Utiliser un RPC privé (Flashbots) et limiter le slippage",
+          "Ne trader que des stablecoins",
+          "Augmenter le gas price au maximum"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Flashbots Protect envoie les transactions directement aux validateurs (invisibles du mempool public). Limiter le slippage réduit aussi l'intérêt d'une sandwich attack."
+      },
+      {
+        "question": "Quel pourcentage maximum investir dans un seul protocole DeFi ?",
+        "options": [
+          "5%",
+          "20%",
+          "50%",
+          "Pas de limite si le protocole est audité"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La règle de gestion des risques recommande de ne jamais dépasser 20% dans un seul protocole, et de diversifier également par blockchain."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "simulation",
+        "titre": "Simulation de looping",
+        "description": "Calcule le rendement net d'une stratégie de looping sur 10 000 USDC avec 3 boucles (LTV 75% à chaque boucle). Taux de dépôt : 4%, taux d'emprunt : 3%. Compare le rendement au simple dépôt et évalue le risque de liquidation."
+      },
+      {
+        "type": "pratique",
+        "titre": "Due diligence protocole",
+        "description": "Choisis un protocole DeFi et réalise une due diligence complète : audits, TVL, revenus, P/S ratio, tokenomics, équipe, users actifs. Donne une note /10 et justifie si tu y investirais."
+      },
+      {
+        "type": "creation",
+        "titre": "Construction de portefeuille DeFi",
+        "description": "Construis un portefeuille DeFi de 50 000$ avec la structure en tiers (conservateur/modéré/agressif). Détaille chaque protocole, stratégie, APY visé et plan de gestion des risques."
+      }
+    ]
+  },
+  {
+    "id": "module_4_4",
+    "parcours": "expert",
+    "titre": "Analyse Inter-Marchés et Macro",
+    "description": "Comprendre les relations entre les classes d'actifs, l'impact des politiques monétaires, les cycles économiques et leur influence sur les décisions de trading.",
+    "duree": "85 min",
+    "difficulte": "expert",
+    "points_xp": 270,
+    "prerequis": [
+      "module_2_1",
+      "module_3_1"
+    ],
+    "contenu": {
+      "introduction": "Tous les marchés sont interconnectés. Le prix d'une action ne dépend pas seulement de l'entreprise, mais aussi des taux d'intérêt, du dollar, des matières premières et des politiques des banques centrales. Ce module te donne les clés pour comprendre ces relations inter-marchés et intégrer l'analyse macroéconomique dans tes décisions de trading.",
+      "sections": [
+        {
+          "titre": "Les relations inter-marchés",
+          "contenu": "John Murphy, dans 'Intermarket Analysis', a démontré que les 4 marchés principaux — devises, matières premières, obligations et actions — sont étroitement interconnectés. Relations classiques : Dollar vs Matières premières = relation inverse (commodities cotées en USD, dollar fort → matières premières faibles). Obligations vs Actions = souvent inverse (flight to quality : peur → achat obligations, vente actions). Taux d'intérêt vs Actions = complexe et variable (hausse des taux généralement négative à court terme, mais peut refléter une économie forte). Or vs Dollar = inverse (l'or est l'anti-dollar). Le cycle inter-marchés simplifié : expansion économique → demande commodities hausse → inflation hausse → banques centrales montent les taux → obligations baissent en prix → actions finissent par baisser → récession → demande commodities baisse → inflation baisse → taux baissent → obligations montent → actions reprennent → nouvelle expansion. Ce cycle n'est pas mécanique mais fournit un cadre pour comprendre la séquence des mouvements inter-marchés.",
+          "points_cles": [
+            "4 marchés interconnectés : devises, commodities, obligations, actions",
+            "Dollar fort = négatif pour matières premières et émergents",
+            "Obligations et actions souvent en relation inverse",
+            "Le cycle inter-marchés suit une séquence logique"
+          ],
+          "exemple_pratique": {
+            "ticker": "DXY",
+            "scenario": "En 2022, la Fed monte agressivement les taux. Le dollar (DXY) monte de 95 à 115. Conséquences : l'or chute de 2050$ à 1620$, le pétrole baisse, les marchés émergents souffrent, Bitcoin perd 65%. Tout est connecté via le dollar et les taux."
+          }
+        },
+        {
+          "titre": "Les politiques monétaires et leur impact",
+          "contenu": "Les banques centrales (Fed, BCE, BoJ, BoE, PBoC) sont le facteur numéro 1 à surveiller. Leurs trois outils principaux : les taux directeurs (hausse = ralentit l'économie, baisse = stimule), le QE/QT (Quantitative Easing = achat d'actifs qui injecte de la liquidité, positif pour actions et crypto / QT = vente qui retire la liquidité, négatif), et le Forward Guidance (communication sur les intentions futures pour influencer les attentes). Le taux des Fed Funds est le taux le plus important au monde. Le cycle typique : taux bas → argent facile → actions et crypto montent ; hausse des taux → resserrement → pression sur actifs risqués ; taux élevés → obligations deviennent attractives ; baisse des taux → signal de problème économique d'abord, puis relance. Le 'Fed Put' est la croyance que la Fed interviendra pour soutenir les marchés en cas de chute majeure, ce qui pousse les investisseurs à prendre plus de risques. Comprendre où l'on se situe dans ce cycle est crucial pour toute décision d'allocation.",
+          "points_cles": [
+            "3 outils : taux directeurs, QE/QT, forward guidance",
+            "QE = positif actifs risqués, QT = négatif",
+            "Taux des Fed Funds = le plus important au monde",
+            "Le 'Fed Put' influence le comportement des investisseurs"
+          ]
+        },
+        {
+          "titre": "Les cycles économiques et la rotation sectorielle",
+          "contenu": "L'économie évolue en 4 phases cycliques. L'Expansion : PIB en croissance, chômage en baisse, confiance élevée — actifs favorisés : actions cycliques, commodities. Le Pic : croissance maximale, inflation qui monte, banques centrales qui resserrent — actifs favorisés : commodities, actions value. La Contraction (récession) : PIB en baisse, chômage en hausse, pessimisme — actifs favorisés : obligations, or, cash, actions défensives. Le Creux : point bas, banques centrales relancent, opportunités d'achat — actifs favorisés : actions growth (anticipation reprise). La rotation sectorielle suit ces phases : début de reprise = finance, consommation discrétionnaire, industrie ; milieu d'expansion = technologie, industrie, matériaux ; fin d'expansion = énergie, matériaux, commodities ; récession = santé, utilities, consommation de base. Identifier la phase actuelle du cycle permet d'ajuster l'allocation sectorielle et de positionner son portefeuille en avance sur les mouvements.",
+          "points_cles": [
+            "4 phases : Expansion, Pic, Contraction, Creux",
+            "Chaque phase favorise différentes classes d'actifs",
+            "Rotation sectorielle = changer de secteurs selon le cycle",
+            "Identifier la phase actuelle pour anticiper les mouvements"
+          ],
+          "exemple_pratique": {
+            "ticker": "SPY",
+            "scenario": "Début 2023 : PMI en contraction, inflation en baisse, Fed en fin de cycle de hausse. Phase = fin de contraction / début de creux. Secteurs favorisés : tech growth (anticipation de reprise). Résultat : le Nasdaq monte de 40%+ en 2023, mené par les tech."
+          }
+        },
+        {
+          "titre": "Les indicateurs économiques clés",
+          "contenu": "Les indicateurs se classent en trois catégories. Les indicateurs avancés (leading) prédisent l'activité future : PMI (Purchasing Managers Index — >50 = expansion, <50 = contraction), courbe des taux (normale = saine, plate = ralentissement, inversée = récession probable dans 12-18 mois), Consumer Confidence, Building Permits, Initial Jobless Claims (hebdomadaire). Les indicateurs coïncidents reflètent l'activité actuelle : PIB, production industrielle, ventes au détail, emploi non-agricole. Les indicateurs retardés confirment les tendances : taux de chômage, CPI (inflation), bénéfices des entreprises. Événements à fort impact sur le calendrier : NFP (Non-Farm Payrolls, 1er vendredi du mois), CPI (milieu de mois), FOMC (décision Fed, 8 fois/an), PIB (trimestriel). La courbe des taux inversée est l'indicateur avancé le plus fiable — elle a précédé chaque récession américaine depuis 50 ans avec un délai de 12-18 mois.",
+          "points_cles": [
+            "PMI > 50 = expansion, < 50 = contraction",
+            "Courbe des taux inversée = récession probable en 12-18 mois",
+            "NFP, CPI, FOMC = événements à plus fort impact",
+            "Leading → Coïncidents → Lagging : 3 catégories d'indicateurs"
+          ]
+        },
+        {
+          "titre": "Le Dollar, la liquidité globale et les cryptos",
+          "contenu": "Le Dollar Index (DXY) mesure le dollar face à un panier de 6 devises (Euro 57,6%, Yen 13,6%, Livre 11,9%, CAD 9,1%, SEK 4,2%, CHF 3,6%). Dollar fort : négatif pour commodities (cotées en USD), émergents (dette en USD), multinationales US, et souvent crypto. Dollar faible : positif pour commodities, or, émergents et crypto. La liquidité globale — quantité d'argent dans le système financier mondial — est le driver principal des actifs risqués. Sources : bilans banques centrales, crédit bancaire, réserves de change. Corrélation forte : liquidité en hausse = actifs risqués montent (2020 : injection massive → BTC et actions explosent), liquidité en baisse = actifs sous pression (2022 : QT → crash généralisé). Les cryptos sont de plus en plus corrélées aux actifs risqués (corrélation BTC/NASDAQ > 0,5 depuis 2020). Les taux réels (taux nominaux - inflation) négatifs sont favorables au BTC, les taux réels positifs sont défavorables (coût d'opportunité de détenir un actif sans rendement).",
+          "points_cles": [
+            "DXY = mesure de la force du dollar vs 6 devises",
+            "Liquidité globale = driver #1 des actifs risqués",
+            "QE 2020 → explosion BTC/actions ; QT 2022 → crash",
+            "Taux réels négatifs = favorable crypto"
+          ]
+        },
+        {
+          "titre": "Framework d'analyse macro pour le trading",
+          "contenu": "Un framework macro structuré en checklist mensuelle couvre 5 dimensions. Politique monétaire : où en sont les taux ? QE ou QT ? Discours des banquiers centraux ? Cycle économique : PMI en expansion ou contraction ? Courbe des taux ? Emploi : création ou destruction ? Inflation : CPI tendance ? Inflation transitoire ou persistante ? Impact sur politique monétaire ? Dollar et liquidité : DXY tendance ? Liquidité globale en expansion ou contraction ? Conditions financières ? Sentiment : VIX (indice de peur) ? Positionnement investisseurs ? Flux de capitaux ? L'approche Top-Down intègre tout : d'abord analyser l'environnement macro global, puis identifier les classes d'actifs et secteurs favorisés, ensuite sélectionner les actifs spécifiques, et enfin utiliser l'analyse technique pour le timing d'entrée. Exemple concret : Fed en pause + inflation en baisse + PMI stable = favorable actifs risqués → surpondérer tech, considérer crypto → sélectionner leaders sectoriels → attendre pullback sur support pour entrer.",
+          "points_cles": [
+            "Checklist macro mensuelle : 5 dimensions à analyser",
+            "Approche Top-Down : Macro → Secteur → Actif → Timing",
+            "La macro = filtre pour les décisions de trading",
+            "Combiner analyse macro avec technique pour le timing"
+          ]
+        }
+      ],
+      "resume": "Tous les marchés sont interconnectés via les taux, le dollar et la liquidité. Les banques centrales sont le facteur #1. Le cycle économique (expansion/pic/contraction/creux) guide la rotation sectorielle. PMI et courbe des taux sont les meilleurs indicateurs avancés. La liquidité globale drive les actifs risqués, y compris les cryptos de plus en plus corrélées à la macro.",
+      "ressources_complementaires": [
+        "Intermarket Analysis - John Murphy",
+        "The Alchemy of Finance - George Soros",
+        "ForexFactory Economic Calendar",
+        "FRED (Federal Reserve Economic Data)"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quelle est la relation typique entre le dollar et les matières premières ?",
+        "options": [
+          "Positive — ils montent ensemble",
+          "Inverse — dollar fort = commodities faibles",
+          "Aucune relation",
+          "Proportionnelle au taux d'inflation"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Les matières premières sont cotées en dollars. Quand le dollar se renforce, il faut moins de dollars pour acheter la même quantité de commodities → prix en baisse."
+      },
+      {
+        "question": "Qu'indique une courbe des taux inversée ?",
+        "options": [
+          "Une expansion économique imminente",
+          "Une récession probable dans 12-18 mois",
+          "Une hausse des actions à venir",
+          "Que les taux vont baisser demain"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La courbe des taux inversée (taux courts > taux longs) a précédé chaque récession américaine depuis 50 ans, avec un délai typique de 12-18 mois."
+      },
+      {
+        "question": "Qu'est-ce que le QE (Quantitative Easing) ?",
+        "options": [
+          "Hausse des taux directeurs",
+          "Achat d'actifs par la banque centrale qui injecte de la liquidité",
+          "Régulation des marchés financiers",
+          "Réduction des dépenses publiques"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le QE = la banque centrale achète des actifs (obligations notamment) sur le marché, injectant de la liquidité dans le système. Généralement positif pour actions et crypto."
+      },
+      {
+        "question": "Dans quelle phase du cycle les actions cycliques performent le mieux ?",
+        "options": [
+          "Contraction/récession",
+          "Expansion",
+          "Au pic du cycle",
+          "Au creux uniquement"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Les actions cycliques (tech, industrie, consommation discrétionnaire) performent le mieux en phase d'expansion quand la croissance économique est forte."
+      },
+      {
+        "question": "Que signifie un PMI de 48 ?",
+        "options": [
+          "Expansion forte de l'économie",
+          "Contraction de l'activité économique",
+          "Stabilité parfaite",
+          "Inflation de 48%"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le PMI (Purchasing Managers Index) au-dessus de 50 indique une expansion, en dessous de 50 une contraction. Un PMI de 48 signifie que l'activité se contracte."
+      },
+      {
+        "question": "Comment la liquidité globale affecte-t-elle les cryptomonnaies ?",
+        "options": [
+          "Aucun effet sur les cryptos",
+          "Liquidité en hausse = cryptos montent, en baisse = cryptos baissent",
+          "La liquidité n'affecte que les obligations",
+          "Les cryptos sont décorrélées de tout"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La corrélation entre liquidité globale et prix des cryptos est historiquement forte. QE 2020 → explosion BTC. QT 2022 → crash crypto. Les cryptos se comportent de plus en plus comme des actifs risqués."
+      },
+      {
+        "question": "Quand les taux réels sont négatifs, c'est favorable à :",
+        "options": [
+          "Les obligations à court terme",
+          "Le Bitcoin et l'or",
+          "Le cash uniquement",
+          "Les actions value"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Taux réels négatifs = le rendement des obligations ne compense pas l'inflation. Cela favorise les actifs alternatifs comme l'or et le Bitcoin qui servent de 'hedge' contre la dévaluation monétaire."
+      },
+      {
+        "question": "Quelle est la première étape de l'approche Top-Down ?",
+        "options": [
+          "Choisir un actif spécifique",
+          "Analyser l'environnement macro global",
+          "Faire de l'analyse technique",
+          "Calculer le position sizing"
+        ],
+        "bonne_reponse": 1,
+        "explication": "L'approche Top-Down commence par le macro (environnement global), puis descend vers le secteur favorisé, la sélection d'actifs spécifiques, et enfin le timing technique."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Checklist macro mensuelle",
+        "description": "Remplis ta première checklist macro : taux Fed actuels + tendance, PMI dernier chiffre, courbe des taux (normale/plate/inversée), DXY tendance, VIX niveau. Conclus : l'environnement est-il favorable ou défavorable aux actifs risqués ?"
+      },
+      {
+        "type": "auto-evaluation",
+        "titre": "Analyse inter-marchés",
+        "description": "Prends les données des 12 derniers mois pour le DXY, l'or, le S&P 500 et le Bitcoin. Identifie les corrélations et les moments où les relations classiques ont fonctionné ou échoué. Explique pourquoi."
+      },
+      {
+        "type": "simulation",
+        "titre": "Rotation sectorielle simulée",
+        "description": "Identifie la phase actuelle du cycle économique avec 3 indicateurs (PMI, courbe des taux, emploi). Détermine les secteurs favorisés et construis un portefeuille sectoriel avec 5 ETF. Reviens dans 3 mois pour évaluer ta performance."
+      }
+    ]
+  },
+  {
+    "id": "module_4_5",
+    "parcours": "expert",
+    "titre": "Synthèse et Plan de Développement",
+    "description": "Vision globale de la formation, création d'un plan de développement personnalisé et construction d'une pratique durable de trading.",
+    "duree": "60 min",
+    "difficulte": "expert",
+    "points_xp": 300,
+    "prerequis": [
+      "module_4_1",
+      "module_4_2",
+      "module_4_4"
+    ],
+    "contenu": {
+      "introduction": "Félicitations, tu as parcouru l'intégralité de la Formation Trading Complète — 4 niveaux, 21 modules, de débutant absolu à expert. Ce module final te donne une vision synthétique de tout ce que tu as appris et t'aide à construire un plan de développement personnalisé pour continuer ta progression.",
+      "sections": [
+        {
+          "titre": "Récapitulatif complet de la formation",
+          "contenu": "Tu as couvert un parcours complet en 4 niveaux. Niveau 1 — Débutant (Les Fondations) : compréhension des marchés financiers et types d'actifs, passage d'ordres et lecture de graphiques, introduction aux cryptomonnaies, et psychologie de base du trader. Niveau 2 — Intermédiaire (Construction) : analyse fondamentale avec bilans et ratios, indicateurs techniques (MA, RSI, MACD, Bollinger), gestion du risque et position sizing, figures chartistes et stratégie de trading complète. Niveau 3 — Avancé (Maîtrise) : analyse technique avancée (Fibonacci, Ichimoku, patterns harmoniques), options, futures et produits dérivés avec les Greeks, money management avancé (critère de Kelly, corrélations, scaling), DeFi fondamentale et psychologie avancée du trading. Niveau 4 — Expert (Excellence) : VaR, CVaR et gestion de risque institutionnelle, construction de portefeuille (Markowitz, Black-Litterman, Risk Parity), DeFi avancée (looping, flash loans, MEV), analyse inter-marchés et macroéconomie. Chaque niveau a construit sur le précédent pour te donner une vision complète et cohérente du trading et de l'investissement.",
+          "points_cles": [
+            "Niveau 1 : Fondations — marchés, ordres, crypto, psychologie base",
+            "Niveau 2 : Construction — fondamentale, technique, risque, stratégie",
+            "Niveau 3 : Maîtrise — dérivés, money management, DeFi, psychologie avancée",
+            "Niveau 4 : Excellence — VaR, portefeuille, DeFi avancée, macro"
+          ]
+        },
+        {
+          "titre": "Les 4 piliers de la réussite en trading",
+          "contenu": "Le succès en trading repose sur 4 piliers indissociables. Pilier 1 — La Stratégie : tu as besoin d'un edge statistiquement prouvé, des règles d'entrée et de sortie claires et non ambiguës, et un backtesting documenté qui prouve que ta stratégie fonctionne sur données historiques. Sans edge, aucune gestion du risque ne te sauvera. Pilier 2 — La Gestion du Risque : maximum 1-2% du capital par trade (jamais plus), stop loss obligatoire sur chaque position, corrélations entre positions surveillées, et heat total du portefeuille contrôlé. Le money management transforme un edge modeste en performance durable. Pilier 3 — La Psychologie : discipline absolue dans l'exécution du plan, acceptation de l'incertitude (les 5 vérités de Mark Douglas), détachement émotionnel des résultats individuels. Sans discipline, même la meilleure stratégie échoue. Pilier 4 — L'Amélioration Continue : journal de trading quotidien (chaque trade documenté), revue hebdomadaire des statistiques et émotions, formation continue (le marché évolue, tes connaissances aussi). Les 4 piliers sont comme les pieds d'une table — si l'un manque, tout s'effondre.",
+          "points_cles": [
+            "Stratégie : edge prouvé + règles claires + backtesting",
+            "Gestion du risque : 1-2% max par trade + stops + corrélations",
+            "Psychologie : discipline + acceptation incertitude + détachement",
+            "Amélioration : journal quotidien + revue hebdo + formation continue"
+          ]
+        },
+        {
+          "titre": "Les erreurs à éviter au niveau avancé",
+          "contenu": "Même les traders expérimentés tombent dans des pièges spécifiques. La sur-optimisation (overfitting) : ajuster sa stratégie parfaitement aux données passées au point qu'elle ne fonctionne plus en temps réel. Solution : garder les stratégies simples, tester sur des données out-of-sample, et accepter que la perfection historique n'existe pas en trading live. L'excès de complexité : empiler les indicateurs et conditions au point de ne plus pouvoir prendre de décision. Solution : moins d'indicateurs, plus de discipline. Deux ou trois indicateurs bien maîtrisés valent mieux que dix utilisés superficiellement. Ignorer la macro : trader en bulle en ignorant l'environnement global. Solution : checklist macro mensuelle systématique. Le surlevier : même pour les experts, le levier maximum de 3-5x est la limite raisonnable. Au-delà, un événement inattendu peut anéantir le compte. Négliger la psychologie : croire que l'expérience immunise contre les biais. Solution : travail continu, routines, et humilité constante.",
+          "points_cles": [
+            "Sur-optimisation : stratégie parfaite sur le passé mais inutile en live",
+            "Excès de complexité : trop d'indicateurs paralysent la décision",
+            "Ignorer la macro = trader à l'aveugle sur l'environnement",
+            "Surlevier : max 3-5x même pour les experts"
+          ]
+        },
+        {
+          "titre": "Plan de développement sur 12 mois",
+          "contenu": "Un plan structuré en 4 phases trimestrielles. Mois 1-3 — Consolidation : définir ta stratégie principale et la documenter précisément, mettre en place ta routine pré/post-trading, commencer le journal de trading quotidien, faire au moins 1 mois de paper trading avant le capital réel. Mois 4-6 — Expansion : ajouter une nouvelle classe d'actifs ou un nouveau marché, identifier et combler tes lacunes (technique ? fondamentale ? risque ?), établir une checklist macro mensuelle, commencer à tracker tes statistiques détaillées. Mois 7-9 — Optimisation : analyser tes données de trading (50+ trades minimum), identifier tes meilleurs et pires setups, ajuster les paramètres (position sizing, sélection de setups, timing), développer des alertes et automatisations. Mois 10-12 — Maîtrise : documenter ta méthode complète (playbook), automatiser ce qui peut l'être, mentor ou communauté pour accountability, planifier l'année suivante avec des objectifs mesurables. Ce plan n'est pas rigide — adapte-le à ta situation, mais garde la structure progressive.",
+          "points_cles": [
+            "Mois 1-3 : Consolidation — stratégie, routine, journal, paper trading",
+            "Mois 4-6 : Expansion — nouveau marché, combler lacunes, macro",
+            "Mois 7-9 : Optimisation — analyser données, ajuster paramètres",
+            "Mois 10-12 : Maîtrise — playbook, automatisation, plan N+1"
+          ]
+        },
+        {
+          "titre": "Ressources essentielles et attentes réalistes",
+          "contenu": "Les 3 livres incontournables : 'Trading in the Zone' de Mark Douglas (psychologie fondamentale), 'Technical Analysis of Financial Markets' de John Murphy (référence technique complète), 'The Intelligent Investor' de Benjamin Graham (philosophie d'investissement). Les outils essentiels : TradingView pour les graphiques et l'analyse technique, DefiLlama pour le suivi DeFi, Glassnode pour l'analyse on-chain crypto, ForexFactory pour le calendrier économique. Attentes réalistes de rendement annuel : débutant (1-2 ans d'expérience) = -20% à +5%, intermédiaire (3-5 ans) = 5-15%, avancé (5+ ans) = 15-30%. Ces rendements semblent modestes mais battent la plupart des fonds professionnels ! La patience est la qualité la plus sous-estimée en trading. Il faut typiquement 2-3 ans pour devenir régulièrement profitable. Les traders qui cherchent des raccourcis finissent dans les statistiques des 90% qui perdent.",
+          "points_cles": [
+            "3 livres essentiels : Douglas, Murphy, Graham",
+            "Outils : TradingView, DefiLlama, Glassnode, ForexFactory",
+            "Rendement réaliste avancé : 15-30%/an (bat la plupart des fonds)",
+            "Patience : 2-3 ans pour être régulièrement profitable"
+          ]
+        },
+        {
+          "titre": "Checklist finale et engagement",
+          "contenu": "Avant de te lancer en capital réel, vérifie chaque point de cette checklist. Stratégie documentée et backtestée avec un edge positif. Règles de gestion du risque claires : taille de position, stop loss, heat maximum. Journal de trading prêt et engagement à le remplir quotidiennement. Au moins 1 mois de paper trading réussi (profitable et discipliné). Capital que tu peux te permettre de perdre intégralement sans impact sur ta vie. Attentes réalistes : pas de Lamborghini en 6 mois, patience et progression. Routine pré et post-trading définie et testée. Engagement d'amélioration continue : revue hebdomadaire, formation permanente. Le vrai apprentissage commence maintenant avec la pratique. La théorie que tu as accumulée dans ces 21 modules est une fondation solide, mais c'est en tradant — en faisant des erreurs et en les corrigeant — que tu deviendras un trader compétent. Le succès en trading n'est pas un événement, c'est un processus.",
+          "points_cles": [
+            "Checklist : stratégie, risque, journal, paper trading, capital",
+            "1 mois de paper trading minimum avant le capital réel",
+            "Le capital engagé doit pouvoir être perdu sans conséquence",
+            "Le succès en trading est un processus, pas un événement"
+          ]
+        }
+      ],
+      "resume": "La formation couvre 4 niveaux et 21 modules, des fondations à l'expertise. Les 4 piliers sont : stratégie prouvée, gestion du risque, psychologie disciplinée et amélioration continue. Le plan de développement sur 12 mois structure la progression : consolidation, expansion, optimisation, maîtrise. Les rendements réalistes sont de 15-30%/an pour un trader avancé. Le succès en trading est un processus continu, pas une destination.",
+      "ressources_complementaires": [
+        "Trading in the Zone - Mark Douglas",
+        "Technical Analysis of Financial Markets - John Murphy",
+        "The Intelligent Investor - Benjamin Graham",
+        "Market Wizards - Jack Schwager"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quels sont les 4 piliers de la réussite en trading ?",
+        "options": [
+          "Capital, Chance, Connexions, Charisme",
+          "Stratégie, Gestion du risque, Psychologie, Amélioration continue",
+          "Indicateurs, Signaux, Timing, Levier",
+          "Analyse fondamentale, Technique, Sentiment, Volume"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Les 4 piliers sont : Stratégie (edge prouvé), Gestion du risque (1-2% max/trade), Psychologie (discipline), et Amélioration continue (journal + revue)."
+      },
+      {
+        "question": "Qu'est-ce que la sur-optimisation (overfitting) ?",
+        "options": [
+          "Utiliser trop de capital",
+          "Ajuster une stratégie parfaitement aux données passées au point qu'elle échoue en live",
+          "Trader trop souvent",
+          "Avoir trop de positions ouvertes"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La sur-optimisation consiste à calibrer sa stratégie si précisément sur les données historiques qu'elle ne fonctionne plus sur des données nouvelles — elle a 'appris le bruit' plutôt que le signal."
+      },
+      {
+        "question": "Combien de temps de paper trading minimum avant le capital réel ?",
+        "options": [
+          "Aucun, on apprend en tradant",
+          "1 semaine",
+          "1 mois minimum",
+          "1 an obligatoire"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Au moins 1 mois de paper trading profitable et discipliné est recommandé avant de risquer du capital réel. Cela valide ta stratégie et ta discipline."
+      },
+      {
+        "question": "Quel rendement annuel est réaliste pour un trader avancé (5+ ans) ?",
+        "options": [
+          "100-200% facilement",
+          "15-30%",
+          "500%+ avec le bon levier",
+          "1-2% seulement"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Un rendement de 15-30%/an est réaliste pour un trader avancé. Cela bat la plupart des fonds professionnels ! Les promesses de 100%+ sont irréalistes et dangereuses."
+      },
+      {
+        "question": "Quelle est la phase 2 du plan de développement sur 12 mois ?",
+        "options": [
+          "Consolidation",
+          "Expansion (nouveau marché, combler lacunes)",
+          "Optimisation",
+          "Maîtrise"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Mois 4-6 = Expansion : ajouter une nouvelle classe d'actifs, combler les lacunes identifiées, et établir une checklist macro mensuelle."
+      },
+      {
+        "question": "Quel levier maximum est recommandé même pour un expert ?",
+        "options": [
+          "10-20x",
+          "50-100x",
+          "3-5x",
+          "Pas de limite si le stop est serré"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Même pour les traders experts, 3-5x est le maximum raisonnable. Au-delà, un événement inattendu (gap, flash crash) peut anéantir le compte malgré un stop loss."
+      },
+      {
+        "question": "Pourquoi le journal de trading est-il si important ?",
+        "options": [
+          "Pour se vanter de ses gains",
+          "Pour l'administration fiscale uniquement",
+          "Pour documenter, analyser et améliorer sa pratique continuellement",
+          "Pour montrer à son broker qu'on est sérieux"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le journal permet de documenter chaque trade, analyser les patterns dans ses décisions (bonnes et mauvaises), et identifier les améliorations concrètes. C'est l'outil d'amélioration continue par excellence."
+      },
+      {
+        "question": "Quel capital doit-on engager en trading ?",
+        "options": [
+          "Tout son épargne pour maximiser les gains",
+          "Un emprunt bancaire car les rendements couvriront les intérêts",
+          "Uniquement du capital qu'on peut perdre intégralement sans impact sur sa vie",
+          "Le minimum de 100€ pour commencer"
+        ],
+        "bonne_reponse": 2,
+        "explication": "On ne doit engager que du capital dont la perte totale n'impacterait pas sa vie quotidienne. Trader avec de l'argent 'nécessaire' crée une pression psychologique destructrice."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "creation",
+        "titre": "Ton playbook de trading complet",
+        "description": "Rédige ton playbook personnel en une page : ta stratégie (edge, setups, entrées/sorties), tes règles de risque (taille position, stops, heat max), ta routine (pré/post-trading, hebdo), et tes objectifs à 3/6/12 mois."
+      },
+      {
+        "type": "auto-evaluation",
+        "titre": "Bilan de compétences",
+        "description": "Note-toi de 1 à 10 sur chaque pilier : Stratégie, Gestion du risque, Psychologie, Amélioration continue. Pour chaque note < 7, identifie l'action concrète pour progresser et le module à revoir."
+      },
+      {
+        "type": "pratique",
+        "titre": "Plan de développement personnalisé",
+        "description": "Crée ton plan de développement sur 12 mois en adaptant le template du module. Définis des objectifs SMART (Spécifiques, Mesurables, Atteignables, Réalistes, Temporels) pour chaque trimestre. Identifie les indicateurs de succès."
+      }
+    ]
+  },
+  {
+    "id": "algorithmic_trading_bots",
+    "parcours": "expert",
+    "titre": "🤖 Trading Algorithmique & Bots de Trading",
+    "description": "Créez des algorithmes de trading automatisés et maîtrisez le trading quantitatif",
+    "durée": "3 heures",
+    "difficulté": "Expert",
+    "points_xp": 500,
+    "prérequis": [
+      "trading_strategies_advanced",
+      "technical_indicators_intro"
+    ],
+    "contenu": {
+      "introduction": "Le trading algorithmique représente aujourd'hui plus de 70% des volumes échangés sur les marchés financiers. Il s'agit de l'utilisation de programmes informatiques pour exécuter automatiquement des ordres selon des règles prédéfinies, sans intervention humaine. Cette approche offre des avantages considérables : élimination des émotions, exécution ultra-rapide, capacité à surveiller plusieurs marchés simultanément, et surtout, la possibilité de backtester rigoureusement vos stratégies sur des années de données historiques. Dans ce module, vous apprendrez à concevoir, développer, tester et déployer vos propres algorithmes de trading, en maîtrisant les concepts de base de la programmation financière, l'architecture des systèmes de trading automatisés, et les pièges à éviter.",
+      "sections": [
+        {
+          "titre": "🏗️ Architecture d'un Système de Trading Algorithmique",
+          "contenu": "Un système de trading algorithmique professionnel se compose de plusieurs modules interconnectés :\n\n1. MODULE DE DONNÉES (Data Feed):\n- Connexion API aux courtiers/exchanges (Interactive Brokers, Alpaca, Binance)\n- Récupération des données en temps réel (prix, volume, order book)\n- Stockage des données historiques pour backtesting\n- Nettoyage et normalisation des données\n\n2. MODULE DE STRATÉGIE (Strategy Engine):\n- Logique de trading (conditions d'entrée/sortie)\n- Calcul des indicateurs techniques\n- Génération des signaux (BUY/SELL/HOLD)\n- Gestion de l'état du marché\n\n3. MODULE DE GESTION DES RISQUES (Risk Management):\n- Calcul de la taille des positions (position sizing)\n- Vérification des limites d'exposition\n- Stop-loss et take-profit automatiques\n- Drawdown maximum autorisé\n\n4. MODULE D'EXÉCUTION (Order Execution):\n- Envoi des ordres au broker\n- Gestion des ordres partiellement exécutés\n- Slippage et frais de transaction\n- Reconnexion automatique en cas de perte de connexion\n\n5. MODULE DE MONITORING (Monitoring & Logging):\n- Enregistrement de tous les trades\n- Métriques de performance en temps réel\n- Alertes en cas d'anomalie\n- Dashboard de visualisation\n\nEXEMPLE D'ARCHITECTURE SIMPLE (Python) :\n```python\nclass TradingBot:\n    def __init__(self):\n        self.data_feed = DataFeed()\n        self.strategy = MeanReversionStrategy()\n        self.risk_manager = RiskManager(max_position=5000)\n        self.executor = OrderExecutor()\n    \n    def run(self):\n        while market_is_open():\n            prices = self.data_feed.get_latest()\n            signal = self.strategy.generate_signal(prices)\n            if signal and self.risk_manager.validate(signal):\n                self.executor.place_order(signal)\n```",
+          "points_cles": [
+            "Un bot de trading = 5 modules principaux interconnectés",
+            "Data Feed + Strategy Engine + Risk Management + Execution + Monitoring",
+            "Chaque module doit être testé indépendamment",
+            "Architecture modulaire = facilité de maintenance et debugging"
+          ]
+        },
+        {
+          "titre": "💻 Langages et Outils pour le Trading Algo",
+          "contenu": "PYTHON - LE ROI DU TRADING ALGO :\n\nPython est le langage dominant en trading algorithmique grâce à son écosystème riche :\n\nBibliothèques essentielles :\n• pandas : Manipulation de données financières (DataFrames, séries temporelles)\n• numpy : Calculs numériques rapides\n• ta-lib / pandas-ta : Indicateurs techniques (RSI, MACD, Bollinger)\n• backtrader / zipline : Frameworks de backtesting\n• ccxt : Connexion à 100+ exchanges crypto\n• alpaca-trade-api : Trading actions US\n• vectorbt : Backtesting vectorisé ultra-rapide\n\nEXEMPLE - CALCULER LE RSI :\n```python\nimport pandas as pd\nimport pandas_ta as ta\n\n# Récupérer les données\ndf = get_historical_data('AAPL', '1d', 100)\n\n# Calculer RSI\ndf['rsi'] = ta.rsi(df['close'], length=14)\n\n# Signal: acheter si RSI < 30\ndf['signal'] = df['rsi'] < 30\n```\n\nAUTRES LANGAGES :\n\n• C++ : Ultra-rapide pour HFT (High Frequency Trading)\n- Latence < 1 microseconde\n- Utilisé par les hedge funds et market makers\n- Complexe à développer\n\n• Java : Robustesse pour systèmes institutionnels\n- Utilisé par les banques\n- JVM garantit la stabilité\n\n• JavaScript/Node.js : Idéal pour crypto trading\n- Connexions WebSocket temps réel\n- Nombreuses librairies pour exchanges\n\nPLATEFORMES NO-CODE :\n\n• TradingView Pine Script : Stratégies simples sans coder\n• MetaTrader 4/5 (MQL) : Forex et CFDs\n• QuantConnect / Quantopian : IDE cloud pour algo trading\n\nCHOISIR VOTRE STACK :\n- Débutant : Python + pandas + backtrader\n- Intermédiaire : Python + vectorbt + ccxt\n- Expert : Python (stratégie) + C++ (exécution) + Redis (cache)",
+          "points_cles": [
+            "Python = langage #1 pour débuter en algo trading",
+            "pandas + ta-lib + backtrader = stack minimaliste efficace",
+            "C++ seulement si vous faites du HFT (< 1ms de latence)",
+            "Commencez simple, optimisez plus tard"
+          ]
+        },
+        {
+          "titre": "🧪 Backtesting: Tester vos Algorithmes",
+          "contenu": "Le backtesting est l'étape CRUCIALE avant de mettre de l'argent réel. Il consiste à tester votre algorithme sur des données historiques pour évaluer sa performance.\n\nMÉTHODOLOGIE DE BACKTESTING RIGOUREUX :\n\n1. DONNÉES HISTORIQUES :\n- Minimum 2-3 ans de données (plus = mieux)\n- Incluez les périodes de crise (2008, 2020)\n- Données tick-by-tick pour day trading, daily pour swing\n- Attention aux données survivorship bias (actions disparues)\n\n2. COÛTS RÉALISTES :\n- Frais de courtage : 0.1% à 0.5% par trade\n- Slippage : 0.05% à 0.2% (différence entre prix théorique et réel)\n- Spread bid/ask : 0.01% à 0.05%\n- Impact de marché si gros volumes\n\n3. MÉTRIQUES IMPORTANTES :\n\n• Sharpe Ratio : Rendement/Risque (> 1.5 = bon, > 2 = excellent)\n```python\nsharpe = (returns.mean() / returns.std()) * sqrt(252)\n```\n\n• Max Drawdown : Pire chute depuis un pic (< 20% acceptable)\n```python\nmax_dd = (cumulative_returns / cumulative_returns.cummax() - 1).min()\n```\n\n• Win Rate : % de trades gagnants (> 55% = bien)\n• Profit Factor : Gains totaux / Pertes totales (> 1.5 = viable)\n• Nombre de trades : Minimum 100 pour significativité statistique\n\n4. PIÈGES DU BACKTESTING (OVERFITTING) :\n\n⚠️ OVERFITTING = Algorithme qui marche parfaitement sur données historiques mais échoue en réel.\n\nCauses communes :\n- Trop de paramètres ajustables (> 5 = danger)\n- Optimisation excessive sur une période courte\n- Ignorer les coûts de transaction\n- Look-ahead bias (utiliser des infos futures)\n\nSOLUTION - WALK-FORWARD ANALYSIS :\n- Divisez données en 70% training / 30% testing\n- Optimisez sur training UNIQUEMENT\n- Validez sur testing (données jamais vues)\n- Si ça marche sur testing → robuste\n\nEXEMPLE BACKTRADER :\n```python\nimport backtrader as bt\n\nclass MaStrategy(bt.Strategy):\n    def __init__(self):\n        self.sma = bt.indicators.SMA(period=50)\n    \n    def next(self):\n        if self.data.close > self.sma:\n            self.buy()\n        elif self.data.close < self.sma:\n            self.sell()\n\ncerebro = bt.Cerebro()\ncerebro.addstrategy(MaStrategy)\ncerebro.adddata(data)\ncerebro.run()\nprint(f'Sharpe: {cerebro.analyzers.sharpe.get_analysis()}')\n```",
+          "points_cles": [
+            "Backtesting = tester sur données historiques AVANT argent réel",
+            "Incluez TOUS les coûts : frais, slippage, spread",
+            "Métriques clés : Sharpe Ratio, Max Drawdown, Win Rate, Profit Factor",
+            "Overfitting = ennemi #1, utilisez walk-forward analysis",
+            "Minimum 100 trades pour validité statistique"
+          ]
+        },
+        {
+          "titre": "⚡ Stratégies Algorithmiques Classiques",
+          "contenu": "STRATÉGIE 1: MEAN REVERSION (RETOUR À LA MOYENNE)\n\nPrincipe : Les prix qui s'écartent trop de leur moyenne ont tendance à y revenir.\n\nImplémentation :\n```python\n# Paramètres\nbb_period = 20\nbb_std = 2\n\n# Signaux\nif price < bollinger_lower:  # Prix 2σ sous moyenne\n    signal = 'BUY'  # Paris sur retour à la moyenne\nelif price > bollinger_upper:  # Prix 2σ au-dessus\n    signal = 'SELL'\n```\n\nMarchés adaptés : Actions de grandes caps (AAPL, MSFT), indices\nTimeframe : 1H à Daily\nSharpe typique : 1.2 à 1.8\n\n---\n\nSTRATÉGIE 2: MOMENTUM / TREND FOLLOWING\n\nPrincipe : Les tendances ont tendance à persister.\n\nImplémentation :\n```python\n# Signaux\nif price > ma_200 and macd > signal_line:\n    signal = 'BUY'  # Tendance haussière confirmée\nelif price < ma_200 and macd < signal_line:\n    signal = 'SELL'\n```\n\nMarchés : Cryptos, matières premières, forex\nTimeframe : 4H à Weekly\nSharpe typique : 0.8 à 1.5\n\n---\n\nSTRATÉGIE 3: STATISTICAL ARBITRAGE (PAIRS TRADING)\n\nPrincipe : Exploiter la corrélation entre deux actifs.\n\nEXEMPLE - Coca vs Pepsi :\n```python\n# Calculer le spread\nspread = price_KO / price_PEP\nspread_ma = spread.rolling(30).mean()\nspread_std = spread.rolling(30).std()\n\n# Z-score\nz_score = (spread - spread_ma) / spread_std\n\nif z_score > 2:  # Spread trop élevé\n    # SHORT KO, LONG PEP\n    sell('KO')\n    buy('PEP')\nelif z_score < -2:  # Spread trop bas\n    # LONG KO, SHORT PEP\n    buy('KO')\n    sell('PEP')\n```\n\nMarchés : Actions corrélées du même secteur\nSharpe typique : 1.5 à 2.5 (market neutral)\n\n---\n\nSTRATÉGIE 4: MARKET MAKING\n\nPrincipe : Profiter du spread bid/ask en fournissant de la liquidité.\n\n```python\n# Placer ordres de chaque côté\nmid_price = (bid + ask) / 2\nspread = 0.002  # 0.2%\n\nbuy_order = mid_price * (1 - spread)  # Bid\nsell_order = mid_price * (1 + spread)  # Ask\n\n# Profit = spread si les deux exécutés\n```\n\nMarchés : Cryptos (liquidité fragmentée)\nRisque : Être pris dans un mouvement fort",
+          "points_cles": [
+            "Mean Reversion = acheter survente, vendre surachat (Bollinger)",
+            "Momentum = suivre les tendances fortes (MACD + MA200)",
+            "Pairs Trading = exploiter corrélations (market neutral)",
+            "Market Making = profiter du spread (nécessite capital important)"
+          ]
+        },
+        {
+          "titre": "🚀 Mise en Production et Gestion en Direct",
+          "contenu": "PHASE 1: PAPER TRADING (SIMULATION)\n\nAvant de risquer de l'argent, testez en conditions réelles mais sans risque :\n\nPlateformes :\n• Alpaca Paper Trading (actions US)\n• Binance Testnet (crypto)\n• Interactive Brokers Paper Account\n\nDurée recommandée : 20-30 trades minimum (1-3 mois)\n\nCritères de validation :\n✓ Sharpe > 1.0 en paper\n✓ Max Drawdown < 20%\n✓ Win Rate > 50%\n✓ Zéro erreur technique (crashes, bugs)\n\n---\n\nPHASE 2: MISE EN PRODUCTION (ARGENT RÉEL)\n\nCommencez PETIT :\n- Capital initial : 500-2000€ (même si vous avez plus)\n- Taille de position : 1-2% du capital max par trade\n- Augmentez PROGRESSIVEMENT si ça marche\n\nINFRASTRUCTURE :\n\n1. SERVEUR DÉDIÉ (VPS) :\n- Hébergement cloud : AWS, DigitalOcean, Scaleway\n- Uptime 99.9% minimum\n- Localisation proche de l'exchange (latence < 50ms)\n- Coût : 5-20€/mois\n\n2. REDONDANCE :\n- Bot primaire + bot de backup\n- Système de heartbeat (vérification toutes les 30s)\n- Alertes SMS/Email si crash\n\n3. SÉCURITÉ :\n- API keys avec droits LIMITÉS (trading only, pas withdraw)\n- Authentification 2FA activée\n- Whitelist IP du serveur\n- Logs encryptés\n\n---\n\nMONITORING CONTINU :\n\nMÉTRIQUES À SURVEILLER QUOTIDIENNEMENT :\n• P&L (Profit & Loss) intraday\n• Sharpe Ratio rolling 30 jours\n• Drawdown actuel vs max autorisé\n• Nombre d'erreurs techniques\n• Latence d'exécution (< 100ms)\n\nALERTES AUTOMATIQUES :\n```python\n# Exemple d'alerte\nif current_drawdown > 0.15:  # -15%\n    send_sms(\"⚠️ Drawdown 15%, STOP BOT\")\n    bot.pause()\n\nif daily_loss > 0.05:  # -5% en une journée\n    send_email(\"Perte journalière 5%\")\n```\n\nRÈGLES DE SÉCURITÉ :\n• KILL SWITCH : Bouton d'arrêt d'urgence\n• MAX DAILY LOSS : -5% → bot s'arrête automatiquement\n• MAX DRAWDOWN : -20% → arrêt et révision de la stratégie\n• Review hebdomadaire : Analyser tous les trades\n\n---\n\nOPTIMISATION EN CONTINU :\n\n• Backtester sur données récentes tous les mois\n• Ajuster paramètres si conditions de marché changent\n• A/B testing : Tester variantes de la stratégie\n• Machine Learning : Améliorer prédictions avec ML (avancé)",
+          "points_cles": [
+            "Paper Trading OBLIGATOIRE avant argent réel (20-30 trades)",
+            "Commencez avec capital MINIMAL (500-2000€) même si vous avez plus",
+            "VPS dédié + redondance + alertes automatiques = infra pro",
+            "Kill switch + max daily loss (-5%) + max drawdown (-20%)",
+            "Monitoring quotidien + review hebdomadaire indispensables"
+          ]
+        },
+        {
+          "titre": "⚠️ Pièges et Erreurs à Éviter",
+          "contenu": "ERREUR #1: OVERFITTING (Surapprentissage)\n\nSymptômes :\n• Backtest = +50%, Live trading = -10%\n• Stratégie avec 10+ paramètres ajustables\n• Optimisé sur période courte (< 1 an)\n\nSolution :\n• Maximum 3-5 paramètres\n• Walk-forward analysis\n• Tester sur différents actifs\n\n---\n\nERREUR #2: IGNORER LES COÛTS DE TRANSACTION\n\nExemple catastrophique :\n```python\n# Stratégie qui fait 50 trades/jour\ntrades_per_day = 50\ncommission = 0.001  # 0.1% par trade\n\n# Coût quotidien\ndaily_cost = trades_per_day * commission * 2  # Buy + Sell\n# = 10% de coût par jour !\n# → Impossible d'être profitable\n```\n\nSolution : Backtesting avec coûts RÉELS inclus\n\n---\n\nERREUR #3: MANQUE DE DIVERSIFICATION\n\nNE JAMAIS mettre tous vos œufs dans le même panier :\n\n❌ MAL : 100% du capital sur 1 stratégie, 1 actif\n✅ BIEN : Portfolio de 3-5 stratégies décorrélées\n\nExemple :\n• 30% Mean Reversion sur AAPL\n• 30% Momentum sur BTC\n• 40% Pairs Trading KO/PEP\n\n---\n\nERREUR #4: BOT MAL GÉRÉ EN PRODUCTION\n\nHISTOIRE VRAIE :\nUn trader lance son bot vendredi soir, part en weekend. Lundi matin : compte à -60% à cause d'un bug.\n\nSOLUTION :\n• Alertes en temps réel\n• Maximum daily loss automatique\n• Toujours surveiller les premières heures\n• Ne JAMAIS laisser tourner non surveillé les premiers jours\n\n---\n\nERREUR #5: IMPATIENCE ET OVERTRADING\n\n\"Mon bot ne fait que 2 trades/jour, c'est trop peu !\"\n\n→ FAUX. Qualité > Quantité\n\n• 2 trades/jour à +0.5% = +252% par an (composé)\n• 50 trades/jour à +0.01% après fees = -5% par an\n\n---\n\nERREUR #6: NE PAS TESTER EN CONDITIONS EXTRÊMES\n\nVotre bot doit survivre à :\n• Flash crash (-10% en 5 min)\n• Perte de connexion\n• API qui rate (timeout)\n• Liquidité faible\n\nTest : Débranchez internet pendant que le bot tourne. Que se passe-t-il ?",
+          "points_cles": [
+            "Overfitting = #1 ennemi (backtest ≠ réalité)",
+            "Inclure TOUS les coûts dans backtesting",
+            "Diversifier : 3-5 stratégies décorrélées minimum",
+            "Alertes temps réel + kill switch obligatoires",
+            "Qualité > Quantité : 2 bons trades/jour suffisent",
+            "Tester bot en conditions extrêmes (crash, déconnexion)"
+          ]
+        }
+      ],
+      "resume": "Le trading algorithmique offre des avantages considérables mais nécessite une approche rigoureuse : architecture modulaire solide, backtesting exhaustif avec walk-forward analysis, paper trading avant production, infrastructure fiable avec monitoring continu, et gestion stricte des risques. Les stratégies classiques (Mean Reversion, Momentum, Pairs Trading) ont fait leurs preuves, mais le succès réside dans l'exécution disciplinée et l'évitement des pièges (overfitting, coûts ignorés, manque de diversification). Commencez petit, testez abondamment, et scalez progressivement. Le trading algo n'est pas un 'get rich quick', mais une approche systématique pour trader sans émotions.",
+      "ressources_complementaires": [
+        "📖 Livre : 'Algorithmic Trading' par Ernest P. Chan",
+        "📖 Livre : 'Quantitative Trading' par Ernest P. Chan",
+        "🎥 Cours : 'Python for Finance' sur Udemy",
+        "🔗 Framework : Backtrader (open-source Python)",
+        "🔗 Framework : VectorBT (backtesting rapide)",
+        "🔗 API : CCXT (connexion 100+ exchanges)",
+        "📄 Documentation : Alpaca API (actions US)",
+        "💻 GitHub : awesome-quant (liste de ressources)",
+        "🎓 Plateforme : QuantConnect (IDE cloud algo trading)"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quels sont les 5 modules essentiels d'un système de trading algorithmique ?",
+        "options": [
+          "Frontend, Backend, Database, API, UI",
+          "Data Feed, Strategy Engine, Risk Management, Order Execution, Monitoring",
+          "Buy Module, Sell Module, Stop-Loss, Take-Profit, Logger",
+          "Python, C++, JavaScript, SQL, HTML"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Les 5 modules sont : Data Feed (données), Strategy Engine (logique), Risk Management (gestion risque), Order Execution (exécution ordres), et Monitoring (surveillance). Cette architecture modulaire garantit maintenabilité et robustesse."
+      },
+      {
+        "question": "Quel langage est le PLUS utilisé pour débuter en trading algorithmique ?",
+        "options": [
+          "C++ car c'est le plus rapide",
+          "Java car utilisé par les banques",
+          "Python car écosystème riche et facile à apprendre",
+          "JavaScript car moderne"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Python est le roi du trading algo grâce à pandas, numpy, ta-lib, backtrader, etc. C++ est réservé au HFT (< 1ms), trop complexe pour débuter. Python = 90% des algo traders retail."
+      },
+      {
+        "question": "Qu'est-ce que l'OVERFITTING en backtesting ?",
+        "options": [
+          "Utiliser trop de données historiques",
+          "Stratégie qui marche parfaitement en backtest mais échoue en live",
+          "Trop de trades executés par le bot",
+          "Bot qui consomme trop de mémoire"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Overfitting = algorithme sur-optimisé sur données historiques (backtest +50%) mais qui échoue en trading réel (-10%). C'est l'ennemi #1. Solution : walk-forward analysis, peu de paramètres (< 5), tester sur différentes périodes."
+      },
+      {
+        "question": "Quelle métrique indique le ratio Rendement/Risque d'une stratégie ?",
+        "options": [
+          "Win Rate",
+          "Max Drawdown",
+          "Sharpe Ratio",
+          "Profit Factor"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Sharpe Ratio = (Rendement moyen) / (Volatilité). > 1.5 = bon, > 2 = excellent. C'est LA métrique clé pour comparer des stratégies. Un Sharpe de 0.5 = mauvais même si Win Rate élevé."
+      },
+      {
+        "question": "Combien de trades MINIMUM devez-vous faire en paper trading avant de passer en réel ?",
+        "options": [
+          "5 trades suffisent",
+          "10-15 trades",
+          "20-30 trades minimum",
+          "100 trades minimum"
+        ],
+        "bonne_reponse": 2,
+        "explication": "20-30 trades MINIMUM en paper trading (simulation) avant argent réel. Cela prend 1-3 mois. Vous devez valider : Sharpe > 1.0, Max DD < 20%, aucun bug technique. Ne skippez pas cette étape !"
+      },
+      {
+        "question": "Quelle est la stratégie où vous ACHETEZ quand un actif est survendu (Bollinger basse) ?",
+        "options": [
+          "Momentum Trading",
+          "Mean Reversion",
+          "Pairs Trading",
+          "Market Making"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Mean Reversion = retour à la moyenne. Quand prix trop bas (< Bollinger lower), vous pariez qu'il va remonter. Marche bien sur grandes caps (AAPL, MSFT). Sharpe typique : 1.2-1.8."
+      },
+      {
+        "question": "Avec un capital de 10,000€, quelle devrait être votre taille de position MAXIMUM par trade ?",
+        "options": [
+          "10,000€ (tout)",
+          "5,000€ (50%)",
+          "200-400€ (2-4%)",
+          "1,000€ (10%)"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Règle en algo trading : 1-2% max du capital par trade pour éviter ruine. Sur 10,000€ → max 200€. Vous pouvez avoir 5 positions simultanées (5×200 = 1,000€ exposé). JAMAIS tout le capital sur 1 trade."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "developpement",
+        "titre": "Créez votre premier bot Mean Reversion",
+        "description": "En Python, développez un bot simple qui : 1) Récupère les données AAPL sur 100 derniers jours, 2) Calcule Bollinger Bands (20 périodes, 2σ), 3) Génère signal BUY si prix < lower band, SELL si prix > upper band, 4) Backteste sur les données. Utilisez pandas + ta-lib ou pandas-ta. Objectif : Comprendre structure basique d'un algo."
+      },
+      {
+        "type": "backtest",
+        "titre": "Backtester et optimiser une stratégie Momentum",
+        "description": "Implémentez stratégie : LONG si (prix > MA200 ET MACD > signal). Backtestez sur AAPL + MSFT + TSLA sur 3 ans. Calculez : Sharpe Ratio, Max Drawdown, Win Rate, Profit Factor. Incluez 0.1% de frais par trade. Testez différentes périodes de MA (100, 150, 200). Documentez : quelle période donne le meilleur Sharpe ?"
+      },
+      {
+        "type": "analyse",
+        "titre": "Walk-Forward Analysis pour éviter l'overfitting",
+        "description": "Prenez une stratégie simple (RSI < 30 = BUY). Divisez données en 70% training (2020-2021) / 30% testing (2022). Optimisez période RSI sur training pour maximiser Sharpe. Puis testez SANS changer paramètres sur testing. Comparez Sharpe training vs testing. Si testing < 50% du training → overfitting. Documentez vos findings."
+      },
+      {
+        "type": "infrastructure",
+        "titre": "Déployez un bot sur VPS avec alertes",
+        "description": "Louez un VPS (DigitalOcean/AWS, 5$/mois). Installez Python + dépendances. Configurez bot simple qui envoie alerte email/SMS : 1) Toutes les heures (heartbeat), 2) Si erreur API, 3) Si drawdown > 10%. Lancez bot, débranchez votre PC, vérifiez que bot continue de tourner sur VPS. Objectif : Infrastructure de production basique."
+      },
+      {
+        "type": "analyse-risque",
+        "titre": "Calculez l'impact des frais sur performance",
+        "description": "Prenez une stratégie qui génère 10 trades/jour avec gain moyen +0.3% par trade. Calculez profit annuel SANS frais. Puis recalculez AVEC 0.1% de frais par trade (buy + sell = 0.2%). Combien de % de profit les frais consomment-ils ? À partir de combien de trades/jour une stratégie devient non-profitable à cause des frais ? Créez graphique : trades/jour vs profit net."
+      }
+    ]
+  },
+  {
+    "id": "options_derivatives_mastery",
+    "parcours": "expert",
+    "titre": "💎 Options & Produits Dérivés - Maîtriser les instruments complexes",
+    "description": "Maîtrisez les options, futures, swaps et dérivés exotiques pour diversifier vos stratégies",
+    "durée": "4 heures",
+    "difficulté": "Expert",
+    "points_xp": 600,
+    "prérequis": [
+      "risk_management",
+      "trading_strategies_advanced"
+    ],
+    "contenu": {
+      "introduction": "Les produits dérivés représentent plus de 600 trillions de dollars de notionnel échangés mondialement, soit 10 fois le PIB mondial. Ces instruments financiers, dont la valeur 'dérive' d'un actif sous-jacent (action, indice, matière première, taux d'intérêt), offrent des possibilités de trading sophistiquées : effet de levier, couverture de risques, génération de revenus, stratégies market neutral. Contrairement aux idées reçues, les dérivés ne sont pas uniquement pour la spéculation agressive - ils sont utilisés par les institutions pour RÉDUIRE les risques. Dans ce module, vous apprendrez à maîtriser les options (calls/puts), comprendre le pricing Black-Scholes et les Greeks, construire des stratégies complexes (spreads, straddles, iron condors), trader les futures, et découvrir les dérivés exotiques. Vous serez capable d'utiliser ces instruments pour toutes les conditions de marché : haussier, baissier, range ou volatile.",
+      "sections": [
+        {
+          "titre": "📊 Comprendre les Options: Calls, Puts et Terminologie",
+          "contenu": "Une OPTION est un contrat qui donne le DROIT (mais pas l'obligation) d'acheter ou vendre un actif à un prix fixé (strike) avant une date d'expiration.\n\nDEUX TYPES D'OPTIONS :\n\n1. CALL OPTION (Option d'Achat) :\n- Donne le droit D'ACHETER l'actif au prix strike\n- Vous achetez un call si vous pensez que le prix va MONTER\n\nEXEMPLE :\n• Action AAPL = 150$\n• Vous achetez 1 CALL strike 160$ expirant dans 30 jours\n• Prime payée : 3$ (coût de l'option)\n• Si AAPL monte à 170$ :\n  → Vous exercez : Achetez à 160$, revendez à 170$ = +10$\n  → Profit net : 10$ - 3$ (prime) = +7$ soit +233%\n• Si AAPL reste à 150$ :\n  → Option expire sans valeur\n  → Perte : -3$ (100% de la prime)\n\n2. PUT OPTION (Option de Vente) :\n- Donne le droit DE VENDRE l'actif au prix strike\n- Vous achetez un put si vous pensez que le prix va BAISSER\n\nEXEMPLE :\n• Action TSLA = 200$\n• Vous achetez 1 PUT strike 190$ expirant dans 30 jours\n• Prime payée : 4$\n• Si TSLA baisse à 170$ :\n  → Vous exercez : Vendez à 190$ (au lieu de 170$) = +20$\n  → Profit net : 20$ - 4$ = +16$ soit +400%\n• Si TSLA monte à 220$ :\n  → Option expire sans valeur\n  → Perte : -4$ (100% de la prime)\n\n---\n\nTERMINOLOGIE ESSENTIELLE :\n\n• STRIKE PRICE (Prix d'exercice) : Prix auquel vous pouvez acheter/vendre\n• EXPIRATION : Date limite d'exercice (hebdo, mensuelle, trimestrielle)\n• PREMIUM (Prime) : Prix que vous PAYEZ pour acheter l'option\n• IN THE MONEY (ITM) : Option profitable si exercée maintenant\n  - Call ITM : Prix actuel > Strike\n  - Put ITM : Prix actuel < Strike\n• AT THE MONEY (ATM) : Prix actuel = Strike\n• OUT OF THE MONEY (OTM) : Option non profitable si exercée\n  - Call OTM : Prix actuel < Strike\n  - Put OTM : Prix actuel > Strike\n\n• VALEUR INTRINSÈQUE : Profit si exercé immédiatement\n  - Call : Max(Prix actuel - Strike, 0)\n  - Put : Max(Strike - Prix actuel, 0)\n\n• VALEUR TEMPORELLE : Prime - Valeur intrinsèque\n  - Diminue avec le temps (theta decay)\n  - Vaut 0 à l'expiration\n\nEXEMPLE COMPLET :\n• AAPL = 150$\n• Call Strike 140$ (ITM), Prime 12$\n  - Valeur intrinsèque : 150 - 140 = 10$\n  - Valeur temporelle : 12 - 10 = 2$\n\n• Call Strike 160$ (OTM), Prime 3$\n  - Valeur intrinsèque : 0$ (pas profitable)\n  - Valeur temporelle : 3$ (100% de la prime)\n\n---\n\nACHETEUR vs VENDEUR (Writer) :\n\nACHETEUR D'OPTION :\n• Paye la prime\n• Risque LIMITÉ (max = prime payée)\n• Profit ILLIMITÉ (call) ou très élevé (put)\n• Contrôle : Décide d'exercer ou non\n\nVENDEUR D'OPTION (WRITER) :\n• Reçoit la prime (revenus)\n• Risque ILLIMITÉ (call) ou très élevé (put)\n• Profit LIMITÉ (max = prime reçue)\n• Obligation : Doit vendre/acheter si acheteur exerce\n\nSTRATÉGIE : Vendre options = générer revenus (80% options expirent OTM)",
+          "points_cles": [
+            "Call = droit d'ACHETER, achetez si bullish (prix monte)",
+            "Put = droit de VENDRE, achetez si bearish (prix baisse)",
+            "Acheteur : Risque limité (prime), profit illimité",
+            "Vendeur : Reçoit prime, risque élevé, stratégie de revenus",
+            "ITM = profitable, OTM = pas profitable, ATM = prix = strike",
+            "Valeur option = Intrinsèque + Temporelle (fond vers 0 à expiration)"
+          ]
+        },
+        {
+          "titre": "🧮 Le Modèle Black-Scholes et les Greeks",
+          "contenu": "Le modèle BLACK-SCHOLES (Nobel 1997) permet de calculer le prix THÉORIQUE d'une option européenne.\n\nFORMULE BLACK-SCHOLES (Call) :\n```\nC = S₀N(d₁) - Ke^(-rT)N(d₂)\n\noù :\nd₁ = [ln(S₀/K) + (r + σ²/2)T] / (σ√T)\nd₂ = d₁ - σ√T\n\nS₀ = Prix actuel de l'actif\nK = Strike price\nr = Taux sans risque\nT = Temps jusqu'à expiration (en années)\nσ = Volatilité implicite (annualisée)\nN(x) = Fonction de distribution normale cumulative\n```\n\nEXEMPLE PRATIQUE (Python) :\n```python\nimport scipy.stats as stats\nimport numpy as np\n\ndef black_scholes_call(S, K, T, r, sigma):\n    d1 = (np.log(S/K) + (r + 0.5*sigma**2)*T) / (sigma*np.sqrt(T))\n    d2 = d1 - sigma*np.sqrt(T)\n    call = S * stats.norm.cdf(d1) - K * np.exp(-r*T) * stats.norm.cdf(d2)\n    return call\n\n# AAPL = 150$, Strike 155$, 30 jours, r=5%, volatilité 25%\nprice = black_scholes_call(150, 155, 30/365, 0.05, 0.25)\nprint(f\"Prix théorique Call: {price:.2f}$\")  # ~3.20$\n```\n\n---\n\nLES GREEKS : Sensibilités de l'option aux variables\n\n1. DELTA (Δ) : Sensibilité au prix de l'actif\n• Mesure : Variation du prix de l'option si actif bouge de 1$\n• Valeurs :\n  - Call : 0 à +1 (0.5 = ATM)\n  - Put : -1 à 0 (-0.5 = ATM)\n\nEXEMPLE :\n• Call Delta = 0.6\n• Si AAPL monte de 1$ → Call monte de 0.60$\n• Si AAPL monte de 10$ → Call monte de ~6$\n\nUTILISATION : Delta hedging (couvrir position)\n\n---\n\n2. GAMMA (Γ) : Vitesse de changement du Delta\n• Mesure : Comment Delta change si prix bouge de 1$\n• Max pour options ATM\n• Important pour gestionnaires de risques\n\nEXEMPLE :\n• Delta = 0.5, Gamma = 0.05\n• Si actif +1$ → Delta devient 0.55\n\n---\n\n3. THETA (Θ) : Décroissance temporelle (Time Decay)\n• Mesure : Perte de valeur de l'option chaque jour\n• Toujours négatif pour acheteurs (temps = ennemi)\n• Positif pour vendeurs (temps = allié)\n\nEXEMPLE :\n• Call Prime = 5$, Theta = -0.10\n• Demain (si rien ne bouge) : Prime = 4.90$\n• Dans 10 jours : Prime ≈ 4.00$\n\n⚠️ THETA DECAY s'accélère dans les 30 derniers jours !\n\nSTRATÉGIE : Vendez options proches expiration pour profiter du theta.\n\n---\n\n4. VEGA (ν) : Sensibilité à la volatilité\n• Mesure : Variation du prix si volatilité implicite +1%\n• Toujours positif pour acheteurs\n\nEXEMPLE :\n• Call Prime = 5$, Vega = 0.15\n• Si volatilité passe de 25% à 26% → Prime = 5.15$\n• Si volatilité passe de 25% à 30% → Prime ≈ 5.75$\n\n💡 Achetez options AVANT événements volatils (earnings, élections)\n💡 Vendez options APRÈS (IV crush = volatilité s'effondre)\n\n---\n\n5. RHO (ρ) : Sensibilité aux taux d'intérêt\n• Impact faible pour options court terme\n• Important pour LEAPS (options long terme, 1-2 ans)\n\n---\n\nEXEMPLE COMPLET - TABLEAU DES GREEKS :\n\n| Option        | Delta | Gamma | Theta  | Vega  |\n|---------------|-------|-------|--------|-------|\n| Call ITM      | 0.80  | 0.02  | -0.08  | 0.10  |\n| Call ATM      | 0.50  | 0.08  | -0.15  | 0.20  |\n| Call OTM      | 0.20  | 0.03  | -0.05  | 0.08  |\n| Put ITM       | -0.80 | 0.02  | -0.08  | 0.10  |\n\nINTERPRÉTATION :\n• Call ATM a le Gamma et Vega max (sensibilité maximale)\n• Theta max pour ATM (perd valeur plus vite)\n• Call OTM a faible sensibilité (peu cher, peu bouge)\n\n---\n\nCALCULER LES GREEKS (Python) :\n```python\ndef calculate_greeks(S, K, T, r, sigma):\n    d1 = (np.log(S/K) + (r + 0.5*sigma**2)*T) / (sigma*np.sqrt(T))\n    d2 = d1 - sigma*np.sqrt(T)\n    \n    delta = stats.norm.cdf(d1)  # Call delta\n    gamma = stats.norm.pdf(d1) / (S * sigma * np.sqrt(T))\n    theta = -(S * stats.norm.pdf(d1) * sigma / (2*np.sqrt(T))) - \\\n            r * K * np.exp(-r*T) * stats.norm.cdf(d2)\n    vega = S * stats.norm.pdf(d1) * np.sqrt(T) / 100  # Par 1% de volatilité\n    \n    return {'Delta': delta, 'Gamma': gamma, 'Theta': theta/365, 'Vega': vega}\n```",
+          "points_cles": [
+            "Black-Scholes calcule prix théorique avec 5 inputs : S, K, T, r, σ",
+            "Delta (Δ) : Sensibilité au prix (+1$ actif = +Δ$ option)",
+            "Theta (Θ) : Decay temporel (ennemi acheteur, allié vendeur)",
+            "Vega (ν) : Sensibilité volatilité (achetez avant events, vendez après)",
+            "Gamma (Γ) : Vitesse de changement du Delta (max pour ATM)",
+            "Options ATM = Greeks max (sensibilité et decay maximaux)"
+          ]
+        },
+        {
+          "titre": "🎯 Stratégies d'Options Courantes",
+          "contenu": "STRATÉGIE 1: COVERED CALL (Appel Couvert)\n\nProfil : MODÉRÉMENT BULLISH + Génération de revenus\n\nConstruction :\n• Posséder 100 actions de l'actif\n• VENDRE 1 call OTM\n\nEXEMPLE :\n• Vous possédez 100 AAPL à 150$\n• Vendez 1 Call Strike 160$ exp 30j, Prime 3$\n• Revenus : 3$ × 100 = 300$\n\nSCÉNARIOS :\n1. AAPL reste < 160$ :\n   → Call expire sans valeur\n   → Vous gardez 300$ + actions\n   → Répétez chaque mois (revenus passifs)\n\n2. AAPL monte > 160$ :\n   → Actions vendues à 160$ (called away)\n   → Profit actions : (160-150) × 100 = 1,000$\n   → Profit total : 1,000$ + 300$ = 1,300$\n\n3. AAPL baisse à 140$ :\n   → Call expire sans valeur (gardez 300$)\n   → Perte sur actions : -1,000$\n   → Perte nette : -700$ (atténuée par prime)\n\nAVANTAGES : Revenus réguliers, réduit risque baissier\nINCONVÉNIENTS : Profit limité si forte hausse\n\n---\n\nSTRATÉGIE 2: PROTECTIVE PUT (Put Protecteur)\n\nProfil : BULLISH avec protection baissière (Assurance)\n\nConstruction :\n• Posséder 100 actions\n• ACHETER 1 put OTM\n\nEXEMPLE :\n• Vous possédez 100 TSLA à 200$\n• Achetez 1 Put Strike 190$ exp 60j, Prime 6$\n• Coût assurance : 6$ × 100 = 600$\n\nSCÉNARIOS :\n1. TSLA monte à 250$ :\n   → Profit actions : +5,000$\n   → Put expire sans valeur : -600$\n   → Net : +4,400$\n\n2. TSLA CRASH à 150$ :\n   → Perte actions théorique : -5,000$\n   → Exercez Put : Vendez à 190$ au lieu de 150$\n   → Perte limitée : (190-200) × 100 = -1,000$\n   → Net avec prime : -1,000$ - 600$ = -1,600$\n   → SANS put, perte aurait été -5,000$ !\n\nUTILISATION : Avant earnings, périodes incertaines\n\n---\n\nSTRATÉGIE 3: BULL CALL SPREAD\n\nProfil : BULLISH modéré, coût réduit\n\nConstruction :\n• ACHETER 1 call ATM ou ITM\n• VENDRE 1 call OTM (strike plus élevé)\n\nEXEMPLE :\n• AAPL = 150$\n• Acheter Call 150$ à 8$ (coût)\n• Vendre Call 160$ à 3$ (crédit)\n• Coût net : 8 - 3 = 5$ × 100 = 500$\n\nSCÉNARIOS :\n1. AAPL monte à 165$ :\n   → Long call 150$ : 165 - 150 = 15$\n   → Short call 160$ : -(165 - 160) = -5$\n   → Profit net : 15 - 5 - 5 (coût) = 5$ × 100 = 500$\n   → ROI : +100%\n\n2. AAPL reste à 150$ :\n   → Les deux expirent sans valeur\n   → Perte : -500$ (max loss)\n\nMAX PROFIT : (Spread - Coût net) = (160-150) - 5 = 5$ × 100\nMAX LOSS : Coût net = 500$\n\nAVANTAGE : Coût réduit vs acheter call seul\n\n---\n\nSTRATÉGIE 4: LONG STRADDLE\n\nProfil : NEUTRE, attend FORTE VOLATILITÉ\n\nConstruction :\n• ACHETER 1 call ATM\n• ACHETER 1 put ATM (même strike, même expiration)\n\nEXEMPLE (Avant earnings) :\n• TSLA = 200$ (earnings demain)\n• Acheter Call 200$ à 12$\n• Acheter Put 200$ à 11$\n• Coût total : 23$ × 100 = 2,300$\n\nSCÉNARIOS :\n1. TSLA EXPLOSE à 240$ :\n   → Call : 240 - 200 = 40$\n   → Put : 0$ (expire)\n   → Profit : (40 - 23) × 100 = 1,700$\n\n2. TSLA CRASH à 160$ :\n   → Put : 200 - 160 = 40$\n   → Call : 0$\n   → Profit : (40 - 23) × 100 = 1,700$\n\n3. TSLA reste à 200$ (IV CRUSH) :\n   → Les deux expirent ATM/OTM\n   → Perte : -2,300$ (perte max)\n\nBREAKEVEN : 200 ± 23 = 177$ ou 223$\n\nUTILISATION : Earnings, FDA approval, élections\n⚠️ DANGER : IV Crush post-event (volatilité s'effondre)\n\n---\n\nSTRATÉGIE 5: IRON CONDOR\n\nProfil : NEUTRE, marché en RANGE (pas de mouvement)\n\nConstruction :\n• VENDRE 1 call OTM\n• ACHETER 1 call OTM plus loin (protection)\n• VENDRE 1 put OTM\n• ACHETER 1 put OTM plus loin (protection)\n\nEXEMPLE :\n• AAPL = 150$\n• Vendre Call 160$ : +4$\n• Acheter Call 165$ : -1$\n• Vendre Put 140$ : +3$\n• Acheter Put 135$ : -0.5$\n• CRÉDIT NET : 4 + 3 - 1 - 0.5 = 5.5$ × 100 = 550$\n\nSCÉNARIO GAGNANT :\n• AAPL reste entre 140$ et 160$\n• Toutes options expirent sans valeur\n• Profit : 550$ (crédit gardé)\n\nSCÉNARIO PERDANT :\n• AAPL sort de la range (< 140 ou > 160)\n• Max Loss : (5 - 5.5) × 100 = -450$\n\nPROBABILITÉ DE SUCCÈS : ~70-80% (large range)\nMAX PROFIT : 550$, MAX LOSS : 450$\n\nUTILISATION : Marchés peu volatils, revenus mensuels",
+          "points_cles": [
+            "Covered Call : Revenus passifs sur actions possédées (bullish léger)",
+            "Protective Put : Assurance contre crash (coûte prime)",
+            "Bull Call Spread : Bullish modéré, coût réduit, profit limité",
+            "Straddle : Pari sur volatilité (earnings), profit si mouvement fort",
+            "Iron Condor : Pari sur range (pas de mouvement), revenus réguliers",
+            "Stratégies multi-legs = réduire coût ET limiter risque"
+          ]
+        },
+        {
+          "titre": "📈 Futures et Forwards : Trading à Effet de Levier",
+          "contenu": "Un FUTURE est un contrat standardisé pour acheter/vendre un actif à une date future à un prix fixé aujourd'hui. Contrairement aux options, c'est une OBLIGATION (pas un droit).\n\nCARACTÉRISTIQUES DES FUTURES :\n\n• STANDARDISÉS : Taille, échéance, spécifications fixées par l'exchange\n• EFFET DE LEVIER : Marge initiale = 5-15% de la valeur du contrat\n• MARK-TO-MARKET : P&L calculé quotidiennement\n• LIQUIDITÉ : Très liquides (millions de contrats/jour)\n\nEXEMPLE - S&P 500 E-MINI FUTURE (ES) :\n\nCONTRAT ES :\n• Taille : 50 × indice S&P 500\n• Si S&P = 4,000 → Valeur notionnelle = 200,000$\n• Marge requise : ~12,000$ (6% seulement !)\n• Tick minimum : 0.25 points = 12.50$\n\nTRADE EXEMPLE :\n• Vous achetez 1 contrat ES à 4,000\n• Exposition : 200,000$\n• Capital immobilisé : 12,000$ (marge)\n• Levier : 200,000 / 12,000 = 16.7x\n\nSCÉNARIOS :\n1. S&P monte à 4,050 (+50 points) :\n   → P&L : 50 × 50$ = +2,500$\n   → ROI sur marge : 2,500 / 12,000 = +20.8%\n\n2. S&P baisse à 3,950 (-50 points) :\n   → P&L : -50 × 50$ = -2,500$\n   → ROI : -20.8%\n   → Si continue à baisser : MARGIN CALL\n\n⚠️ DANGER : Levier = gains ET pertes amplifiés !\n\n---\n\nPRINCIPAUX FUTURES TRADÉS :\n\n1. INDICES :\n• ES (S&P 500 E-mini) : Indice US le plus populaire\n• NQ (Nasdaq E-mini) : Tech US\n• YM (Dow Jones E-mini) : Industriels US\n• VX (VIX Futures) : Volatilité\n\n2. MATIÈRES PREMIÈRES :\n• CL (Crude Oil) : Pétrole WTI, 1,000 barils/contrat\n• GC (Gold) : Or, 100 onces troy/contrat\n• ZW (Wheat) : Blé, 5,000 boisseaux\n\n3. DEVISES (FOREX) :\n• 6E (Euro FX) : EUR/USD\n• 6J (Japanese Yen) : USD/JPY\n\n4. TAUX D'INTÉRÊT :\n• ZN (10-Year T-Note) : Obligations US 10 ans\n• ZB (30-Year T-Bond) : Obligations US 30 ans\n\n---\n\nFORWARDS vs FUTURES :\n\n| Caractéristique | FUTURES | FORWARDS |\n|----------------|---------|----------|\n| Standardisé    | Oui (exchange) | Non (OTC) |\n| Liquidité      | Élevée | Faible |\n| Risque contrepartie | Aucun (clearinghouse) | Élevé |\n| Personnalisation | Non | Oui |\n| Utilisateurs   | Traders retail/instit | Entreprises, banques |\n\nFORWARD EXEMPLE (Entreprise) :\n• Airbus doit payer 100M$ dans 6 mois\n• EUR/USD = 1.10 aujourd'hui\n• Airbus achète forward EUR/USD à 1.10 pour dans 6 mois\n• Même si EUR/USD monte à 1.20 → Airbus paye 1.10 (couverture)\n\n---\n\nSTRATÉGIES AVEC FUTURES :\n\nSTRATÉGIE 1: HEDGING (Couverture) :\n• Vous possédez 500,000$ d'actions US\n• Crainte de correction\n• VENDEZ 2 contrats ES (short) à 4,000\n• Si marché baisse -10% :\n  - Actions : -50,000$\n  - Futures : +50,000$ (short profitable)\n  - Net : 0$ (couverture parfaite)\n\nSTRATÉGIE 2: SPREAD TRADING (Calendar Spread) :\n• ACHETER Mars Future\n• VENDRE Juin Future\n• Profiter de différence de prix entre échéances\n• Risque réduit (market neutral)\n\nSTRATÉGIE 3: CARRY TRADE :\n• Exploiter différence de taux d'intérêt entre devises\n• Ex: Short JPY (taux 0%), Long USD (taux 5%)\n• Profit : Différentiel de taux (carry)",
+          "points_cles": [
+            "Future = obligation d'acheter/vendre (vs option = droit)",
+            "Levier élevé : Marge 5-15% seulement du notionnel",
+            "ES (S&P E-mini) = future le plus tradé (50$ par point)",
+            "Futures = hedging portefeuille ou spéculation pure",
+            "Forward = OTC personnalisé pour entreprises (pas retail)",
+            "⚠️ Levier = pertes amplifiées, risque margin call"
+          ]
+        },
+        {
+          "titre": "🌟 Produits Dérivés Avancés : Swaps et Exotiques",
+          "contenu": "SWAPS : Échange de flux de trésorerie\n\n1. INTEREST RATE SWAP (Swap de Taux) :\n\nPrincipe : Échanger taux fixe contre taux variable\n\nEXEMPLE :\n• Entreprise A : Prêt 10M€ à taux VARIABLE (Euribor + 1%)\n• Entreprise B : Prêt 10M€ à taux FIXE (4%)\n• A craint hausse taux, B veut profiter de baisse\n\nSWAP :\n• A paye à B : 4% fixe\n• B paye à A : Euribor + 1% variable\n• Résultat :\n  - A paye désormais taux fixe 4% (protection)\n  - B paye taux variable (pari sur baisse)\n\nUTILISATION : Banques, grandes entreprises\nMARCHÉ : 400 trillions $ notionnel (le plus gros au monde)\n\n---\n\n2. CURRENCY SWAP (Swap de Devises) :\n\nPrincipe : Échanger devise A contre devise B, avec réversement futur\n\nEXEMPLE :\n• Entreprise US a besoin d'EUR\n• Entreprise EU a besoin d'USD\n• Swap : Échangent capitaux + intérêts\n• À l'échéance : Réchangent aux taux initiaux\n\nAVANTAGE : Évite risque de change\n\n---\n\n3. TOTAL RETURN SWAP (TRS) :\n\nPrincipe : Échanger rendement total d'un actif contre taux fixe\n\nEXEMPLE :\n• Hedge Fund veut exposition S&P 500 sans acheter actions\n• Banque possède les actions\n• TRS : \n  - HF paye LIBOR + 0.5% à la banque\n  - Banque paye rendement S&P 500 au HF\n\nAVANTAGE : Levier implicite, pas de transfert d'actifs\n\n---\n\nOPTIONS EXOTIQUES :\n\n1. BARRIER OPTIONS (Options à Barrière) :\n\nPrincipe : Option activée/désactivée si prix touche barrière\n\nTYPES :\n• KNOCK-OUT : Meurt si prix touche barrière\n• KNOCK-IN : S'active si prix touche barrière\n\nEXEMPLE - UP-AND-OUT CALL :\n• AAPL = 150$\n• Call Strike 155$, Barrière 170$\n• Si AAPL touche 170$ → Option disparaît (knock-out)\n• AVANTAGE : Prime moins chère qu'option standard\n• UTILISATION : Pari directionnel avec conviction\n\n---\n\n2. ASIAN OPTIONS :\n\nPrincipe : Payoff basé sur MOYENNE du prix sur période\n\nEXEMPLE :\n• Call Strike 150$\n• Moyenne prix sur 30 jours = 155$\n• Payoff : Max(155 - 150, 0) = 5$\n\nAVANTAGE : Moins volatile, prime moins chère\nUTILISATION : Entreprises importatrices (couverture taux de change moyen)\n\n---\n\n3. LOOKBACK OPTIONS :\n\nPrincipe : Strike = meilleur prix de la période\n\nEXEMPLE - LOOKBACK CALL :\n• Prix min sur 30 jours = 140$\n• Prix final = 160$\n• Payoff : 160 - 140 = 20$ (optimal !)\n\nAVANTAGE : Capture optimal (rêve de trader)\nINCONVÉNIENT : Prime TRÈS chère\n\n---\n\n4. BINARY OPTIONS (Tout ou Rien) :\n\nPrincipe : Paye montant fixe si condition remplie, sinon 0$\n\nEXEMPLE :\n• AAPL = 150$\n• Binary Call Strike 155$, Payout 100$\n• Prime : 40$\n\nRÉSULTAT :\n• Si AAPL ≥ 155$ à expiration → Vous recevez 100$ (profit +60$)\n• Si AAPL < 155$ → Vous recevez 0$ (perte -40$)\n\n⚠️ ATTENTION : Souvent utilisé par plateformes NON RÉGULÉES (arnaques)\n\n---\n\n5. VARIANCE SWAPS :\n\nPrincipe : Paris sur VOLATILITÉ réalisée future\n\nEXEMPLE :\n• Vous achetez variance swap sur SPX\n• Strike volatilité : 20%\n• Volatilité réalisée sur 30j : 28%\n• Payoff : (28² - 20²) × Notionnel\n\nUTILISATION : Hedge funds, traders de volatilité\nCOMPLEXITÉ : Élevée, réservé pros\n\n---\n\nCONSTRUIRE UN PRODUIT STRUCTURÉ :\n\nEXEMPLE - REVERSE CONVERTIBLE (Coupon élevé) :\n\nConstruction :\n• Vendre put OTM sur AAPL\n• Investir premium dans obligation\n\nProduit final :\n• Capital : 10,000€\n• Coupon : 8% annuel (vs 3% obligation normale)\n• Risque : Si AAPL baisse > 20%, recevez actions au lieu de cash\n\nQUI ACHÈTE : Investisseurs retail cherchant rendement\nQUI VEND : Banques (profit sur marge)",
+          "points_cles": [
+            "Swaps = échange flux (taux, devises, rendements totaux)",
+            "Barrier Options = moins chères, disparaissent si touche seuil",
+            "Asian Options = basées sur moyenne (moins volatiles)",
+            "Lookback = capture optimal (très cher)",
+            "Binary Options = tout ou rien (attention arnaques)",
+            "Produits structurés = combinaison dérivés (coupon élevé + risque caché)"
+          ]
+        },
+        {
+          "titre": "🛡️ Gestion des Risques avec les Dérivés",
+          "contenu": "PRINCIPE FONDAMENTAL : Les dérivés AMPLIFIENT risques ET opportunités\n\nRÈGLE #1: COMPRENDRE VOS GREEKS\n\nEXEMPLE - PORTEFEUILLE D'OPTIONS :\n\nVotre position :\n• 10 Calls AAPL Strike 150$ (Delta +0.6 chacun)\n• 5 Puts TSLA Strike 200$ (Delta -0.4 chacun)\n\nGREEKS PORTFOLIO :\n• Delta net : (10 × 0.6) + (5 × -0.4) = 6 - 2 = +4\n• Interprétation : Si marché +1$, portfolio +4$\n\nACTION :\n• Delta +4 = position BULLISH\n• Pour neutraliser : Vendre 4 calls ou acheter 4 puts ou short 400 actions\n\n---\n\nRÈGLE #2: POSITION SIZING AVEC LEVIER\n\nFORMULE KELLY CRITERION (adaptée) :\n```\nPosition % = (Win Rate × Avg Win - (1 - Win Rate) × Avg Loss) / Avg Win\n\nMais divisez par 4 pour dérivés (conservateur)\n```\n\nEXEMPLE :\n• Win Rate = 60%\n• Avg Win = 500$\n• Avg Loss = 300$\n• Kelly = (0.6×500 - 0.4×300) / 500 = 0.36 (36%)\n• Position réelle : 36% / 4 = 9% du capital MAX par trade\n\n⚠️ Avec futures levier 20x :\n• 9% capital = 9% × 20 = 180% exposition notionnelle\n• Très agressif, réduire à 3-5% si débutant\n\n---\n\nRÈGLE #3: HEDGING MULTI-STRATÉGIES\n\nTECHNIQUE 1: DELTA HEDGING\n\nPROBLÈME :\n• Vous vendez 10 calls AAPL (revenu premium)\n• Delta net : -6 (exposition short)\n• Risque : Si AAPL explose, perte illimitée\n\nSOLUTION - DELTA NEUTRAL :\n• Acheter 600 actions AAPL (Delta +0.01 par action × 600 = +6)\n• Delta portfolio : -6 + 6 = 0 (neutre)\n• Résultat : Vous gardez premium sans risque directionnel\n\n---\n\nTECHNIQUE 2: VEGA HEDGING (Volatilité)\n\nPROBLÈME :\n• Vous avez long straddle (long volatilité)\n• Vega portfolio : +50\n• Risque : IV crush post-earnings (-10 points IV)\n• Perte : 50 × -10 = -500$\n\nSOLUTION :\n• Vendre options sur autre actif corrélé (Vega -20)\n• Ou acheter VIX puts (pari contre volatilité)\n• Résultat : Vega net réduit à +30 (risque atténué)\n\n---\n\nTECHNIQUE 3: CALENDAR SPREAD POUR THETA\n\nSTRATÉGIE :\n• VENDRE options expiration proche (Theta élevé = decay rapide)\n• ACHETER options expiration lointaine (protection)\n\nEXEMPLE :\n• Vendre Call AAPL 155$ exp 15j, Theta -0.20\n• Acheter Call AAPL 155$ exp 45j, Theta -0.05\n• Theta net : -0.20 - (-0.05) = -0.15 × 100 = -15$/jour\n• Profit : 15$/jour si AAPL stable (450$ sur 30 jours)\n\n---\n\nRÈGLE #4: LIMITES ET STOPS STRICTS\n\nPOUR OPTIONS :\n• MAX LOSS par position : 2% du capital\n• MAX LOSS journalier : 5% (puis arrêt)\n• MAX LOSS mensuel : 15% (révision stratégie)\n\nEXEMPLE :\n• Capital : 50,000$\n• Position max : 50,000 × 2% = 1,000$\n• Si achetez call à 5$ → Max 200 contrats (1,000$ / 5$)\n• Si achetez call à 10$ → Max 100 contrats\n\nPOUR FUTURES :\n• STOP LOSS AUTOMATIQUE : 50 points max sur ES (2,500$)\n• MARGIN CALL = signal d'alerte CRITIQUE\n• Si 2 margin calls en 1 mois → Arrêtez trading futures\n\n---\n\nRÈGLE #5: SCÉNARIOS EXTRÊMES (STRESS TESTING)\n\nTESTEZ votre portfolio sur :\n\n1. FLASH CRASH -10% en 1 heure :\n• Quelle est votre perte max ?\n• Avez-vous assez de marge ?\n• Vos stops sont-ils exécutables ?\n\n2. IV SPIKE +100% (VIX passe de 15 à 30) :\n• Positions short options : Perte énorme\n• Positions long options : Gain\n• Êtes-vous hedgé ?\n\n3. GAP UP/DOWN (marché ouvre ±5%) :\n• Vos stops ne fonctionnent PAS (gap over stop)\n• Avez-vous protection (options) ?\n\nEXEMPLE DE CALCUL :\n```python\n# Stress test portfolio\nportfolio_delta = 120\ncrash_scenario = -0.10  # -10%\nSPX_value = 4000\n\nloss = portfolio_delta * (SPX_value * crash_scenario)\nprint(f\"Perte en flash crash: {loss}$\")  # -48,000$\n\nif abs(loss) > capital * 0.20:  # > 20% capital\n    print(\"⚠️ RISQUE EXCESSIF, réduire delta\")\n```\n\n---\n\nRÈGLE #6: DIVERSIFICATION PAR STRATÉGIES\n\n❌ MAL : 100% capital en long calls (pari unique)\n✅ BIEN : Portfolio mixte décorrélé\n\nEXEMPLE PORTFOLIO ÉQUILIBRÉ :\n• 30% Covered calls (revenus stables, bullish léger)\n• 20% Iron condors (revenus range, volatilité basse)\n• 15% Long straddles (paris événements, volatilité haute)\n• 20% Futures hedging (protection portefeuille actions)\n• 15% Cash (opportunités)\n\nCORRÉLATION :\n• Covered calls et iron condors profitent de stabilité\n• Straddles profitent de volatilité\n• Si marché stable : revenus des premières\n• Si marché volatile : profit des straddles\n• Résultat : Lissage des performances",
+          "points_cles": [
+            "Calculez Greeks du portfolio (Delta, Vega, Theta net)",
+            "Position sizing : 2% max par trade, divisez Kelly par 4 pour levier",
+            "Delta Hedging : Neutralisez exposition directionnelle",
+            "Stops stricts : 2% par trade, 5% daily, 15% monthly",
+            "Stress testing : Testez portfolio sur crash -10%, IV spike, gaps",
+            "Diversification : Mix stratégies décorrélées (revenus + volatilité)"
+          ]
+        }
+      ],
+      "resume": "Les produits dérivés (options, futures, swaps) offrent des possibilités infinies : effet de levier, génération de revenus, couverture de risques, stratégies pour tous marchés. Les options donnent droits (call = acheter, put = vendre) avec risque limité pour acheteur. Black-Scholes et Greeks (Delta, Theta, Vega) permettent de pricer et gérer ces positions. Stratégies multi-legs (spreads, straddles, iron condors) réduisent coûts et risques. Futures offrent levier élevé (5-15% marge) mais risque amplifié. Produits exotiques (barriers, asians, swaps) pour besoins spécifiques. CLÉS DU SUCCÈS : Maîtriser Greeks, position sizing strict (2% max), hedging actif, stress testing, diversification stratégies. Les dérivés amplifient résultats - utilisez-les avec discipline et connaissance approfondie.",
+      "ressources_complementaires": [
+        "📖 Livre : 'Options, Futures, and Other Derivatives' par John Hull (Bible des dérivés)",
+        "📖 Livre : 'Option Volatility & Pricing' par Sheldon Natenberg",
+        "🎥 Cours : 'Options Trading' sur Coursera (Université Penn State)",
+        "🔗 Outil : OptionStrat.com (visualiser P&L stratégies options)",
+        "🔗 Outil : ThinkorSwim (plateforme options avancée)",
+        "🔗 Calculateur : Black-Scholes Calculator (option-price.com)",
+        "📄 Data : CBOE (Chicago Board Options Exchange) pour éducation options",
+        "💻 Python : QuantLib (librairie pricing dérivés)",
+        "🎓 Certification : CFA Level 2-3 (dérivés avancés)",
+        "📊 Data : Barchart.com (futures quotes et charts)"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quelle est la différence principale entre un CALL et un PUT ?",
+        "options": [
+          "Call = obligation d'acheter, Put = obligation de vendre",
+          "Call = droit d'acheter, Put = droit de vendre",
+          "Call pour actions, Put pour indices seulement",
+          "Aucune différence, juste des noms différents"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Call = DROIT (pas obligation) d'ACHETER à strike, achetez si bullish. Put = DROIT de VENDRE à strike, achetez si bearish. Acheteur paye prime, risque limité. C'est fondamental."
+      },
+      {
+        "question": "Une option est IN THE MONEY (ITM) quand :",
+        "options": [
+          "Elle génère un profit si exercée immédiatement",
+          "Le prix actuel est exactement au strike",
+          "Elle n'a plus de valeur temporelle",
+          "L'expiration est dans moins de 7 jours"
+        ],
+        "bonne_reponse": 0,
+        "explication": "ITM = profitable si exercée maintenant. Call ITM : Prix > Strike. Put ITM : Prix < Strike. Ex: AAPL=150$, Call Strike 140$ = ITM (+10$ valeur intrinsèque)."
+      },
+      {
+        "question": "Quel GREEK mesure la décroissance temporelle (time decay) d'une option ?",
+        "options": [
+          "Delta",
+          "Gamma",
+          "Theta",
+          "Vega"
+        ],
+        "bonne_reponse": 2,
+        "explication": "THETA = perte de valeur quotidienne. Toujours négatif pour acheteurs (temps = ennemi), positif pour vendeurs. S'accélère dans les 30 derniers jours. Ex: Theta -0.10 = option perd 0.10$/jour."
+      },
+      {
+        "question": "Vous achetez un Call AAPL Strike 150$ à 5$, puis VENDEZ un Call Strike 160$ à 2$. Quelle stratégie ?",
+        "options": [
+          "Covered Call",
+          "Protective Put",
+          "Bull Call Spread",
+          "Iron Condor"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Bull Call Spread = LONG call + SHORT call strike plus élevé. Coût net: 5-2=3$. Max profit: (160-150)-3=7$. Stratégie bullish modérée, coût réduit, profit limité. ROI potentiel +233%."
+      },
+      {
+        "question": "Quelle est la PRINCIPALE différence entre Future et Forward ?",
+        "options": [
+          "Future = court terme, Forward = long terme",
+          "Future = standardisé exchange, Forward = OTC personnalisé",
+          "Future = sans levier, Forward = avec levier",
+          "Aucune différence pratique"
+        ],
+        "bonne_reponse": 1,
+        "explication": "FUTURE : Standardisé exchange, liquide, clearinghouse élimine risque contrepartie, retail. FORWARD : OTC personnalisé, illiquide, risque contrepartie élevé, entreprises/banques. Ex: Airbus utilise forwards EUR/USD."
+      },
+      {
+        "question": "Un contrat ES (S&P 500 E-mini) à 4,000 avec marge 12,000$. Quel est le levier ?",
+        "options": [
+          "2x",
+          "5x",
+          "16.7x",
+          "Pas de levier"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Notionnel: 4,000 × 50 = 200,000$. Marge: 12,000$. Levier: 200,000/12,000 = 16.7x. Si S&P +1% → P&L +16.7% sur marge. ⚠️ Pertes aussi amplifiées x16.7 !"
+      },
+      {
+        "question": "Quelle est la taille de position MAXIMUM recommandée par trade avec produits dérivés à levier ?",
+        "options": [
+          "10-20% du capital",
+          "2-5% du capital",
+          "50% du capital",
+          "Pas de limite si vous avez confiance"
+        ],
+        "bonne_reponse": 1,
+        "explication": "MAX 2% par trade (conservateur), 5% si expérimenté. Jamais plus avec levier. Sur 50,000$: max 1,000-2,500$ de risque par trade. Protection contre séries de pertes. Kelly divisé par 4 pour dérivés."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "calcul",
+        "titre": "Calculer prix théorique d'un Call avec Black-Scholes",
+        "description": "En Python, implémentez le modèle Black-Scholes pour calculer prix d'un Call. Paramètres : AAPL S=150$, Strike K=155$, Temps T=30 jours (30/365), Taux r=5% (0.05), Volatilité σ=25% (0.25). Utilisez scipy.stats pour fonction normale cumulative N(x). Comparez votre résultat au prix de marché réel de l'option sur ThinkorSwim/IBKR. Documentez : pourquoi y a-t-il une différence (indice: volatilité implicite vs réalisée) ?"
+      },
+      {
+        "type": "strategie",
+        "titre": "Construire et analyser un Iron Condor",
+        "description": "Sur AAPL trading à 150$, créez Iron Condor : Vendez Call 160$ (+4$), Achetez Call 165$ (-1$), Vendez Put 140$ (+3$), Achetez Put 135$ (-0.5$). 1) Calculez crédit net reçu. 2) Calculez max profit et max loss. 3) Déterminez breakeven points. 4) Créez graphique P&L en fonction du prix à expiration (120$ à 180$). 5) Quelle est probabilité de succès (restez dans range 140-160) ? 6) Quel ROI sur marge requise ?"
+      },
+      {
+        "type": "hedging",
+        "titre": "Hedger un portefeuille avec Futures ES",
+        "description": "Vous possédez portefeuille actions US valeur 250,000$ (Beta 1.1 vs S&P 500). S&P à 4,000. Crainte de correction -15%. 1) Calculez combien de contrats ES shorter pour hedge parfait (ES = 50×S&P). 2) Si S&P baisse à 3,400 (-15%) : Quelle est P&L sur actions ? Sur futures ? Net ? 3) Si S&P monte à 4,400 (+10%) : P&L actions ? Futures ? Net ? 4) Quel est le coût du hedge (marge immobilisée) ? 5) Est-ce plus efficient qu'acheter Puts SPY ?"
+      },
+      {
+        "type": "greeks",
+        "titre": "Calculer et neutraliser le Delta d'un portfolio",
+        "description": "Portfolio actuel : 20 Long Calls AAPL Strike 150$ (Delta +0.55 chacun), 10 Short Puts TSLA Strike 200$ (Delta -0.35 chacun), 5 Long Puts MSFT Strike 300$ (Delta -0.45 chacun). 1) Calculez Delta net du portfolio. 2) Interprétation : Position bullish ou bearish ? 3) Pour rendre portfolio Delta neutral (Delta=0), proposez 3 solutions : via options, via actions, via futures. 4) Implémentez solution la plus capital-efficiente. 5) Recalculez Delta après ajustement (doit être ~0)."
+      },
+      {
+        "type": "stress-test",
+        "titre": "Stress Testing : Portfolio survive-t-il à un Flash Crash ?",
+        "description": "Portfolio : Long 10 Calls ATM diverses actions (Delta total +400), Short 5 Iron Condors sur indices (Delta ~0, mais Gamma élevé). Capital : 100,000$. SCÉNARIO : Flash crash -12% en 30 minutes, VIX passe de 15 à 45 (IV triple). 1) Estimez perte sur Long Calls (Delta×Move + Vega×IV change). 2) Estimez impact sur Iron Condors (breach des strikes). 3) Perte totale en % du capital ? 4) Margin call sur positions futures hedging ? 5) Proposez ajustements pour réduire risque crash à max 15% capital."
+      }
+    ]
+  }
+]

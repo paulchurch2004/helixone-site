@@ -1,0 +1,1192 @@
+[
+  {
+    "id": "module_1_1",
+    "parcours": "debutant",
+    "titre": "📚 Introduction aux Marchés Financiers",
+    "description": "Découvrez le fonctionnement des marchés financiers, leurs acteurs et les grandes places boursières mondiales.",
+    "durée": "45 minutes",
+    "difficulté": "Débutant",
+    "points_xp": 100,
+    "prérequis": [],
+    "contenu": {
+      "introduction": "Les marchés financiers sont au cœur de l'économie mondiale. Chaque jour, des milliards d'euros s'échangent sur ces plateformes qui permettent aux entreprises de se financer et aux investisseurs de faire fructifier leur épargne. Comprendre leur fonctionnement est la première étape essentielle pour tout futur trader ou investisseur. Dans ce module, vous découvrirez ce qu'est un marché financier, comment il fonctionne, qui sont ses acteurs principaux, et quelles sont les grandes places boursières à travers le monde. Ces connaissances fondamentales vous serviront de base solide pour la suite de votre formation.",
+      "sections": [
+        {
+          "titre": "🏦 Qu'est-ce qu'un marché financier ?",
+          "contenu": "Un marché financier est un lieu, physique ou virtuel, où s'échangent des produits financiers entre acheteurs et vendeurs. Imaginez un grand marché aux fruits : les agriculteurs viennent vendre, les clients viennent acheter, et le prix dépend de l'offre et de la demande.\n\nLes marchés financiers remplissent trois rôles essentiels :\n\n1. Financer l'économie : Les entreprises ont besoin d'argent pour se développer. Plutôt que d'emprunter à la banque, elles peuvent lever des fonds directement auprès des investisseurs en émettant des actions ou des obligations. Par exemple, une startup technologique peut émettre des actions pour récolter 50 millions d'euros.\n\n2. Permettre aux investisseurs de placer leur argent : Les particuliers et les institutions peuvent faire fructifier leur épargne en investissant dans différents actifs. Plutôt que de laisser dormir 1 000€ sur un compte courant, vous pouvez acheter des actions qui versent des dividendes.\n\n3. Fixer les prix : La rencontre entre l'offre et la demande détermine le juste prix d'un actif à un moment donné. Si beaucoup de gens veulent acheter des actions Apple mais peu veulent les vendre, le prix monte. Si tout le monde vend et personne n'achète, le prix baisse.\n\nOn distingue plusieurs types de marchés : le marché des actions, le marché obligataire, le marché des devises (Forex), le marché des matières premières et le marché des dérivés. Chacun a ses propres caractéristiques et règles de fonctionnement.",
+          "points_cles": [
+            "Un marché financier met en relation acheteurs et vendeurs d'actifs financiers",
+            "Les 3 rôles : financer l'économie, permettre l'investissement, fixer les prix",
+            "Le prix est déterminé par la loi de l'offre et de la demande",
+            "Il existe plusieurs types de marchés : actions, obligations, Forex, matières premières, dérivés"
+          ],
+          "exemple_pratique": {
+            "ticker": "AAPL",
+            "scenario": "Si Apple annonce des résultats exceptionnels, la demande pour ses actions augmente. Avec plus d'acheteurs que de vendeurs, le prix monte de 150$ à 160$ en quelques heures."
+          }
+        },
+        {
+          "titre": "🔄 Marché primaire vs Marché secondaire",
+          "contenu": "Il existe deux types de marchés qu'il est essentiel de distinguer :\n\nLe marché primaire est le marché du 'neuf'. C'est là que les titres sont créés et vendus pour la première fois. Quand une entreprise entre en bourse, elle réalise une IPO (Initial Public Offering). Elle vend ses actions directement aux premiers investisseurs.\n\nExemple : En 2012, Facebook fait son IPO. L'entreprise crée 421 millions de nouvelles actions à 38$ chacune et récolte 16 milliards de dollars. L'argent va directement à Facebook.\n\nCaractéristiques du marché primaire :\n- L'argent va directement à l'émetteur\n- C'est la naissance des titres financiers\n- Souvent réservé aux gros investisseurs institutionnels\n\nLe marché secondaire est le marché de 'l'occasion'. C'est là que les titres déjà existants s'échangent entre investisseurs. Quand vous achetez une action sur votre application de trading, vous l'achetez à un autre investisseur, pas à l'entreprise.\n\nExemple : Vous achetez une action Apple à 180$. Cet argent ne va pas à Apple, il va au vendeur. Apple a déjà reçu l'argent lors de son IPO en 1980.\n\nAnalogie immobilière pour bien comprendre :\n- Marché primaire = Acheter un appartement neuf au promoteur\n- Marché secondaire = Acheter un appartement ancien à un particulier\n\nC'est sur le marché secondaire que se forment les prix en temps réel et c'est là que vous intervenez quand vous faites du trading.",
+          "points_cles": [
+            "Marché primaire : émission de nouveaux titres (IPO), l'argent va à l'entreprise",
+            "Marché secondaire : échange de titres existants entre investisseurs",
+            "L'IPO (Introduction en Bourse) est le passage du primaire au secondaire",
+            "Le trading quotidien se fait sur le marché secondaire"
+          ],
+          "exemple_pratique": {
+            "ticker": "META",
+            "scenario": "Facebook (Meta) a levé 16 milliards lors de son IPO en 2012 sur le marché primaire. Aujourd'hui, quand vous achetez une action Meta, vous l'achetez à un autre investisseur sur le marché secondaire."
+          }
+        },
+        {
+          "titre": "👥 Les acteurs des marchés financiers",
+          "contenu": "Plusieurs types d'acteurs interviennent sur les marchés :\n\nLes émetteurs créent les titres pour lever des fonds. Ce sont les entreprises (actions et obligations), les États (bons du Trésor, OAT en France), et les collectivités locales.\n\nLes investisseurs institutionnels représentent environ 80% des volumes échangés. On y trouve les fonds de pension qui gèrent l'épargne retraite, les compagnies d'assurance qui investissent les primes collectées, les fonds d'investissement (OPCVM, hedge funds) et les banques.\n\nLes investisseurs particuliers (retail investors) sont des individus comme vous et moi qui investissent leur épargne personnelle. Grâce aux applications de trading en ligne, leur nombre a explosé ces dernières années.\n\nLes courtiers (brokers) exécutent les ordres d'achat et de vente pour le compte des investisseurs. Exemples : Trade Republic, Degiro, Interactive Brokers, Boursorama.\n\nLes teneurs de marché (market makers) assurent la liquidité en se tenant prêts à acheter et vendre à tout moment. Ils affichent un prix d'achat (bid) et un prix de vente (ask). La différence entre les deux s'appelle le spread, c'est leur rémunération. Par exemple, sur l'action Total : bid à 54,95€ et ask à 55,00€, le spread est de 0,05€.\n\nLes régulateurs sont les gendarmes des marchés : l'AMF en France, la SEC aux États-Unis, l'ESMA en Europe. Ils protègent les investisseurs et sanctionnent les fraudes comme le délit d'initié.",
+          "points_cles": [
+            "Les institutionnels représentent 80% des volumes du marché",
+            "Les brokers exécutent vos ordres, les market makers assurent la liquidité",
+            "Le spread (bid-ask) est la rémunération du teneur de marché",
+            "L'AMF (France) et la SEC (USA) régulent et protègent les investisseurs"
+          ]
+        },
+        {
+          "titre": "🌍 Les grandes places boursières mondiales",
+          "contenu": "Une bourse est le lieu où s'organisent les échanges de titres. Autrefois physiques avec des traders criant leurs ordres, elles sont aujourd'hui des systèmes informatiques ultrarapides.\n\nEn Amérique du Nord :\n- NYSE (New York Stock Exchange) : la plus grande bourse mondiale par capitalisation. On y trouve les entreprises traditionnelles comme Coca-Cola, Goldman Sachs ou ExxonMobil.\n- NASDAQ : la bourse technologique où sont cotées les GAFAM (Google, Apple, Meta, Amazon, Microsoft).\n- TSX (Toronto) : forte présence de sociétés minières et énergétiques.\n\nEn Europe :\n- Euronext : bourse paneuropéenne regroupant Paris, Amsterdam, Bruxelles et Lisbonne. C'est là qu'est coté le CAC 40.\n- LSE (London Stock Exchange) : fondée en 1801, une des plus anciennes et prestigieuses.\n- Deutsche Börse (Francfort) : siège du DAX allemand.\n\nEn Asie :\n- Tokyo Stock Exchange : 3ème mondiale, avec Toyota, Sony et Nintendo.\n- Shanghai Stock Exchange : accès limité pour les étrangers.\n- Hong Kong Stock Exchange : porte d'entrée sur la Chine pour les investisseurs internationaux.\n\nHoraires de cotation (heure de Paris) :\n- Tokyo : 01h00 - 07h00\n- Shanghai : 02h30 - 08h00\n- Paris/Londres : 09h00 - 17h30\n- New York : 15h30 - 22h00\n\nImportant : quand Paris ferme, New York continue pendant 4h30. Ce qui se passe à Wall Street le soir influence l'ouverture européenne le lendemain.",
+          "points_cles": [
+            "NYSE = plus grande bourse mondiale, NASDAQ = bourse techno",
+            "Euronext regroupe Paris, Amsterdam, Bruxelles, Lisbonne",
+            "Les marchés sont ouverts en décalé selon les fuseaux horaires",
+            "Wall Street influence les ouvertures européennes du lendemain"
+          ],
+          "exemple_pratique": {
+            "ticker": "CAC40",
+            "scenario": "Si le S&P 500 chute de 2% à Wall Street le soir à 21h, le CAC 40 ouvrira probablement en baisse le lendemain matin à 9h, car les investisseurs européens réagissent aux nouvelles américaines."
+          }
+        },
+        {
+          "titre": "📈 Les indices boursiers",
+          "contenu": "Un indice boursier est un indicateur qui mesure la performance d'un groupe d'actions. C'est le thermomètre de la santé du marché. Plutôt que de regarder chaque action individuellement, l'indice donne une vision globale.\n\nLes principaux indices mondiaux :\n\nFrance - CAC 40 : les 40 plus grandes entreprises françaises (LVMH, TotalEnergies, Sanofi, L'Oréal). Pondéré par capitalisation flottante.\n\nÉtats-Unis - S&P 500 : les 500 plus grandes entreprises américaines, considéré comme le meilleur baromètre de l'économie US. Le Dow Jones Industrial Average regroupe seulement 30 grandes valeurs industrielles. Le NASDAQ Composite est orienté technologie.\n\nAllemagne - DAX 40 : les 40 plus grandes entreprises allemandes (Siemens, BMW, SAP).\n\nJapon - Nikkei 225 : les 225 valeurs les plus actives de la bourse de Tokyo.\n\nMondial - MSCI World : regroupe plus de 1 500 actions de 23 pays développés, très utilisé comme référence globale.\n\nModes de pondération :\n- Par capitalisation : les plus grosses entreprises pèsent plus. Apple à 3 000 milliards pèse plus que n'importe quelle autre dans le S&P 500.\n- Par les prix : le Dow Jones pondère par le prix de l'action, ce qui est moins représentatif.\n- Équipondéré : chaque action a le même poids, utilisé par certains ETF.\n\nQuand on dit 'le marché monte', on parle généralement de l'indice principal du pays concerné.",
+          "points_cles": [
+            "Un indice mesure la performance globale d'un groupe d'actions",
+            "CAC 40 (France), S&P 500 (USA), DAX (Allemagne), Nikkei (Japon)",
+            "La plupart des indices sont pondérés par capitalisation boursière",
+            "Le S&P 500 est considéré comme le meilleur baromètre de l'économie mondiale"
+          ]
+        },
+        {
+          "titre": "🔄 Les cycles économiques",
+          "contenu": "L'économie évolue par cycles qui influencent directement les marchés financiers. Comprendre ces cycles est crucial pour adapter sa stratégie d'investissement.\n\nLes 4 phases du cycle économique :\n\n1. Expansion : L'économie croît, le PIB augmente, le chômage baisse, les entreprises investissent et embauchent. Les bénéfices augmentent et les marchés montent. C'est la période la plus favorable pour investir en actions.\n\n2. Pic : L'économie atteint son maximum. L'inflation commence à monter car la demande dépasse l'offre. Les banques centrales relèvent les taux d'intérêt pour freiner la surchauffe. Les marchés commencent à plafonner.\n\n3. Contraction (récession) : L'économie ralentit, les entreprises réduisent leurs effectifs, les bénéfices baissent, le chômage monte. Les marchés chutent. Une récession est techniquement définie par deux trimestres consécutifs de croissance négative du PIB.\n\n4. Creux : Le point le plus bas du cycle. L'économie stagne mais les banques centrales baissent les taux pour relancer l'activité. C'est paradoxalement le meilleur moment pour acheter des actions car les prix sont au plus bas.\n\nUn cycle complet dure généralement entre 5 et 10 ans. Depuis 1945, les États-Unis ont connu environ 12 récessions. La dernière majeure était en 2020 due au Covid-19.\n\nPour le trader, il est important de savoir dans quelle phase du cycle on se trouve, car les stratégies et les secteurs performants varient selon la phase.",
+          "points_cles": [
+            "4 phases : expansion, pic, contraction (récession), creux",
+            "Un cycle complet dure environ 5 à 10 ans",
+            "Les banques centrales ajustent les taux selon la phase du cycle",
+            "Le creux est souvent le meilleur moment pour acheter (quand tout le monde a peur)"
+          ]
+        }
+      ],
+      "resume": "Les marchés financiers sont des plateformes d'échange entre acheteurs et vendeurs d'actifs. Ils se divisent en marché primaire (émission de nouveaux titres via IPO) et marché secondaire (échanges entre investisseurs). Les acteurs principaux sont les émetteurs, les investisseurs (institutionnels et particuliers), les intermédiaires (brokers, market makers) et les régulateurs (AMF, SEC). Les grandes bourses mondiales fonctionnent en décalé selon les fuseaux horaires, et les indices boursiers (CAC 40, S&P 500) servent de thermomètre. L'économie évolue par cycles de 4 phases qui influencent directement les marchés.",
+      "ressources_complementaires": [
+        "📖 Livre : 'La Bourse pour les Nuls' de Gérard Horny - introduction accessible",
+        "🎥 Vidéo : 'Comment fonctionne la bourse ?' - Heu?reka sur YouTube",
+        "🌐 Site : Investopedia.com - encyclopédie financière de référence (en anglais)",
+        "📰 Journal : Les Échos - actualités des marchés financiers français"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quelle est la différence entre le marché primaire et le marché secondaire ?",
+        "options": [
+          "Le marché primaire est pour les actions, le secondaire pour les obligations",
+          "Le marché primaire concerne l'émission de nouveaux titres, le secondaire l'échange de titres existants",
+          "Le marché primaire est en Europe, le secondaire aux États-Unis",
+          "Le marché primaire est pour les institutionnels, le secondaire pour les particuliers"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le marché primaire est celui où les titres sont créés et vendus pour la première fois (comme lors d'une IPO). Le marché secondaire est celui où les titres existants s'échangent entre investisseurs."
+      },
+      {
+        "question": "Qu'est-ce qu'une IPO ?",
+        "options": [
+          "Un type d'ordre boursier",
+          "L'introduction en bourse d'une entreprise",
+          "Un indice de performance",
+          "Un organisme de régulation"
+        ],
+        "bonne_reponse": 1,
+        "explication": "IPO signifie Initial Public Offering, c'est-à-dire l'introduction en bourse d'une entreprise. C'est le moment où elle vend ses actions au public pour la première fois sur le marché primaire."
+      },
+      {
+        "question": "Qu'est-ce que le spread ?",
+        "options": [
+          "La commission du broker",
+          "La différence entre le prix d'achat (ask) et le prix de vente (bid)",
+          "Le pourcentage de gain sur un trade",
+          "L'écart entre le prix d'ouverture et de fermeture"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le spread est la différence entre le prix ask (auquel vous pouvez acheter) et le prix bid (auquel vous pouvez vendre). C'est la rémunération du teneur de marché."
+      },
+      {
+        "question": "Quel indice regroupe les 40 plus grandes entreprises françaises ?",
+        "options": [
+          "Le S&P 500",
+          "Le DAX 40",
+          "Le CAC 40",
+          "Le Dow Jones"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le CAC 40 (Cotation Assistée en Continu) regroupe les 40 plus grandes entreprises françaises cotées sur Euronext Paris, comme LVMH, TotalEnergies ou L'Oréal."
+      },
+      {
+        "question": "À quelle heure (de Paris) ouvre la bourse de New York ?",
+        "options": [
+          "9h00",
+          "14h00",
+          "15h30",
+          "17h00"
+        ],
+        "bonne_reponse": 2,
+        "explication": "La bourse de New York (NYSE et NASDAQ) ouvre à 15h30 heure de Paris et ferme à 22h00. Le décalage horaire avec la côte Est des États-Unis est de 6 heures."
+      },
+      {
+        "question": "Quel organisme régule les marchés financiers en France ?",
+        "options": [
+          "La SEC",
+          "L'ESMA",
+          "L'AMF",
+          "La BCE"
+        ],
+        "bonne_reponse": 2,
+        "explication": "L'AMF (Autorité des Marchés Financiers) est le régulateur français. La SEC est le régulateur américain, l'ESMA est l'autorité européenne, et la BCE est la banque centrale européenne."
+      },
+      {
+        "question": "Dans quelle phase du cycle économique est-il généralement le plus avantageux d'acheter des actions ?",
+        "options": [
+          "Au pic",
+          "Pendant l'expansion",
+          "Au creux",
+          "Pendant la contraction"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le creux du cycle est paradoxalement le meilleur moment pour acheter car les prix sont au plus bas et la reprise est à venir. C'est le principe de Warren Buffett : 'Soyez avide quand les autres ont peur.'"
+      }
+    ],
+    "exercices": [
+      {
+        "type": "simulation",
+        "titre": "Identifier les marchés",
+        "description": "Classez les situations suivantes en marché primaire ou secondaire : 1) Tesla fait son IPO en 2010, 2) Vous achetez une action LVMH sur Euronext, 3) L'État français émet de nouvelles obligations, 4) Un fonds vend ses actions Total à un autre investisseur."
+      },
+      {
+        "type": "pratique",
+        "titre": "Explorer les indices mondiaux",
+        "description": "Rendez-vous sur un site comme TradingView ou Google Finance. Notez la valeur actuelle du CAC 40, du S&P 500 et du Nikkei 225. Calculez leur variation sur les 5 derniers jours. Quel indice a le mieux performé ?"
+      }
+    ],
+    "duree": "45 min",
+    "difficulte": "débutant",
+    "prerequis": []
+  },
+  {
+    "id": "module_1_2",
+    "parcours": "debutant",
+    "titre": "💰 Les Types d'Actifs Financiers",
+    "description": "Découvrez les différentes classes d'actifs : actions, obligations, ETF, Forex, matières premières et cryptomonnaies.",
+    "durée": "50 minutes",
+    "difficulté": "Débutant",
+    "points_xp": 120,
+    "prérequis": [
+      "module_1_1"
+    ],
+    "contenu": {
+      "introduction": "Maintenant que vous comprenez le fonctionnement des marchés financiers, il est temps de découvrir les différents produits que vous pouvez y acheter et vendre. Chaque classe d'actifs a ses propres caractéristiques en termes de risque, rendement, liquidité et complexité. Connaître ces différences est essentiel pour construire un portefeuille diversifié et adapté à votre profil d'investisseur. Dans ce module, nous passerons en revue les principales classes d'actifs que tout investisseur doit connaître.",
+      "sections": [
+        {
+          "titre": "📊 Les Actions",
+          "contenu": "Une action représente une part de propriété dans une entreprise. Quand vous achetez une action Apple, vous devenez littéralement copropriétaire de l'entreprise, même si votre part est infime.\n\nDroits de l'actionnaire :\n- Droit aux dividendes : part des bénéfices redistribuée aux actionnaires. Par exemple, Total verse environ 3€ par action chaque année.\n- Droit de vote : vous pouvez voter aux assemblées générales.\n- Droit à l'information : accès aux rapports financiers de l'entreprise.\n- Droit au boni de liquidation : en cas de dissolution, vous récupérez une part des actifs.\n\nTypes d'actions :\n- Actions ordinaires : les plus courantes, donnent tous les droits classiques.\n- Actions de préférence : dividendes prioritaires mais souvent sans droit de vote.\n- Actions de croissance (Growth) : entreprises en forte croissance qui réinvestissent leurs bénéfices (Tesla, Amazon jeune).\n- Actions de valeur (Value) : entreprises matures, sous-évaluées, versant des dividendes réguliers (Coca-Cola, Johnson & Johnson).\n\nComment gagne-t-on de l'argent avec des actions ?\n1. Plus-value : acheter à 100€, revendre à 150€ = gain de 50€.\n2. Dividendes : revenus réguliers versés par l'entreprise.\n\nLes actions sont historiquement la classe d'actifs la plus performante sur le long terme, avec un rendement moyen de 7-10% par an pour le S&P 500 sur les 100 dernières années.",
+          "points_cles": [
+            "Une action = une part de propriété dans une entreprise",
+            "Deux sources de revenus : plus-value et dividendes",
+            "Actions Growth (croissance) vs Value (valeur)",
+            "Rendement historique moyen : 7-10% par an sur le long terme"
+          ],
+          "exemple_pratique": {
+            "ticker": "AAPL",
+            "scenario": "Vous achetez 10 actions Apple à 150$. Apple verse un dividende de 0,96$ par action par an. Après un an, l'action vaut 180$. Votre gain : plus-value de 300$ (10×30$) + dividendes de 9,60$ = 309,60$ soit +20,6%."
+          }
+        },
+        {
+          "titre": "🏛️ Les Obligations",
+          "contenu": "Une obligation est un titre de dette. Quand vous achetez une obligation, vous prêtez de l'argent à un émetteur (entreprise ou État) qui s'engage à vous rembourser avec des intérêts.\n\nCaractéristiques principales :\n- Valeur nominale : le montant emprunté (généralement 1 000€ par obligation).\n- Coupon : le taux d'intérêt annuel versé. Une obligation à 3% de coupon sur 1 000€ verse 30€ par an.\n- Maturité : la date à laquelle le capital est remboursé (2 ans, 5 ans, 10 ans, 30 ans).\n- Notation : les agences (S&P, Moody's, Fitch) évaluent le risque. AAA = très sûr, BB ou moins = 'junk bonds' (obligations pourries).\n\nRelation inverse taux/prix - concept crucial :\nQuand les taux d'intérêt montent, le prix des obligations baisse, et inversement. Pourquoi ? Si vous détenez une obligation à 2% et que les nouvelles obligations offrent 4%, personne ne veut acheter votre obligation à 2% sauf à un prix réduit.\n\nTypes d'obligations :\n- Obligations d'État (OAT en France, Treasuries aux USA) : les plus sûres, rendement faible.\n- Obligations d'entreprise (corporate bonds) : plus risquées, rendement plus élevé.\n- Obligations convertibles : peuvent être échangées contre des actions.\n\nLes obligations sont considérées comme moins risquées que les actions et servent de valeur refuge en période de crise.",
+          "points_cles": [
+            "Une obligation = un prêt à une entreprise ou un État",
+            "Le coupon est l'intérêt versé périodiquement",
+            "Relation INVERSE entre taux d'intérêt et prix des obligations",
+            "Notation AAA (très sûr) à D (défaut) par les agences"
+          ]
+        },
+        {
+          "titre": "📦 Les ETF (Exchange-Traded Funds)",
+          "contenu": "Un ETF est un fonds coté en bourse qui réplique la performance d'un indice, d'un secteur ou d'une classe d'actifs. C'est comme un panier contenant plusieurs titres que vous achetez en une seule transaction.\n\nAvantages des ETF :\n- Diversification instantanée : un ETF S&P 500 vous expose à 500 entreprises en un seul achat.\n- Frais très bas : 0,1% à 0,5% par an contre 1,5% à 2% pour un fonds classique.\n- Liquidité : se négocie comme une action, achetable et vendable à tout moment.\n- Transparence : la composition est publique et mise à jour quotidiennement.\n\nTypes d'ETF :\n- Indiciels : répliquent un indice (S&P 500, CAC 40, MSCI World).\n- Sectoriels : ciblent un secteur (technologie, santé, énergie).\n- Thématiques : suivent une tendance (intelligence artificielle, énergies renouvelables, blockchain).\n- Obligataires : investissent dans des paniers d'obligations.\n- Matières premières : exposent à l'or, le pétrole, etc.\n\nL'ETF MSCI World est souvent recommandé aux débutants car il offre une exposition à plus de 1 500 entreprises dans 23 pays développés avec des frais minimes. Warren Buffett lui-même recommande les ETF indiciels pour la majorité des investisseurs.",
+          "points_cles": [
+            "Un ETF réplique un indice ou un panier d'actifs",
+            "Avantages : diversification, frais bas, liquidité, transparence",
+            "L'ETF MSCI World expose à 1 500+ entreprises de 23 pays",
+            "Recommandé par Warren Buffett pour les investisseurs particuliers"
+          ],
+          "exemple_pratique": {
+            "ticker": "IWDA",
+            "scenario": "Vous investissez 1 000€ dans l'ETF iShares MSCI World (IWDA). Vous êtes instantanément exposé à Apple, Microsoft, Amazon, LVMH et 1 500 autres entreprises mondiales. Si le marché mondial monte de 8%, votre investissement vaut 1 080€."
+          }
+        },
+        {
+          "titre": "💱 Le Forex (Marché des Devises)",
+          "contenu": "Le Forex (Foreign Exchange) est le plus grand marché au monde avec plus de 7 500 milliards de dollars échangés chaque jour. Il est ouvert 24h/24 du lundi au vendredi.\n\nLes devises se négocient par paires :\n- Paires majeures : EUR/USD, GBP/USD, USD/JPY, USD/CHF (les plus liquides, spreads les plus bas).\n- Paires mineures : EUR/GBP, EUR/JPY, GBP/JPY (sans le dollar).\n- Paires exotiques : USD/TRY, EUR/ZAR (devises de pays émergents, plus volatiles).\n\nConcepts essentiels :\n- Pip : la plus petite variation de prix. Pour EUR/USD, un pip = 0,0001. Si EUR/USD passe de 1,1000 à 1,1050, il a bougé de 50 pips.\n- Lot : unité de trading. Un lot standard = 100 000 unités de la devise de base.\n- Levier : permet de contrôler une position plus grande que votre capital. Un levier de 30:1 signifie que 1 000€ contrôlent 30 000€. Attention, le levier amplifie les gains ET les pertes.\n- Spread : la différence bid/ask, votre coût de transaction.\n\nFacteurs influençant les devises :\n- Taux d'intérêt des banques centrales\n- Données économiques (emploi, inflation, PIB)\n- Événements géopolitiques\n- Flux de capitaux internationaux\n\nLe Forex attire beaucoup de traders particuliers mais est très risqué, surtout avec le levier. Plus de 70% des traders particuliers perdent de l'argent sur le Forex.",
+          "points_cles": [
+            "Plus grand marché au monde : 7 500 milliards$/jour, ouvert 24h/24",
+            "Les devises se négocient par paires (EUR/USD, GBP/USD)",
+            "Un pip = plus petite variation (0,0001 pour EUR/USD)",
+            "Le levier amplifie gains ET pertes - 70%+ des traders Forex perdent"
+          ]
+        },
+        {
+          "titre": "🛢️ Les Matières Premières",
+          "contenu": "Les matières premières (commodities) sont des ressources naturelles négociées sur les marchés. Elles se divisent en plusieurs catégories :\n\nMétaux précieux :\n- Or (Gold/XAU) : valeur refuge par excellence. En période de crise ou d'inflation, les investisseurs se réfugient vers l'or. Son prix monte quand l'incertitude augmente.\n- Argent (Silver) : à la fois métal précieux et industriel.\n\nÉnergie :\n- Pétrole (WTI pour le brut américain, Brent pour le brut européen) : son prix dépend de l'OPEP, la géopolitique et la demande mondiale.\n- Gaz naturel : très volatile, influencé par la météo et la géopolitique.\n\nMatières premières agricoles :\n- Blé, maïs, soja, café, cacao, sucre.\n- Influencées par les conditions météorologiques, les politiques agricoles.\n\nComment investir dans les matières premières :\n- Futures/Contrats à terme : le moyen traditionnel, mais complexe.\n- ETF/ETC : la solution la plus simple (ex: ETF Gold pour l'or).\n- Actions de producteurs : acheter des actions de sociétés minières ou pétrolières.\n\nL'or est souvent recommandé comme diversification (5-10% du portefeuille) car il est peu corrélé aux actions. Quand les marchés actions chutent, l'or a tendance à monter, offrant une protection naturelle.",
+          "points_cles": [
+            "L'or est la valeur refuge par excellence en période d'incertitude",
+            "Le pétrole (WTI/Brent) est influencé par l'OPEP et la géopolitique",
+            "Les ETF/ETC sont le moyen le plus simple d'investir dans les matières premières",
+            "L'or offre une diversification car peu corrélé aux actions"
+          ]
+        },
+        {
+          "titre": "🔗 Introduction aux Cryptomonnaies",
+          "contenu": "Les cryptomonnaies sont des actifs numériques basés sur la technologie blockchain. Apparues en 2009 avec Bitcoin, elles représentent une nouvelle classe d'actifs à part entière.\n\nBitcoin (BTC) : la première et la plus importante cryptomonnaie. Créé par le mystérieux Satoshi Nakamoto, il est limité à 21 millions d'unités. Son prix est passé de quelques centimes en 2009 à des dizaines de milliers d'euros.\n\nEthereum (ETH) : la deuxième plus grande crypto. Elle permet l'exécution de smart contracts (contrats intelligents) et est la base de la DeFi (finance décentralisée) et des NFT.\n\nCaractéristiques des cryptomonnaies :\n- Décentralisation : pas de banque centrale ou de gouvernement qui contrôle.\n- Volatilité extrême : des variations de 10-20% en une journée sont courantes.\n- Marché 24/7 : ouvert en permanence, y compris weekends et jours fériés.\n- Accessibilité : achetable par fractions (vous pouvez acheter 0,001 BTC).\n\nRisques spécifiques :\n- Volatilité : le Bitcoin a perdu 80% de sa valeur à plusieurs reprises.\n- Régulation : les gouvernements durcissent progressivement les règles.\n- Sécurité : piratages d'exchanges, arnaques, perte de clés privées.\n- Pas de valeur intrinsèque claire comme une entreprise avec des bénéfices.\n\nAllocation recommandée pour un débutant : 0 à 5% maximum du portefeuille total en crypto.",
+          "points_cles": [
+            "Bitcoin : première crypto, limitée à 21 millions d'unités",
+            "Ethereum : smart contracts, base de la DeFi et des NFT",
+            "Volatilité extrême : variations de 10-20% en une journée",
+            "Allocation recommandée pour débutant : 0 à 5% du portefeuille"
+          ],
+          "exemple_pratique": {
+            "ticker": "BTC",
+            "scenario": "Vous investissez 500€ dans Bitcoin à 40 000€ l'unité. Vous possédez 0,0125 BTC. Si Bitcoin monte à 50 000€ (+25%), votre investissement vaut 625€. Mais s'il chute à 30 000€ (-25%), il ne vaut plus que 375€."
+          }
+        },
+        {
+          "titre": "⚖️ Comparatif des Classes d'Actifs",
+          "contenu": "Voici un résumé comparatif pour vous aider à choisir :\n\nActions : Risque moyen à élevé, rendement 7-10%/an historique, liquidité élevée, idéal pour la croissance long terme. Adapté aux débutants via les ETF.\n\nObligations : Risque faible à moyen, rendement 2-5%/an, liquidité moyenne, idéal pour la stabilité et les revenus réguliers. Bon complément aux actions.\n\nETF : Risque variable selon le sous-jacent, rendement variable, liquidité élevée, idéal pour diversifier à moindre coût. LE produit recommandé pour les débutants.\n\nForex : Risque élevé (surtout avec levier), rendement variable, liquidité très élevée, réservé aux traders expérimentés.\n\nMatières premières : Risque moyen à élevé, rendement variable, liquidité variable. L'or comme diversification, le reste pour les initiés.\n\nCryptomonnaies : Risque très élevé, rendement potentiel très élevé, liquidité moyenne. Allocation limitée recommandée.\n\nLa règle d'or de la diversification : ne mettez pas tous vos œufs dans le même panier. Un portefeuille équilibré combine plusieurs classes d'actifs selon votre profil de risque, votre horizon d'investissement et vos objectifs financiers.\n\nUn portefeuille débutant typique : 60% actions (via ETF), 30% obligations, 5% or, 5% liquidités.",
+          "points_cles": [
+            "Chaque classe d'actifs a un profil risque/rendement différent",
+            "Les ETF sont le produit idéal pour les débutants",
+            "Diversifier entre plusieurs classes d'actifs réduit le risque global",
+            "Portefeuille débutant typique : 60% actions, 30% obligations, 5% or, 5% cash"
+          ]
+        }
+      ],
+      "resume": "Les principales classes d'actifs sont les actions (parts d'entreprise), les obligations (titres de dette), les ETF (paniers diversifiés à faible coût), le Forex (devises), les matières premières (or, pétrole) et les cryptomonnaies. Chacune a son profil risque/rendement. Les ETF indiciels sont recommandés pour les débutants. La diversification entre classes d'actifs est essentielle pour réduire le risque global de votre portefeuille.",
+      "ressources_complementaires": [
+        "📖 Livre : 'L'investisseur intelligent' de Benjamin Graham",
+        "🎥 Vidéo : 'Les classes d'actifs expliquées' - Zonebourse YouTube",
+        "🌐 Site : JustETF.com - comparateur d'ETF européens",
+        "📊 Outil : TradingView.com - graphiques gratuits pour tous les actifs"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Qu'est-ce qu'un dividende ?",
+        "options": [
+          "Une taxe sur les actions",
+          "Une part des bénéfices distribuée aux actionnaires",
+          "Le prix d'une action",
+          "La commission du broker"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le dividende est la part des bénéfices qu'une entreprise redistribue à ses actionnaires. Par exemple, Total verse environ 3€ par action et par an à ses actionnaires."
+      },
+      {
+        "question": "Que se passe-t-il quand les taux d'intérêt montent ?",
+        "options": [
+          "Le prix des obligations monte",
+          "Le prix des obligations baisse",
+          "Les obligations ne sont pas affectées",
+          "Les obligations disparaissent"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Il existe une relation inverse entre taux d'intérêt et prix des obligations. Quand les taux montent, les anciennes obligations à taux plus bas deviennent moins attractives, donc leur prix baisse."
+      },
+      {
+        "question": "Quel est le principal avantage d'un ETF ?",
+        "options": [
+          "Garantie de rendement",
+          "Diversification instantanée à faible coût",
+          "Aucun risque de perte",
+          "Rendement supérieur à toutes les actions"
+        ],
+        "bonne_reponse": 1,
+        "explication": "L'ETF permet d'investir dans un panier diversifié d'actifs en une seule transaction, avec des frais très bas (0,1% à 0,5% par an). Il ne garantit ni rendement ni absence de perte."
+      },
+      {
+        "question": "Qu'est-ce qu'un pip sur le Forex ?",
+        "options": [
+          "Un type d'ordre",
+          "La plus petite variation de prix d'une paire de devises",
+          "Le profit sur un trade",
+          "La commission du broker"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le pip (Percentage in Point) est la plus petite unité de variation d'une paire de devises. Pour EUR/USD, un pip = 0,0001. Si le cours passe de 1,1000 à 1,1001, il a bougé d'un pip."
+      },
+      {
+        "question": "Pourquoi l'or est-il considéré comme une valeur refuge ?",
+        "options": [
+          "Son prix ne baisse jamais",
+          "Il est garanti par les banques centrales",
+          "Il tend à monter quand les marchés actions chutent",
+          "Il offre des dividendes élevés"
+        ],
+        "bonne_reponse": 2,
+        "explication": "L'or est une valeur refuge car il est peu corrélé aux actions et tend à monter en période de crise ou d'incertitude, quand les investisseurs cherchent à protéger leur capital."
+      },
+      {
+        "question": "Quelle allocation en cryptomonnaies est recommandée pour un débutant ?",
+        "options": [
+          "50% du portefeuille",
+          "20-30% du portefeuille",
+          "0 à 5% du portefeuille",
+          "100% en Bitcoin"
+        ],
+        "bonne_reponse": 2,
+        "explication": "En raison de la volatilité extrême des cryptomonnaies (pertes de 80% possibles), une allocation de 0 à 5% maximum est recommandée pour un débutant. Investissez uniquement ce que vous pouvez vous permettre de perdre."
+      },
+      {
+        "question": "Quel produit est généralement recommandé pour un investisseur débutant ?",
+        "options": [
+          "Le Forex avec levier",
+          "Les options et dérivés",
+          "Les ETF indiciels",
+          "Les cryptomonnaies"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Les ETF indiciels (comme un ETF MSCI World) sont recommandés car ils offrent une diversification instantanée, des frais bas et une exposition au marché mondial. Warren Buffett lui-même les recommande."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Créer un portefeuille théorique",
+        "description": "Avec un capital fictif de 10 000€, répartissez-le entre les différentes classes d'actifs en justifiant vos choix. Précisez les produits spécifiques (ex: ETF MSCI World, obligation d'État française, etc.)."
+      },
+      {
+        "type": "simulation",
+        "titre": "Comparer les rendements historiques",
+        "description": "Sur TradingView, comparez la performance sur 5 ans du S&P 500, de l'or et du Bitcoin. Notez le rendement et la volatilité de chacun. Lequel a le meilleur ratio rendement/risque ?"
+      }
+    ],
+    "duree": "50 min",
+    "difficulte": "débutant",
+    "prerequis": [
+      "module_1_1"
+    ]
+  },
+  {
+    "id": "module_1_3",
+    "parcours": "debutant",
+    "titre": "🎯 Passer un Ordre - Les Bases",
+    "description": "Maîtrisez les différents types d'ordres boursiers : marché, limite, stop loss, trailing stop et ordres temporels.",
+    "durée": "55 minutes",
+    "difficulté": "Débutant",
+    "points_xp": 130,
+    "prérequis": [
+      "module_1_1"
+    ],
+    "contenu": {
+      "introduction": "Savoir passer un ordre est la compétence pratique la plus fondamentale du trading. Un ordre mal exécuté peut transformer un bon trade en catastrophe. Comprendre les différents types d'ordres et savoir quand les utiliser est essentiel pour protéger votre capital et optimiser vos entrées et sorties de position. Dans ce module, vous apprendrez à utiliser chaque type d'ordre comme un professionnel.",
+      "sections": [
+        {
+          "titre": "📋 Le Carnet d'Ordres : Bid, Ask et Spread",
+          "contenu": "Le carnet d'ordres est le cœur du marché. Il affiche tous les ordres d'achat et de vente en attente pour un actif donné.\n\nLe Bid (prix de demande) : c'est le prix le plus élevé qu'un acheteur est prêt à payer. Si vous vendez immédiatement, c'est le prix que vous obtiendrez.\n\nL'Ask (prix d'offre) : c'est le prix le plus bas auquel un vendeur est prêt à vendre. Si vous achetez immédiatement, c'est le prix que vous paierez.\n\nLe Spread : la différence entre le Ask et le Bid. C'est votre coût implicite de transaction. Plus un actif est liquide, plus le spread est faible.\n\nExemple concret sur l'action LVMH :\n- Bid : 850,00€ (quelqu'un veut acheter à ce prix)\n- Ask : 850,20€ (quelqu'un veut vendre à ce prix)\n- Spread : 0,20€ (0,02%)\n\nSur un actif très liquide comme Apple, le spread peut être de 0,01$. Sur une petite action peu négociée, il peut être de 1% ou plus.\n\nLa profondeur du carnet montre les volumes à chaque niveau de prix. Un carnet profond (beaucoup de volume) signifie que votre ordre sera exécuté facilement. Un carnet peu profond peut causer du slippage.",
+          "points_cles": [
+            "Bid = meilleur prix d'achat, Ask = meilleur prix de vente",
+            "Spread = Ask - Bid = votre coût implicite de transaction",
+            "Plus l'actif est liquide, plus le spread est faible",
+            "La profondeur du carnet indique la facilité d'exécution"
+          ],
+          "exemple_pratique": {
+            "ticker": "LVMH",
+            "scenario": "LVMH affiche Bid 850,00€ / Ask 850,20€. Si vous achetez au marché et revendez immédiatement, vous perdez 0,20€ (le spread). Sur 100 actions, cela représente 20€ de coût implicite."
+          }
+        },
+        {
+          "titre": "⚡ L'Ordre au Marché",
+          "contenu": "L'ordre au marché est le plus simple : vous achetez ou vendez immédiatement au meilleur prix disponible.\n\nAvantages :\n- Exécution garantie : votre ordre sera rempli à coup sûr (tant qu'il y a de la liquidité).\n- Rapidité : exécution quasi instantanée.\n- Simplicité : pas de prix à spécifier.\n\nInconvénients :\n- Pas de contrôle sur le prix : vous acceptez le prix du marché.\n- Risque de slippage : si le marché bouge vite ou si la liquidité est faible, vous pouvez obtenir un prix très différent de celui affiché.\n\nQuand utiliser un ordre au marché :\n- Quand la vitesse d'exécution est plus importante que le prix exact.\n- Sur des actifs très liquides où le spread est minimal.\n- En situation d'urgence : vous devez sortir d'une position immédiatement.\n\nQuand l'éviter :\n- Sur des actifs peu liquides (small caps, crypto mineures).\n- Pendant les premières minutes après l'ouverture du marché (forte volatilité).\n- Lors d'annonces économiques importantes.\n\nExemple : Vous voulez acheter Apple (très liquide). Le Ask est à 175,02$. Votre ordre au marché sera probablement exécuté à 175,02$ ou très proche. Mais sur une petite crypto, l'affichage montre 1,50$ et vous pourriez être exécuté à 1,55$ à cause du slippage.",
+          "points_cles": [
+            "Exécution immédiate au meilleur prix disponible",
+            "Garantit l'exécution mais pas le prix",
+            "Idéal pour les actifs liquides et les situations urgentes",
+            "Risque de slippage sur les marchés peu liquides ou volatils"
+          ]
+        },
+        {
+          "titre": "🎯 L'Ordre Limite",
+          "contenu": "L'ordre limite vous permet de spécifier le prix maximum auquel vous voulez acheter (ou le prix minimum auquel vous voulez vendre).\n\nOrdre limite d'achat : 'Je veux acheter à 170$ ou moins'. Votre ordre ne sera exécuté que si le prix descend à 170$ ou en dessous.\n\nOrdre limite de vente : 'Je veux vendre à 190$ ou plus'. Votre ordre ne sera exécuté que si le prix monte à 190$ ou au-dessus.\n\nAvantages :\n- Contrôle total sur le prix d'exécution.\n- Pas de mauvaise surprise due au slippage.\n- Permet de 'poser' des ordres à l'avance et de s'absenter.\n\nInconvénients :\n- Exécution non garantie : si le prix n'atteint jamais votre limite, l'ordre n'est pas exécuté.\n- Vous pouvez manquer une opportunité si le prix repart sans toucher votre limite.\n\nQuand utiliser un ordre limite :\n- Pour entrer sur un repli (acheter moins cher que le prix actuel).\n- Pour prendre ses profits à un niveau prédéfini.\n- Sur les actifs peu liquides pour éviter le slippage.\n- Quand vous n'êtes pas pressé et voulez un bon prix.\n\nStratégie courante : placer un ordre limite d'achat sur un support. Par exemple, Apple est à 180$ et un support se situe à 170$. Vous placez un ordre limite d'achat à 171$ en espérant que le prix rebondira sur le support.",
+          "points_cles": [
+            "Vous fixez le prix exact d'exécution (maximum à l'achat, minimum à la vente)",
+            "Garantit le prix mais pas l'exécution",
+            "Idéal pour acheter sur les replis ou vendre sur les résistances",
+            "Permet de placer des ordres à l'avance et de ne pas surveiller le marché"
+          ],
+          "exemple_pratique": {
+            "ticker": "AAPL",
+            "scenario": "Apple cote à 180$. Vous identifiez un support à 170$. Vous placez un ordre limite d'achat à 171$. Deux jours plus tard, Apple corrige et touche 170,50$. Votre ordre est exécuté à 171$ au lieu de 180$, vous économisez 9$ par action."
+          }
+        },
+        {
+          "titre": "🛡️ Le Stop Loss",
+          "contenu": "Le stop loss est l'outil de protection le plus important du trader. C'est un ordre qui se déclenche automatiquement pour limiter vos pertes si le marché va contre vous.\n\nFonctionnement : vous définissez un prix de déclenchement. Si ce prix est atteint, un ordre au marché est envoyé pour fermer votre position.\n\nExemple : Vous achetez Apple à 180$. Vous placez un stop loss à 170$. Si Apple chute à 170$, votre position est automatiquement vendue, limitant votre perte à 10$ par action (5,5%).\n\nOù placer son stop loss ?\n- Sous un support technique pour un achat.\n- Au-dessus d'une résistance technique pour une vente à découvert.\n- À un pourcentage fixe (ex: 2-3% sous le prix d'entrée).\n- Basé sur la volatilité (ex: 2 fois l'ATR sous le prix d'entrée).\n\nRègles essentielles :\n1. TOUJOURS utiliser un stop loss. Pas de stop = pas de limite à vos pertes.\n2. Ne jamais déplacer son stop loss dans le mauvais sens (l'éloigner pour 'laisser respirer').\n3. Définir le stop AVANT d'entrer en position.\n4. Le stop loss détermine votre taille de position (règle du 1-2% du capital).\n\nAttention : en cas de gap (saut de prix), le stop loss peut être exécuté à un prix pire que prévu. C'est le risque de gap, fréquent lors d'annonces après la clôture du marché.",
+          "points_cles": [
+            "Le stop loss limite automatiquement vos pertes",
+            "TOUJOURS utiliser un stop loss sur chaque trade",
+            "Placement : sous un support, à % fixe, ou basé sur la volatilité (ATR)",
+            "Ne jamais éloigner son stop loss du prix d'entrée"
+          ]
+        },
+        {
+          "titre": "📐 Stop Limit et Trailing Stop",
+          "contenu": "Le Stop Limit combine un stop et un ordre limite. Quand le prix de déclenchement est atteint, au lieu d'un ordre au marché, un ordre limite est envoyé.\n\nExemple : Stop à 170$, Limite à 169$. Si Apple touche 170$, un ordre limite de vente à 169$ est placé. Avantage : vous évitez le slippage. Inconvénient : si le prix chute brutalement en dessous de 169$, votre ordre n'est pas exécuté et vos pertes continuent.\n\nLe Trailing Stop est un stop loss dynamique qui suit le prix quand il évolue en votre faveur.\n\nFonctionnement : vous définissez une distance (en valeur ou en pourcentage). Le stop suit le prix à la hausse mais ne redescend jamais.\n\nExemple avec trailing stop à 5% :\n- Achat à 100$, stop initial à 95$ (-5%)\n- Le prix monte à 110$, le stop monte automatiquement à 104,50$ (-5% de 110$)\n- Le prix monte à 120$, le stop monte à 114$ (-5% de 120$)\n- Le prix redescend à 114$, le stop se déclenche. Vous vendez à ~114$ avec un gain de 14$ au lieu d'avoir vendu manuellement plus tôt.\n\nLe trailing stop est excellent pour laisser courir ses gains tout en protégeant ses profits. C'est un outil essentiel pour suivre une tendance sans avoir à surveiller le marché en permanence.\n\nInconvénient : sur un marché volatile, le trailing stop peut se déclencher sur un simple repli temporaire, vous sortant d'une position qui aurait continué à monter.",
+          "points_cles": [
+            "Stop Limit = stop + ordre limite (évite le slippage mais risque de non-exécution)",
+            "Trailing Stop = stop dynamique qui suit le prix favorable",
+            "Le trailing stop monte avec le prix mais ne redescend jamais",
+            "Idéal pour laisser courir ses gains en protégeant ses profits"
+          ]
+        },
+        {
+          "titre": "⏰ Ordres Temporels et Slippage",
+          "contenu": "Les ordres temporels définissent la durée de validité de vos ordres :\n\n- GTC (Good Till Cancelled) : l'ordre reste actif jusqu'à exécution ou annulation manuelle. Pratique pour les ordres limites sur des niveaux clés.\n\n- Day Order : l'ordre expire à la fin de la journée de trading s'il n'est pas exécuté. C'est le paramètre par défaut chez la plupart des brokers.\n\n- IOC (Immediate Or Cancel) : l'ordre doit être exécuté immédiatement, en totalité ou en partie. La partie non exécutée est annulée.\n\n- FOK (Fill Or Kill) : l'ordre doit être exécuté intégralement et immédiatement, sinon il est entièrement annulé. Aucune exécution partielle.\n\nLe Slippage : c'est la différence entre le prix attendu et le prix réellement obtenu. Il survient quand :\n- Le marché bouge très vite (annonces économiques, earnings).\n- La liquidité est insuffisante (small caps, crypto mineure).\n- Les ordres au marché sont passés dans un carnet peu profond.\n\nComment minimiser le slippage :\n1. Utiliser des ordres limites plutôt que des ordres au marché.\n2. Trader des actifs liquides avec des spreads faibles.\n3. Éviter de trader pendant les premières et dernières minutes de la séance.\n4. Éviter de passer de gros ordres sur des actifs peu liquides.\n5. Ne pas trader pendant les annonces économiques majeures.\n\nEn pratique, sur des actifs comme Apple, Amazon ou le S&P 500, le slippage est quasi inexistant pour un trader particulier.",
+          "points_cles": [
+            "GTC = valide jusqu'à annulation, Day = expire en fin de journée",
+            "IOC = exécution immédiate (partielle OK), FOK = tout ou rien",
+            "Le slippage est la différence entre prix attendu et prix obtenu",
+            "Minimiser le slippage : ordres limites + actifs liquides + éviter les annonces"
+          ]
+        }
+      ],
+      "resume": "Maîtriser les types d'ordres est fondamental. L'ordre au marché garantit l'exécution mais pas le prix. L'ordre limite garantit le prix mais pas l'exécution. Le stop loss est votre protection indispensable contre les pertes. Le trailing stop suit vos gains. Chaque type d'ordre a son utilité selon la situation. Le slippage est l'ennemi à minimiser en préférant les ordres limites sur des actifs liquides.",
+      "ressources_complementaires": [
+        "📖 Livre : 'Trading for a Living' d'Alexander Elder",
+        "🎥 Vidéo : 'Les types d'ordres expliqués' - Andlil Trading YouTube",
+        "🌐 Site : ProRealTime.com - plateforme avec simulateur d'ordres",
+        "📱 App : TradingView Paper Trading - pratiquer sans risque"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quelle est la différence entre le Bid et le Ask ?",
+        "options": [
+          "Le Bid est pour les gros investisseurs, le Ask pour les petits",
+          "Le Bid est le prix d'achat maximum, le Ask est le prix de vente minimum",
+          "Le Bid est le prix du matin, le Ask est le prix du soir",
+          "Il n'y a pas de différence"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Bid est le prix le plus élevé qu'un acheteur est prêt à payer, et le Ask est le prix le plus bas auquel un vendeur est prêt à vendre. La différence entre les deux est le spread."
+      },
+      {
+        "question": "Quel type d'ordre garantit l'exécution mais pas le prix ?",
+        "options": [
+          "Ordre limite",
+          "Ordre stop limit",
+          "Ordre au marché",
+          "Ordre GTC"
+        ],
+        "bonne_reponse": 2,
+        "explication": "L'ordre au marché s'exécute immédiatement au meilleur prix disponible. L'exécution est garantie mais le prix peut différer de celui affiché (slippage)."
+      },
+      {
+        "question": "Quel type d'ordre garantit le prix mais pas l'exécution ?",
+        "options": [
+          "Ordre au marché",
+          "Ordre limite",
+          "Trailing stop",
+          "Ordre IOC"
+        ],
+        "bonne_reponse": 1,
+        "explication": "L'ordre limite ne s'exécute que si le prix atteint votre niveau spécifié. Le prix est garanti, mais si le marché ne touche jamais votre limite, l'ordre n'est pas exécuté."
+      },
+      {
+        "question": "Pourquoi le stop loss est-il considéré comme indispensable ?",
+        "options": [
+          "Il augmente vos gains",
+          "Il garantit des profits",
+          "Il limite automatiquement vos pertes",
+          "Il réduit le spread"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le stop loss se déclenche automatiquement pour vendre votre position si le prix atteint un niveau défini, limitant ainsi vos pertes à un montant prédéterminé. C'est votre filet de sécurité."
+      },
+      {
+        "question": "Comment fonctionne un trailing stop ?",
+        "options": [
+          "Il reste fixe au prix d'entrée",
+          "Il suit le prix dans la direction favorable et se déclenche sur un repli",
+          "Il achète automatiquement quand le prix baisse",
+          "Il annule l'ordre après un certain temps"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le trailing stop suit le prix quand il évolue en votre faveur (monte pour un achat) et se déclenche quand le prix recule d'une distance ou pourcentage défini. Il ne redescend jamais."
+      },
+      {
+        "question": "Qu'est-ce que le slippage ?",
+        "options": [
+          "Les frais de courtage",
+          "La différence entre le prix attendu et le prix d'exécution réel",
+          "Le dividende manqué",
+          "La perte maximale sur un trade"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le slippage est l'écart entre le prix que vous attendiez et le prix auquel votre ordre a été réellement exécuté. Il survient surtout sur les marchés peu liquides ou très volatils."
+      },
+      {
+        "question": "Que signifie un ordre FOK (Fill Or Kill) ?",
+        "options": [
+          "L'ordre est valide pour la journée seulement",
+          "L'ordre doit être exécuté intégralement et immédiatement, sinon il est annulé",
+          "L'ordre est exécuté au meilleur prix",
+          "L'ordre reste actif jusqu'à annulation"
+        ],
+        "bonne_reponse": 1,
+        "explication": "FOK (Fill Or Kill) signifie que l'ordre doit être exécuté en totalité immédiatement. Si l'exécution complète n'est pas possible, l'ordre est entièrement annulé. Aucune exécution partielle n'est acceptée."
+      },
+      {
+        "question": "Comment minimiser le slippage ?",
+        "options": [
+          "Utiliser des ordres au marché sur des actifs peu liquides",
+          "Utiliser des ordres limites sur des actifs liquides",
+          "Trader pendant les annonces économiques",
+          "Passer de très gros ordres"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Pour minimiser le slippage, utilisez des ordres limites (vous contrôlez le prix), tradez des actifs liquides (spreads faibles), et évitez les moments de forte volatilité comme les annonces économiques."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "simulation",
+        "titre": "Placer différents types d'ordres",
+        "description": "Sur un compte de démonstration ou TradingView Paper Trading, placez les ordres suivants sur Apple (AAPL) : 1) Un ordre limite d'achat 2% sous le prix actuel, 2) Un stop loss 3% sous votre prix d'achat, 3) Un trailing stop à 5%. Observez comment chaque ordre se comporte."
+      },
+      {
+        "type": "pratique",
+        "titre": "Calculer le coût du spread",
+        "description": "Choisissez 5 actifs différents (une grande action US, une petite action FR, une paire Forex majeure, Bitcoin, et une crypto mineure). Notez le spread de chacun en pourcentage. Classez-les du moins cher au plus cher à trader."
+      }
+    ],
+    "duree": "40 min",
+    "difficulte": "débutant",
+    "prerequis": [
+      "module_1_1"
+    ]
+  },
+  {
+    "id": "module_1_4",
+    "parcours": "debutant",
+    "titre": "📊 Lecture des Graphiques - Les Bases",
+    "description": "Apprenez à lire les graphiques boursiers, identifier les tendances, les supports/résistances et les chandeliers japonais.",
+    "durée": "60 minutes",
+    "difficulté": "Débutant",
+    "points_xp": 150,
+    "prérequis": [
+      "module_1_3"
+    ],
+    "contenu": {
+      "introduction": "L'analyse graphique est l'un des piliers du trading. Savoir lire un graphique vous permet d'identifier les tendances, de repérer les opportunités d'achat et de vente, et de prendre des décisions éclairées. Les graphiques contiennent une quantité extraordinaire d'informations sur le comportement passé et présent des prix. Dans ce module, vous apprendrez à décoder ces informations et à les utiliser pour améliorer vos décisions de trading.",
+      "sections": [
+        {
+          "titre": "📈 Pourquoi analyser les graphiques ?",
+          "contenu": "L'analyse graphique (ou analyse technique) repose sur trois principes fondamentaux :\n\n1. Le prix intègre toute l'information : toutes les nouvelles, les résultats financiers, les événements géopolitiques et les émotions des investisseurs sont déjà reflétés dans le prix. Inutile de tout analyser séparément, le graphique résume tout.\n\n2. Les prix évoluent en tendances : les marchés ne bougent pas de manière totalement aléatoire. Ils forment des tendances (haussières, baissières ou latérales) qui ont tendance à persister. Un marché en hausse a plus de chances de continuer à monter que de se retourner.\n\n3. L'histoire se répète : les comportements humains face à l'argent ne changent pas. La peur et l'avidité créent des schémas récurrents sur les graphiques. Les figures que l'on observait il y a 100 ans se retrouvent encore aujourd'hui.\n\nCes principes, formulés par Charles Dow (fondateur du Wall Street Journal et créateur du Dow Jones) à la fin du 19ème siècle, sont toujours la base de l'analyse technique moderne.\n\nL'analyse graphique ne prédit pas l'avenir avec certitude. Elle donne des probabilités et aide à prendre des décisions en identifiant les zones de prix stratégiques et les configurations récurrentes.",
+          "points_cles": [
+            "Le prix intègre toute l'information disponible",
+            "Les prix évoluent en tendances qui persistent",
+            "L'histoire se répète car la psychologie humaine ne change pas",
+            "L'analyse technique donne des probabilités, pas des certitudes"
+          ]
+        },
+        {
+          "titre": "📉 Types de graphiques",
+          "contenu": "Il existe trois principaux types de graphiques :\n\nLe graphique en lignes : le plus simple. Il trace une ligne reliant les prix de clôture successifs. Avantage : lecture facile et claire de la tendance générale. Inconvénient : ne montre pas les prix d'ouverture, plus hauts et plus bas de chaque période.\n\nLe graphique en barres (OHLC) : chaque barre verticale représente une période. Le trait horizontal gauche est le prix d'ouverture (Open), le trait droit est la clôture (Close), le haut de la barre est le plus haut (High), le bas est le plus bas (Low). Plus complet que la ligne, mais moins visuel que les chandeliers.\n\nLe graphique en chandeliers japonais : le plus utilisé par les traders. Inventé au 18ème siècle par Munehisa Homma, un trader de riz japonais. Chaque chandelier montre l'ouverture, la clôture, le plus haut et le plus bas. Le corps du chandelier est coloré : vert (ou blanc) si la clôture est supérieure à l'ouverture (bougie haussière), rouge (ou noir) si la clôture est inférieure à l'ouverture (bougie baissière). Les lignes fines au-dessus et en dessous du corps sont les mèches (ou ombres).\n\nLa taille du corps indique la force du mouvement. Un gros corps vert = forte pression acheteuse. Les mèches indiquent le rejet : une longue mèche inférieure signifie que les vendeurs ont poussé le prix en bas mais que les acheteurs ont repris le contrôle.",
+          "points_cles": [
+            "Graphique en lignes : simple mais limité, montre seulement les clôtures",
+            "Graphique en barres OHLC : montre Open, High, Low, Close",
+            "Chandeliers japonais : le plus utilisé, très visuel et informatif",
+            "Corps vert = haussier, corps rouge = baissier, mèches = rejet"
+          ],
+          "exemple_pratique": {
+            "ticker": "TSLA",
+            "scenario": "Sur le graphique en chandeliers de Tesla, une grande bougie verte avec un corps plein et de petites mèches indique une forte journée haussière avec peu de résistance vendeuse. Les acheteurs ont dominé toute la séance."
+          }
+        },
+        {
+          "titre": "⏱️ Les Timeframes (Unités de Temps)",
+          "contenu": "Le timeframe détermine la durée représentée par chaque bougie sur le graphique. Le choix du timeframe dépend de votre style de trading.\n\nTimeframes courts (intraday) :\n- 1 minute (M1) : pour le scalping ultra-rapide, très bruyant.\n- 5 minutes (M5) : scalping et day trading rapide.\n- 15 minutes (M15) : day trading classique.\n- 1 heure (H1) : day trading et swing trading court.\n\nTimeframes moyens :\n- 4 heures (H4) : swing trading, bon compromis signal/bruit.\n- Journalier (D1) : le timeframe roi, le plus fiable et le plus utilisé.\n\nTimeframes longs :\n- Hebdomadaire (W1) : investissement moyen/long terme.\n- Mensuel (M1) : vision macro, tendance de fond.\n\nRègle importante : plus le timeframe est élevé, plus les signaux sont fiables mais moins fréquents. Un signal sur le graphique journalier a beaucoup plus de poids qu'un signal sur le graphique 5 minutes.\n\nPour un débutant, le timeframe journalier (D1) est recommandé. Il offre des signaux fiables, ne nécessite pas de surveiller l'écran toute la journée, et permet de prendre des décisions réfléchies.\n\nConseil pratique : toujours regarder un timeframe supérieur pour avoir le contexte général avant de trader sur votre timeframe principal.",
+          "points_cles": [
+            "Chaque bougie représente une période : 1min, 5min, 1h, 1jour, etc.",
+            "Plus le timeframe est élevé, plus les signaux sont fiables",
+            "Le timeframe journalier (D1) est recommandé pour les débutants",
+            "Toujours vérifier le timeframe supérieur pour le contexte"
+          ]
+        },
+        {
+          "titre": "📐 Tendances : Haussière, Baissière et Range",
+          "contenu": "Identifier la tendance est la compétence la plus importante en analyse technique. 'La tendance est votre amie' (The trend is your friend) est le mantra de tout trader.\n\nTendance haussière (bullish) : le prix fait des sommets de plus en plus hauts (higher highs) et des creux de plus en plus hauts (higher lows). Chaque correction s'arrête plus haut que la précédente. On dit que le marché est en tendance haussière ou en bull market. Stratégie : acheter sur les replis (buy the dip).\n\nTendance baissière (bearish) : le prix fait des sommets de plus en plus bas (lower highs) et des creux de plus en plus bas (lower lows). Chaque rebond s'arrête plus bas que le précédent. On parle de bear market. Stratégie : vendre sur les rebonds ou rester à l'écart.\n\nRange (consolidation) : le prix oscille entre un niveau haut et un niveau bas sans direction claire. Ni les acheteurs ni les vendeurs ne dominent. Le marché est indécis. Stratégie : acheter en bas du range, vendre en haut, ou attendre la cassure.\n\nComment tracer une ligne de tendance :\n- Haussière : reliez au moins 2 creux successifs (higher lows). La droite doit monter.\n- Baissière : reliez au moins 2 sommets successifs (lower highs). La droite doit descendre.\n- Plus la ligne a été touchée de fois, plus elle est valide.\n- La cassure d'une ligne de tendance est un signal important de changement potentiel.",
+          "points_cles": [
+            "Haussière : higher highs + higher lows = acheter sur les replis",
+            "Baissière : lower highs + lower lows = vendre ou rester à l'écart",
+            "Range : prix entre deux bornes = acheter en bas, vendre en haut",
+            "Une ligne de tendance se trace en reliant au moins 2 points"
+          ],
+          "exemple_pratique": {
+            "ticker": "MSFT",
+            "scenario": "Microsoft est en tendance haussière depuis 2023. Chaque correction (baisse temporaire) s'est arrêtée à un niveau plus haut que la précédente. Le trader achète sur ces replis vers la ligne de tendance haussière."
+          }
+        },
+        {
+          "titre": "🧱 Supports et Résistances",
+          "contenu": "Les supports et résistances sont les concepts les plus importants de l'analyse technique après les tendances.\n\nSupport : un niveau de prix où la demande (acheteurs) est suffisamment forte pour empêcher le prix de baisser davantage. C'est un plancher. Quand le prix atteint un support, il a tendance à rebondir.\n\nRésistance : un niveau de prix où l'offre (vendeurs) est suffisamment forte pour empêcher le prix de monter davantage. C'est un plafond. Quand le prix atteint une résistance, il a tendance à redescendre.\n\nLe principe de polarité : quand un support est cassé, il devient une résistance, et inversement. C'est un concept fondamental. Par exemple, si Apple casse un support à 170$, ce niveau deviendra une résistance lors du prochain rebond.\n\nComment identifier les supports et résistances :\n- Niveaux historiques : les prix où le marché a déjà rebondi ou bloqué.\n- Chiffres ronds : 100$, 200$, 50 000$ pour Bitcoin. La psychologie humaine aime les chiffres ronds.\n- Anciens plus hauts/plus bas : les sommets et creux précédents.\n\nImportant : pensez en termes de zones plutôt que de lignes précises. Un support n'est pas un prix exact mais une zone de prix (par exemple, 168$-172$).\n\nPlus un support ou une résistance a été testé de fois, plus il est significatif. Mais attention : un niveau testé trop souvent finit par céder.",
+          "points_cles": [
+            "Support = plancher (acheteurs), Résistance = plafond (vendeurs)",
+            "Principe de polarité : un support cassé devient résistance et vice versa",
+            "Penser en zones de prix plutôt qu'en lignes exactes",
+            "Les chiffres ronds agissent souvent comme support/résistance psychologique"
+          ]
+        },
+        {
+          "titre": "🕯️ Les Chandeliers Japonais Essentiels",
+          "contenu": "Les chandeliers japonais forment des figures qui donnent des indications sur la direction future du prix. Voici les plus importants pour un débutant :\n\nLe Doji : ouverture et clôture au même niveau (corps très fin). Indique l'indécision du marché. Après une tendance, il peut signaler un retournement. Variantes : Doji étoile, Doji libellule, Doji pierre tombale.\n\nLe Marteau (Hammer) : petit corps en haut, longue mèche inférieure (au moins 2 fois le corps). Apparaît après une baisse. Les vendeurs ont poussé le prix en bas mais les acheteurs ont repris le contrôle. Signal haussier.\n\nL'Étoile filante (Shooting Star) : petit corps en bas, longue mèche supérieure. Apparaît après une hausse. Les acheteurs ont poussé le prix en haut mais les vendeurs ont repris le contrôle. Signal baissier.\n\nLes Englobantes : une bougie dont le corps englobe entièrement le corps de la bougie précédente. Englobante haussière : bougie verte qui englobe la rouge précédente = signal d'achat. Englobante baissière : bougie rouge qui englobe la verte précédente = signal de vente.\n\nMorning Star (Étoile du matin) : figure de 3 bougies. 1) Grande bougie rouge, 2) Petite bougie (doji ou marteau), 3) Grande bougie verte. Signal de retournement haussier après une baisse.\n\nEvening Star (Étoile du soir) : l'inverse. 1) Grande bougie verte, 2) Petite bougie, 3) Grande bougie rouge. Signal de retournement baissier après une hausse.\n\nRègle clé : un chandelier seul ne suffit pas. Toujours confirmer avec le contexte (tendance, support/résistance, volume).",
+          "points_cles": [
+            "Doji = indécision, peut signaler un retournement après une tendance",
+            "Marteau = signal haussier après une baisse (longue mèche basse)",
+            "Étoile filante = signal baissier après une hausse (longue mèche haute)",
+            "Englobantes = la bougie englobe la précédente, signal fort de retournement",
+            "Toujours confirmer avec le contexte (tendance, S/R, volume)"
+          ],
+          "exemple_pratique": {
+            "ticker": "AAPL",
+            "scenario": "Apple est en baisse depuis 3 jours et atteint un support à 170$. Un marteau apparaît sur le support avec un volume croissant. Le lendemain, une grande bougie verte confirme. C'est un signal d'achat : la combinaison support + marteau + volume donne une bonne probabilité de rebond."
+          }
+        },
+        {
+          "titre": "📊 Les Volumes",
+          "contenu": "Le volume représente le nombre de titres échangés pendant une période. C'est l'énergie derrière le mouvement de prix. Un mouvement avec du volume a plus de chances de se poursuivre qu'un mouvement sans volume.\n\nRègles fondamentales du volume :\n\n1. Le volume confirme la tendance : dans une tendance haussière, le volume devrait augmenter lors des hausses et diminuer lors des replis. C'est le signe que les acheteurs sont plus agressifs que les vendeurs.\n\n2. Le volume confirme les cassures : quand le prix casse un support ou une résistance, le volume devrait augmenter significativement. Une cassure avec un faible volume est suspecte et souvent un faux signal (fakeout).\n\n3. Volume élevé sur un sommet : peut signaler un point d'exhaustion (climax volume). Les derniers acheteurs entrent en masse, il n'y a plus personne pour acheter après = le prix se retourne.\n\n4. Volume décroissant dans un range : signale que le marché accumule de l'énergie avant un mouvement explosif (cassure imminente).\n\nDivergence volume/prix :\nSi le prix monte mais le volume diminue, c'est un signe de faiblesse. La hausse n'est pas soutenue par la participation des acteurs du marché. Un retournement est probable.\n\nInversement, si le prix baisse mais le volume diminue, la pression vendeuse s'essouffle et un rebond est possible.\n\nLe volume est souvent appelé 'l'indicateur qui ne ment pas' car il reflète la réalité de la participation des acteurs du marché.",
+          "points_cles": [
+            "Le volume = nombre de titres échangés = énergie du mouvement",
+            "Volume croissant confirme la tendance et les cassures",
+            "Faible volume sur une cassure = probable faux signal (fakeout)",
+            "Divergence prix/volume = signe de retournement potentiel"
+          ]
+        }
+      ],
+      "resume": "L'analyse graphique repose sur trois principes : le prix intègre tout, les prix évoluent en tendances, et l'histoire se répète. Les chandeliers japonais sont le type de graphique le plus utilisé. Identifiez la tendance (haussière/baissière/range), les supports et résistances (principe de polarité), et les figures de chandeliers (Doji, Marteau, Englobantes). Le volume confirme les mouvements : une cassure sans volume est suspecte.",
+      "ressources_complementaires": [
+        "📖 Livre : 'Japanese Candlestick Charting Techniques' de Steve Nison",
+        "🎥 Vidéo : 'Les chandeliers japonais pour les nuls' - Zonebourse YouTube",
+        "🌐 Site : TradingView.com - graphiques interactifs gratuits",
+        "📖 Livre : 'L'analyse technique des marchés financiers' de John Murphy"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quel principe fondamental de l'analyse technique stipule que le prix reflète toute l'information disponible ?",
+        "options": [
+          "Le principe de polarité",
+          "Le prix intègre toute l'information",
+          "La tendance est votre amie",
+          "L'histoire se répète"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le premier principe de l'analyse technique est que le prix intègre toute l'information : nouvelles, résultats, émotions des investisseurs. Tout est déjà reflété dans le cours."
+      },
+      {
+        "question": "Qu'indique une bougie verte (haussière) avec un très grand corps ?",
+        "options": [
+          "Le marché est indécis",
+          "Forte pression acheteuse durant la période",
+          "Le prix va baisser",
+          "Le volume est faible"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Un grand corps vert signifie que le prix de clôture est très au-dessus du prix d'ouverture, ce qui indique une forte domination des acheteurs pendant cette période."
+      },
+      {
+        "question": "Quel timeframe est recommandé pour un débutant ?",
+        "options": [
+          "1 minute",
+          "5 minutes",
+          "Journalier (D1)",
+          "Mensuel"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le timeframe journalier (D1) est recommandé car il offre des signaux fiables, ne nécessite pas de surveillance constante, et permet des décisions réfléchies."
+      },
+      {
+        "question": "Qu'est-ce que le principe de polarité ?",
+        "options": [
+          "Les prix évoluent toujours en tendance",
+          "Un support cassé devient résistance et vice versa",
+          "Le volume confirme le prix",
+          "Les chandeliers alternent entre haussiers et baissiers"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le principe de polarité stipule qu'un support cassé à la baisse devient une résistance lors du prochain rebond, et qu'une résistance cassée à la hausse devient un support."
+      },
+      {
+        "question": "Qu'est-ce qu'un Marteau (Hammer) ?",
+        "options": [
+          "Une figure de continuation de tendance baissière",
+          "Un chandelier avec un petit corps en haut et une longue mèche inférieure, signal haussier",
+          "Un chandelier entièrement rouge sans mèche",
+          "Deux chandeliers identiques consécutifs"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Marteau a un petit corps en haut et une longue mèche inférieure (au moins 2x le corps). Il apparaît après une baisse et signale un potentiel retournement haussier : les vendeurs ont poussé le prix en bas mais les acheteurs ont repris le contrôle."
+      },
+      {
+        "question": "Que signifie une cassure de résistance avec un volume très faible ?",
+        "options": [
+          "C'est un signal très fiable d'achat",
+          "C'est probablement un faux signal (fakeout)",
+          "Le volume n'a pas d'importance",
+          "Le prix va monter encore plus vite"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Une cassure sans volume significatif est suspecte. Le volume doit augmenter pour confirmer la cassure. Un faible volume suggère un manque de conviction et un risque élevé de fausse cassure (fakeout)."
+      },
+      {
+        "question": "Qu'est-ce qu'une tendance haussière ?",
+        "options": [
+          "Le prix monte en ligne droite sans jamais baisser",
+          "Le prix fait des sommets et des creux de plus en plus hauts",
+          "Le volume augmente chaque jour",
+          "Le prix est au-dessus de 100$"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Une tendance haussière se caractérise par une succession de sommets de plus en plus hauts (higher highs) et de creux de plus en plus hauts (higher lows). Le prix monte globalement malgré des corrections temporaires."
+      },
+      {
+        "question": "Qu'est-ce qu'une Englobante Haussière ?",
+        "options": [
+          "Une bougie rouge qui englobe la verte précédente",
+          "Une bougie verte qui englobe la rouge précédente",
+          "Un Doji après un Marteau",
+          "Deux bougies vertes consécutives"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Une Englobante Haussière est une bougie verte dont le corps englobe entièrement le corps de la bougie rouge précédente. C'est un signal de retournement haussier, particulièrement puissant sur un support."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Identifier tendances et S/R sur des graphiques réels",
+        "description": "Sur TradingView, ouvrez les graphiques journaliers de 3 actions au choix. Pour chacune : 1) Identifiez la tendance principale (haussière/baissière/range), 2) Tracez au moins 2 supports et 2 résistances, 3) Repérez 3 chandeliers significatifs (Doji, Marteau, Englobante, etc.)."
+      },
+      {
+        "type": "simulation",
+        "titre": "Analyser le volume sur les cassures",
+        "description": "Trouvez 3 exemples récents de cassure de support ou résistance. Pour chaque cassure, notez si le volume était élevé ou faible. La cassure a-t-elle été suivie d'une continuation ou d'un retour (fakeout) ? Le volume était-il un bon indicateur ?"
+      }
+    ],
+    "duree": "55 min",
+    "difficulte": "débutant",
+    "prerequis": [
+      "module_1_1"
+    ]
+  },
+  {
+    "id": "module_1_5",
+    "parcours": "debutant",
+    "titre": "🔗 Introduction aux Cryptomonnaies",
+    "description": "Comprenez la blockchain, Bitcoin, Ethereum, les wallets et les exchanges pour débuter sereinement dans l'univers crypto.",
+    "durée": "55 minutes",
+    "difficulté": "Débutant",
+    "points_xp": 130,
+    "prérequis": [
+      "module_1_1"
+    ],
+    "contenu": {
+      "introduction": "Les cryptomonnaies ont révolutionné le monde de la finance depuis la création de Bitcoin en 2009. Elles représentent une nouvelle classe d'actifs basée sur la technologie blockchain, offrant décentralisation, transparence et accessibilité mondiale. Cependant, cet univers est complexe et les risques sont réels. Ce module vous donnera les bases solides nécessaires pour comprendre les cryptomonnaies, leur technologie sous-jacente, et comment interagir avec cet écosystème en toute sécurité.",
+      "sections": [
+        {
+          "titre": "⛓️ La Blockchain : Comment ça marche ?",
+          "contenu": "La blockchain est la technologie fondamentale derrière les cryptomonnaies. C'est un registre numérique distribué, partagé entre des milliers d'ordinateurs à travers le monde.\n\nImaginez un grand cahier comptable dont chaque participant possède une copie identique. Chaque nouvelle transaction est inscrite sur une nouvelle page (un bloc), et chaque page contient un résumé de la page précédente, créant une chaîne inaltérable.\n\nFonctionnement étape par étape :\n1. Vous envoyez une transaction (ex: envoyer 0,1 BTC à quelqu'un)\n2. La transaction est diffusée à tous les nœuds du réseau\n3. Les nœuds vérifient la validité (avez-vous les fonds ? La signature est-elle correcte ?)\n4. Les transactions validées sont regroupées dans un bloc\n5. Le bloc est ajouté à la chaîne après consensus\n6. La transaction est confirmée et irréversible\n\nMécanismes de consensus :\n- Proof of Work (PoW) : les mineurs résolvent des puzzles mathématiques complexes. Le premier à trouver la solution valide le bloc et reçoit une récompense. Utilisé par Bitcoin. Très énergivore.\n- Proof of Stake (PoS) : les validateurs bloquent (stakent) une quantité de crypto comme garantie. Plus vous stakez, plus vous avez de chances de valider un bloc. Utilisé par Ethereum depuis 2022. Beaucoup moins énergivore.\n\nPropriétés clés de la blockchain :\n- Décentralisation : aucune autorité centrale ne contrôle le réseau\n- Transparence : toutes les transactions sont publiques et vérifiables\n- Immutabilité : une fois inscrite, une transaction ne peut pas être modifiée\n- Sécurité : la cryptographie protège le réseau contre les fraudes",
+          "points_cles": [
+            "La blockchain est un registre distribué partagé entre des milliers de nœuds",
+            "Chaque bloc contient des transactions et un lien vers le bloc précédent",
+            "Proof of Work (Bitcoin) vs Proof of Stake (Ethereum) pour le consensus",
+            "Propriétés : décentralisation, transparence, immutabilité, sécurité"
+          ],
+          "exemple_pratique": {
+            "ticker": "BTC",
+            "scenario": "Vous envoyez 0,01 BTC à un ami. La transaction est diffusée au réseau, incluse dans un bloc par un mineur, et confirmée après environ 10 minutes (1 confirmation). Après 6 confirmations (~1h), la transaction est considérée comme définitive et irréversible."
+          }
+        },
+        {
+          "titre": "₿ Bitcoin : L'Or Numérique",
+          "contenu": "Bitcoin (BTC) a été créé en 2009 par une personne ou un groupe anonyme sous le pseudonyme de Satoshi Nakamoto. C'est la première cryptomonnaie et elle reste la plus importante par sa capitalisation boursière.\n\nCaractéristiques fondamentales :\n- Supply limité : il n'existera jamais plus de 21 millions de bitcoins. C'est cette rareté programmée qui lui vaut le surnom d'or numérique.\n- Halving : tous les 210 000 blocs (~4 ans), la récompense des mineurs est divisée par 2. En 2009 : 50 BTC par bloc, en 2024 : 3,125 BTC. Le halving réduit l'inflation et a historiquement précédé des hausses de prix importantes.\n- Décentralisation : aucun gouvernement, banque ou entreprise ne contrôle Bitcoin.\n- Pseudonymat : les transactions sont publiques mais liées à des adresses, pas à des identités.\n\nHistorique des prix :\n- 2009 : quasi 0$\n- 2013 : premier pic à ~1 000$\n- 2017 : ~20 000$ puis crash à 3 000$\n- 2021 : ~69 000$ puis crash à 16 000$\n- 2024 : nouveaux sommets historiques\n\nCas d'usage :\n- Réserve de valeur (or numérique) : protection contre l'inflation et la dévaluation des monnaies fiduciaires.\n- Transfert de valeur : envoyer de l'argent partout dans le monde sans intermédiaire.\n- Investissement : actif spéculatif avec un potentiel de rendement élevé mais très volatile.\n\nBitcoin n'est pas anonyme mais pseudonyme. Des entreprises spécialisées peuvent tracer les transactions sur la blockchain.",
+          "points_cles": [
+            "Créé en 2009 par Satoshi Nakamoto, supply limité à 21 millions",
+            "Le halving divise la récompense par 2 tous les ~4 ans",
+            "Surnommé 'or numérique' pour sa rareté et sa résistance à l'inflation",
+            "Extrêmement volatile : des baisses de 80% se sont déjà produites"
+          ]
+        },
+        {
+          "titre": "💎 Ethereum et les Smart Contracts",
+          "contenu": "Ethereum (ETH), lancé en 2015 par Vitalik Buterin, est la deuxième plus grande cryptomonnaie. Contrairement à Bitcoin qui se concentre sur la monnaie, Ethereum est une plateforme programmable.\n\nLes Smart Contracts (contrats intelligents) : ce sont des programmes qui s'exécutent automatiquement quand certaines conditions sont remplies. Imaginez un distributeur automatique numérique : vous mettez des pièces, le produit sort automatiquement, sans intermédiaire.\n\nExemples d'applications :\n- DeFi (Finance Décentralisée) : prêts, emprunts, échanges sans banque.\n- NFT (Non-Fungible Tokens) : art numérique, objets de collection.\n- DAO (Organisations Autonomes Décentralisées) : gouvernance communautaire.\n- Tokenisation : représenter des actifs du monde réel (immobilier, art) sur la blockchain.\n\nPassage au Proof of Stake (The Merge, septembre 2022) :\nEthereum est passé du Proof of Work au Proof of Stake, réduisant sa consommation d'énergie de 99,95%. Les validateurs bloquent un minimum de 32 ETH pour participer à la sécurisation du réseau et gagner des récompenses.\n\nGas Fees : chaque opération sur Ethereum nécessite du gas (frais de transaction). Plus le réseau est utilisé, plus les frais sont élevés. Les solutions Layer 2 (Arbitrum, Optimism, Base) réduisent ces frais en traitant les transactions hors de la chaîne principale.\n\nETH n'a pas de supply maximum défini mais est devenu déflationnaire depuis The Merge grâce au mécanisme de burn EIP-1559.",
+          "points_cles": [
+            "Ethereum = plateforme programmable avec smart contracts",
+            "Base de la DeFi, des NFT et des DAO",
+            "Passage au Proof of Stake en 2022 : -99,95% d'énergie",
+            "Gas fees variables, Layer 2 pour réduire les coûts"
+          ],
+          "exemple_pratique": {
+            "ticker": "ETH",
+            "scenario": "Vous voulez échanger 1 ETH contre des USDC sur Uniswap (DEX). Le smart contract exécute l'échange automatiquement : il vérifie que le pool a assez de liquidité, calcule le prix, et effectue l'échange. Vous payez ~2-5$ de gas fees."
+          }
+        },
+        {
+          "titre": "🪙 Stablecoins et Altcoins",
+          "contenu": "Les Stablecoins sont des cryptomonnaies dont le prix est arrimé à une monnaie fiduciaire, généralement le dollar américain. Ils visent une volatilité minimale.\n\nPrincipaux stablecoins :\n- USDT (Tether) : le plus utilisé, collatéralisé par des réserves en dollars et obligations. Controversé car manque de transparence sur les réserves.\n- USDC (Circle) : plus régulé et transparent, audité régulièrement. Considéré comme plus sûr.\n- DAI (MakerDAO) : stablecoin décentralisé, collatéralisé par des cryptos sur-collatéralisées. Pas de risque d'émetteur centralisé.\n\nUtilité des stablecoins :\n- Se protéger de la volatilité sans sortir de l'écosystème crypto.\n- Transférer de la valeur rapidement et à moindre coût.\n- Participer à la DeFi (prêts, rendements).\n\nLes Altcoins désignent toutes les cryptomonnaies autres que Bitcoin. Catégories principales :\n- Layer 1 : blockchains alternatives à Ethereum (Solana, Avalanche, Cardano).\n- Layer 2 : solutions de scaling pour Ethereum (Polygon, Arbitrum, Optimism).\n- DeFi tokens : tokens de protocoles financiers décentralisés (UNI, AAVE, MKR).\n- Meme coins : créés par la communauté, souvent spéculatifs (DOGE, SHIB, PEPE).\n\nAttention aux shitcoins : des milliers de projets sans valeur réelle sont créés chaque jour. 99% des altcoins perdent leur valeur avec le temps. Ne jamais investir dans un projet sans avoir fait ses propres recherches (DYOR - Do Your Own Research).",
+          "points_cles": [
+            "Stablecoins : USDT, USDC, DAI - arrimés au dollar (~1$)",
+            "Utilisés pour se protéger de la volatilité et transférer de la valeur",
+            "Altcoins = toute crypto sauf Bitcoin (L1, L2, DeFi, meme coins)",
+            "99% des altcoins perdent leur valeur - DYOR (Do Your Own Research)"
+          ]
+        },
+        {
+          "titre": "👛 Wallets : Hot et Cold Storage",
+          "contenu": "Un wallet (portefeuille) crypto est un outil qui vous permet de stocker, envoyer et recevoir des cryptomonnaies. Il ne contient pas réellement vos cryptos (elles sont sur la blockchain), mais vos clés privées qui vous en donnent le contrôle.\n\nClé privée : c'est votre mot de passe secret. Celui qui possède la clé privée contrôle les fonds. Ne la partagez JAMAIS avec personne.\n\nClé publique : c'est votre adresse, comme un numéro de compte bancaire. Vous pouvez la partager pour recevoir des cryptos.\n\nSeed phrase (phrase de récupération) : 12 ou 24 mots qui permettent de restaurer votre wallet en cas de perte. Notez-la sur papier, JAMAIS en photo ou sur un ordinateur.\n\nHot Wallets (portefeuilles chauds) : connectés à Internet.\n- MetaMask : le plus populaire pour Ethereum et les dApps.\n- Trust Wallet : multichain, mobile.\n- Avantages : pratiques, accès rapide, gratuits.\n- Inconvénients : vulnérables aux piratages car connectés à Internet.\n\nCold Wallets (portefeuilles froids) : hors ligne.\n- Ledger Nano : clé USB sécurisée, marque française.\n- Trezor : alternative réputée.\n- Avantages : sécurité maximale, clés privées hors ligne.\n- Inconvénients : coût (60-150€), moins pratiques au quotidien.\n\nRègle d'or : 'Not your keys, not your coins'. Si vos cryptos sont sur un exchange (Binance, Coinbase), c'est l'exchange qui détient vos clés. Si l'exchange fait faillite (comme FTX en 2022), vous perdez tout. Utilisez un cold wallet pour les montants importants.",
+          "points_cles": [
+            "Clé privée = votre mot de passe secret, ne JAMAIS la partager",
+            "Seed phrase = 12/24 mots de récupération, noter sur PAPIER uniquement",
+            "Hot wallet (MetaMask) = pratique mais vulnérable aux piratages",
+            "Cold wallet (Ledger) = sécurité maximale pour les gros montants",
+            "'Not your keys, not your coins' - leçon de la faillite FTX"
+          ]
+        },
+        {
+          "titre": "🏪 Exchanges : CEX vs DEX",
+          "contenu": "Les exchanges sont les plateformes où vous achetez et vendez des cryptomonnaies. Il en existe deux types :\n\nCEX (Centralized Exchange) - Échanges centralisés :\n- Binance : le plus grand au monde par volume.\n- Coinbase : le plus régulé, coté en bourse aux USA.\n- Kraken : réputé pour sa sécurité.\n- Fonctionnement : vous déposez vos fonds sur la plateforme qui gère les transactions. Comme une banque pour la crypto.\n- Avantages : interface simple, liquidité élevée, support client, conversion fiat/crypto.\n- Inconvénients : vous ne contrôlez pas vos clés, risque de faillite (FTX), KYC obligatoire.\n\nDEX (Decentralized Exchange) - Échanges décentralisés :\n- Uniswap : le plus grand sur Ethereum.\n- PancakeSwap : populaire sur BNB Chain.\n- Jupiter : leader sur Solana.\n- Fonctionnement : échanges peer-to-peer via smart contracts. Pas d'intermédiaire.\n- Avantages : vous gardez le contrôle de vos clés, pas de KYC, accès à tous les tokens.\n- Inconvénients : plus complexe, gas fees, risque de smart contracts bugués, pas de support.\n\nConseils pour débuter :\n1. Commencez par un CEX régulé (Coinbase ou Kraken) pour vos premiers achats.\n2. Utilisez un cold wallet pour stocker vos cryptos à long terme.\n3. N'utilisez les DEX que quand vous êtes à l'aise avec les wallets et la DeFi.\n4. Vérifiez toujours que l'exchange est régulé dans votre pays (enregistré à l'AMF en France).",
+          "points_cles": [
+            "CEX (Binance, Coinbase) : simple et liquide mais vous ne contrôlez pas vos clés",
+            "DEX (Uniswap) : décentralisé, vous gardez vos clés, mais plus complexe",
+            "Commencez par un CEX régulé puis évoluez vers les DEX",
+            "Toujours vérifier la régulation de l'exchange (enregistrement AMF)"
+          ]
+        },
+        {
+          "titre": "🔒 Sécurité Crypto",
+          "contenu": "La sécurité est primordiale dans l'univers crypto car les transactions sont irréversibles. Une erreur ou un piratage = perte définitive de vos fonds.\n\nMenaces principales :\n- Phishing : faux sites, faux emails qui imitent des plateformes légitimes pour voler vos identifiants. Vérifiez TOUJOURS l'URL.\n- Rug pulls : les créateurs d'un projet disparaissent avec les fonds des investisseurs. Fréquent dans la DeFi et les meme coins.\n- Piratage d'exchange : des milliards ont été volés au fil des années. Mt. Gox (2014), FTX (2022).\n- Malwares : logiciels qui remplacent votre adresse de réception par celle du pirate.\n\nBonnes pratiques essentielles :\n1. Activez le 2FA (authentification à deux facteurs) sur TOUS vos comptes. Utilisez Google Authenticator, pas les SMS (vulnérables au SIM swapping).\n2. Utilisez un cold wallet pour les montants supérieurs à ce que vous pouvez vous permettre de perdre.\n3. Notez votre seed phrase sur papier et conservez-la dans un lieu sûr. Jamais de photo, jamais en ligne.\n4. Vérifiez 3 fois l'adresse de destination avant d'envoyer des cryptos. Envoyez d'abord un petit montant test.\n5. Ne cliquez jamais sur des liens suspects. Utilisez vos favoris pour accéder aux sites.\n6. Méfiez-vous des promesses de rendements garantis. Si c'est trop beau pour être vrai, c'est une arnaque.\n7. Diversifiez vos plateformes et wallets pour ne pas avoir tous vos fonds au même endroit.",
+          "points_cles": [
+            "2FA obligatoire sur tous les comptes (Google Authenticator, pas SMS)",
+            "Seed phrase sur PAPIER uniquement, dans un lieu sûr",
+            "Toujours vérifier les adresses et faire un envoi test",
+            "Méfiez-vous des rendements garantis = arnaque",
+            "Les transactions crypto sont IRRÉVERSIBLES"
+          ]
+        }
+      ],
+      "resume": "Les cryptomonnaies fonctionnent grâce à la blockchain, un registre distribué sécurisé par la cryptographie. Bitcoin est l'or numérique (21M supply, halving), Ethereum la plateforme de smart contracts. Les stablecoins offrent la stabilité du dollar en crypto. Stockez vos cryptos en sécurité : hot wallet (MetaMask) pour le quotidien, cold wallet (Ledger) pour les gros montants. Commencez par un CEX régulé et respectez les règles de sécurité (2FA, seed phrase papier, vérification des adresses).",
+      "ressources_complementaires": [
+        "📖 Livre : 'The Bitcoin Standard' de Saifedean Ammous",
+        "🎥 Vidéo : 'But how does bitcoin actually work?' - 3Blue1Brown YouTube",
+        "🌐 Site : CoinGecko.com - suivi des prix et données crypto",
+        "📱 App : Ledger Live - gestion de portefeuille crypto sécurisée"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Qu'est-ce que la blockchain ?",
+        "options": [
+          "Une cryptomonnaie comme Bitcoin",
+          "Un registre numérique distribué et immuable",
+          "Un logiciel de trading",
+          "Un type de wallet"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La blockchain est un registre numérique distribué partagé entre des milliers d'ordinateurs. Chaque transaction y est enregistrée de manière transparente et immuable. Bitcoin et Ethereum sont des cryptomonnaies qui fonctionnent sur leur propre blockchain."
+      },
+      {
+        "question": "Qu'est-ce que le halving de Bitcoin ?",
+        "options": [
+          "La division du prix par 2",
+          "La division de la récompense des mineurs par 2 tous les ~4 ans",
+          "La création de 2 blockchains différentes",
+          "Le doublement du nombre de bitcoins"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le halving divise par 2 la récompense donnée aux mineurs pour chaque bloc validé. Il a lieu tous les 210 000 blocs (~4 ans) et réduit progressivement l'inflation de Bitcoin."
+      },
+      {
+        "question": "Quelle est la différence principale entre Bitcoin et Ethereum ?",
+        "options": [
+          "Bitcoin est plus récent qu'Ethereum",
+          "Ethereum permet les smart contracts, Bitcoin se concentre sur la monnaie",
+          "Bitcoin utilise le Proof of Stake",
+          "Ethereum a un supply limité à 21 millions"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Bitcoin est principalement une réserve de valeur et un moyen de paiement. Ethereum est une plateforme programmable grâce aux smart contracts, permettant la DeFi, les NFT et les dApps."
+      },
+      {
+        "question": "Qu'est-ce qu'un stablecoin ?",
+        "options": [
+          "Une crypto très volatile",
+          "Une crypto dont le prix est arrimé à une monnaie fiat (~1$)",
+          "Une crypto réservée aux institutionnels",
+          "Une crypto qui ne peut pas être échangée"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Un stablecoin est une cryptomonnaie conçue pour maintenir un prix stable, généralement arrimé au dollar américain. USDT, USDC et DAI sont les plus connus."
+      },
+      {
+        "question": "Que signifie 'Not your keys, not your coins' ?",
+        "options": [
+          "Il faut acheter des clés USB spéciales",
+          "Si vous ne contrôlez pas vos clés privées, vous ne contrôlez pas vos cryptos",
+          "Les coins n'existent que si vous avez la clé",
+          "Il faut donner ses clés au broker"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Cette expression rappelle que si vos cryptos sont sur un exchange (qui détient vos clés privées), vous dépendez de cet exchange. S'il fait faillite (comme FTX), vous perdez tout. Utilisez un wallet personnel pour garder le contrôle."
+      },
+      {
+        "question": "Quel type de wallet offre la meilleure sécurité ?",
+        "options": [
+          "Hot wallet (MetaMask)",
+          "Le wallet de l'exchange",
+          "Cold wallet (Ledger, Trezor)",
+          "Un fichier texte avec vos clés"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Les cold wallets comme Ledger ou Trezor stockent vos clés privées hors ligne, les rendant inaccessibles aux pirates informatiques. C'est la solution la plus sécurisée pour stocker des cryptomonnaies."
+      },
+      {
+        "question": "Pourquoi faut-il utiliser Google Authenticator plutôt que les SMS pour le 2FA ?",
+        "options": [
+          "Google Authenticator est gratuit",
+          "Les SMS sont vulnérables au SIM swapping",
+          "Les SMS ne fonctionnent pas à l'étranger",
+          "Google Authenticator affiche les prix des cryptos"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le SIM swapping est une technique où un pirate transfère votre numéro de téléphone sur sa carte SIM, recevant ainsi vos SMS de vérification. Google Authenticator génère des codes localement sur votre appareil, évitant ce risque."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Créer et sécuriser un wallet MetaMask",
+        "description": "Installez MetaMask sur votre navigateur. Créez un wallet, notez votre seed phrase de 12 mots sur papier. Familiarisez-vous avec l'interface : adresse publique, réseaux (Ethereum, Polygon, etc.), et l'ajout de tokens."
+      },
+      {
+        "type": "simulation",
+        "titre": "Explorer la blockchain",
+        "description": "Rendez-vous sur etherscan.io. Recherchez l'adresse d'un wallet public connu (comme le wallet de Vitalik Buterin). Observez les transactions : montants, gas fees, tokens détenus. Cela illustre la transparence de la blockchain."
+      }
+    ],
+    "duree": "50 min",
+    "difficulte": "débutant",
+    "prerequis": [
+      "module_1_1"
+    ]
+  },
+  {
+    "id": "module_1_6",
+    "parcours": "debutant",
+    "titre": "🧠 Psychologie du Trader Débutant",
+    "description": "Découvrez pourquoi la psychologie est la clé du succès en trading : biais cognitifs, gestion des émotions, journal et plan de trading.",
+    "durée": "50 minutes",
+    "difficulté": "Débutant",
+    "points_xp": 120,
+    "prérequis": [
+      "module_1_1"
+    ],
+    "contenu": {
+      "introduction": "La psychologie est souvent négligée par les traders débutants qui se concentrent uniquement sur les graphiques et les indicateurs. Pourtant, les experts estiment que le succès en trading repose à 80% sur la psychologie et seulement 20% sur la technique. Les meilleurs systèmes de trading échouent entre les mains de traders qui ne contrôlent pas leurs émotions. Ce module vous donnera les outils pour comprendre et maîtriser votre psychologie de trader.",
+      "sections": [
+        {
+          "titre": "🎯 L'importance de la psychologie en trading",
+          "contenu": "Pourquoi deux traders utilisant exactement la même stratégie peuvent-ils avoir des résultats radicalement différents ? La réponse est la psychologie.\n\nLe trading est l'une des activités les plus psychologiquement exigeantes qui existe. Vous prenez des décisions financières sous pression, avec de l'incertitude, en temps réel, et votre argent est en jeu. C'est un cocktail émotionnel explosif.\n\nLes statistiques sont parlantes : 70 à 90% des traders particuliers perdent de l'argent. Ce n'est pas parce qu'ils manquent d'intelligence ou de connaissances techniques. C'est principalement parce qu'ils n'arrivent pas à gérer leurs émotions.\n\nLes erreurs psychologiques les plus courantes :\n- Couper ses gains trop tôt par peur de les perdre.\n- Laisser courir ses pertes en espérant un retournement.\n- Prendre des positions trop grosses après une série de gains.\n- Faire du revenge trading après une perte (vouloir se refaire immédiatement).\n- Ne pas respecter son plan de trading sous le coup de l'émotion.\n\nLa bonne nouvelle : la psychologie du trading peut se travailler et s'améliorer. Comme un muscle, la discipline mentale se renforce avec la pratique et les bons outils.",
+          "points_cles": [
+            "Le succès en trading repose à 80% sur la psychologie",
+            "70-90% des traders particuliers perdent de l'argent, principalement pour des raisons émotionnelles",
+            "Erreurs typiques : couper les gains, laisser courir les pertes, revenge trading",
+            "La psychologie se travaille comme un muscle avec pratique et discipline"
+          ]
+        },
+        {
+          "titre": "😨 Peur et Avidité : Le Cycle Émotionnel",
+          "contenu": "La peur et l'avidité sont les deux émotions fondamentales qui gouvernent les marchés. Elles forment un cycle prévisible :\n\nPhase de hausse :\n1. Optimisme : le marché monte, les premiers investisseurs gagnent.\n2. Excitation : les gains s'accumulent, tout semble facile.\n3. Euphorie : tout le monde en parle, même votre coiffeur achète des actions. C'est le POINT DE RISQUE MAXIMUM.\n\nPhase de baisse :\n4. Anxiété : le marché commence à baisser, 'ce n'est qu'une correction'.\n5. Peur : les pertes s'accumulent, la panique commence.\n6. Capitulation : les gens vendent tout à perte, 'plus jamais la bourse'. C'est le POINT D'OPPORTUNITÉ MAXIMUM.\n7. Dépression : plus personne ne veut entendre parler de bourse.\n8. Espoir : le marché repart doucement, le cycle recommence.\n\nFOMO (Fear Of Missing Out) : la peur de rater une opportunité. Vous voyez un actif monter de 50% et vous achetez au plus haut, par peur de manquer la suite. Le FOMO vous fait acheter au pire moment.\n\nFUD (Fear, Uncertainty, Doubt) : la peur, l'incertitude et le doute qui vous poussent à vendre au pire moment, généralement en bas du cycle.\n\nWarren Buffett résume parfaitement : 'Soyez avide quand les autres ont peur, et ayez peur quand les autres sont avides.'",
+          "points_cles": [
+            "Le cycle émotionnel : optimisme → euphorie → peur → capitulation → espoir",
+            "L'euphorie = risque maximum, la capitulation = opportunité maximum",
+            "FOMO = acheter au plus haut par peur de manquer",
+            "FUD = vendre au plus bas par peur et doute"
+          ],
+          "exemple_pratique": {
+            "ticker": "BTC",
+            "scenario": "Bitcoin monte de 20 000$ à 60 000$. Le FOMO pousse des millions de débutants à acheter à 55 000-65 000$. Quand Bitcoin chute à 20 000$, ces mêmes personnes vendent paniquées (FUD), perdant 60-70%. Ceux qui ont acheté à 20 000$ pendant la capitulation (quand tout le monde avait peur) ont ensuite triplé leur investissement."
+          }
+        },
+        {
+          "titre": "🧩 Les Biais Cognitifs du Trader",
+          "contenu": "Les biais cognitifs sont des erreurs de raisonnement systématiques causées par notre cerveau. En trading, ils sont dévastateurs.\n\nAversion à la perte : la douleur d'une perte est 2,5 fois plus intense que le plaisir d'un gain équivalent. Conséquence : vous laissez courir vos pertes (en espérant qu'elles se transforment en gains) et vous coupez vos gains trop tôt (de peur de les voir disparaître). C'est exactement l'inverse de ce qu'il faut faire.\n\nBiais de confirmation : vous ne cherchez que les informations qui confirment votre opinion et ignorez celles qui la contredisent. Si vous pensez qu'Apple va monter, vous ne lirez que les articles positifs et ignorerez les signaux baissiers.\n\nExcès de confiance : après une série de trades gagnants, vous pensez être invincible. Vous augmentez vos tailles de position, prenez plus de risques, et finissez par perdre gros. Le marché a une façon brutale de remettre les ego à leur place.\n\nEffet de disposition : tendance à vendre les gagnants trop tôt et à garder les perdants trop longtemps. Vous voulez 'encaisser' vos gains et 'attendre' que vos pertes se résorbent. Résultat : de petits gains et de grosses pertes.\n\nBiais d'ancrage : vous vous accrochez à un prix de référence. Vous avez acheté à 100$, le prix est à 80$, vous refusez de vendre car vous êtes 'ancré' à votre prix d'achat. Le marché ne sait pas (et ne se soucie pas) à quel prix vous avez acheté.\n\nSolution : la conscience de ces biais est la première étape. Le journal de trading et les règles de trading écrites sont les meilleurs remèdes.",
+          "points_cles": [
+            "Aversion à la perte : la douleur d'une perte est 2,5x celle d'un gain",
+            "Biais de confirmation : on ne voit que ce qui confirme notre opinion",
+            "Excès de confiance : séries gagnantes → prise de risque excessive",
+            "Effet de disposition : couper les gains, garder les pertes = désastre",
+            "Solution : journal de trading et règles écrites"
+          ]
+        },
+        {
+          "titre": "📓 Le Journal de Trading",
+          "contenu": "Le journal de trading est l'outil le plus puissant et le plus sous-estimé du trader. Il permet d'identifier vos forces, vos faiblesses, et de progresser systématiquement.\n\nQue noter dans votre journal :\n\n1. Informations de base :\n- Date et heure\n- Instrument (action, crypto, paire Forex)\n- Direction (achat/vente)\n- Prix d'entrée et de sortie\n- Taille de position\n- Résultat (P&L en € et en %)\n\n2. Analyse du trade :\n- Setup : pourquoi avez-vous pris ce trade ? Quel signal ?\n- Timeframe utilisé\n- Capture d'écran du graphique avant et après le trade\n- Le trade était-il conforme à votre plan de trading ?\n\n3. Aspect psychologique (le plus important) :\n- Quel était votre état émotionnel avant le trade ? (calme, anxieux, excité, revanche)\n- Comment vous êtes-vous senti pendant le trade ?\n- Avez-vous respecté vos règles ? Si non, pourquoi ?\n- Qu'avez-vous appris ?\n\nReview hebdomadaire : chaque weekend, relisez votre journal de la semaine. Identifiez les patterns récurrents. Calculez vos statistiques : nombre de trades, winrate, ratio gain/perte moyen, profit factor.\n\nLe journal vous force à être honnête avec vous-même. Après quelques semaines, vous identifierez clairement vos erreurs récurrentes et pourrez les corriger. Sans journal, vous répéterez les mêmes erreurs indéfiniment.",
+          "points_cles": [
+            "Le journal de trading est l'outil de progression numéro 1",
+            "Noter : date, instrument, prix, P&L, setup, émotions, leçons",
+            "Review hebdomadaire pour identifier les patterns et erreurs récurrentes",
+            "Sans journal, vous répéterez les mêmes erreurs indéfiniment"
+          ],
+          "exemple_pratique": {
+            "ticker": "TSLA",
+            "scenario": "Entrée dans votre journal : 'Achat TSLA à 240$ le 15/01, stop 230$, objectif 260$. Setup : rebond sur support + englobante haussière. État émotionnel : calme, trade conforme au plan. Résultat : vendu à 258$, +7,5%. Leçon : j'ai failli couper à 250$ par impatience, bien d'avoir respecté mon plan.'"
+          }
+        },
+        {
+          "titre": "📋 Créer son Plan de Trading",
+          "contenu": "Un plan de trading est un document écrit qui définit toutes vos règles AVANT d'ouvrir un trade. Trader sans plan, c'est comme naviguer sans carte : vous finirez par vous perdre.\n\nLes composants d'un plan de trading simple :\n\n1. Objectifs : Quel est votre objectif mensuel/annuel ? Soyez réaliste. Pour un débutant : ne pas perdre d'argent est déjà un objectif ambitieux.\n\n2. Instruments tradés : Quels marchés ? Actions US, crypto, Forex ? Ne pas tout trader. Commencez par 2-3 instruments que vous connaissez bien.\n\n3. Timeframe : Sur quel horizon de temps tradez-vous ? Journalier recommandé pour un débutant.\n\n4. Critères d'entrée : Quelles conditions doivent être réunies pour entrer en position ? Soyez précis : 'Rebond sur support en tendance haussière avec confirmation par englobante haussière'.\n\n5. Critères de sortie : Où placez-vous votre stop loss ? Votre take profit ? Votre ratio risk/reward minimum (recommandé : 1:2 minimum).\n\n6. Gestion du risque : Maximum 1-2% du capital par trade. Maximum 3 trades ouverts simultanément. Arrêter de trader après 3 pertes consécutives.\n\n7. Horaires de trading : Quand tradez-vous ? Routine pré-marché, pendant le marché, post-marché.\n\nRègle fondamentale : si les conditions de votre plan ne sont pas réunies, NE TRADEZ PAS. Le meilleur trade est parfois de ne pas trader. La patience est une vertu essentielle.",
+          "points_cles": [
+            "Un plan de trading = règles écrites AVANT de trader",
+            "Définir : objectifs, instruments, timeframe, entrées, sorties, risque",
+            "Risque maximum : 1-2% du capital par trade",
+            "Si les conditions ne sont pas réunies, NE PAS TRADER"
+          ]
+        },
+        {
+          "titre": "💪 Discipline et Routine",
+          "contenu": "La discipline est ce qui sépare les traders rentables des perdants. Ce n'est pas le plus intelligent qui gagne, c'est le plus discipliné.\n\nLa discipline en trading signifie :\n- Respecter son plan de trading à chaque trade, sans exception.\n- Accepter les pertes comme partie intégrante du métier. Même les meilleurs traders perdent 40-50% de leurs trades.\n- Ne pas trader quand les conditions ne sont pas réunies, même si vous avez envie d'action.\n- Ne pas augmenter son risque après une série de pertes pour 'se refaire'.\n\nRoutine quotidienne recommandée :\n\nAvant le marché (30 min) :\n- Revue des positions ouvertes\n- Analyse des graphiques de votre watchlist\n- Identification des setups potentiels\n- Check des actualités économiques du jour\n\nPendant le marché :\n- Exécution mécanique de votre plan\n- Pas de décision impulsive\n- Notes dans votre journal en temps réel\n\nAprès le marché (15 min) :\n- Compléter le journal de trading\n- Noter les leçons du jour\n- Préparer le lendemain\n\nWeekend :\n- Review hebdomadaire complète\n- Calcul des statistiques\n- Ajustements du plan si nécessaire\n- Repos mental\n\nConseil important : si vous n'êtes pas dans un bon état émotionnel (stress, fatigue, colère, euphorie), NE TRADEZ PAS. Le marché sera toujours là demain.",
+          "points_cles": [
+            "La discipline sépare les gagnants des perdants",
+            "Accepter les pertes : les meilleurs perdent 40-50% des trades",
+            "Routine : pré-marché (analyse), marché (exécution), post-marché (journal)",
+            "Ne pas trader si état émotionnel inadéquat"
+          ]
+        }
+      ],
+      "resume": "La psychologie représente 80% du succès en trading. Les deux émotions dominantes sont la peur et l'avidité, créant un cycle émotionnel prévisible. Les biais cognitifs (aversion à la perte, confirmation, excès de confiance, disposition) sabotent vos décisions. Vos deux meilleurs outils : le journal de trading (pour identifier vos erreurs) et le plan de trading (pour cadrer vos décisions). La discipline et la routine quotidienne transforment un amateur en professionnel.",
+      "ressources_complementaires": [
+        "📖 Livre : 'Trading in the Zone' de Mark Douglas - la référence absolue",
+        "📖 Livre : 'Psychologie des grands traders' de Thami Kabbaj",
+        "🎥 Vidéo : 'La psychologie du trading' - Andlil YouTube",
+        "📱 App : Journal de trading (Edgewonk ou TraderSync)"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quel pourcentage du succès en trading est attribué à la psychologie ?",
+        "options": [
+          "20%",
+          "50%",
+          "80%",
+          "100%"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Les experts estiment que le succès en trading repose à environ 80% sur la psychologie (discipline, gestion des émotions) et 20% sur la technique (stratégie, indicateurs)."
+      },
+      {
+        "question": "Qu'est-ce que le FOMO ?",
+        "options": [
+          "Un type d'ordre boursier",
+          "La peur de rater une opportunité qui pousse à acheter au mauvais moment",
+          "Un indicateur technique",
+          "Un type de compte de trading"
+        ],
+        "bonne_reponse": 1,
+        "explication": "FOMO (Fear Of Missing Out) est la peur de rater une opportunité. Elle pousse les traders à acheter au plus haut, quand tout le monde parle d'un actif, souvent au pire moment."
+      },
+      {
+        "question": "Qu'est-ce que l'aversion à la perte ?",
+        "options": [
+          "La peur de perdre son emploi",
+          "Le fait que la douleur d'une perte est 2,5 fois plus forte que le plaisir d'un gain",
+          "La tendance à éviter tous les risques",
+          "Le refus de vendre ses actions"
+        ],
+        "bonne_reponse": 1,
+        "explication": "L'aversion à la perte est un biais cognitif démontré par la recherche : la douleur ressentie lors d'une perte est environ 2,5 fois plus intense que le plaisir d'un gain équivalent. Cela pousse à garder les positions perdantes."
+      },
+      {
+        "question": "Quel est l'outil le plus important pour progresser en trading ?",
+        "options": [
+          "Un indicateur technique avancé",
+          "Un ordinateur très rapide",
+          "Le journal de trading",
+          "Un abonnement à une newsletter"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le journal de trading est l'outil de progression numéro 1. Il vous force à documenter vos trades, vos émotions et vos erreurs, permettant d'identifier et corriger vos faiblesses."
+      },
+      {
+        "question": "Quel risque maximum par trade est recommandé pour un débutant ?",
+        "options": [
+          "10-15% du capital",
+          "5-10% du capital",
+          "1-2% du capital",
+          "50% du capital"
+        ],
+        "bonne_reponse": 2,
+        "explication": "La règle standard est de ne pas risquer plus de 1-2% de votre capital total par trade. Avec 1% de risque, il faudrait 100 pertes consécutives pour perdre tout votre capital, ce qui est statistiquement quasi impossible."
+      },
+      {
+        "question": "Qu'est-ce que le revenge trading ?",
+        "options": [
+          "Trader pour se venger d'un concurrent",
+          "Essayer de se refaire immédiatement après une perte en prenant plus de risques",
+          "Une stratégie de trading automatisé",
+          "Trader uniquement le vendredi"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le revenge trading est la tendance à vouloir récupérer immédiatement une perte en prenant des trades impulsifs et plus risqués. C'est l'un des comportements les plus destructeurs en trading."
+      },
+      {
+        "question": "Que faire si vous n'êtes pas dans un bon état émotionnel ?",
+        "options": [
+          "Trader quand même pour se changer les idées",
+          "Doubler la taille des positions",
+          "Ne pas trader et revenir demain",
+          "Trader mais avec des stop loss plus serrés"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Si vous êtes stressé, fatigué, en colère ou euphorique, la meilleure décision est de ne pas trader. Le marché sera toujours là demain. Trader sous le coup des émotions mène presque toujours à des pertes."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Créer votre journal de trading",
+        "description": "Créez un journal de trading (dans un tableur ou un carnet). Définissez les colonnes : Date, Instrument, Direction, Prix d'entrée, Stop loss, Take profit, Prix de sortie, P&L, Setup utilisé, État émotionnel, Leçons. Commencez à le remplir même en paper trading."
+      },
+      {
+        "type": "auto-evaluation",
+        "titre": "Rédiger votre plan de trading",
+        "description": "Écrivez un plan de trading simple : 1) Vos objectifs, 2) Les 2-3 instruments que vous allez trader, 3) Votre timeframe, 4) Vos critères d'entrée (soyez précis), 5) Vos critères de sortie (stop loss et take profit), 6) Votre risque par trade, 7) Vos horaires de trading."
+      }
+    ],
+    "duree": "45 min",
+    "difficulte": "débutant",
+    "prerequis": []
+  }
+]

@@ -1,0 +1,1059 @@
+[
+  {
+    "id": "module_3_1",
+    "parcours": "avance",
+    "titre": "🔬 Analyse Technique Avancée",
+    "description": "Maîtrisez Fibonacci, Ichimoku, les patterns harmoniques et l'analyse multi-timeframe.",
+    "durée": "80 minutes",
+    "difficulté": "Avancé",
+    "points_xp": 230,
+    "prérequis": [
+      "module_2_2",
+      "module_2_4"
+    ],
+    "contenu": {
+      "introduction": "L'analyse technique avancée vous donne des outils de précision pour identifier des zones de prix à haute probabilité. Les retracements de Fibonacci, le système Ichimoku, les patterns harmoniques et l'analyse multi-timeframe sont utilisés par les traders professionnels pour affiner leurs entrées et sorties. Ces outils, combinés en système de confluence, augmentent significativement la fiabilité de vos signaux.",
+      "sections": [
+        {
+          "titre": "📐 Fibonacci : Retracements et Extensions",
+          "contenu": "Les niveaux de Fibonacci sont dérivés de la suite mathématique de Fibonacci et sont omniprésents dans la nature et les marchés financiers.\n\nRetracements : après un mouvement impulsif, le prix corrige souvent vers des niveaux précis avant de reprendre la tendance. Les niveaux clés sont 23,6%, 38,2%, 50%, 61,8% et 78,6%.\n\nLa Golden Zone (61,8% - 65%) est la zone de retracement la plus puissante. C'est là que les corrections trouvent le plus souvent un support dans une tendance forte. Un rebond sur cette zone offre un excellent ratio risk/reward.\n\nComment tracer : identifiez un mouvement impulsif clair (swing low vers swing high pour une tendance haussière). L'outil Fibonacci projette automatiquement les niveaux de retracement.\n\nExtensions : projettent les objectifs au-delà du mouvement initial. Les niveaux clés sont 127,2%, 161,8% et 261,8%. Si un trade rebondit sur le retracement 61,8%, l'objectif naturel est l'extension 161,8%.\n\nRègles pratiques :\n- Un retracement qui ne dépasse pas 38,2% indique une tendance très forte\n- Au-delà de 78,6%, le retracement devient une inversion probable\n- Combinez Fibonacci avec les supports/résistances horizontaux pour plus de précision",
+          "points_cles": [
+            "Golden Zone (61,8-65%) = zone de rebond la plus probable",
+            "Extensions 127,2/161,8/261,8% = objectifs de prix",
+            "Retracement < 38,2% = tendance très forte",
+            "Combiner Fibonacci avec S/R horizontaux pour confluence"
+          ],
+          "exemple_pratique": {
+            "ticker": "BTC",
+            "scenario": "Bitcoin monte de 25 000$ à 45 000$. Le retracement 61,8% se situe à 32 600$. Le prix corrige exactement vers 32 800$ puis repart à la hausse. L'extension 161,8% à 57 300$ donne l'objectif de prix."
+          }
+        },
+        {
+          "titre": "☁️ Ichimoku Kinko Hyo",
+          "contenu": "Ichimoku est un système complet d'analyse japonais qui donne en un coup d'œil la tendance, les supports/résistances et les signaux d'entrée.\n\nLes 5 composantes :\n- Tenkan-sen (ligne de conversion, période 9) : moyenne du plus haut et plus bas sur 9 périodes. Représente le momentum court terme.\n- Kijun-sen (ligne de base, période 26) : même calcul sur 26 périodes. Représente la tendance moyen terme.\n- Senkou Span A : moyenne de Tenkan et Kijun, projetée 26 périodes en avant.\n- Senkou Span B : moyenne des extrêmes sur 52 périodes, projetée 26 périodes en avant.\n- Chikou Span : prix de clôture projeté 26 périodes en arrière.\n\nLe Kumo (nuage) : zone entre Senkou Span A et B. C'est le cœur d'Ichimoku.\n- Prix au-dessus du nuage = tendance haussière\n- Prix en dessous = tendance baissière\n- Prix dans le nuage = zone d'indécision\n- Nuage épais = support/résistance fort\n\nSignaux clés :\n- TK Cross : Tenkan croise au-dessus de Kijun = signal haussier (surtout au-dessus du nuage)\n- Kumo twist : le nuage change de couleur = possible changement de tendance\n- Chikou Span au-dessus du prix = confirmation haussière",
+          "points_cles": [
+            "Kumo (nuage) = zone de support/résistance dynamique",
+            "Prix au-dessus du nuage = haussier, en dessous = baissier",
+            "TK Cross au-dessus du nuage = signal haussier fort",
+            "Ichimoku est un système complet à lui seul"
+          ]
+        },
+        {
+          "titre": "🦋 Patterns Harmoniques",
+          "contenu": "Les patterns harmoniques utilisent les ratios de Fibonacci pour identifier des zones de retournement avec une grande précision.\n\nPattern ABCD : le plus simple. Le mouvement AB est suivi d'une correction BC (retracement de AB), puis d'un mouvement CD égal à AB. Le point D est la zone d'entrée.\n\nGartley : structure XABCD. Le point B est un retracement de 61,8% de XA. Le point D est un retracement de 78,6% de XA. C'est la zone d'entrée avec un stop serré sous X.\n\nBat : similaire au Gartley mais le point D est un retracement de 88,6% de XA. Zone d'entrée très précise.\n\nButterfly : pattern d'extension. Le point D dépasse X et se situe à l'extension 127% de XA.\n\nCrab : le plus extrême. Le point D est à l'extension 161,8% de XA.\n\nAvantage des patterns harmoniques : ils définissent précisément la zone d'entrée, le stop loss (juste au-delà du point D) et les objectifs (retracements de CD). Le ratio R:R est souvent excellent (3:1 ou plus).\n\nInconvénient : ils sont rares et nécessitent de la patience. Utilisez des scanners automatiques (TradingView a des indicateurs dédiés) pour les identifier.",
+          "points_cles": [
+            "ABCD = le pattern de base, CD = AB en taille",
+            "Gartley : point D à 78,6% de XA = zone d'entrée",
+            "Les patterns définissent entrée, stop et objectif précisément",
+            "Ratio R:R souvent > 3:1, mais patterns rares"
+          ]
+        },
+        {
+          "titre": "📺 Analyse Multi-Timeframe (Triple Screen)",
+          "contenu": "La méthode Triple Screen d'Alexander Elder utilise 3 timeframes pour filtrer les signaux et améliorer la fiabilité.\n\nÉcran 1 (timeframe supérieur) : identifie la tendance de fond. Si vous tradez en H4, regardez le graphique journalier. Utilisez un indicateur de tendance (EMA 200, MACD). Ne tradez que dans le sens de cette tendance.\n\nÉcran 2 (timeframe intermédiaire) : votre timeframe principal de décision. Cherchez les signaux d'entrée qui vont dans le sens de la tendance identifiée à l'écran 1. Utilisez un oscillateur (RSI, Stochastique) pour le timing.\n\nÉcran 3 (timeframe inférieur) : affine le point d'entrée exact. Cherchez un pattern de chandelier ou une cassure sur ce timeframe court pour optimiser votre prix d'entrée et minimiser le stop loss.\n\nExemple concret :\n- Écran 1 (Journalier) : tendance haussière confirmée (prix > EMA 200)\n- Écran 2 (H4) : RSI revient en zone 40-50 (repli)\n- Écran 3 (H1) : englobante haussière sur support\n→ Entrée avec un stop serré basé sur le H1, objectif basé sur le journalier\n\nRègle : ne jamais trader contre la tendance du timeframe supérieur. L'alignement des 3 écrans donne les trades les plus fiables.",
+          "points_cles": [
+            "Écran 1 (supérieur) = tendance, Écran 2 = signal, Écran 3 = entrée",
+            "Ne jamais trader contre la tendance du timeframe supérieur",
+            "L'alignement des 3 timeframes = haute fiabilité",
+            "Exemple : Journalier→H4→H1 pour le swing trading"
+          ],
+          "exemple_pratique": {
+            "ticker": "MSFT",
+            "scenario": "Journalier : MSFT en tendance haussière au-dessus de l'EMA 200. H4 : RSI descend vers 42 (repli sain). H1 : marteau sur la SMA 50. Entrée à 410$, stop sous le creux H1 à 405$, objectif le dernier sommet journalier à 430$. Ratio R:R = 1:4."
+          }
+        },
+        {
+          "titre": "🔀 Divergences Cachées",
+          "contenu": "Les divergences cachées sont différentes des divergences classiques et signalent la continuation de la tendance plutôt que son retournement.\n\nDivergence cachée haussière : le prix fait un creux PLUS HAUT que le précédent (higher low), mais le RSI/MACD fait un creux PLUS BAS. Le momentum semble faiblir mais la structure de prix reste haussière. La tendance va probablement continuer à la hausse.\n\nDivergence cachée baissière : le prix fait un sommet PLUS BAS, mais le RSI/MACD fait un sommet PLUS HAUT. La tendance baissière va probablement continuer.\n\nContrairement aux divergences classiques (qui anticipent un retournement), les divergences cachées confirment que la tendance en cours reste intacte malgré un repli temporaire. Elles offrent d'excellents points d'entrée dans le sens de la tendance.\n\nOù les chercher :\n- Pendant les pullbacks dans une tendance établie\n- Sur votre timeframe principal (H4 ou journalier)\n- Confirmez avec un support/résistance et un chandelier de retournement\n\nLes divergences cachées sont moins connues que les divergences classiques mais tout aussi puissantes. Combinées avec Fibonacci et les supports/résistances, elles donnent des setups de très haute qualité.",
+          "points_cles": [
+            "Divergence cachée haussière : prix higher low + RSI lower low = continuation haussière",
+            "Divergence cachée baissière : prix lower high + RSI higher high = continuation baissière",
+            "Excellent pour entrer dans le sens de la tendance sur les pullbacks",
+            "Combiner avec Fibonacci et S/R pour haute qualité"
+          ]
+        },
+        {
+          "titre": "🎯 Système de Confluence",
+          "contenu": "La confluence est le principe de combiner plusieurs signaux indépendants pointant vers la même conclusion. Plus vous avez de confluences, plus la probabilité de succès est élevée.\n\nNiveau de confluence idéal : 3 à 5 facteurs alignés.\n\nExemples de facteurs de confluence :\n- Niveau de Fibonacci (61,8%)\n- Support/Résistance horizontal\n- Moyenne mobile clé (EMA 200)\n- Ligne de tendance\n- Kumo Ichimoku\n- Divergence RSI/MACD\n- Pattern de chandelier\n- Volume croissant\n\nExemple de trade à haute confluence :\nLe prix corrige vers une zone où convergent : le retracement Fibonacci 61,8%, un ancien support devenu résistance (principe de polarité), et l'EMA 50. Le RSI montre une divergence cachée haussière. Un marteau apparaît sur cette zone avec du volume.\n\nCette accumulation de 5 confluences donne un signal de très haute qualité. Le stop se place juste sous la zone de confluence et l'objectif est l'extension Fibonacci 161,8%.\n\nRègle : n'entrez jamais sur un seul signal. Exigez un minimum de 3 confluences pour chaque trade. La patience de ne prendre que les meilleurs setups est la marque des traders rentables.",
+          "points_cles": [
+            "Confluence = 3+ signaux indépendants alignés",
+            "Plus de confluences = plus haute probabilité de succès",
+            "Fibonacci + S/R + EMA + divergence = setup idéal",
+            "N'entrez jamais sur un seul signal, minimum 3 confluences"
+          ]
+        }
+      ],
+      "resume": "L'analyse technique avancée combine Fibonacci (Golden Zone 61,8%, extensions), Ichimoku (système complet avec le Kumo), les patterns harmoniques (entrées précises avec excellent R:R), l'analyse multi-timeframe (Triple Screen d'Elder) et les divergences cachées (continuation de tendance). Le système de confluence exige 3+ signaux alignés pour des trades à haute probabilité.",
+      "ressources_complementaires": [
+        "📖 Livre : 'Fibonacci Trading' de Carolyn Boroden",
+        "📖 Livre : 'Ichimoku Charts' de Nicole Elliott",
+        "🎥 Vidéo : 'Patterns harmoniques masterclass' - TradingView YouTube",
+        "📖 Livre : 'Trading for a Living' d'Alexander Elder (Triple Screen)"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Qu'est-ce que la Golden Zone de Fibonacci ?",
+        "options": [
+          "Le niveau 23,6%",
+          "La zone 61,8% - 65%",
+          "Le niveau 100%",
+          "La zone 38,2% - 50%"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La Golden Zone (61,8-65%) est la zone de retracement la plus puissante. C'est là que les corrections trouvent le plus souvent un support."
+      },
+      {
+        "question": "Dans Ichimoku, que signifie un prix au-dessus du Kumo ?",
+        "options": [
+          "Tendance baissière",
+          "Zone d'indécision",
+          "Tendance haussière",
+          "Signal de vente"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le Kumo (nuage) est la référence centrale d'Ichimoku. Prix au-dessus = haussier, en dessous = baissier, dedans = indécision."
+      },
+      {
+        "question": "Quel pattern harmonique a son point D à 78,6% de XA ?",
+        "options": [
+          "ABCD",
+          "Gartley",
+          "Butterfly",
+          "Crab"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Gartley est défini par un point D situé au retracement de 78,6% du mouvement XA initial."
+      },
+      {
+        "question": "Dans le Triple Screen d'Elder, quel timeframe donne la tendance ?",
+        "options": [
+          "Le plus court",
+          "Le timeframe supérieur",
+          "Le timeframe intermédiaire",
+          "Tous les timeframes"
+        ],
+        "bonne_reponse": 1,
+        "explication": "L'écran 1 (timeframe supérieur) identifie la tendance de fond. On ne trade jamais contre cette tendance."
+      },
+      {
+        "question": "Qu'est-ce qu'une divergence cachée haussière ?",
+        "options": [
+          "Prix lower low + RSI higher low",
+          "Prix higher low + RSI lower low = continuation haussière",
+          "Prix higher high + RSI lower high",
+          "RSI > 70"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Divergence cachée haussière : le prix fait un creux plus haut mais le RSI fait un creux plus bas. Cela confirme la continuation de la tendance haussière."
+      },
+      {
+        "question": "Combien de confluences minimum faut-il exiger ?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "10"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Un minimum de 3 confluences indépendantes est recommandé pour entrer en position avec une bonne probabilité de succès."
+      },
+      {
+        "question": "Que signifie un TK Cross haussier dans Ichimoku ?",
+        "options": [
+          "Tenkan croise sous Kijun",
+          "Tenkan croise au-dessus de Kijun",
+          "Le prix casse le Kumo",
+          "Chikou croise le prix"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le TK Cross haussier se produit quand la Tenkan-sen croise au-dessus de la Kijun-sen. C'est un signal d'achat, particulièrement fort au-dessus du nuage."
+      },
+      {
+        "question": "L'extension Fibonacci 161,8% sert à :",
+        "options": [
+          "Identifier le stop loss",
+          "Calculer l'objectif de prix au-delà du mouvement initial",
+          "Mesurer le volume",
+          "Tracer les supports"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Les extensions Fibonacci (127,2%, 161,8%, 261,8%) projettent les objectifs de prix au-delà du mouvement impulsif initial."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Tracer Fibonacci sur 3 actifs",
+        "description": "Sur TradingView, identifiez 3 mouvements impulsifs récents. Tracez les niveaux Fibonacci et vérifiez si le prix a réagi sur la Golden Zone (61,8%). Notez les extensions atteintes."
+      },
+      {
+        "type": "simulation",
+        "titre": "Appliquer le Triple Screen",
+        "description": "Choisissez un actif et analysez-le avec le Triple Screen : Journalier (tendance), H4 (signal), H1 (entrée). Documentez chaque écran et identifiez un setup conforme."
+      }
+    ],
+    "duree": "75 min",
+    "difficulte": "avancé",
+    "prerequis": [
+      "module_2_2",
+      "module_2_4"
+    ]
+  },
+  {
+    "id": "module_3_2",
+    "parcours": "avance",
+    "titre": "📋 Les Produits Dérivés",
+    "description": "Comprenez les futures, options, CFD et leurs stratégies : Covered Call, Straddle, Iron Condor.",
+    "durée": "85 minutes",
+    "difficulté": "Avancé",
+    "points_xp": 240,
+    "prérequis": [
+      "module_2_6"
+    ],
+    "contenu": {
+      "introduction": "Les produits dérivés sont des instruments financiers dont la valeur dépend d'un actif sous-jacent. Ils permettent de spéculer avec levier, de se couvrir contre les risques, et de mettre en place des stratégies sophistiquées impossibles avec les actions seules. Cependant, leur complexité et leur effet de levier en font des instruments dangereux pour les non-initiés. Ce module vous donnera les connaissances nécessaires pour les comprendre et les utiliser judicieusement.",
+      "sections": [
+        {
+          "titre": "📜 Les Futures (Contrats à Terme)",
+          "contenu": "Un contrat future est un accord pour acheter ou vendre un actif à un prix et une date futurs prédéterminés. Contrairement aux options, l'obligation est ferme des deux côtés.\n\nCaractéristiques :\n- Contrats standardisés (taille, échéance, tick size)\n- Négociés sur des marchés réglementés (CME, Eurex)\n- Marge initiale : dépôt de garantie (5-15% de la valeur du contrat)\n- Marge de maintenance : si vos pertes creusent la marge, vous recevez un appel de marge\n- Mark-to-market : gains/pertes calculés quotidiennement\n\nContango et Backwardation :\n- Contango : prix future > prix spot. Situation normale, le coût de portage s'ajoute.\n- Backwardation : prix spot > prix future. Situation d'urgence (pénurie) ou forte demande immédiate.\n\nFutures perpétuels crypto : spécifiques aux crypto-marchés, sans date d'expiration. Le funding rate maintient le prix aligné avec le spot. Funding positif = les longs payent les shorts (marché trop haussier). Levier jusqu'à 125x sur certains exchanges (extrêmement dangereux).\n\nLiquidation : si votre marge tombe sous le seuil de maintenance, votre position est automatiquement fermée. Avec un levier 10x, une variation de 10% contre vous = liquidation totale.",
+          "points_cles": [
+            "Futures = obligation d'acheter/vendre à un prix et date fixés",
+            "Marge initiale 5-15%, appel de marge si pertes trop importantes",
+            "Contango = future > spot, Backwardation = spot > future",
+            "Perpetuals crypto : levier extrême, risque de liquidation"
+          ],
+          "exemple_pratique": {
+            "ticker": "ES",
+            "scenario": "Le future E-mini S&P 500 (ES) a une valeur de 50$ × index. Si le S&P est à 5 000, un contrat vaut 250 000$. Avec une marge de 12 000$ (levier ~20x), une baisse de 1% = perte de 2 500$, soit 20% de votre marge."
+          }
+        },
+        {
+          "titre": "📊 Les Options : Call, Put et les Greeks",
+          "contenu": "Une option donne le DROIT (pas l'obligation) d'acheter (Call) ou de vendre (Put) un actif à un prix fixé (strike) avant une date d'expiration.\n\nCall : droit d'acheter. Vous achetez un Call si vous pensez que le prix va monter. Gain potentiel illimité, perte limitée à la prime payée.\n\nPut : droit de vendre. Vous achetez un Put si vous pensez que le prix va baisser ou pour protéger une position.\n\nValeur d'une option :\n- Valeur intrinsèque : différence entre le prix du sous-jacent et le strike (si favorable). Option 'in the money'.\n- Valeur temps : prime supplémentaire qui décroît avec le temps. À l'expiration, seule la valeur intrinsèque reste.\n\nLes Greeks mesurent les sensibilités :\n- Delta (0 à 1 pour Call, -1 à 0 pour Put) : sensibilité au mouvement du sous-jacent. Delta 0,5 = l'option gagne 0,50$ pour chaque 1$ de hausse du sous-jacent.\n- Gamma : accélération du Delta. Plus fort quand l'option est 'at the money'.\n- Theta : décroissance temporelle. Votre option perd de la valeur chaque jour qui passe. Theta est l'ennemi de l'acheteur et l'ami du vendeur.\n- Vega : sensibilité à la volatilité. Hausse de volatilité = hausse de la prime de l'option.",
+          "points_cles": [
+            "Call = droit d'acheter, Put = droit de vendre",
+            "Valeur = intrinsèque + valeur temps (décroît vers l'expiration)",
+            "Delta = sensibilité au sous-jacent, Theta = décroissance temporelle",
+            "Acheter une option = perte limitée (prime), gain potentiel élevé"
+          ]
+        },
+        {
+          "titre": "🎯 Stratégies d'Options",
+          "contenu": "Les options permettent des stratégies impossibles avec les actions seules.\n\nCovered Call : vous détenez 100 actions et vendez un Call au-dessus du prix actuel. Vous encaissez la prime du Call. Si le prix reste sous le strike, vous gardez actions + prime. Si le prix dépasse le strike, vos actions sont vendues au strike (vous limitez votre gain mais avez la prime en bonus). Idéal pour générer des revenus sur des actions que vous détenez.\n\nProtective Put : vous détenez des actions et achetez un Put pour vous protéger contre une baisse. C'est une assurance : vous payez la prime du Put mais votre perte maximale est limitée. Comme une assurance voiture.\n\nStraddle : achat simultané d'un Call et d'un Put au même strike et même échéance. Vous pariez sur un mouvement fort, peu importe la direction. Profitable si le mouvement dépasse le coût des deux primes. Idéal avant les earnings ou annonces importantes.\n\nIron Condor : vente d'un Put spread + vente d'un Call spread. Vous pariez que le prix restera dans un range. Profit maximum = primes encaissées. Risque limité et défini. Stratégie de range avec une probabilité de succès souvent > 60%.",
+          "points_cles": [
+            "Covered Call : actions + vente Call = revenus supplémentaires",
+            "Protective Put : actions + achat Put = assurance contre la baisse",
+            "Straddle : Call + Put = parier sur la volatilité, direction inconnue",
+            "Iron Condor : parier que le prix reste en range, probabilité > 60%"
+          ],
+          "exemple_pratique": {
+            "ticker": "AAPL",
+            "scenario": "Apple cote 180$. Vous détenez 100 actions. Vous vendez un Call strike 190$ expirant dans 30 jours pour 3$. Vous encaissez 300$. Si Apple reste sous 190$, vous gardez les actions ET les 300$. Si Apple dépasse 190$, vos actions sont vendues à 190$ (gain de 10$/action + 3$ de prime)."
+          }
+        },
+        {
+          "titre": "📈 Les CFD (Contracts for Difference)",
+          "contenu": "Un CFD est un contrat entre vous et votre broker pour échanger la différence de prix entre l'ouverture et la fermeture de la position. Vous ne possédez jamais l'actif sous-jacent.\n\nAvantages :\n- Accès à de nombreux marchés (actions, indices, Forex, crypto, matières premières)\n- Vente à découvert facile\n- Levier jusqu'à 30:1 en Europe pour les particuliers (régulation ESMA)\n- Pas de date d'expiration\n\nInconvénients :\n- Frais overnight (swap) : si vous gardez une position du jour au lendemain, vous payez des intérêts. Sur un an, ces frais peuvent être significatifs.\n- Risque de contrepartie : vous dépendez de votre broker (pas de marché central)\n- Le levier amplifie les pertes autant que les gains\n- Interdit dans certains pays (USA)\n\nEn Europe, la régulation ESMA impose : levier max 30:1 pour le Forex, 20:1 pour les indices, 10:1 pour les matières premières, 5:1 pour les actions, 2:1 pour les crypto. Ces limites protègent les particuliers.\n\nStatistique importante : 70-80% des comptes de particuliers perdent de l'argent avec les CFD. C'est la mention légale obligatoire chez tous les brokers CFD.",
+          "points_cles": [
+            "CFD = échange de différence de prix, pas de possession de l'actif",
+            "Levier max en Europe (ESMA) : 30:1 Forex, 5:1 actions, 2:1 crypto",
+            "Frais overnight significatifs sur les positions gardées longtemps",
+            "70-80% des particuliers perdent de l'argent avec les CFD"
+          ]
+        },
+        {
+          "titre": "⚠️ Risques des Produits Dérivés",
+          "contenu": "Les dérivés sont des outils puissants mais dangereux. Comprendre les risques est indispensable.\n\nLevier amplificateur : un levier de 10x signifie que vos gains ET vos pertes sont multipliés par 10. Un mouvement de 5% contre vous = perte de 50% de votre capital engagé.\n\nAppel de marge : si vos pertes dépassent votre marge de maintenance, le broker exige un dépôt supplémentaire immédiat. Si vous ne pouvez pas payer, votre position est liquidée, souvent au pire moment.\n\nLiquidation : votre position est fermée automatiquement quand votre marge est insuffisante. En crypto avec levier 50x, une variation de 2% peut vous liquider.\n\nComplexité : les options et futures nécessitent une compréhension approfondie. Trader des produits que vous ne comprenez pas est le chemin le plus rapide vers la ruine.\n\nConseils de prudence :\n1. N'utilisez jamais plus de 5:1 de levier en tant que débutant\n2. Comprenez parfaitement le produit avant de l'utiliser\n3. Commencez en paper trading\n4. Ne risquez jamais plus de 1-2% du capital par trade, même avec le levier\n5. Les futures perpétuels crypto à levier élevé sont les instruments les plus dangereux du marché",
+          "points_cles": [
+            "Levier 10x = gains ET pertes ×10",
+            "Appel de marge = dépôt supplémentaire obligatoire",
+            "Ne jamais dépasser 5:1 de levier pour un débutant",
+            "Comprendre parfaitement le produit avant de l'utiliser"
+          ]
+        }
+      ],
+      "resume": "Les produits dérivés (futures, options, CFD) offrent levier, couverture et stratégies avancées. Les futures sont des obligations à terme avec marge. Les options donnent des droits (Call/Put) avec des Greeks. Les stratégies options (Covered Call, Straddle, Iron Condor) permettent des approches sophistiquées. Les CFD offrent du levier accessible mais 70-80% des particuliers y perdent de l'argent. Prudence absolue avec le levier.",
+      "ressources_complementaires": [
+        "📖 Livre : 'Options, Futures, and Other Derivatives' de John Hull",
+        "📖 Livre : 'Option Volatility and Pricing' de Sheldon Natenberg",
+        "🎥 Vidéo : 'Options pour les nuls' - Saxo Banque YouTube",
+        "🌐 Site : OptionStrat.com - visualisation de stratégies options"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quelle est la différence entre un future et une option ?",
+        "options": [
+          "Aucune",
+          "Le future est une obligation, l'option est un droit",
+          "L'option est plus risquée",
+          "Le future n'a pas de levier"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Un future est une obligation ferme d'acheter/vendre. Une option donne le droit (pas l'obligation). L'acheteur d'option ne peut perdre que sa prime."
+      },
+      {
+        "question": "Que mesure le Delta d'une option ?",
+        "options": [
+          "Le temps restant",
+          "La sensibilité au mouvement du sous-jacent",
+          "La volatilité",
+          "Le volume"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Delta mesure combien l'option gagne/perd pour chaque dollar de mouvement du sous-jacent. Delta 0,5 = gain de 0,50$ pour +1$ du sous-jacent."
+      },
+      {
+        "question": "Qu'est-ce que le Theta ?",
+        "options": [
+          "La sensibilité au prix",
+          "La décroissance temporelle de la valeur de l'option",
+          "Le levier de l'option",
+          "La marge requise"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Theta mesure combien l'option perd de valeur chaque jour qui passe. C'est l'ennemi de l'acheteur et l'ami du vendeur d'options."
+      },
+      {
+        "question": "Quelle stratégie parier sur un grand mouvement sans connaître la direction ?",
+        "options": [
+          "Covered Call",
+          "Iron Condor",
+          "Straddle",
+          "Protective Put"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le Straddle (achat Call + Put même strike) profite d'un mouvement fort, peu importe la direction. Idéal avant les annonces."
+      },
+      {
+        "question": "Qu'est-ce que le contango ?",
+        "options": [
+          "Prix spot > future",
+          "Prix future > prix spot",
+          "Le prix est stable",
+          "Un type d'option"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le contango est la situation normale où le prix future est supérieur au prix spot, car il inclut le coût de portage."
+      },
+      {
+        "question": "Quel levier maximum l'ESMA autorise pour les CFD sur actions ?",
+        "options": [
+          "30:1",
+          "20:1",
+          "5:1",
+          "2:1"
+        ],
+        "bonne_reponse": 2,
+        "explication": "L'ESMA limite le levier CFD pour les particuliers en Europe : 30:1 Forex, 20:1 indices, 10:1 matières premières, 5:1 actions, 2:1 crypto."
+      },
+      {
+        "question": "Qu'est-ce qu'un Covered Call ?",
+        "options": [
+          "Acheter un Call seul",
+          "Détenir des actions + vendre un Call pour générer des revenus",
+          "Acheter un Put pour se protéger",
+          "Vendre à découvert"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Covered Call consiste à détenir 100 actions et à vendre un Call au-dessus du prix actuel. La prime encaissée génère un revenu supplémentaire."
+      },
+      {
+        "question": "Qu'est-ce que le funding rate des perpetuals ?",
+        "options": [
+          "Les frais du broker",
+          "Un mécanisme qui aligne le prix du perpétuel avec le spot",
+          "Le taux d'intérêt de la banque centrale",
+          "Le spread"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le funding rate est un paiement périodique entre longs et shorts qui maintient le prix du perpetual aligné avec le spot. Positif = les longs paient."
+      },
+      {
+        "question": "Quel pourcentage de particuliers perdent de l'argent avec les CFD ?",
+        "options": [
+          "10-20%",
+          "30-40%",
+          "50-60%",
+          "70-80%"
+        ],
+        "bonne_reponse": 3,
+        "explication": "Selon les données des brokers européens, 70 à 80% des comptes de particuliers perdent de l'argent avec les CFD."
+      },
+      {
+        "question": "Avec un levier 50x, quelle variation suffit pour une liquidation ?",
+        "options": [
+          "10%",
+          "5%",
+          "2%",
+          "0,5%"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Avec un levier 50x, une variation de 2% contre votre position (100%/50 = 2%) suffit pour perdre la totalité de votre marge et être liquidé."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "simulation",
+        "titre": "Simuler des stratégies options",
+        "description": "Sur OptionStrat.com, construisez un Covered Call, un Straddle et un Iron Condor sur Apple. Observez le profil de gains/pertes de chaque stratégie selon le prix à l'expiration."
+      },
+      {
+        "type": "pratique",
+        "titre": "Calculer l'impact du levier",
+        "description": "Capital de 1 000€. Calculez votre P&L avec un levier 1x, 5x, 10x et 50x si le sous-jacent bouge de +5% et -5%. À quel levier êtes-vous liquidé avec -5% ?"
+      }
+    ],
+    "duree": "80 min",
+    "difficulte": "avancé",
+    "prerequis": [
+      "module_2_6"
+    ]
+  },
+  {
+    "id": "module_3_3",
+    "parcours": "avance",
+    "titre": "💎 Money Management Avancé",
+    "description": "Maîtrisez le critère de Kelly, le scaling, la gestion du drawdown et l'espérance mathématique.",
+    "durée": "75 minutes",
+    "difficulté": "Avancé",
+    "points_xp": 220,
+    "prérequis": [
+      "module_2_6"
+    ],
+    "contenu": {
+      "introduction": "Le money management avancé est ce qui transforme un trader profitable en trader durablement profitable. Même avec un excellent système, une mauvaise gestion du risque peut mener à la ruine. Ce module vous enseignera les concepts mathématiques et pratiques qui protègent votre capital tout en maximisant votre croissance : le critère de Kelly, la gestion des corrélations, le scaling, la gestion du drawdown et l'espérance mathématique.",
+      "sections": [
+        {
+          "titre": "📐 Le Critère de Kelly",
+          "contenu": "Le critère de Kelly est une formule mathématique qui détermine la taille optimale de position pour maximiser la croissance du capital à long terme.\n\nFormule : f* = (p × b - q) / b\nOù : p = probabilité de gain, q = probabilité de perte (1-p), b = ratio gain moyen / perte moyenne\n\nExemple : votre système a un winrate de 55% (p=0,55), un gain moyen de 200$ et une perte moyenne de 100$ (b=2).\nf* = (0,55 × 2 - 0,45) / 2 = 0,65/2 = 0,325 soit 32,5% du capital\n\nATTENTION : le Kelly pur est trop agressif en pratique. Il suppose des probabilités exactes (ce qui n'est jamais le cas en trading) et génère une volatilité insoutenable.\n\nSolution : le Kelly fractionnaire. Utilisez Kelly/2 (demi-Kelly) ou Kelly/4 (quart-Kelly). Avec notre exemple : demi-Kelly = 16,25%, quart-Kelly = 8,1%.\n\nLe demi-Kelly atteint 75% de la croissance du Kelly pur avec beaucoup moins de volatilité. C'est le compromis recommandé.\n\nEn pratique, la plupart des traders professionnels risquent 1-5% par trade, ce qui correspond souvent à un Kelly fractionnaire adapté à l'incertitude réelle de leurs statistiques.",
+          "points_cles": [
+            "Kelly = (p×b - q) / b, donne la taille optimale théorique",
+            "Kelly pur = trop agressif, toujours utiliser Kelly/2 ou Kelly/4",
+            "Demi-Kelly = 75% de la croissance avec beaucoup moins de volatilité",
+            "En pratique : 1-5% par trade = Kelly fractionnaire réaliste"
+          ],
+          "exemple_pratique": {
+            "ticker": "SPY",
+            "scenario": "Votre système sur le S&P 500 a un winrate de 52% et un ratio gain/perte de 1,8. Kelly = (0,52×1,8 - 0,48)/1,8 = 0,27, soit 27%. Demi-Kelly = 13,5%. Quart-Kelly = 6,75%. En pratique, vous risquez 2-3% par trade."
+          }
+        },
+        {
+          "titre": "🔗 Gestion des Corrélations",
+          "contenu": "Avoir 5 positions ouvertes ne diversifie pas si elles sont toutes corrélées. Si vous avez des longs sur Apple, Microsoft, Google, Amazon et Meta, vous avez en réalité UNE seule position sur le secteur tech US.\n\nLa corrélation mesure le degré de co-mouvement entre deux actifs :\n- Corrélation +1 : les actifs bougent exactement ensemble\n- Corrélation 0 : aucun lien\n- Corrélation -1 : les actifs bougent exactement en sens inverse\n\nErreur courante : 5 positions à 1% de risque chacune sur des actifs corrélés à 0,9 = un risque réel proche de 5%, pas 1%.\n\nComment gérer :\n- Construisez une matrice de corrélation de vos instruments\n- Réduisez la taille quand vous avez plusieurs positions corrélées\n- Diversifiez entre classes d'actifs (actions, obligations, crypto, matières premières)\n- Les corrélations changent : en période de crise, tout devient corrélé (flight to safety)\n\nLa diversification réelle nécessite des actifs faiblement corrélés ou inversement corrélés. L'or et les actions sont historiquement peu corrélés. Les obligations d'État et les actions ont une corrélation souvent négative.",
+          "points_cles": [
+            "5 positions corrélées = 1 seule grosse position en réalité",
+            "Corrélation +1 = même direction, -1 = direction opposée",
+            "En crise, les corrélations augmentent (tout baisse ensemble)",
+            "Diversification réelle = actifs faiblement corrélés"
+          ]
+        },
+        {
+          "titre": "📊 Scaling IN (Pyramiding) et OUT",
+          "contenu": "Le scaling permet d'entrer et sortir progressivement d'une position pour optimiser le prix moyen et protéger les profits.\n\nScaling IN (Pyramiding) : ajouter à une position gagnante. Règle absolue : la taille ajoutée doit être décroissante.\n- Entrée initiale : 50% de la taille prévue\n- Ajout 1 (si le trade confirme) : 30%\n- Ajout 2 (si toujours favorable) : 20%\n\nJamais ajouter à une position perdante (moyenner à la baisse). C'est le chemin le plus rapide vers la ruine.\n\nScaling OUT (Sorties partielles) : sécuriser les profits progressivement.\n- 33% à l'objectif 1 (1× le risque initial)\n- 33% à l'objectif 2 (2× le risque initial)\n- 34% restant avec trailing stop (laisser courir)\n\nAvantages : vous sécurisez des gains tout en gardant une exposition si le mouvement continue. Psychologiquement, c'est beaucoup plus confortable que le tout-ou-rien.\n\nAprès la première prise de profits, déplacez le stop loss au break-even. Le trade ne peut plus être perdant, ce qui réduit le stress et améliore la prise de décision.",
+          "points_cles": [
+            "Pyramiding : ajouter en taille DÉCROISSANTE sur position gagnante",
+            "JAMAIS moyenner à la baisse sur une position perdante",
+            "Sorties partielles : 33% / 33% / 34% trailing",
+            "Après 1er TP, stop au break-even = trade sans risque"
+          ]
+        },
+        {
+          "titre": "📉 Gestion du Drawdown",
+          "contenu": "Le drawdown est la baisse de votre capital depuis son dernier point haut. C'est la mesure la plus importante de la santé de votre trading.\n\nNiveaux acceptables par profil :\n- Conservateur : drawdown max 10%\n- Modéré : drawdown max 20%\n- Agressif : drawdown max 30%\n- Au-delà de 30% : danger critique\n\nMathématiquement, plus le drawdown est profond, plus il est difficile de récupérer :\n- Drawdown 10% → besoin de +11% pour récupérer\n- Drawdown 20% → besoin de +25%\n- Drawdown 50% → besoin de +100%\n- Drawdown 80% → besoin de +400%\n\nProtocole de gestion :\n- Drawdown de 5% : rester vigilant, vérifier les conditions de marché\n- Drawdown de 10% : réduire la taille des positions de 50%\n- Drawdown de 15% : stopper le trading pendant 2-3 jours, analyser le journal\n- Drawdown de 20% : pause prolongée (1-2 semaines), review complète de la stratégie\n\nAjustement dynamique : en période de drawdown, réduisez automatiquement votre risque par trade. Si votre capital passe de 10 000$ à 9 000$ (-10%), votre 1% de risque passe de 100$ à 90$ (risque basé sur le capital actuel, pas le capital initial).",
+          "points_cles": [
+            "Drawdown 50% = besoin de +100% pour récupérer",
+            "Drawdown max acceptable : 10% (conservateur) à 30% (agressif)",
+            "Réduire la taille de 50% après -10% de drawdown",
+            "Risquer % du capital ACTUEL, pas du capital initial"
+          ]
+        },
+        {
+          "titre": "🔥 Le Concept de Heat",
+          "contenu": "Le Heat mesure votre exposition totale au risque à un instant donné. C'est la somme de tous les risques de toutes vos positions ouvertes.\n\nRègle : le Heat total ne devrait jamais dépasser 6% de votre capital.\n\nExemple : vous avez 3 positions ouvertes, chacune risquant 2% du capital. Votre Heat = 6%. Si vous voulez ouvrir une 4ème position, vous devez soit fermer une position existante, soit réduire la taille de la nouvelle.\n\nPourquoi 6% ? Parce qu'un scénario catastrophe où TOUTES vos positions touchent leur stop loss simultanément ne devrait pas être dévastateur. Avec un Heat de 6%, le pire scénario est une perte de 6%, ce qui est gérable.\n\nGestion du Heat :\n- Chaque nouvelle position ajoute au Heat\n- Quand une position atteint le break-even, son Heat devient 0\n- Les profits partiels réduisent le Heat de la position\n- En période de drawdown, réduisez le Heat max à 4%\n\nLe Heat vous empêche d'être surexposé, ce qui est l'une des causes les plus fréquentes de drawdowns catastrophiques.",
+          "points_cles": [
+            "Heat = somme des risques de toutes les positions ouvertes",
+            "Heat max = 6% du capital (4% en période de drawdown)",
+            "Position au break-even = Heat de 0 pour cette position",
+            "Le Heat évite la surexposition, cause fréquente de ruine"
+          ]
+        },
+        {
+          "titre": "📊 Espérance Mathématique",
+          "contenu": "L'espérance mathématique (E) est le gain moyen par trade sur un grand nombre de trades. C'est LE chiffre le plus important de votre système.\n\nFormule : E = (Winrate × Gain moyen) - (Lossrate × Perte moyenne)\n\nExemple : Winrate 45%, gain moyen 300$, perte moyenne 150$.\nE = (0,45 × 300) - (0,55 × 150) = 135 - 82,50 = 52,50$ par trade\n\nInterprétation :\n- E > 0 : votre système est profitable à long terme. Continuez.\n- E = 0 : vous ne gagnez ni ne perdez (moins les frais = perte).\n- E < 0 : vous perdez de l'argent. Arrêtez et ajustez.\n\nUn système avec un winrate de seulement 35% peut être très profitable si le ratio gain/perte est de 3:1 ou plus. E = (0,35 × 3) - (0,65 × 1) = 1,05 - 0,65 = 0,40 par unité risquée.\n\nImportant : l'espérance ne se révèle que sur un grand nombre de trades. Minimum 100 trades pour des statistiques fiables. Sur 10 trades, le hasard domine.\n\nProfit Factor = Gains totaux / Pertes totales. C'est un raccourci de l'espérance. PF > 1,5 = bon système, PF > 2 = excellent.",
+          "points_cles": [
+            "E = (Winrate × Gain moyen) - (Lossrate × Perte moyenne)",
+            "E > 0 = système profitable, E < 0 = système perdant",
+            "Winrate de 35% peut être très profitable avec ratio R:R 3:1",
+            "Minimum 100 trades pour des statistiques fiables"
+          ]
+        }
+      ],
+      "resume": "Le money management avancé protège et fait croître votre capital. Le critère de Kelly donne la taille optimale (utilisez Kelly/2). Gérez les corrélations pour une vraie diversification. Le scaling IN (pyramiding décroissant) et OUT (sorties partielles 33/33/34) optimisent vos trades. Le drawdown max acceptable est de 20-30% avec réduction progressive. Le Heat (max 6%) contrôle l'exposition totale. L'espérance mathématique positive est non-négociable.",
+      "ressources_complementaires": [
+        "📖 Livre : 'The Mathematics of Money Management' de Ralph Vince",
+        "📖 Livre : 'Trade Your Way to Financial Freedom' de Van Tharp",
+        "🎥 Vidéo : 'Position sizing et Kelly criterion' - Chat With Traders",
+        "📊 Outil : EdgeWonk.com - calcul automatique des statistiques de trading"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Que donne la formule de Kelly ?",
+        "options": [
+          "Le prix d'entrée optimal",
+          "La taille de position optimale pour maximiser la croissance",
+          "Le stop loss idéal",
+          "Le take profit"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le critère de Kelly calcule la fraction optimale du capital à risquer pour maximiser la croissance à long terme."
+      },
+      {
+        "question": "Pourquoi utiliser Kelly/2 plutôt que Kelly pur ?",
+        "options": [
+          "Kelly/2 est plus rentable",
+          "Kelly pur est trop agressif et génère trop de volatilité",
+          "Kelly/2 est plus simple à calculer",
+          "Il n'y a aucune différence"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Kelly pur maximise la croissance mais avec une volatilité insoutenable. Kelly/2 atteint 75% de la croissance avec beaucoup moins de risque."
+      },
+      {
+        "question": "Qu'est-ce que le Heat ?",
+        "options": [
+          "La température du marché",
+          "La somme des risques de toutes les positions ouvertes",
+          "Le volume de trading",
+          "Le profit mensuel"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le Heat mesure votre exposition totale au risque. Il ne devrait jamais dépasser 6% du capital (4% en drawdown)."
+      },
+      {
+        "question": "Après un drawdown de 50%, quel gain faut-il pour récupérer ?",
+        "options": [
+          "+50%",
+          "+75%",
+          "+100%",
+          "+200%"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Après une perte de 50% (ex: de 10 000$ à 5 000$), il faut un gain de +100% pour revenir à 10 000$. Plus le drawdown est profond, plus la récupération est difficile."
+      },
+      {
+        "question": "Le pyramiding consiste à :",
+        "options": [
+          "Ajouter à une position perdante",
+          "Ajouter à une position gagnante en taille décroissante",
+          "Fermer toutes ses positions",
+          "Doubler sa position après une perte"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le pyramiding ajoute à une position gagnante avec des tailles décroissantes (50%, 30%, 20%). Jamais ajouter à un perdant."
+      },
+      {
+        "question": "Quelle est la formule de l'espérance mathématique ?",
+        "options": [
+          "Winrate × gain moyen",
+          "(Winrate × gain moyen) - (Lossrate × perte moyenne)",
+          "Gain total / nombre de trades",
+          "PER × ROE"
+        ],
+        "bonne_reponse": 1,
+        "explication": "E = (Winrate × Gain moyen) - (Lossrate × Perte moyenne). E doit être positive pour un système profitable."
+      },
+      {
+        "question": "Un système avec un winrate de 35% peut-il être profitable ?",
+        "options": [
+          "Non, il faut au moins 50%",
+          "Oui, si le ratio gain/perte est suffisamment élevé (ex: 3:1)",
+          "Non, c'est toujours perdant",
+          "Seulement avec un levier élevé"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Un winrate de 35% avec un ratio 3:1 donne E = 0,35×3 - 0,65×1 = 0,40 par unité risquée. C'est profitable."
+      },
+      {
+        "question": "Que faire après un drawdown de 10% ?",
+        "options": [
+          "Augmenter la taille pour récupérer vite",
+          "Réduire la taille des positions de 50%",
+          "Arrêter le trading définitivement",
+          "Changer de stratégie immédiatement"
+        ],
+        "bonne_reponse": 1,
+        "explication": "À -10% de drawdown, réduisez la taille de 50% pour protéger le capital. Analysez votre journal pour identifier la cause."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "pratique",
+        "titre": "Calculer votre Kelly",
+        "description": "Avec les stats de votre backtest : winrate et ratio gain/perte moyen, calculez votre Kelly pur, Kelly/2 et Kelly/4. Comparez avec le % de risque que vous utilisez actuellement."
+      },
+      {
+        "type": "simulation",
+        "titre": "Simuler un plan de scaling",
+        "description": "Sur votre prochain trade (paper ou réel), appliquez le scaling OUT : prenez 33% au 1er objectif, 33% au 2ème, et laissez 34% avec trailing stop. Notez le résultat comparé à une sortie en une seule fois."
+      }
+    ],
+    "duree": "70 min",
+    "difficulte": "avancé",
+    "prerequis": [
+      "module_2_6"
+    ]
+  },
+  {
+    "id": "module_3_4",
+    "parcours": "avance",
+    "titre": "DeFi - Concepts et Stratégies",
+    "description": "Comprendre l'écosystème de la finance décentralisée, les protocoles de lending, les AMM et les risques spécifiques à la DeFi.",
+    "duree": "70 min",
+    "difficulte": "avancé",
+    "points_xp": 220,
+    "prerequis": [
+      "module_2_5"
+    ],
+    "contenu": {
+      "introduction": "La Finance Décentralisée (DeFi) représente une révolution dans le monde financier. En éliminant les intermédiaires traditionnels grâce aux smart contracts sur blockchain, la DeFi offre des services financiers accessibles à tous : échanges, prêts, emprunts, assurances. Ce module te guide à travers les concepts fondamentaux et les stratégies pratiques pour naviguer dans cet écosystème en pleine expansion.",
+      "sections": [
+        {
+          "titre": "Introduction à la DeFi et son écosystème",
+          "contenu": "La DeFi (Decentralized Finance) désigne l'ensemble des services financiers construits sur des blockchains publiques, sans intermédiaires centralisés. Sa promesse repose sur cinq piliers : accès ouvert à tous sans KYC, transparence totale via du code open source, contrôle de ses propres fonds (non-custodial), interopérabilité entre protocoles et innovation rapide car permissionless. Contrairement à la finance traditionnelle où les horaires de marché sont limités et les virements prennent des jours, la DeFi fonctionne 24/7/365 avec des transactions en quelques secondes. L'écosystème se divise en plusieurs catégories : les DEX (Uniswap, Curve) pour les échanges, les protocoles de lending (Aave, Compound) pour le prêt et l'emprunt, les yield aggregators (Yearn, Beefy) pour optimiser les rendements, les protocoles de dérivés décentralisés (dYdX, GMX), les stablecoins décentralisés (DAI, FRAX) et le liquid staking (Lido, Rocket Pool). La métrique clé pour évaluer un protocole est la TVL (Total Value Locked), équivalent des actifs sous gestion en finance traditionnelle, suivie sur DefiLlama.",
+          "points_cles": [
+            "DeFi = services financiers sur blockchain sans intermédiaires",
+            "Accès ouvert 24/7, transparent et non-custodial",
+            "Catégories principales : DEX, Lending, Yield, Dérivés, Stablecoins",
+            "TVL = métrique clé pour évaluer un protocole"
+          ],
+          "exemple_pratique": {
+            "ticker": "DeFi",
+            "scenario": "Compare un virement bancaire classique (3 jours, frais 15€, horaires limités) avec un transfert USDC sur Ethereum (quelques minutes, frais variables, 24/7). La DeFi élimine les intermédiaires mais ajoute le risque technologique."
+          }
+        },
+        {
+          "titre": "Les DEX et les AMM (Automated Market Makers)",
+          "contenu": "Un AMM (Automated Market Maker) est un protocole qui permet d'échanger des tokens sans carnet d'ordres traditionnel. Les utilisateurs déposent des tokens dans des pools de liquidité, et un algorithme détermine le prix en fonction des quantités disponibles. La formule fondamentale d'Uniswap v2 est x × y = k, où x et y sont les quantités des deux tokens et k est une constante. Exemple : un pool contient 100 ETH et 200 000 USDC (k = 20 000 000). Si tu achètes 10 ETH, il reste 90 ETH, donc le pool doit contenir 222 222 USDC pour maintenir k. Tu paies 22 222 USDC au lieu de 20 000 au prix initial — c'est le slippage. Les LP (Liquidity Providers) déposent des tokens dans les pools et reçoivent des LP tokens représentant leur part. Ils gagnent une portion des frais de trading (typiquement 0,3%) mais s'exposent à l'Impermanent Loss. Les principaux DEX incluent Uniswap (le plus grand, référence sur Ethereum), Curve (spécialisé stablecoins avec faible slippage), PancakeSwap (leader sur BNB Chain) et Balancer (pools multi-tokens).",
+          "points_cles": [
+            "AMM = échange sans carnet d'ordres via algorithme",
+            "Formule x × y = k détermine les prix automatiquement",
+            "Plus l'ordre est gros, plus le slippage est important",
+            "Les LP gagnent des frais mais risquent l'Impermanent Loss"
+          ],
+          "exemple_pratique": {
+            "ticker": "UNI",
+            "scenario": "Pool ETH/USDC de 100 ETH et 200 000 USDC. Prix initial = 2 000 USDC/ETH. L'achat de 10 ETH coûte 22 222 USDC soit 2 222/ETH — un slippage de 11%. Pour réduire le slippage, utilise des pools avec plus de liquidité ou fractionne ton ordre."
+          }
+        },
+        {
+          "titre": "L'Impermanent Loss expliquée",
+          "contenu": "L'Impermanent Loss (IL) est la perte de valeur subie par un fournisseur de liquidité par rapport au fait de simplement détenir (HODL) ses tokens. Elle se produit quand le ratio de prix des tokens dans le pool change. Prenons un exemple concret : tu déposes 1 ETH + 2 000 USDC dans un pool (valeur totale 4 000$). Si l'ETH double à 4 000$, en HODL tu aurais 6 000$ (1 ETH à 4 000$ + 2 000 USDC). Mais dans le pool, la formule x × y = k redistribue tes tokens : tu as environ 0,707 ETH + 2 828 USDC = 5 656$. L'IL est de 344$ soit 5,7%. Tableau de référence : +25% de variation = 0,6% d'IL, +50% = 2%, +100% = 5,7%, +200% = 13,4%, +300% = 20%. L'IL est symétrique — que le prix monte ou baisse, tu subis une perte. Pour la minimiser : choisis des pools stablecoins (USDC/USDT ont une IL quasi nulle), des paires corrélées (ETH/stETH), ou des pools à liquidité concentrée (Uniswap v3). L'objectif est que les frais gagnés compensent largement l'IL.",
+          "points_cles": [
+            "IL = perte vs HODL quand le ratio de prix change",
+            "Un doublement de prix cause environ 5,7% d'IL",
+            "L'IL est symétrique : hausse ou baisse causent une perte",
+            "Minimiser via pools stablecoins ou paires corrélées"
+          ]
+        },
+        {
+          "titre": "Lending et Borrowing décentralisé",
+          "contenu": "Les protocoles de lending permettent de prêter ses cryptos pour gagner des intérêts. En déposant des tokens (ex: USDC) sur Aave ou Compound, tu reçois des aTokens ou cTokens qui accumulent automatiquement les intérêts. Le retrait est possible à tout moment. Pour emprunter, tu dois fournir un collatéral (garantie). Exemple : tu déposes 10 000$ en ETH et peux emprunter jusqu'à 75% soit 7 500$ en stablecoins. Le ratio Loan-to-Value (LTV) mesure emprunt/collatéral. Chaque protocole a un seuil de liquidation (ex: 80%). Si ton ETH baisse et que le LTV dépasse ce seuil, une partie de ton collatéral est vendue avec pénalité. Le Health Factor indique la santé de ta position : HF = (Collatéral × Seuil) / Dette. Un HF > 2 est sûr, entre 1 et 1,5 c'est dangereux, et < 1 déclenche la liquidation. Les principaux protocoles sont Aave (le plus grand, multi-chain, flash loans), Compound (pionnier), MakerDAO (émetteur du stablecoin DAI) et Venus (sur BNB Chain).",
+          "points_cles": [
+            "Lending = prêter contre intérêts automatiques",
+            "Borrowing = emprunter contre collatéral surdimensionné",
+            "Health Factor > 2 = zone de sécurité",
+            "Liquidation si le collatéral baisse trop (LTV > seuil)"
+          ],
+          "exemple_pratique": {
+            "ticker": "AAVE",
+            "scenario": "Tu déposes 10 000$ d'ETH sur Aave et empruntes 5 000 USDC (LTV=50%, HF=1,6). L'ETH baisse de 20% → collatéral=8 000$, LTV=62,5%, HF=1,28. Encore sûr mais à surveiller. Si ETH baisse de 40% → collatéral=6 000$, LTV=83% → Liquidation !"
+          }
+        },
+        {
+          "titre": "Yield Farming et agrégateurs de rendement",
+          "contenu": "Le Yield Farming consiste à maximiser ses rendements en déplaçant ses fonds entre protocoles DeFi. Les sources de rendement sont multiples : frais de trading (LP), intérêts de lending, rewards en tokens de gouvernance et airdrops. Les stratégies de base incluent le simple staking (déposer sur un protocole de lending), le LP + Farm (fournir de la liquidité puis staker les LP tokens pour des rewards supplémentaires) et le leveraged yield farming (emprunter pour augmenter sa position, très risqué). Les yield aggregators comme Yearn Finance, Beefy Finance et Convex Finance automatisent cette optimisation : tu déposes tes tokens, le protocole les déploie sur les meilleures opportunités avec auto-composition des rewards. Distinction cruciale : APR (Annual Percentage Rate) = rendement sans composition, et APY (Annual Percentage Yield) = rendement avec composition. Un APR de 50% composé quotidiennement donne un APY de 64,8%. Attention aux APY affichés : ils peuvent être trompeurs si basés sur des rewards en tokens volatils dont le prix chute.",
+          "points_cles": [
+            "Yield Farming = optimiser rendements entre protocoles",
+            "Sources : frais LP, intérêts lending, rewards tokens",
+            "APY ≠ APR : la composition fait la différence",
+            "Les agrégateurs automatisent l'optimisation"
+          ]
+        },
+        {
+          "titre": "APY vs APR et évaluation des rendements",
+          "contenu": "Comprendre la différence entre APR et APY est essentiel pour évaluer les opportunités DeFi. L'APR est le rendement annuel simple sans composition. L'APY intègre la composition : APY = (1 + APR/n)^n - 1, où n est le nombre de périodes de composition par an. Avec un APR de 50% composé quotidiennement (n=365), l'APY réel est de 64,8%. Mais les rendements affichés en DeFi sont souvent trompeurs. Un pool affichant 200% APY distribue en réalité ses rewards dans un token volatile. Si ce token perd 80% de sa valeur, ton rendement réel est bien inférieur. Pour évaluer correctement : calcule le rendement en termes stables (USDC), vérifie la durabilité des incentives, compare avec le risque (smart contract, IL), et considère les frais de gas. Une règle simple : si un rendement semble trop beau pour être vrai, il l'est probablement. Les rendements durables en DeFi pour les stratégies conservatrices se situent entre 3-15% APY, au-delà il y a nécessairement un risque proportionnel.",
+          "points_cles": [
+            "APR = rendement simple, APY = avec composition",
+            "Formule : APY = (1 + APR/n)^n - 1",
+            "Toujours convertir en termes stables pour évaluer",
+            "Rendements durables conservateurs : 3-15% APY"
+          ]
+        },
+        {
+          "titre": "Risques spécifiques à la DeFi",
+          "contenu": "La DeFi présente des risques uniques qu'il faut comprendre et gérer. Le risque de smart contract est le plus fondamental : le code peut contenir des bugs. Les hacks majeurs l'illustrent — The DAO (60M$, 2016), Cream Finance (130M$, 2021), Ronin Bridge (625M$, 2022). Protection : utiliser des protocoles audités, vérifier l'ancienneté et la TVL, ne pas être early adopter sur les nouveaux protocoles. Le risque de liquidation concerne les emprunteurs : maintenir un Health Factor > 2 et monitorer sa position. Le risque d'oracle survient quand les services de prix (Chainlink, Pyth) sont manipulés, causant des liquidations injustes. Le risque de rug pull existe quand l'équipe disparaît avec les fonds — signes d'alerte : équipe anonyme, tokenomics déséquilibrés, liquidité non verrouillée, code non audité. Le risque réglementaire est croissant car la DeFi opère dans une zone grise légale. Matrice des risques : lending simple = risque moyen, rendement 2-8% ; LP stablecoins = faible IL, rendement 5-15% ; LP volatile = IL élevée, rendement 10-50% ; leveraged farming = tous risques élevés, rendement 50%+.",
+          "points_cles": [
+            "Smart contract : le risque fondamental — utiliser des protocoles audités",
+            "Liquidation : maintenir Health Factor > 2",
+            "Rug pull : vérifier équipe, audits, liquidité verrouillée",
+            "Plus le rendement est élevé, plus le risque est proportionnel"
+          ],
+          "exemple_pratique": {
+            "ticker": "DeFi",
+            "scenario": "Tu hésites entre Aave (lending USDC, 4% APY, audité, 10B+ TVL) et un nouveau protocole affichant 500% APY mais sans audit. Le choix rationnel est Aave : le rendement ajusté au risque est bien meilleur malgré un APY affiché inférieur."
+          }
+        }
+      ],
+      "resume": "La DeFi offre des services financiers sans intermédiaires via des smart contracts. Les AMM permettent l'échange sans carnet d'ordres avec la formule x×y=k. L'Impermanent Loss est le risque principal des LP. Le lending requiert un suivi du Health Factor. Les rendements élevés impliquent des risques proportionnels. Toujours vérifier audits et réputation avant d'investir.",
+      "ressources_complementaires": [
+        "DefiLlama - Suivi TVL et rendements",
+        "Aave Documentation officielle",
+        "Uniswap v3 Whitepaper",
+        "Revoke.cash - Révoquer les approbations de tokens"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Que signifie DeFi ?",
+        "options": [
+          "Digital Finance",
+          "Decentralized Finance",
+          "Derivative Finance",
+          "Distributed Finance"
+        ],
+        "bonne_reponse": 1,
+        "explication": "DeFi = Decentralized Finance, soit Finance Décentralisée, désignant les services financiers sur blockchain sans intermédiaires."
+      },
+      {
+        "question": "Dans la formule AMM x × y = k, que se passe-t-il quand tu achètes beaucoup de token X ?",
+        "options": [
+          "Le prix de X baisse",
+          "Le prix de X augmente (slippage)",
+          "Le prix reste constant",
+          "k change proportionnellement"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Plus tu achètes de X, moins il en reste dans le pool, ce qui fait monter son prix — c'est le slippage."
+      },
+      {
+        "question": "Quelle est l'Impermanent Loss approximative si le prix d'un token double ?",
+        "options": [
+          "0,6%",
+          "2%",
+          "5,7%",
+          "13,4%"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Un doublement de prix (2x) cause environ 5,7% d'Impermanent Loss pour un fournisseur de liquidité."
+      },
+      {
+        "question": "À quel Health Factor une position est-elle liquidée ?",
+        "options": [
+          "Inférieur à 2",
+          "Inférieur à 1,5",
+          "Inférieur à 1",
+          "Inférieur à 0,5"
+        ],
+        "bonne_reponse": 2,
+        "explication": "La liquidation se déclenche quand le Health Factor passe sous 1, ce qui signifie que la dette dépasse la valeur du collatéral ajusté."
+      },
+      {
+        "question": "Quelle est la différence entre APR et APY ?",
+        "options": [
+          "Aucune, ce sont des synonymes",
+          "APY inclut la composition des intérêts",
+          "APR est toujours plus élevé",
+          "APY ne s'applique qu'aux stablecoins"
+        ],
+        "bonne_reponse": 1,
+        "explication": "L'APY (Annual Percentage Yield) inclut l'effet de la composition des intérêts, contrairement à l'APR (Annual Percentage Rate) qui est le taux simple."
+      },
+      {
+        "question": "Quel est le principal risque d'un protocole DeFi ?",
+        "options": [
+          "Le risque de change",
+          "Le risque de smart contract",
+          "Le risque de taux d'intérêt",
+          "Le risque de marché uniquement"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le risque de smart contract (bugs dans le code) est le risque fondamental en DeFi, pouvant entraîner la perte totale des fonds."
+      },
+      {
+        "question": "Comment minimiser l'Impermanent Loss ?",
+        "options": [
+          "Utiliser un levier plus élevé",
+          "Choisir des pools de stablecoins ou paires corrélées",
+          "Ne fournir de la liquidité que pendant les week-ends",
+          "Augmenter la taille de sa position"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Les pools de stablecoins (USDC/USDT) ou de paires corrélées (ETH/stETH) minimisent l'IL car les prix divergent peu."
+      },
+      {
+        "question": "Que mesure la TVL (Total Value Locked) ?",
+        "options": [
+          "Le nombre d'utilisateurs",
+          "La valeur des actifs déposés dans un protocole",
+          "Le volume de trading quotidien",
+          "Le nombre de smart contracts"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La TVL mesure la valeur totale des actifs déposés dans un protocole DeFi, c'est l'équivalent des actifs sous gestion en finance traditionnelle."
+      },
+      {
+        "question": "Quel signe d'alerte suggère un possible rug pull ?",
+        "options": [
+          "Le protocole a plusieurs audits de firmes réputées",
+          "L'équipe est anonyme et la liquidité n'est pas verrouillée",
+          "La TVL est supérieure à 1 milliard",
+          "Le code est open source depuis plus d'un an"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Équipe anonyme + liquidité non verrouillée + absence d'audit sont les principaux signes d'alerte d'un potentiel rug pull."
+      },
+      {
+        "question": "Pour un profil conservateur en DeFi, quelle stratégie est la plus adaptée ?",
+        "options": [
+          "Leveraged yield farming sur nouveau protocole",
+          "Lending de stablecoins sur Aave (3-8% APY)",
+          "LP sur altcoins à petite capitalisation",
+          "Points farming sur protocoles en beta"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le lending de stablecoins sur des protocoles établis comme Aave offre un rendement de 3-8% avec un risque relativement faible (principalement smart contract)."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "simulation",
+        "titre": "Simulation de fourniture de liquidité",
+        "description": "Calcule l'Impermanent Loss et le rendement net pour un dépôt de 5 000$ dans un pool ETH/USDC si l'ETH passe de 2 000$ à 3 000$ (+50%), avec des frais de LP de 0,3% et un volume quotidien de 1M$ sur le pool."
+      },
+      {
+        "type": "pratique",
+        "titre": "Analyse de protocole DeFi",
+        "description": "Choisis un protocole de lending (Aave, Compound ou MakerDAO) et analyse : sa TVL, les taux de lending/borrowing actuels, les audits réalisés, et calcule le Health Factor pour un emprunt de 50% de ton collatéral."
+      },
+      {
+        "type": "auto-evaluation",
+        "titre": "Évaluation des risques DeFi",
+        "description": "Pour chaque stratégie DeFi (lending stablecoins, LP volatile, leveraged farming), liste les risques spécifiques, leur probabilité et leur impact potentiel. Détermine quel pourcentage de ton capital tu allouerais à chaque stratégie."
+      }
+    ]
+  },
+  {
+    "id": "module_3_5",
+    "parcours": "avance",
+    "titre": "Psychologie Avancée du Trading",
+    "description": "Maîtriser les biais cognitifs avancés, développer la discipline mentale du trader professionnel et gérer les périodes difficiles.",
+    "duree": "65 min",
+    "difficulte": "avancé",
+    "points_xp": 200,
+    "prerequis": [
+      "module_1_6",
+      "module_2_6"
+    ],
+    "contenu": {
+      "introduction": "La psychologie est souvent considérée comme le facteur le plus important du succès en trading. Même avec une stratégie rentable et une gestion du risque solide, les biais cognitifs et les émotions peuvent détruire tes performances. Ce module avancé va au-delà des bases pour explorer les biais subtils, les techniques de régulation émotionnelle et les routines des traders professionnels.",
+      "sections": [
+        {
+          "titre": "Les biais cognitifs avancés",
+          "contenu": "Au-delà des biais de base, plusieurs biais subtils affectent les traders expérimentés. Le biais d'attribution consiste à attribuer ses succès à ses compétences ('J'ai gagné grâce à mon analyse') et ses échecs à des facteurs externes ('J'ai perdu à cause de la manipulation'). Solution : documenter objectivement et analyser gains et pertes avec la même rigueur. Le biais de récence pousse à accorder plus d'importance aux événements récents — après 5 gains tu te sens invincible, après 5 pertes tu penses que ta stratégie ne marche plus. Solution : évaluer sur 50-100 trades minimum. L'effet de disposition est le biais le plus coûteux : vendre les gagnants trop tôt (pour sécuriser le gain) et garder les perdants trop longtemps (par espoir de retournement). Il combine aversion à la perte, recherche de certitude et espoir irrationnel. Le biais de surconfiance pousse à surestimer ses capacités de prédiction — les traders les plus confiants ont souvent les pires performances. Le biais du survivant fait que l'on voit les millionnaires du trading mais pas les 90% qui perdent.",
+          "points_cles": [
+            "Biais d'attribution : succès = compétence, échec = facteurs externes",
+            "Biais de récence : les derniers trades influencent trop tes décisions",
+            "Effet de disposition : vendre gagnants trop tôt, garder perdants trop longtemps",
+            "Biais de surconfiance : les plus confiants performent souvent le moins bien"
+          ],
+          "exemple_pratique": {
+            "ticker": "AAPL",
+            "scenario": "Tu achètes AAPL à 150$ et le cours monte à 160$. L'effet de disposition te pousse à vendre pour sécuriser +10$. Pourtant, ton plan visait 180$. En parallèle, une position sur META à -15$ que tu refuses de couper car 'ça va remonter'. Solution : automatise tes stops et targets."
+          }
+        },
+        {
+          "titre": "Les 5 vérités du trading (Mark Douglas)",
+          "contenu": "Mark Douglas, dans 'Trading in the Zone', identifie 5 vérités fondamentales que tout trader doit intégrer. Vérité 1 : Tout peut arriver. Les marchés sont imprévisibles et chaque instant est unique. Accepter l'incertitude est la première étape vers la sérénité. Vérité 2 : Tu n'as pas besoin de savoir ce qui va se passer pour gagner de l'argent. Le trading est un jeu de probabilités — focalise-toi sur le processus, pas sur la prédiction. Vérité 3 : Il y a une distribution aléatoire entre les gains et les pertes pour chaque série de trades. Tu ne peux pas savoir lequel sera gagnant, donc exécute chaque trade de la même façon disciplinée. Vérité 4 : Un edge n'est qu'une probabilité supérieure d'un résultat plutôt qu'un autre. Ton avantage ne garantit jamais le résultat d'un trade individuel, seulement la tendance sur un grand nombre. Vérité 5 : Chaque moment sur le marché est unique. Le passé ne prédit pas le futur. Un pattern identique peut donner un résultat différent. Ces vérités, une fois internalisées, éliminent l'anxiété car tu n'attends plus de résultat spécifique de chaque trade.",
+          "points_cles": [
+            "Tout peut arriver — accepter l'incertitude totale",
+            "Pas besoin de prédire pour gagner — focus sur le processus",
+            "Distribution aléatoire — exécuter chaque trade de la même façon",
+            "Un edge = probabilité, pas certitude"
+          ]
+        },
+        {
+          "titre": "Les émotions destructrices et leur gestion",
+          "contenu": "Quatre émotions principales détruisent les comptes de trading. La peur se manifeste par la paralysie (incapacité de prendre un trade valide) ou la sortie prématurée (couper un gagnant trop tôt). Solution : un plan de trading strict avec des règles mécaniques. L'avidité mène à l'overtrading (prendre trop de positions) et au risque excessif (trop de levier, positions trop grosses). Solution : des limites prédéfinies de trades par jour et de risque maximum. L'espoir est l'émotion qui fait déplacer les stop-loss ('si j'attends encore un peu') et maintient dans le déni face aux pertes. Solution : les stops ne se déplacent JAMAIS dans le sens de la perte. Le regret déclenche le revenge trading — après une perte, trader impulsivement pour 'se refaire'. C'est la spirale la plus destructrice. Solution : après une perte significative, prendre une pause obligatoire de 24h. Chaque émotion a un antidote comportemental : automatiser ce qui peut l'être, définir des règles avant de trader, et s'engager à les suivre inconditionnellement.",
+          "points_cles": [
+            "4 émotions destructrices : Peur, Avidité, Espoir, Regret",
+            "Peur → plan strict ; Avidité → limites prédéfinies",
+            "Espoir → stops non négociables ; Regret → pause obligatoire",
+            "Automatiser les décisions élimine l'influence émotionnelle"
+          ]
+        },
+        {
+          "titre": "Techniques de régulation mentale",
+          "contenu": "Les traders professionnels utilisent des techniques concrètes de régulation mentale. La respiration diaphragmatique (inspire 4s, retiens 4s, expire 6s, répète 5-10 fois) active le système nerveux parasympathique et réduit le stress en 2-3 minutes. Le détachement émotionnel consiste à se rappeler que 'ce n'est pas MON trade, c'est UN trade parmi des centaines'. Cette perspective statistique réduit l'attachement au résultat individuel. La visualisation positive (se visualiser en train de suivre son plan calmement, même face à une perte) programme le cerveau pour répondre de façon disciplinée. Le recadrage cognitif transforme les pensées négatives : au lieu de 'J'ai perdu 500€' → 'J'ai payé 500€ pour une information sur le marché'. La méditation de pleine conscience, même 10 minutes par jour, améliore la capacité à observer ses pensées sans y réagir impulsivement. Des études montrent que les traders qui méditent régulièrement ont une meilleure gestion du drawdown et prennent des décisions plus rationnelles sous pression.",
+          "points_cles": [
+            "Respiration 4-4-6 pour calmer le stress en 2-3 minutes",
+            "Détachement : chaque trade est UN parmi des centaines",
+            "Visualisation : programmer le cerveau pour la discipline",
+            "Méditation : 10 min/jour améliore les décisions sous pression"
+          ]
+        },
+        {
+          "titre": "Routine mentale du trader professionnel",
+          "contenu": "Les meilleurs traders ont des routines structurées qui les mettent dans l'état mental optimal. Routine pré-trading (30 min) : préparation physique (eau, étirements — 5 min), revue du plan et des règles (10 min), état du marché et analyse (10 min), préparation mentale avec respiration et visualisation (5 min). Routine post-trading : documenter chaque trade dans le journal (prix, raison, émotion), analyser si les règles ont été respectées, identifier les améliorations possibles, puis se détacher physiquement des écrans. Routine hebdomadaire (dimanche) : revue statistique des trades de la semaine (win rate, R moyen, expectancy), revue émotionnelle (quand ai-je dévié du plan et pourquoi), planification de la semaine suivante (niveaux clés, events économiques, objectifs). La routine crée des automatismes qui protègent contre les décisions impulsives. Un trader sans routine est comme un pilote sans checklist — les accidents arrivent quand on oublie les fondamentaux.",
+          "points_cles": [
+            "Routine pré-trading de 30 min : physique, plan, marché, mental",
+            "Post-trading : documenter, analyser, décompresser",
+            "Revue hebdomadaire : stats, émotions, planification",
+            "La routine = protection contre les décisions impulsives"
+          ],
+          "exemple_pratique": {
+            "ticker": "Trading",
+            "scenario": "Lundi matin : tu te lèves 30 min avant l'ouverture. Eau, étirements, relecture de tes 5 règles clés. Analyse des pré-marchés et news. 5 min de respiration. Tu es prêt. Vendredi soir : tu imprimes ton journal de la semaine, analyses 3 trades (1 bon, 1 mauvais, 1 breakeven) et notes tes 3 leçons."
+          }
+        },
+        {
+          "titre": "Gérer les périodes difficiles",
+          "contenu": "Les drawdowns et les losing streaks sont inévitables. Avec un win rate de 50%, 5 pertes consécutives sont statistiquement quasi-certaines sur 100 trades. Le protocole de gestion de drawdown en 5 étapes : STOP (arrêter de trader 24-48h), RESPIRE (exercices de respiration, activité physique, nature), ANALYSE (qu'est-ce qui s'est passé objectivement ? Problème de stratégie ou d'exécution ?), AJUSTE (réduire le risque, ne prendre que les meilleurs setups), REPRENDS (doucement, focus sur le processus pas les résultats). Ce qu'il ne faut JAMAIS faire pendant un drawdown : augmenter le risque pour se refaire, changer de stratégie impulsivement, faire du revenge trading, ou ignorer ses règles 'juste cette fois'. Les traders professionnels partagent des caractéristiques mentales communes : discipline absolue (les règles ne sont pas négociables), acceptation de l'incertitude, focus sur le processus plutôt que les résultats, détachement émotionnel, patience extrême pour les meilleures opportunités, et responsabilité totale de leurs résultats.",
+          "points_cles": [
+            "5 pertes consécutives sont normales avec 50% de win rate",
+            "Protocole drawdown : STOP → RESPIRE → ANALYSE → AJUSTE → REPRENDS",
+            "JAMAIS augmenter le risque pendant un drawdown",
+            "Les pros se concentrent sur le processus, pas les résultats"
+          ]
+        }
+      ],
+      "resume": "La psychologie avancée du trading repose sur la compréhension des biais cognitifs (attribution, récence, disposition, surconfiance), l'intégration des 5 vérités de Mark Douglas, la gestion des 4 émotions destructrices (peur, avidité, espoir, regret) et la mise en place de routines structurées. Les losing streaks sont normales et se gèrent avec le protocole STOP-RESPIRE-ANALYSE-AJUSTE-REPRENDS.",
+      "ressources_complementaires": [
+        "Trading in the Zone - Mark Douglas",
+        "The Psychology of Trading - Brett Steenbarger",
+        "Thinking Fast and Slow - Daniel Kahneman",
+        "Daily Trading Coach - Brett Steenbarger"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Qu'est-ce que l'effet de disposition ?",
+        "options": [
+          "Augmenter le risque après une perte",
+          "Vendre les gagnants trop tôt et garder les perdants trop longtemps",
+          "Suivre la tendance du marché",
+          "Changer de stratégie après chaque trade"
+        ],
+        "bonne_reponse": 1,
+        "explication": "L'effet de disposition est le biais qui pousse à vendre les positions gagnantes trop tôt (pour sécuriser le gain) et à conserver les perdantes trop longtemps (par espoir)."
+      },
+      {
+        "question": "Selon Mark Douglas, un edge en trading est :",
+        "options": [
+          "Une garantie de profit sur chaque trade",
+          "Une probabilité supérieure d'un résultat",
+          "Un indicateur technique infaillible",
+          "Une information privilégiée"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Vérité 4 de Mark Douglas : un edge n'est qu'une probabilité supérieure d'un résultat plutôt qu'un autre, jamais une certitude individuelle."
+      },
+      {
+        "question": "Quelle est la technique de respiration recommandée pour le trading ?",
+        "options": [
+          "Inspire 2s, expire 2s",
+          "Inspire 4s, retiens 4s, expire 6s",
+          "Inspire 10s, expire 10s",
+          "Respirer aussi vite que possible"
+        ],
+        "bonne_reponse": 1,
+        "explication": "La respiration 4-4-6 (inspire 4s, retiens 4s, expire 6s) active le système nerveux parasympathique et réduit le stress en 2-3 minutes."
+      },
+      {
+        "question": "Après une série de 5 pertes consécutives, que faire ?",
+        "options": [
+          "Doubler la taille des positions pour récupérer",
+          "Changer immédiatement de stratégie",
+          "Arrêter, analyser, réduire le risque et reprendre doucement",
+          "Trader en mode revenge pour se refaire"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Le protocole STOP-RESPIRE-ANALYSE-AJUSTE-REPRENDS est la réponse correcte. Jamais augmenter le risque ou faire du revenge trading."
+      },
+      {
+        "question": "Quelle émotion pousse à déplacer les stop-loss ?",
+        "options": [
+          "La peur",
+          "L'avidité",
+          "L'espoir",
+          "La colère"
+        ],
+        "bonne_reponse": 2,
+        "explication": "L'espoir est l'émotion qui fait déplacer les stops ('si j'attends encore un peu, ça va remonter') et maintient dans le déni face aux pertes."
+      },
+      {
+        "question": "Le biais de récence en trading, c'est :",
+        "options": [
+          "Trader uniquement les actifs récemment découverts",
+          "Accorder trop d'importance aux derniers trades",
+          "Préférer les stratégies les plus récentes",
+          "N'utiliser que les données les plus récentes"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le biais de récence pousse à accorder plus d'importance aux événements récents : après quelques gains on se croit invincible, après quelques pertes on doute de tout."
+      },
+      {
+        "question": "Avec un win rate de 50%, combien de trades minimum pour évaluer une stratégie ?",
+        "options": [
+          "5 trades",
+          "10 trades",
+          "50-100 trades",
+          "1000 trades"
+        ],
+        "bonne_reponse": 2,
+        "explication": "Un minimum de 50-100 trades est nécessaire pour évaluer statistiquement une stratégie. Sur 5 ou 10 trades, le hasard domine les résultats."
+      },
+      {
+        "question": "Quelle est la première étape de la routine pré-trading ?",
+        "options": [
+          "Ouvrir les graphiques",
+          "Vérifier les news",
+          "Préparation physique (eau, étirements)",
+          "Passer un premier trade"
+        ],
+        "bonne_reponse": 2,
+        "explication": "La routine commence par la préparation physique (eau, étirements, 5 min) avant de passer à la revue du plan, l'analyse du marché et la préparation mentale."
+      },
+      {
+        "question": "Qu'est-ce que le revenge trading ?",
+        "options": [
+          "Trader contre la tendance par conviction",
+          "Trader impulsivement après une perte pour se refaire",
+          "Shorter un actif qui t'a fait perdre",
+          "Copier les trades d'un rival"
+        ],
+        "bonne_reponse": 1,
+        "explication": "Le revenge trading est la réaction impulsive de trader après une perte pour 'se refaire', souvent avec un risque plus élevé. C'est la spirale la plus destructrice."
+      }
+    ],
+    "exercices": [
+      {
+        "type": "auto-evaluation",
+        "titre": "Journal émotionnel de trading",
+        "description": "Pendant 2 semaines, note pour chaque trade : l'émotion ressentie avant, pendant et après. Identifie tes 3 biais les plus fréquents et propose un plan d'action pour chacun."
+      },
+      {
+        "type": "pratique",
+        "titre": "Mise en place de ta routine",
+        "description": "Crée ta routine pré-trading personnalisée (30 min max) et post-trading (15 min). Inclus : préparation physique, mentale, analyse marché, documentation. Teste-la pendant 5 jours consécutifs."
+      },
+      {
+        "type": "simulation",
+        "titre": "Simulation de drawdown",
+        "description": "En paper trading, simule 10 trades consécutifs perdants (1% de risque chacun). Applique le protocole STOP-RESPIRE-ANALYSE-AJUSTE-REPRENDS. Note tes émotions à chaque étape et comment tu ajustes ton risque."
+      }
+    ]
+  }
+]
