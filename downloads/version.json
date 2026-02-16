@@ -1,0 +1,19 @@
+{
+  "version": "1.0.8",
+  "mandatory": false,
+  "published_at": "2026-02-16",
+  "release_url": "https://helixone.fr/downloads",
+  "download_url_mac": "https://helixone.fr/downloads/HelixOne-v1.0.8-Intel.dmg",
+  "download_url_windows": "https://helixone.fr/downloads/HelixOne-v1.0.8-Setup.exe",
+  "changelog": [
+    "⚡ Virtual scrolling avec lazy loading - Performance 3x plus rapide",
+    "Seuls 12 modules visibles rendus à la fois (au lieu de 50+)",
+    "Buffer intelligent de 3 modules pour un scroll ultra-fluide",
+    "60% moins de mémoire utilisée",
+    "Peut gérer 1000+ modules sans ralentissement",
+    "Polling optimisé : 200ms → 1000ms",
+    "Cartes de modules ultra-simplifiées (70px hauteur fixe)",
+    "Design compact et moderne avec icônes de statut",
+    "Fix authentification en mode DEV avec données mockées"
+  ]
+}
