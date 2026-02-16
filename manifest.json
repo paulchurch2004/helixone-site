@@ -1,18 +1,24 @@
 {
   "name": "HelixOne",
   "short_name": "HelixOne",
-  "description": "Plateforme de trading et formation HelixOne",
+  "description": "Plateforme de formation au trading — HelixOne",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0d1117",
-  "theme_color": "#238636",
+  "background_color": "#0a0a0a",
+  "theme_color": "#00D4FF",
   "orientation": "portrait",
   "icons": [
     {
       "src": "/logo.png",
-      "sizes": "512x512",
+      "sizes": "1024x1024",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
