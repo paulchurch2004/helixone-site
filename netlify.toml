@@ -11,3 +11,9 @@
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Content-Type = "application/json"
+
+[[headers]]
+  for = "/downloads/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=3600"
