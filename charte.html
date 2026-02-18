@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Charte d'Éthique, de Durabilité et de Responsabilité Algorithmique — HelixOne">
+  <meta name="author" content="HelixOne">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="stylesheet" href="style.css?v=20260216">
+  <title>HelixOne — Notre Charte</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%2300e0ff'/></svg>">
+
+  <style>
+    /* ===== CHARTE PAGE ===== */
+    .charte-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* Cover */
+    .charte-cover {
+      text-align: center;
+      padding: 80px 40px 64px;
+      background: linear-gradient(135deg, #0A1628 0%, #1a2744 50%, #0F172A 100%);
+      border-radius: 20px;
+      margin-bottom: 64px;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+    }
+    .charte-cover-brand {
+      letter-spacing: 12px;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #C9A84C;
+    }
+    .charte-cover-sub {
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #94A3B8;
+      margin-bottom: 28px;
+    }
+    .charte-cover-divider {
+      width: 60px;
+      height: 2px;
+      background: #C9A84C;
+      margin: 0 auto 28px;
+    }
+    .charte-cover-title {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #fff;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .charte-cover-line {
+      width: 200px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+      margin: 0 auto 24px;
+    }
+    .charte-cover-meta {
+      font-size: 13px;
+      color: #94A3B8;
+      line-height: 2;
+    }
+
+    /* Sections */
+    .charte-section {
+      margin-bottom: 56px;
+    }
+    .charte-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 48px 0;
+    }
+    .charte-h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #C9A84C;
+      margin-bottom: 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+    .charte-h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 32px 0 12px;
+    }
+    .charte-p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+    .charte-p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .charte-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+    .charte-ul li {
+      color: var(--text-muted);
+      padding: 6px 0 6px 20px;
+      position: relative;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .charte-ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #C9A84C;
+    }
+
+    /* Table */
+    .charte-table-wrap {
+      overflow-x: auto;
+      margin: 24px 0;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .charte-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .charte-table th {
+      background: rgba(201,168,76,0.12);
+      color: #C9A84C;
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      white-space: nowrap;
+    }
+    .charte-table td {
+      padding: 10px 16px;
+      color: var(--text-muted);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      vertical-align: top;
+    }
+    .charte-table tr:last-child td { border-bottom: none; }
+    .charte-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .charte-table td:last-child { color: var(--primary); font-weight: 500; }
+
+    /* Signature */
+    .charte-signature {
+      text-align: center;
+      padding: 56px 40px;
+      margin-top: 40px;
+    }
+    .charte-signature-city {
+      font-size: 12px;
+      color: #94A3B8;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+    }
+    .charte-signature-line {
+      width: 200px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+      margin: 0 auto 32px;
+    }
+    .charte-signature-card {
+      display: inline-block;
+      padding: 32px 56px;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(201,168,76,0.05) 0%, rgba(10,22,40,0.5) 100%);
+    }
+    .charte-signature-name {
+      font-family: 'Brush Script MT', 'Segoe Script', 'Apple Chancery', cursive;
+      font-size: 44px;
+      color: #fff;
+      margin-bottom: 4px;
+      letter-spacing: 2px;
+    }
+    .charte-signature-underline {
+      width: 180px;
+      height: 2px;
+      background: linear-gradient(90deg, #C9A84C, #E8D48B, #C9A84C);
+      margin: 0 auto 14px;
+    }
+    .charte-signature-role {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: #94A3B8;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .charte-signature-company {
+      font-size: 13px;
+      letter-spacing: 6px;
+      color: #C9A84C;
+      font-weight: 600;
+    }
+
+    /* Footer note */
+    .charte-footer-note {
+      text-align: center;
+      padding: 24px;
+      margin-top: 24px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .charte-footer-note p {
+      font-size: 11px;
+      color: #94A3B8;
+      letter-spacing: 1px;
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="main-app">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-helix">Helix</span><span class="logo-one">One</span>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-dropdown">
+            <a href="index.html#" class="nav-link nav-dropdown-toggle">Logiciel <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg></a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="index.html#features" class="nav-dropdown-link">Fonctionnalités</a></li>
+              <li><a href="index.html#formation" class="nav-dropdown-link">Formation</a></li>
+              <li><a href="index.html#screens" class="nav-dropdown-link">Aperçu</a></li>
+              <li><a href="index.html#reviews" class="nav-dropdown-link">Avis clients</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">À propos</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="charte.html" class="nav-link" style="color: var(--primary);">Charte</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="index.html#download" class="nav-cta">Télécharger</a>
+          <button class="nav-toggle" id="navToggle">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Charter Content -->
+    <section style="padding-top: 80px;">
+      <div class="charte-wrap">
+
+        <!-- Cover -->
+        <div class="charte-cover">
+          <div class="charte-cover-brand">HELIXONE</div>
+          <div class="charte-cover-sub">AI-POWERED QUANTITATIVE TRADING PLATFORM</div>
+          <div class="charte-cover-divider"></div>
+          <div class="charte-cover-title">
+            CHARTE D'ÉTHIQUE, DE DURABILITÉ<br>ET DE RESPONSABILITÉ ALGORITHMIQUE
+          </div>
+          <div class="charte-cover-line"></div>
+          <div class="charte-cover-meta">
+            Version 1.0 &nbsp;│&nbsp; 18 février 2026<br>
+            Document opposable à l'ensemble des parties prenantes
+          </div>
+        </div>
+
+        <!-- PRÉAMBULE -->
+        <div class="charte-section">
+          <h2 class="charte-h1">PRÉAMBULE</h2>
+          <h3 class="charte-h2">Qui sommes-nous</h3>
+          <p class="charte-p">HelixOne est une plateforme française de trading quantitatif propulsée par l'intelligence artificielle. Inspirée des architectures institutionnelles comme le système Aladdin de BlackRock, la plateforme intègre des moteurs d'analyse multi-dimensionnelle (FXI Engine), des algorithmes de machine learning et des modèles de calcul stochastique pour offrir une aide à la décision d'investissement.</p>
+          <p class="charte-p">HelixOne n'est pas un simple outil technique. C'est une plateforme qui touche directement aux marchés financiers, à l'épargne des individus, et à l'allocation des capitaux dans l'économie réelle. Cette position implique une responsabilité considérable, et c'est précisément ce qui motive la rédaction de cette charte.</p>
+          <h3 class="charte-h2">Pourquoi cette charte</h3>
+          <p class="charte-p">Le trading algorithmique connaît une croissance exponentielle. Il représente aujourd'hui plus de 70 % des volumes échangés sur les marchés actions aux États-Unis et une part croissante en Europe. Cette expansion s'accompagne de défis majeurs : risques de manipulation de marché, opacité des algorithmes, biais dans les modèles de machine learning, consommation énergétique des infrastructures de calcul, et impact systémique potentiel sur la stabilité financière.</p>
+          <p class="charte-p">La présente charte formalise les engagements d'HelixOne pour exercer son activité de manière éthique, transparente et durable. Elle constitue un document opposable à l'ensemble des parties prenantes.</p>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE I -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE I — VALEURS FONDAMENTALES</h2>
+          <p class="charte-p">HelixOne fonde son activité sur cinq valeurs cardinales qui guident chaque décision, chaque ligne de code, et chaque interaction avec nos parties prenantes.</p>
+          <p class="charte-p"><strong>Transparence algorithmique.</strong> Nos utilisateurs ont le droit de comprendre comment les décisions sont prises. On ne cache pas la logique derrière une boîte noire. Chaque signal généré par le FXI Engine est accompagné d'une explication des facteurs qui l'ont déclenché.</p>
+          <p class="charte-p"><strong>Intégrité financière.</strong> HelixOne s'interdit de faciliter, directement ou indirectement, toute forme de manipulation de marché, de délit d'initié, ou de pratique contraire à la règlementation financière en vigueur.</p>
+          <p class="charte-p"><strong>Responsabilité technologique.</strong> Le développement de nos algorithmes intègre systématiquement une évaluation des risques, des biais et des impacts potentiels. La performance ne justifie pas tout.</p>
+          <p class="charte-p"><strong>Sobriété numérique.</strong> On optimise en permanence l'efficience énergétique de nos infrastructures. Chaque calcul doit être justifié par sa valeur ajoutée.</p>
+          <p class="charte-p"><strong>Accessibilité.</strong> La finance quantitative a longtemps été réservée aux institutions. HelixOne ambitionne de démocratiser l'accès à des outils de qualité institutionnelle, tout en protégeant ses utilisateurs contre les risques qu'ils ne maîtrisent pas forcément.</p>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE II -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE II — CHAMP D'APPLICATION</h2>
+          <h3 class="charte-h2">II.1. Personnes concernées</h3>
+          <p class="charte-p">Cette charte s'applique à l'ensemble des personnes impliquées dans l'écosystème HelixOne : le fondateur et les futurs collaborateurs (salariés, stagiaires, freelances), les utilisateurs de la plateforme, les partenaires technologiques (hébergeurs, fournisseurs de données de marché, API tierces), les investisseurs et les conseillers.</p>
+          <h3 class="charte-h2">II.2. Périmètre technique</h3>
+          <p class="charte-p">La charte couvre l'intégralité de la stack technologique d'HelixOne : le FXI Engine et ses modules d'analyse, les algorithmes de machine learning (reinforcement learning, réseaux de neurones), les modèles de calcul stochastique et d'optimisation de portefeuille, les systèmes de gestion des risques (VaR, CVaR), l'infrastructure serveur et les bases de données, ainsi que les interfaces utilisateur (web, API).</p>
+          <h3 class="charte-h2">II.3. Opposabilité</h3>
+          <p class="charte-p">La charte est annexée aux conditions générales d'utilisation de la plateforme, aux contrats de travail et de prestation, et aux accords de partenariat technologique. Son acceptation constitue un préalable à toute relation avec HelixOne. Elle est publiée intégralement sur helixone.fr.</p>
+          <h3 class="charte-h2">II.4. Révision</h3>
+          <p class="charte-p">La charte est révisée au minimum une fois par an, ou immédiatement en cas d'évolution règlementaire majeure (AI Act, MiFID II, DORA). Les modifications sont communiquées aux parties prenantes 30 jours avant leur entrée en vigueur.</p>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE III -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE III — OBJECTIFS</h2>
+          <h3 class="charte-h2">III.1. Objectif général</h3>
+          <p class="charte-p">Cette charte vise à garantir que le développement, le déploiement et l'exploitation de la plateforme HelixOne respectent les plus hauts standards d'éthique, de transparence, de durabilité et de conformité règlementaire.</p>
+          <h3 class="charte-h2">III.2. Objectifs spécifiques</h3>
+          <p class="charte-p">HelixOne se fixe les objectifs concrets suivants :</p>
+          <ul class="charte-ul">
+            <li>Atteindre 100 % d'explicabilité sur les signaux de trading générés par le FXI Engine d'ici fin 2027</li>
+            <li>Réduire de 40 % la consommation énergétique par opération de calcul d'ici 2029</li>
+            <li>Obtenir la certification ISO 27001 pour la sécurité des données d'ici 2028</li>
+            <li>Zéro incident de manipulation de marché lié à nos algorithmes</li>
+            <li>Publier un rapport annuel de transparence algorithmique accessible au public</li>
+          </ul>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE IV -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE IV — ÉTHIQUE ALGORITHMIQUE ET TRANSPARENCE</h2>
+          <h3 class="charte-h2">IV.1. Explicabilité des décisions</h3>
+          <p class="charte-p">Chaque signal, score ou recommandation produit par HelixOne est accompagné d'une décomposition des facteurs contributifs. L'utilisateur peut consulter, pour chaque décision algorithmique, les variables d'entrée, leur pondération et la logique de décision appliquée. On ne se contente pas de dire « achetez » ou « vendez », on explique pourquoi.</p>
+          <h3 class="charte-h2">IV.2. Détection et correction des biais</h3>
+          <p class="charte-p">Les modèles de machine learning d'HelixOne font l'objet d'audits réguliers pour détecter les biais statistiques, les surapprentissages (overfitting) et les dérives de modèle (model drift). Un processus de backtesting systématique est appliqué avant tout déploiement en production. Si un biais est détecté, le modèle concerné est immédiatement désactivé le temps de la correction.</p>
+          <h3 class="charte-h2">IV.3. Garde-fous algorithmiques</h3>
+          <p class="charte-p">HelixOne intègre des mécanismes de sécurité à plusieurs niveaux :</p>
+          <ul class="charte-ul">
+            <li>Limites de position maximale par actif et par portefeuille</li>
+            <li>Circuit breakers suspendant automatiquement l'exécution en cas de volatilité anormale</li>
+            <li>Seuils de drawdown maximum au-delà desquels le système coupe les positions</li>
+            <li>Surveillance en temps réel des anomalies de comportement algorithmique</li>
+          </ul>
+          <h3 class="charte-h2">IV.4. Interdiction de manipulation</h3>
+          <p class="charte-p">Les algorithmes d'HelixOne sont conçus pour détecter et rejeter tout schéma de trading qui pourrait s'apparenter à de la manipulation de marché : spoofing, layering, wash trading, ou front-running. Cette interdiction est absolue et non-négociable.</p>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE V -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE V — GOUVERNANCE DES DONNÉES</h2>
+          <h3 class="charte-h2">V.1. Protection des données personnelles</h3>
+          <p class="charte-p">HelixOne traite des données de marché, des données de portefeuille et des données personnelles d'utilisateurs. L'ensemble de ces traitements est conforme au RGPD. Les données personnelles sont chiffrées au repos et en transit (AES-256, TLS 1.3). Aucune donnée personnelle n'est revendue, partagée avec des tiers ou utilisée à des fins publicitaires.</p>
+          <h3 class="charte-h2">V.2. Données de marché</h3>
+          <p class="charte-p">Les données de marché utilisées par HelixOne proviennent exclusivement de sources licenciées et vérifiables. L'entreprise ne recourt à aucune méthode d'acquisition de données non autorisée.</p>
+          <h3 class="charte-h2">V.3. Conservation et suppression</h3>
+          <p class="charte-p">Les données utilisateurs sont conservées uniquement pour la durée nécessaire à la fourniture du service. L'utilisateur peut à tout moment demander l'export ou la suppression complète de ses données. Les demandes de suppression sont traitées sous 72 heures maximum.</p>
+          <h3 class="charte-h2">V.4. Sécurité</h3>
+          <p class="charte-p">L'infrastructure d'HelixOne fait l'objet de tests de pénétration annuels, d'une surveillance continue des vulnérabilités, et d'un plan de continuité d'activité documenté. Les accès aux systèmes de production sont restreints par authentification multi-facteur et journalisés.</p>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE VI -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE VI — DURABILITÉ ENVIRONNEMENTALE</h2>
+          <h3 class="charte-h2">VI.1. Empreinte énergétique</h3>
+          <p class="charte-p">Le machine learning et le trading haute fréquence sont gourmands en ressources de calcul. HelixOne s'engage à mesurer et publier annuellement l'empreinte carbone de son infrastructure. L'objectif est de réduire la consommation énergétique par opération de 40 % d'ici 2029, notamment par l'optimisation du code, le choix d'hébergeurs alimentant leurs datacenters en énergie renouvelable, et la rationalisation des pipelines de calcul.</p>
+          <h3 class="charte-h2">VI.2. Sobriété computationnelle</h3>
+          <p class="charte-p">Chaque nouveau modèle ou feature déployé en production fait l'objet d'une évaluation de son coût énergétique marginal. Si le gain de performance ne justifie pas la consommation additionnelle, le déploiement est reporté jusqu'à optimisation.</p>
+          <h3 class="charte-h2">VI.3. Choix d'infrastructure</h3>
+          <p class="charte-p">HelixOne privilégie les fournisseurs cloud qui proposent des datacenters alimentés en énergies renouvelables et qui publient des engagements climatiques vérifiés. Le choix de l'hébergeur intègre un critère environnemental pondéré à 30 % dans la grille de sélection.</p>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE VII -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE VII — RESPONSABILITÉ FINANCIÈRE ET SOCIALE</h2>
+          <h3 class="charte-h2">VII.1. Protection des utilisateurs</h3>
+          <p class="charte-p">HelixOne est un outil d'aide à la décision, pas un conseil en investissement. La plateforme affiche systématiquement des avertissements sur les risques liés au trading. Les utilisateurs débutants sont orientés vers des modules pédagogiques avant de pouvoir activer les fonctionnalités avancées. On refuse catégoriquement de gamifier le trading ou d'utiliser des mécanismes addictifs.</p>
+          <h3 class="charte-h2">VII.2. Lutte contre l'utilisation abusive</h3>
+          <p class="charte-p">HelixOne surveille activement les patterns d'utilisation susceptibles de relever du blanchiment d'argent, du financement illicite ou de la fraude. La plateforme se conforme aux obligations KYC (Know Your Customer) et AML (Anti-Money Laundering) applicables. Tout comportement suspect est signalé aux autorités compétentes.</p>
+          <h3 class="charte-h2">VII.3. Impact systémique</h3>
+          <p class="charte-p">HelixOne est consciente que le trading algorithmique peut avoir un impact sur la stabilité des marchés. L'entreprise s'engage à concevoir ses algorithmes de manière à ne pas amplifier la volatilité ni contribuer à des mouvements de marché irrationnels. Les stratégies procycliques excessives sont exclues par design.</p>
+          <h3 class="charte-h2">VII.4. Finance responsable</h3>
+          <p class="charte-p">HelixOne intègre dans ses modèles d'analyse la possibilité de filtrer les actifs selon des critères ESG (Environnement, Social, Gouvernance). Les utilisateurs qui le souhaitent peuvent exclure certains secteurs (armement, énergies fossiles, tabac) de leur univers d'investissement.</p>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE VIII -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE VIII — RESPONSABILITÉS DES PARTIES PRENANTES</h2>
+          <h3 class="charte-h2">VIII.1. Le fondateur et les collaborateurs</h3>
+          <p class="charte-p">Chaque personne travaillant pour HelixOne est tenue de connaître et d'appliquer cette charte. Tout développement algorithmique doit passer par une revue éthique avant déploiement. Les collaborateurs sont encouragés à signaler toute pratique contraire aux principes de la charte, via un canal d'alerte confidentiel.</p>
+          <h3 class="charte-h2">VIII.2. Les utilisateurs</h3>
+          <p class="charte-p">Les utilisateurs s'engagent à utiliser la plateforme conformément à la législation applicable et aux présentes dispositions. L'utilisation d'HelixOne dans le but de manipuler les marchés ou de contourner des règlementations est strictement interdite et entraîne la suspension immédiate du compte.</p>
+          <h3 class="charte-h2">VIII.3. Les partenaires technologiques</h3>
+          <p class="charte-p">Les fournisseurs de données, hébergeurs et prestataires techniques doivent respecter des standards de sécurité équivalents à ceux d'HelixOne. Ils sont soumis à une évaluation annuelle portant sur la sécurité, la fiabilité et l'impact environnemental de leurs services.</p>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE IX — TABLE -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE IX — INDICATEURS DE PERFORMANCE</h2>
+          <p class="charte-p">HelixOne mesure ses engagements à travers les indicateurs suivants :</p>
+          <div class="charte-table-wrap">
+            <table class="charte-table">
+              <thead>
+                <tr>
+                  <th>Dimension</th>
+                  <th>Indicateur</th>
+                  <th>Objectif</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Éthique</td><td>Taux d'explicabilité des signaux</td><td>100 % d'ici 2027</td></tr>
+                <tr><td>Éthique</td><td>Incidents manipulation marché</td><td>Zéro tolérance</td></tr>
+                <tr><td>Éthique</td><td>Fréquence audits biais ML</td><td>Trimestriel</td></tr>
+                <tr><td>Données</td><td>Certification ISO 27001</td><td>D'ici 2028</td></tr>
+                <tr><td>Données</td><td>Délai suppression données</td><td>≤ 72h</td></tr>
+                <tr><td>Données</td><td>Tests de pénétration</td><td>Annuel</td></tr>
+                <tr><td>Environnement</td><td>Conso énergétique par opération</td><td>−40 % d'ici 2029</td></tr>
+                <tr><td>Environnement</td><td>% hébergement renouvelable</td><td>100 % d'ici 2028</td></tr>
+                <tr><td>Social</td><td>Utilisateurs formés aux risques</td><td>100 %</td></tr>
+                <tr><td>Social</td><td>Conformité KYC/AML</td><td>100 %</td></tr>
+                <tr><td>Gouvernance</td><td>Rapport transparence publié</td><td>Annuel</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE X -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE X — MÉCANISMES D'APPLICATION ET SANCTIONS</h2>
+          <h3 class="charte-h2">X.1. Gouvernance</h3>
+          <p class="charte-p">Un Comité d'Éthique Algorithmique est institué au sein d'HelixOne. Il est composé du fondateur, d'un expert technique indépendant et, à terme, d'un représentant des utilisateurs. Ce comité se réunit au moins une fois par trimestre pour examiner les incidents, valider les évolutions algorithmiques majeures, et s'assurer du respect de la charte.</p>
+          <h3 class="charte-h2">X.2. Audits</h3>
+          <p class="charte-p">Des audits internes de conformité sont menés chaque trimestre. Des audits externes sont réalisés annuellement par un organisme indépendant spécialisé dans la fintech et la conformité algorithmique. Les résultats sont synthétisés dans le rapport annuel de transparence.</p>
+          <h3 class="charte-h2">X.3. Canal d'alerte</h3>
+          <p class="charte-p">Un dispositif d'alerte confidentiel (whistleblowing) est accessible à toutes les parties prenantes. Les signalements sont traités sous dix jours ouvrables et font l'objet d'un suivi documenté. Aucune mesure de représailles ne peut être prise à l'encontre d'un lanceur d'alerte de bonne foi.</p>
+          <h3 class="charte-h2">X.4. Régime de sanctions</h3>
+          <p class="charte-p">Pour les <strong>collaborateurs</strong> : avertissement, mise à pied, ou rupture du contrat selon la gravité du manquement.</p>
+          <p class="charte-p">Pour les <strong>utilisateurs</strong> : avertissement, suspension temporaire ou fermeture définitive du compte. En cas de suspicion d'activité illégale, signalement aux autorités.</p>
+          <p class="charte-p">Pour les <strong>partenaires technologiques</strong> : mise en demeure de correction sous 30 jours, puis résiliation du partenariat si la non-conformité persiste.</p>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE XI -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE XI — AMÉLIORATION CONTINUE</h2>
+          <h3 class="charte-h2">XI.1. Veille règlementaire et technologique</h3>
+          <p class="charte-p">HelixOne assure une veille permanente sur les évolutions règlementaires (AI Act, MiFID II, DORA, RGPD), les avancées en matière d'IA responsable, et les meilleures pratiques du secteur fintech. Les résultats de cette veille alimentent la révision annuelle de la charte.</p>
+          <h3 class="charte-h2">XI.2. Recherche et développement</h3>
+          <p class="charte-p">Une part du budget R&D est spécifiquement allouée à l'amélioration de l'explicabilité des modèles, à la réduction de l'empreinte énergétique et au développement d'outils de détection des biais. L'objectif est que chaque mise à jour de la plateforme représente un progrès mesurable en matière d'éthique et de durabilité.</p>
+          <h3 class="charte-h2">XI.3. Retour utilisateurs</h3>
+          <p class="charte-p">HelixOne recueille régulièrement les retours de ses utilisateurs sur les enjeux de transparence, d'éthique et de pédagogie financière. Ces retours sont intégrés dans la feuille de route produit et dans la révision de la charte.</p>
+        </div>
+
+        <hr class="charte-divider">
+
+        <!-- ARTICLE XII -->
+        <div class="charte-section">
+          <h2 class="charte-h1">ARTICLE XII — DISPOSITIONS FINALES</h2>
+          <h3 class="charte-h2">XII.1. Entrée en vigueur</h3>
+          <p class="charte-p">La présente charte entre en vigueur à compter de sa date de signature.</p>
+          <h3 class="charte-h2">XII.2. Durée</h3>
+          <p class="charte-p">Elle est conclue pour une durée indéterminée et reste applicable jusqu'à sa révision ou son remplacement.</p>
+          <h3 class="charte-h2">XII.3. Diffusion</h3>
+          <p class="charte-p">La charte est publiée intégralement sur helixone.fr, intégrée aux CGU de la plateforme, et annexée à tous les contrats liant HelixOne à ses parties prenantes.</p>
+        </div>
+
+        <!-- Signature -->
+        <div class="charte-signature">
+          <div class="charte-signature-city">FAIT À BORDEAUX, LE 18 FÉVRIER 2026</div>
+          <div class="charte-signature-line"></div>
+          <div class="charte-signature-card">
+            <div class="charte-signature-name">Paul Church</div>
+            <div class="charte-signature-underline"></div>
+            <div class="charte-signature-role">Fondateur &amp; CEO</div>
+            <div class="charte-signature-company">HELIXONE</div>
+          </div>
+        </div>
+
+        <!-- Footer note -->
+        <div class="charte-footer-note">
+          <p>© 2026 HelixOne — Tous droits réservés</p>
+          <p>helixone.fr &nbsp;│&nbsp; paul.church@helixone.fr</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-helix">Helix</span><span class="logo-one">One</span>
+            </div>
+            <p class="footer-tagline">Plateforme de formation au trading</p>
+          </div>
+          <div class="footer-links">
+            <div class="link-group">
+              <h4>Produit</h4>
+              <a href="index.html#features">Fonctionnalités</a>
+              <a href="index.html#formation">Formation</a>
+              <a href="index.html#download">Télécharger</a>
+            </div>
+            <div class="link-group">
+              <h4>Pages</h4>
+              <a href="about.html">À propos</a>
+              <a href="faq.html">FAQ</a>
+              <a href="charte.html">Notre Charte</a>
+            </div>
+            <div class="link-group">
+              <h4>Support</h4>
+              <a href="mailto:paul.church@helixone.fr">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-socials">
+            <a href="https://instagram.com/helixonefxi" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+            </a>
+          </div>
+          <p>&copy; 2026 HelixOne. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('navMenu').classList.toggle('active');
+    });
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(r => r.forEach(reg => reg.unregister()));
+    }
+  </script>
+
+  <!-- WhatsApp Widget -->
+  <div class="whatsapp-widget">
+    <div class="whatsapp-popup" id="whatsappPopup">
+      <div class="whatsapp-popup-header">
+        <p class="whatsapp-popup-title">Posez-nous toutes<br>vos questions !</p>
+        <button class="whatsapp-popup-close" id="whatsappClose" aria-label="Fermer">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+      <div class="whatsapp-popup-contacts">
+        <a href="https://wa.me/33617975132" target="_blank" rel="noopener noreferrer" class="whatsapp-contact">
+          <div class="whatsapp-contact-avatar">PC</div>
+          <div class="whatsapp-contact-info">
+            <span class="whatsapp-contact-name">Paul Church</span>
+            <span class="whatsapp-contact-role">Fondateur · HelixOne</span>
+          </div>
+          <svg class="whatsapp-contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <button class="whatsapp-float" id="whatsappBtn" aria-label="Contacter sur WhatsApp">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    </button>
+  </div>
+  <script>
+    (function() {
+      var btn = document.getElementById('whatsappBtn');
+      var popup = document.getElementById('whatsappPopup');
+      var close = document.getElementById('whatsappClose');
+      btn.addEventListener('click', function() { popup.classList.toggle('open'); });
+      close.addEventListener('click', function(e) { e.stopPropagation(); popup.classList.remove('open'); });
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.whatsapp-widget')) popup.classList.remove('open');
+      });
+    })();
+  </script>
+</body>
+</html>
